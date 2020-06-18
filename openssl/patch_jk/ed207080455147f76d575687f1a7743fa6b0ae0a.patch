@@ -1,0 +1,47 @@
+From ed207080455147f76d575687f1a7743fa6b0ae0a Mon Sep 17 00:00:00 2001
+From: Richard Levitte <levitte@openssl.org>
+Date: Fri, 23 Nov 2018 14:40:39 +0100
+Subject: [PATCH] Document the removed 'dist' target
+
+Also adds missing copyright boilerplate to util/mktar.sh
+
+Reviewed-by: Matthias St. Pierre <Matthias.St.Pierre@ncp-e.com>
+(Merged from https://github.com/openssl/openssl/pull/7696)
+
+(cherry picked from commit b42922ea2f605fd6c42faad1743fb27be5f7f1f3)
+---
+ CHANGES       | 5 ++++-
+ util/mktar.sh | 6 ++++++
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+
+diff --git a/CHANGES b/CHANGES
+index 60c0dd119ff3..e19b9769af92 100644
+--- a/CHANGES
++++ b/CHANGES
+@@ -9,7 +9,10 @@
+ 
+  Changes between 1.1.0j and 1.1.0k [xx XXX xxxx]
+ 
+-  *)
++  *) Remove the 'dist' target and add a tarball building script.  The
++     'dist' target has fallen out of use, and it shouldn't be
++     necessary to configure just to create a source distribution.
++     [Richard Levitte]
+ 
+  Changes between 1.1.0i and 1.1.0j [20 Nov 2018]
+ 
+diff --git a/util/mktar.sh b/util/mktar.sh
+index 0848b7b1e157..bf874a14d8a0 100755
+--- a/util/mktar.sh
++++ b/util/mktar.sh
+@@ -1,4 +1,10 @@
+ #! /bin/sh
++# Copyright 2018 The OpenSSL Project Authors. All Rights Reserved.
++#
++# Licensed under the OpenSSL license (the "License").  You may not use
++# this file except in compliance with the License.  You can obtain a copy
++# in the file LICENSE in the source distribution or at
++# https://www.openssl.org/source/license.html
+ 
+ HERE=`dirname $0`
+ 

@@ -1,0 +1,48 @@
+From 68be523db761867cde2c5476cf43f8766c593b2a Mon Sep 17 00:00:00 2001
+From: Corinna Vinschen <vinschen@redhat.com>
+Date: Mon, 18 Feb 2019 22:37:37 +0100
+Subject: [PATCH] cygwin: drop explicit O_TEXT
+
+Cygwin binaries should not enforce text mode these days, just
+use text mode if the underlying mount point requests it
+
+Signed-off-by: Corinna Vinschen <vinschen@redhat.com>
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+Reviewed-by: Richard Levitte <levitte@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/8275)
+---
+ crypto/bio/bss_file.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+
+diff --git a/crypto/bio/bss_file.c b/crypto/bio/bss_file.c
+index 2edf24483531..0240a0dd5ad2 100644
+--- a/crypto/bio/bss_file.c
++++ b/crypto/bio/bss_file.c
+@@ -255,9 +255,7 @@ static long file_ctrl(BIO *b, int cmd, long num, void *ptr)
+             }
+ #  elif defined(OPENSSL_SYS_WIN32_CYGWIN)
+             int fd = fileno((FILE *)ptr);
+-            if (num & BIO_FP_TEXT)
+-                setmode(fd, O_TEXT);
+-            else
++            if (!(num & BIO_FP_TEXT))
+                 setmode(fd, O_BINARY);
+ #  endif
+         }
+@@ -281,11 +279,14 @@ static long file_ctrl(BIO *b, int cmd, long num, void *ptr)
+             ret = 0;
+             break;
+         }
+-#  if defined(OPENSSL_SYS_MSDOS) || defined(OPENSSL_SYS_WINDOWS) || defined(OPENSSL_SYS_WIN32_CYGWIN)
++#  if defined(OPENSSL_SYS_MSDOS) || defined(OPENSSL_SYS_WINDOWS)
+         if (!(num & BIO_FP_TEXT))
+             strcat(p, "b");
+         else
+             strcat(p, "t");
++#  elif defined(OPENSSL_SYS_WIN32_CYGWIN)
++        if (!(num & BIO_FP_TEXT))
++            strcat(p, "b");
+ #  endif
+         fp = openssl_fopen(ptr, p);
+         if (fp == NULL) {

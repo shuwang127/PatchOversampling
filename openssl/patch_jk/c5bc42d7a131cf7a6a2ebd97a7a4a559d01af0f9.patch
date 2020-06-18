@@ -1,0 +1,26 @@
+From c5bc42d7a131cf7a6a2ebd97a7a4a559d01af0f9 Mon Sep 17 00:00:00 2001
+From: Bernd Edlinger <bernd.edlinger@hotmail.de>
+Date: Sun, 17 Mar 2019 09:48:15 +0100
+Subject: [PATCH] Clear the secret point in ecdh_simple_compute_key
+
+Reviewed-by: Paul Dale <paul.dale@oracle.com>
+(Merged from https://github.com/openssl/openssl/pull/8501)
+
+(cherry picked from commit 1ff2c992c24c330c0d40708b4169b862563d6aab)
+---
+ crypto/ec/ecdh_ossl.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/crypto/ec/ecdh_ossl.c b/crypto/ec/ecdh_ossl.c
+index a865145974d1..2d620cbc3e32 100644
+--- a/crypto/ec/ecdh_ossl.c
++++ b/crypto/ec/ecdh_ossl.c
+@@ -138,7 +138,7 @@ int ecdh_simple_compute_key(unsigned char **pout, size_t *poutlen,
+     ret = 1;
+ 
+  err:
+-    EC_POINT_free(tmp);
++    EC_POINT_clear_free(tmp);
+     if (ctx)
+         BN_CTX_end(ctx);
+     BN_CTX_free(ctx);

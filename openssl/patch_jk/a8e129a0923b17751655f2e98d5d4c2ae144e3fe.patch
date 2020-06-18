@@ -1,0 +1,59 @@
+From a8e129a0923b17751655f2e98d5d4c2ae144e3fe Mon Sep 17 00:00:00 2001
+From: Matt Caswell <matt@openssl.org>
+Date: Tue, 5 Mar 2019 13:26:45 +0000
+Subject: [PATCH] Avoid an underflow in ecp_nistp521.c
+
+The function felem_diff_128_64 in ecp_nistp521.c substracts the number |in|
+from |out| mod p. In order to avoid underflow it first adds 32p mod p
+(which is equivalent to 0 mod p) to |out|. The comments and variable naming
+suggest that the original author intended to add 64p mod p. In fact it
+has been shown that with certain unusual co-ordinates it is possible to
+cause an underflow in this function when only adding 32p mod p while
+performing a point double operation. By changing this to 64p mod p the
+underflow is avoided.
+
+It turns out to be quite difficult to construct points that satisfy the
+underflow criteria although this has been done and the underflow
+demonstrated. However none of these points are actually on the curve.
+Finding points that satisfy the underflow criteria and are also *on* the
+curve is considered significantly more difficult. For this reason we do
+not believe that this issue is currently practically exploitable and
+therefore no CVE has been assigned.
+
+This only impacts builds using the enable-ec_nistp_64_gcc_128 Configure
+option.
+
+With thanks to Bo-Yin Yang, Billy Brumley and Dr Liu for their significant
+help in investigating this issue.
+
+Reviewed-by: Nicola Tuveri <nic.tuv@gmail.com>
+(Merged from https://github.com/openssl/openssl/pull/8405)
+
+(cherry picked from commit 13fbce17fc9f02e2401fc3868f3f8e02d6647e5f)
+---
+ crypto/ec/ecp_nistp521.c | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/crypto/ec/ecp_nistp521.c b/crypto/ec/ecp_nistp521.c
+index ddfef91bda02..6059c2efc829 100644
+--- a/crypto/ec/ecp_nistp521.c
++++ b/crypto/ec/ecp_nistp521.c
+@@ -357,10 +357,15 @@ static void felem_diff64(felem out, const felem in)
+ static void felem_diff_128_64(largefelem out, const felem in)
+ {
+     /*
+-     * In order to prevent underflow, we add 0 mod p before subtracting.
++     * In order to prevent underflow, we add 64p mod p (which is equivalent
++     * to 0 mod p) before subtracting. p is 2^521 - 1, i.e. in binary a 521
++     * digit number with all bits set to 1. See "The representation of field
++     * elements" comment above for a description of how limbs are used to
++     * represent a number. 64p is represented with 8 limbs containing a number
++     * with 58 bits set and one limb with a number with 57 bits set.
+      */
+-    static const limb two63m6 = (((limb) 1) << 62) - (((limb) 1) << 5);
+-    static const limb two63m5 = (((limb) 1) << 62) - (((limb) 1) << 4);
++    static const limb two63m6 = (((limb) 1) << 63) - (((limb) 1) << 6);
++    static const limb two63m5 = (((limb) 1) << 63) - (((limb) 1) << 5);
+ 
+     out[0] += two63m6 - in[0];
+     out[1] += two63m5 - in[1];

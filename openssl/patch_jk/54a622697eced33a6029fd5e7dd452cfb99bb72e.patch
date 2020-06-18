@@ -1,0 +1,59 @@
+From 54a622697eced33a6029fd5e7dd452cfb99bb72e Mon Sep 17 00:00:00 2001
+From: Richard Levitte <levitte@openssl.org>
+Date: Mon, 11 Feb 2019 12:22:02 +0100
+Subject: [PATCH] crypto/engine/eng_cryptodev.c: fix bignum<->crp conversion
+
+bn2crparam() incorrectly delivered a big endian byte string to cryptodev.
+Using BN_bn2lebinpad() instead of BN_bn2bin() fixes this.
+
+crparam2bn() had a hack that avoided this issue in the other direction,
+but allocated an intermediary chunk of memory to get correct endianness.
+Using BN_lebin2bn() avoids this allocation.
+
+Fixes #8202
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/8204)
+---
+ crypto/engine/eng_cryptodev.c | 14 ++++----------
+ 1 file changed, 4 insertions(+), 10 deletions(-)
+
+diff --git a/crypto/engine/eng_cryptodev.c b/crypto/engine/eng_cryptodev.c
+index 5572735008d9..1450fdd8b0cc 100644
+--- a/crypto/engine/eng_cryptodev.c
++++ b/crypto/engine/eng_cryptodev.c
+@@ -1228,14 +1228,14 @@ static int bn2crparam(const BIGNUM *a, struct crparam *crp)
+     crp->crp_p = (caddr_t) b;
+     crp->crp_nbits = bits;
+ 
+-    BN_bn2bin(a, b);
++    BN_bn2lebinpad(a, b, bytes);
+     return (0);
+ }
+ 
+ /* Convert a /dev/crypto parameter to a BIGNUM */
+ static int crparam2bn(struct crparam *crp, BIGNUM *a)
+ {
+-    u_int8_t *pd;
++    u_int8_t *b;
+     int i, bytes;
+ 
+     bytes = (crp->crp_nbits + 7) / 8;
+@@ -1243,15 +1243,9 @@ static int crparam2bn(struct crparam *crp, BIGNUM *a)
+     if (bytes == 0)
+         return (-1);
+ 
+-    if ((pd = OPENSSL_malloc(bytes)) == NULL)
+-        return (-1);
+-
+-    for (i = 0; i < bytes; i++)
+-        pd[i] = crp->crp_p[bytes - i - 1];
+-
+-    BN_bin2bn(pd, bytes, a);
+-    free(pd);
++    b = (u_int8_t *)crp->crp_p;
+ 
++    BN_lebin2bn(b, bytes, a);
+     return (0);
+ }
+ 

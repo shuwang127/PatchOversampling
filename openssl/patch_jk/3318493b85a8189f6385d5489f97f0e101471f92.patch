@@ -1,0 +1,36 @@
+From 3318493b85a8189f6385d5489f97f0e101471f92 Mon Sep 17 00:00:00 2001
+From: Jeff Mahoney <jeffm@suse.com>
+Date: Sun, 24 Feb 2019 16:56:28 +0800
+Subject: [PATCH] apps/speed: fix segfault while looking up algorithm name
+
+The backport of master commit 5c6a69f539a (apps/speed: fix possible OOB
+access in some EC arrays) as 1.1.0 commit 4e07941373a introduced a
+regression.  The ecdh_choices array is iterated using an element count
+but is NULL terminated.  This means that running 'openssl speed somealgo'
+will result in a segfault when opt_found hits the NULL entry.
+
+Fixes #8243
+
+CLA: trivial
+
+Signed-off-by: Jeff Mahoney <jeffm@suse.com>
+
+Reviewed-by: Paul Yang <yang.yang@baishancloud.com>
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/8244)
+---
+ apps/speed.c | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/apps/speed.c b/apps/speed.c
+index 6672fe606ac0..4595cc602cc5 100644
+--- a/apps/speed.c
++++ b/apps/speed.c
+@@ -537,7 +537,6 @@ static const OPT_PAIR ecdh_choices[] = {
+     {"ecdhb409", R_EC_B409},
+     {"ecdhb571", R_EC_B571},
+     {"ecdhx25519", R_EC_X25519},
+-    {NULL}
+ };
+ # define EC_NUM       OSSL_NELEM(ecdh_choices)
+ 

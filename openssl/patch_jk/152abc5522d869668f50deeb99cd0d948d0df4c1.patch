@@ -1,0 +1,41 @@
+From 152abc5522d869668f50deeb99cd0d948d0df4c1 Mon Sep 17 00:00:00 2001
+From: Bernd Edlinger <bernd.edlinger@hotmail.de>
+Date: Wed, 30 Jan 2019 16:20:31 +0100
+Subject: [PATCH] Fix a crash in reuse of d2i_X509_PUBKEY
+
+If the second PUBKEY is malformed there is use after free.
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/8135)
+---
+ CHANGES                | 4 ++++
+ crypto/x509/x_pubkey.c | 1 +
+ 2 files changed, 5 insertions(+)
+
+diff --git a/CHANGES b/CHANGES
+index b810a1293619..d6342524f7b3 100644
+--- a/CHANGES
++++ b/CHANGES
+@@ -9,6 +9,10 @@
+ 
+  Changes between 1.1.0j and 1.1.0k [xx XXX xxxx]
+ 
++  *) Fix a use after free bug in d2i_X509_PUBKEY when overwriting a
++     re-used X509_PUBKEY object if the second PUBKEY is malformed.
++     [Bernd Edlinger]
++
+   *) Move strictness check from EVP_PKEY_asn1_new() to EVP_PKEY_asn1_add0().
+      [Richard Levitte]
+ 
+diff --git a/crypto/x509/x_pubkey.c b/crypto/x509/x_pubkey.c
+index cc692834d1fa..03271cbe97c5 100644
+--- a/crypto/x509/x_pubkey.c
++++ b/crypto/x509/x_pubkey.c
+@@ -36,6 +36,7 @@ static int pubkey_cb(int operation, ASN1_VALUE **pval, const ASN1_ITEM *it,
+         /* Attempt to decode public key and cache in pubkey structure. */
+         X509_PUBKEY *pubkey = (X509_PUBKEY *)*pval;
+         EVP_PKEY_free(pubkey->pkey);
++        pubkey->pkey = NULL;
+         /*
+          * Opportunistically decode the key but remove any non fatal errors
+          * from the queue. Subsequent explicit attempts to decode/use the key

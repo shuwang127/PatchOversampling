@@ -1,0 +1,56 @@
+From e29dcc3794bdc3928942ffb38ee383328b0d6dc1 Mon Sep 17 00:00:00 2001
+From: Andy Polyakov <appro@openssl.org>
+Date: Fri, 7 Dec 2018 22:19:57 +0100
+Subject: [PATCH] err/err.c: improve err_clear_last_constant_time's
+ portability.
+
+Reviewed-by: Kurt Roeckx <kurt@roeckx.be>
+Reviewed-by: Richard Levitte <levitte@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/7850)
+
+(cherry picked from commit 91d0fd1c2753f0f7d6e0953eed3cfb6eb96d8ff4)
+---
+ crypto/err/err.c | 23 +++++++++++++++++++++--
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+
+diff --git a/crypto/err/err.c b/crypto/err/err.c
+index 638cbf235b46..ba7577b7dfb2 100644
+--- a/crypto/err/err.c
++++ b/crypto/err/err.c
+@@ -824,6 +824,25 @@ int ERR_pop_to_mark(void)
+     return 1;
+ }
+ 
++#ifdef UINTPTR_T
++# undef UINTPTR_T
++#endif
++/*
++ * uintptr_t is the answer, but unfortunately C89, current "least common
++ * denominator" doesn't define it. Most legacy platforms typedef it anyway,
++ * so that attempt to fill the gaps means that one would have to identify
++ * that track these gaps, which would be undesirable. Macro it is...
++ */
++#if defined(__VMS) && __INITIAL_POINTER_SIZE==64
++/*
++ * But we can't use size_t on VMS, because it adheres to sizeof(size_t)==4
++ * even in 64-bit builds, which means that it won't work as mask.
++ */
++# define UINTPTR_T unsigned long long
++#else
++# define UINTPTR_T size_t
++#endif
++
+ void err_clear_last_constant_time(int clear)
+ {
+     ERR_STATE *es;
+@@ -837,8 +856,8 @@ void err_clear_last_constant_time(int clear)
+ 
+     es->err_flags[top] &= ~(0 - clear);
+     es->err_buffer[top] &= ~(0UL - clear);
+-    es->err_file[top] = (const char *)((uintptr_t)es->err_file[top] &
+-                                       ~((uintptr_t)0 - clear));
++    es->err_file[top] = (const char *)((UINTPTR_T)es->err_file[top] &
++                                       ~((UINTPTR_T)0 - clear));
+     es->err_line[top] |= 0 - clear;
+ 
+     es->top = (top + ERR_NUM_ERRORS - clear) % ERR_NUM_ERRORS;

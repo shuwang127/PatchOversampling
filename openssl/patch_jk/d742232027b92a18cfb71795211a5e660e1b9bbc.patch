@@ -1,0 +1,292 @@
+From d742232027b92a18cfb71795211a5e660e1b9bbc Mon Sep 17 00:00:00 2001
+From: Richard Levitte <richard@levitte.org>
+Date: Tue, 28 May 2019 14:47:54 +0200
+Subject: [PATCH] Update copyright year
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/9033)
+---
+ apps/speed.c                              | 2 +-
+ crypto/bio/bss_file.c                     | 2 +-
+ crypto/bn/bn_lib.c                        | 2 +-
+ crypto/dh/dh_pmeth.c                      | 2 +-
+ crypto/dsa/dsa_pmeth.c                    | 2 +-
+ crypto/ec/ec2_oct.c                       | 2 +-
+ crypto/ec/ec_mult.c                       | 2 +-
+ crypto/ec/ecdh_ossl.c                     | 2 +-
+ crypto/engine/eng_cryptodev.c             | 2 +-
+ crypto/err/err.c                          | 2 +-
+ crypto/evp/e_chacha20_poly1305.c          | 2 +-
+ crypto/rsa/rsa_ossl.c                     | 2 +-
+ crypto/rsa/rsa_pmeth.c                    | 2 +-
+ crypto/x509/x_pubkey.c                    | 2 +-
+ doc/apps/genpkey.pod                      | 2 +-
+ doc/ssl/SSL_get_error.pod                 | 2 +-
+ doc/ssl/SSL_shutdown.pod                  | 2 +-
+ include/openssl/err.h                     | 2 +-
+ ssl/record/rec_layer_d1.c                 | 2 +-
+ ssl/record/rec_layer_s3.c                 | 2 +-
+ ssl/s3_msg.c                              | 2 +-
+ ssl/statem/statem.c                       | 2 +-
+ test/recipes/30-test_evp_data/evpciph.txt | 2 +-
+ 23 files changed, 23 insertions(+), 23 deletions(-)
+
+diff --git a/apps/speed.c b/apps/speed.c
+index 4595cc602cc5..90f04b54bf28 100644
+--- a/apps/speed.c
++++ b/apps/speed.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/bio/bss_file.c b/crypto/bio/bss_file.c
+index 0240a0dd5ad2..09bde0143149 100644
+--- a/crypto/bio/bss_file.c
++++ b/crypto/bio/bss_file.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/bn/bn_lib.c b/crypto/bn/bn_lib.c
+index 9885b0c71bf9..de46d0f2d10a 100644
+--- a/crypto/bn/bn_lib.c
++++ b/crypto/bn/bn_lib.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/dh/dh_pmeth.c b/crypto/dh/dh_pmeth.c
+index 4b9e98175db7..6c1a32547673 100644
+--- a/crypto/dh/dh_pmeth.c
++++ b/crypto/dh/dh_pmeth.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2006-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2006-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/dsa/dsa_pmeth.c b/crypto/dsa/dsa_pmeth.c
+index f5ba5fdba449..f0b7ea5c3acd 100644
+--- a/crypto/dsa/dsa_pmeth.c
++++ b/crypto/dsa/dsa_pmeth.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2006-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2006-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/ec/ec2_oct.c b/crypto/ec/ec2_oct.c
+index 2b411e26ba3c..a1f47c3b1d64 100644
+--- a/crypto/ec/ec2_oct.c
++++ b/crypto/ec/ec2_oct.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2011-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2011-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/ec/ec_mult.c b/crypto/ec/ec_mult.c
+index 47c0fc028c9d..b96c4045b135 100644
+--- a/crypto/ec/ec_mult.c
++++ b/crypto/ec/ec_mult.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2001-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2001-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/ec/ecdh_ossl.c b/crypto/ec/ecdh_ossl.c
+index 2d620cbc3e32..46858244fb7f 100644
+--- a/crypto/ec/ecdh_ossl.c
++++ b/crypto/ec/ecdh_ossl.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2002-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2002-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/engine/eng_cryptodev.c b/crypto/engine/eng_cryptodev.c
+index 1450fdd8b0cc..17d08b6534ca 100644
+--- a/crypto/engine/eng_cryptodev.c
++++ b/crypto/engine/eng_cryptodev.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2002-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2002-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/err/err.c b/crypto/err/err.c
+index 8cbf21f69696..cf59a993d465 100644
+--- a/crypto/err/err.c
++++ b/crypto/err/err.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/evp/e_chacha20_poly1305.c b/crypto/evp/e_chacha20_poly1305.c
+index 4adc64c99308..8e9448d30c95 100644
+--- a/crypto/evp/e_chacha20_poly1305.c
++++ b/crypto/evp/e_chacha20_poly1305.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2015-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2015-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/rsa/rsa_ossl.c b/crypto/rsa/rsa_ossl.c
+index b48d70825d0b..72b2130af43e 100644
+--- a/crypto/rsa/rsa_ossl.c
++++ b/crypto/rsa/rsa_ossl.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/rsa/rsa_pmeth.c b/crypto/rsa/rsa_pmeth.c
+index 0037b914dd80..ddbae5d34a05 100644
+--- a/crypto/rsa/rsa_pmeth.c
++++ b/crypto/rsa/rsa_pmeth.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2006-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2006-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/crypto/x509/x_pubkey.c b/crypto/x509/x_pubkey.c
+index 03271cbe97c5..8875933c2649 100644
+--- a/crypto/x509/x_pubkey.c
++++ b/crypto/x509/x_pubkey.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/doc/apps/genpkey.pod b/doc/apps/genpkey.pod
+index 27fee6e3313a..529f6827d17e 100644
+--- a/doc/apps/genpkey.pod
++++ b/doc/apps/genpkey.pod
+@@ -289,7 +289,7 @@ OpenSSL 1.1.0.
+ 
+ =head1 COPYRIGHT
+ 
+-Copyright 2006-2018 The OpenSSL Project Authors. All Rights Reserved.
++Copyright 2006-2019 The OpenSSL Project Authors. All Rights Reserved.
+ 
+ Licensed under the OpenSSL license (the "License").  You may not use
+ this file except in compliance with the License.  You can obtain a copy
+diff --git a/doc/ssl/SSL_get_error.pod b/doc/ssl/SSL_get_error.pod
+index 9b432a1516f1..979c655153e9 100644
+--- a/doc/ssl/SSL_get_error.pod
++++ b/doc/ssl/SSL_get_error.pod
+@@ -136,7 +136,7 @@ SSL_ERROR_WANT_ASYNC was added in OpenSSL 1.1.0.
+ 
+ =head1 COPYRIGHT
+ 
+-Copyright 2000-2016 The OpenSSL Project Authors. All Rights Reserved.
++Copyright 2000-2019 The OpenSSL Project Authors. All Rights Reserved.
+ 
+ Licensed under the OpenSSL license (the "License").  You may not use
+ this file except in compliance with the License.  You can obtain a copy
+diff --git a/doc/ssl/SSL_shutdown.pod b/doc/ssl/SSL_shutdown.pod
+index 0e83cf94a43e..3df756f5d379 100644
+--- a/doc/ssl/SSL_shutdown.pod
++++ b/doc/ssl/SSL_shutdown.pod
+@@ -126,7 +126,7 @@ L<ssl(3)>, L<bio(3)>
+ 
+ =head1 COPYRIGHT
+ 
+-Copyright 2000-2016 The OpenSSL Project Authors. All Rights Reserved.
++Copyright 2000-2019 The OpenSSL Project Authors. All Rights Reserved.
+ 
+ Licensed under the OpenSSL license (the "License").  You may not use
+ this file except in compliance with the License.  You can obtain a copy
+diff --git a/include/openssl/err.h b/include/openssl/err.h
+index 779ed24bbaa5..ba40f79b85ed 100644
+--- a/include/openssl/err.h
++++ b/include/openssl/err.h
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/ssl/record/rec_layer_d1.c b/ssl/record/rec_layer_d1.c
+index 4ee6e52ef655..7df9f71e2861 100644
+--- a/ssl/record/rec_layer_d1.c
++++ b/ssl/record/rec_layer_d1.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2005-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2005-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/ssl/record/rec_layer_s3.c b/ssl/record/rec_layer_s3.c
+index 324102e0c55e..92abbb5ebce3 100644
+--- a/ssl/record/rec_layer_s3.c
++++ b/ssl/record/rec_layer_s3.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/ssl/s3_msg.c b/ssl/s3_msg.c
+index c4a476c34b3d..0737e62f4708 100644
+--- a/ssl/s3_msg.c
++++ b/ssl/s3_msg.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 1995-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/ssl/statem/statem.c b/ssl/statem/statem.c
+index 36c9e98f125c..3b72fa3e5e44 100644
+--- a/ssl/statem/statem.c
++++ b/ssl/statem/statem.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2015-2018 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2015-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+diff --git a/test/recipes/30-test_evp_data/evpciph.txt b/test/recipes/30-test_evp_data/evpciph.txt
+index 4cf011f662d3..8a95c9fe3a6f 100644
+--- a/test/recipes/30-test_evp_data/evpciph.txt
++++ b/test/recipes/30-test_evp_data/evpciph.txt
+@@ -1,5 +1,5 @@
+ #
+-# Copyright 2001-2018 The OpenSSL Project Authors. All Rights Reserved.
++# Copyright 2001-2019 The OpenSSL Project Authors. All Rights Reserved.
+ #
+ # Licensed under the OpenSSL license (the "License").  You may not use
+ # this file except in compliance with the License.  You can obtain a copy

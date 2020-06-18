@@ -1,0 +1,552 @@
+TranslationUnitDecl 0x56423d75e6d8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x56423d75ec50 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x56423d75e970 '__int128'
+|-TypedefDecl 0x56423d75ecc0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x56423d75e990 'unsigned __int128'
+|-TypedefDecl 0x56423d75efb8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x56423d75edc0 'struct __NSConstantString_tag'
+|   `-Record 0x56423d75ed18 '__NSConstantString_tag'
+|-TypedefDecl 0x56423d75f050 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x56423d75f010 'char *'
+|   `-BuiltinType 0x56423d75e770 'char'
+|-TypedefDecl 0x56423d75f338 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x56423d75f2e0 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x56423d75f150 'struct __va_list_tag'
+|     `-Record 0x56423d75f0a8 '__va_list_tag'
+|-RecordDecl 0x56423d7c0b80 <crypto-bn-bn_ctx_before.c:36:9, line:41:1> line:36:16 invalid struct bignum_pool_item definition
+| |-FullComment 0x56423d7d17f0 <line:33:4, col:11>
+| | `-ParagraphComment 0x56423d7d17c0 <col:4, col:11>
+| |   `-TextComment 0x56423d7d1790 <col:4, col:11> Text="********"
+| |-FieldDecl 0x56423d7c0cc0 <line:38:5, <invalid sloc>> col:12 invalid vals 'int [16]'
+| |-FieldDecl 0x56423d7c0dc0 <line:40:5, col:30> col:30 referenced prev 'struct bignum_pool_item *'
+| `-FieldDecl 0x56423d7c0e30 <col:5, col:37> col:37 referenced next 'struct bignum_pool_item *'
+|-TypedefDecl 0x56423d7c0e98 <line:36:1, line:41:3> col:3 referenced BN_POOL_ITEM 'struct bignum_pool_item':'struct bignum_pool_item'
+| `-ElaboratedType 0x56423d7c0d10 'struct bignum_pool_item' sugar
+|   `-RecordType 0x56423d7c0c20 'struct bignum_pool_item'
+|     `-Record 0x56423d7c0b80 'bignum_pool_item'
+|-RecordDecl 0x56423d7c0f08 <line:43:9, line:48:1> line:43:16 struct bignum_pool definition
+| |-FieldDecl 0x56423d7c1028 <line:45:5, col:19> col:19 referenced head 'BN_POOL_ITEM *'
+| |-FieldDecl 0x56423d7c1080 <col:5, col:26> col:26 referenced current 'BN_POOL_ITEM *'
+| |-FieldDecl 0x56423d7c10d8 <col:5, col:36> col:36 referenced tail 'BN_POOL_ITEM *'
+| |-FieldDecl 0x56423d7c1138 <line:47:5, col:14> col:14 referenced used 'unsigned int'
+| `-FieldDecl 0x56423d7c1198 <col:5, col:20> col:20 referenced size 'unsigned int'
+|-TypedefDecl 0x56423d7c1230 <line:43:1, line:48:3> col:3 referenced BN_POOL 'struct bignum_pool':'struct bignum_pool'
+| `-ElaboratedType 0x56423d7c11e0 'struct bignum_pool' sugar
+|   `-RecordType 0x56423d7c0fb0 'struct bignum_pool'
+|     `-Record 0x56423d7c0f08 'bignum_pool'
+|-FunctionDecl 0x56423d7c1430 <line:49:1, col:35> col:13 used BN_POOL_init 'void (BN_POOL *)' static
+| `-ParmVarDecl 0x56423d7c1328 <col:26, col:34> col:35 'BN_POOL *'
+|-FunctionDecl 0x56423d7c15c8 <line:50:1, col:37> col:13 used BN_POOL_finish 'void (BN_POOL *)' static
+| `-ParmVarDecl 0x56423d7c1540 <col:28, col:36> col:37 'BN_POOL *'
+|-FunctionDecl 0x56423d7c1858 <line:51:1, col:42> col:16 invalid BN_POOL_get 'int *(BN_POOL *, int)' static
+| |-ParmVarDecl 0x56423d7c1698 <col:28, col:36> col:37 'BN_POOL *'
+| `-ParmVarDecl 0x56423d7c1710 <col:39> col:42 'int'
+|-FunctionDecl 0x56423d7c1aa0 <line:52:1, col:52> col:13 used BN_POOL_release 'void (BN_POOL *, unsigned int)' static
+| |-ParmVarDecl 0x56423d7c1918 <col:29, col:37> col:38 'BN_POOL *'
+| `-ParmVarDecl 0x56423d7c1990 <col:40, col:49> col:52 'unsigned int'
+|-RecordDecl 0x56423d7c1be8 <line:59:9, line:64:1> line:59:16 struct bignum_ctx_stack definition
+| |-FullComment 0x56423d7d1990 <line:56:4, col:12>
+| | `-ParagraphComment 0x56423d7d1960 <col:4, col:12>
+| |   `-TextComment 0x56423d7d1930 <col:4, col:12> Text="*********"
+| |-FieldDecl 0x56423d7c1cf0 <line:61:5, col:19> col:19 referenced indexes 'unsigned int *'
+| |-FieldDecl 0x56423d7c1d50 <line:63:5, col:18> col:18 referenced depth 'unsigned int'
+| `-FieldDecl 0x56423d7c1db0 <col:5, col:25> col:25 referenced size 'unsigned int'
+|-TypedefDecl 0x56423d7c1e50 <line:59:1, line:64:3> col:3 referenced BN_STACK 'struct bignum_ctx_stack':'struct bignum_ctx_stack'
+| `-ElaboratedType 0x56423d7c1e00 'struct bignum_ctx_stack' sugar
+|   `-RecordType 0x56423d7c1c90 'struct bignum_ctx_stack'
+|     `-Record 0x56423d7c1be8 'bignum_ctx_stack'
+|-FunctionDecl 0x56423d7c2050 <line:65:1, col:37> col:13 used BN_STACK_init 'void (BN_STACK *)' static
+| `-ParmVarDecl 0x56423d7c1f48 <col:27, col:36> col:37 'BN_STACK *'
+|-FunctionDecl 0x56423d7c21a8 <line:66:1, col:39> col:13 used BN_STACK_finish 'void (BN_STACK *)' static
+| `-ParmVarDecl 0x56423d7c2120 <col:29, col:38> col:39 'BN_STACK *'
+|-FunctionDecl 0x56423d7c2408 <line:67:1, col:50> col:12 used BN_STACK_push 'int (BN_STACK *, unsigned int)' static
+| |-ParmVarDecl 0x56423d7c2278 <col:26, col:35> col:36 'BN_STACK *'
+| `-ParmVarDecl 0x56423d7c22f0 <col:38, col:47> col:50 'unsigned int'
+|-FunctionDecl 0x56423d7c25e8 <line:68:1, col:44> col:21 used BN_STACK_pop 'unsigned int (BN_STACK *)' static
+| `-ParmVarDecl 0x56423d7c24e0 <col:34, col:43> col:44 'BN_STACK *'
+|-RecordDecl 0x56423d7c2708 <line:75:1, line:88:1> line:75:8 struct bignum_ctx definition
+| |-FullComment 0x56423d7d1af0 <line:72:4, col:10>
+| | `-ParagraphComment 0x56423d7d1ac0 <col:4, col:10>
+| |   `-TextComment 0x56423d7d1a90 <col:4, col:10> Text="*******"
+| |-FieldDecl 0x56423d7c27e0 <line:77:5, col:13> col:13 pool 'BN_POOL':'struct bignum_pool'
+| |-FieldDecl 0x56423d7c2838 <line:79:5, col:14> col:14 stack 'BN_STACK':'struct bignum_ctx_stack'
+| |-FieldDecl 0x56423d7c2898 <line:81:5, col:18> col:18 used 'unsigned int'
+| |-FieldDecl 0x56423d7c28f8 <line:83:5, col:9> col:9 err_stack 'int'
+| |-FieldDecl 0x56423d7c2958 <line:85:5, col:9> col:9 too_many 'int'
+| `-FieldDecl 0x56423d7c29b8 <line:87:5, col:9> col:9 flags 'int'
+|-FunctionDecl 0x56423d7c3bb0 <line:134:1, line:146:1> line:134:9 invalid BN_CTX_new 'int *(void)'
+| `-CompoundStmt 0x56423d7c3f80 <line:135:1, line:146:1>
+|   `-IfStmt 0x56423d7c3ef8 <line:138:5, line:141:5>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-OpaqueValueExpr 0x56423d7c3ed8 <<invalid sloc>> '_Bool'
+|     |-CompoundStmt 0x56423d7c3ec8 <line:138:55, line:141:5>
+|     `-<<<NULL>>>
+|-FunctionDecl 0x56423d7c4030 <line:148:1, line:155:1> line:148:9 invalid BN_CTX_secure_new 'int *(void)'
+| `-CompoundStmt 0x56423d7c40e8 <line:149:1, line:155:1>
+|-FunctionDecl 0x56423d7c41d0 <line:157:1, line:179:1> line:157:6 invalid BN_CTX_free 'void (int *)'
+| |-ParmVarDecl 0x56423d7c4110 <col:18, col:26> col:26 invalid ctx 'int *'
+| `-CompoundStmt 0x56423d7c4468 <line:158:1, line:179:1>
+|   `-IfStmt 0x56423d7c42c8 <line:159:5, line:160:9>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-OpaqueValueExpr 0x56423d7c42a8 <<invalid sloc>> '_Bool'
+|     |-ReturnStmt 0x56423d7c4290 <col:9>
+|     `-<<<NULL>>>
+|-FunctionDecl 0x56423d7c4520 <line:181:1, line:193:1> line:181:6 invalid BN_CTX_start 'void (int *)'
+| |-ParmVarDecl 0x56423d7c4498 <col:19, col:27> col:27 invalid ctx 'int *'
+| `-CompoundStmt 0x56423d7c4720 <line:182:1, line:193:1>
+|   |-NullStmt 0x56423d7c45e0 <line:183:38>
+|   |-IfStmt 0x56423d7c46d8 <line:185:5, line:191:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x56423d7c46b8 <<invalid sloc>> '_Bool'
+|   | |-NullStmt 0x56423d7c46a8 <line:186:9>
+|   | `-IfStmt 0x56423d7c4670 <line:188:10, line:191:5>
+|   |   |-<<<NULL>>>
+|   |   |-<<<NULL>>>
+|   |   |-OpaqueValueExpr 0x56423d7c4650 <<invalid sloc>> '_Bool'
+|   |   |-CompoundStmt 0x56423d7c4640 <line:188:54, line:191:5>
+|   |   `-<<<NULL>>>
+|   `-NullStmt 0x56423d7c4710 <line:192:21>
+|-FunctionDecl 0x56423d7c47e8 <line:195:1, line:210:1> line:195:6 invalid BN_CTX_end 'void (int *)'
+| |-ParmVarDecl 0x56423d7c4760 <col:17, col:25> col:25 invalid ctx 'int *'
+| `-CompoundStmt 0x56423d7c4ad8 <line:196:1, line:210:1>
+|   |-NullStmt 0x56423d7c48a8 <line:197:36>
+|   |-IfStmt 0x56423d7c4a90 <line:198:5, line:208:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x56423d7c4a70 <<invalid sloc>> '_Bool'
+|   | |-NullStmt 0x56423d7c4a60 <line:199:9>
+|   | `-CompoundStmt 0x56423d7c4a48 <line:200:10, line:208:5>
+|   |   `-DeclStmt 0x56423d7c4958 <line:201:9, col:52>
+|   |     `-VarDecl 0x56423d7c48d0 <col:9, col:22> col:22 used fp 'unsigned int'
+|   `-NullStmt 0x56423d7c4ac8 <line:209:21>
+|-FunctionDecl 0x56423d7c5ca8 <line:212:1, line:233:1> line:212:9 invalid BN_CTX_get 'int *(int *)'
+| |-ParmVarDecl 0x56423d7c4b18 <col:20, col:28> col:28 invalid ctx 'int *'
+| `-CompoundStmt 0x56423d7c5fa8 <line:213:1, line:233:1>
+|   |-NullStmt 0x56423d7c5d68 <line:216:36>
+|   |-IfStmt 0x56423d7c5df0 <line:219:5, line:227:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-OpaqueValueExpr 0x56423d7c5dd0 <<invalid sloc>> '_Bool'
+|   | |-CompoundStmt 0x56423d7c5dc0 <line:219:62, line:227:5>
+|   | `-<<<NULL>>>
+|   `-NullStmt 0x56423d7c5f40 <line:231:25>
+|-FunctionDecl 0x56423d7c6080 prev 0x56423d7c2050 <line:239:1, line:243:1> line:239:13 used BN_STACK_init 'void (BN_STACK *)' static
+| |-ParmVarDecl 0x56423d7c5fe0 <col:27, col:37> col:37 used st 'BN_STACK *'
+| |-CompoundStmt 0x56423d7c6318 <line:240:1, line:243:1>
+| | `-BinaryOperator 0x56423d7c62f0 <line:242:5, col:28> 'unsigned int' '='
+| |   |-MemberExpr 0x56423d7c61e0 <col:5, col:9> 'unsigned int' lvalue ->depth 0x56423d7c1d50
+| |   | `-ImplicitCastExpr 0x56423d7c61c8 <col:5> 'BN_STACK *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x56423d7c61a0 <col:5> 'BN_STACK *' lvalue ParmVar 0x56423d7c5fe0 'st' 'BN_STACK *'
+| |   `-BinaryOperator 0x56423d7c62c8 <col:17, col:28> 'unsigned int' '='
+| |     |-MemberExpr 0x56423d7c6258 <col:17, col:21> 'unsigned int' lvalue ->size 0x56423d7c1db0
+| |     | `-ImplicitCastExpr 0x56423d7c6240 <col:17> 'BN_STACK *' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x56423d7c6218 <col:17> 'BN_STACK *' lvalue ParmVar 0x56423d7c5fe0 'st' 'BN_STACK *'
+| |     `-ImplicitCastExpr 0x56423d7c62b0 <col:28> 'unsigned int' <IntegralCast>
+| |       `-IntegerLiteral 0x56423d7c6290 <col:28> 'int' 0
+| `-FullComment 0x56423d7d1c20 <line:237:4, col:12>
+|   `-ParagraphComment 0x56423d7d1bf0 <col:4, col:12>
+|     `-TextComment 0x56423d7d1bc0 <col:4, col:12> Text="*********"
+|-FunctionDecl 0x56423d7c63e0 prev 0x56423d7c21a8 <line:245:1, line:249:1> line:245:13 used BN_STACK_finish 'void (BN_STACK *)' static
+| |-ParmVarDecl 0x56423d7c6340 <col:29, col:39> col:39 used st 'BN_STACK *'
+| `-CompoundStmt 0x56423d7c6630 <line:246:1, line:249:1>
+|   `-CallExpr 0x56423d7c6570 <line:247:5, col:29> 'int'
+|     |-ImplicitCastExpr 0x56423d7c6558 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x56423d7c6488 <col:5> 'int ()' Function 0x56423d7c4378 'OPENSSL_free' 'int ()'
+|     `-ImplicitCastExpr 0x56423d7c65a0 <col:18, col:22> 'unsigned int *' <LValueToRValue>
+|       `-MemberExpr 0x56423d7c64f0 <col:18, col:22> 'unsigned int *' lvalue ->indexes 0x56423d7c1cf0
+|         `-ImplicitCastExpr 0x56423d7c64d8 <col:18> 'BN_STACK *' <LValueToRValue>
+|           `-DeclRefExpr 0x56423d7c64b0 <col:18> 'BN_STACK *' lvalue ParmVar 0x56423d7c6340 'st' 'BN_STACK *'
+|-FunctionDecl 0x56423d7c6798 prev 0x56423d7c2408 <line:252:1, line:269:1> line:252:12 used BN_STACK_push 'int (BN_STACK *, unsigned int)' static
+| |-ParmVarDecl 0x56423d7c6658 <col:26, col:36> col:36 used st 'BN_STACK *'
+| |-ParmVarDecl 0x56423d7c66d0 <col:40, col:53> col:53 used idx 'unsigned int'
+| `-CompoundStmt 0x56423d7c80a8 <line:253:1, line:269:1>
+|   |-IfStmt 0x56423d7c7e40 <line:254:5, line:266:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x56423d7c6968 <line:254:9, col:26> 'int' '=='
+|   | | |-ImplicitCastExpr 0x56423d7c6938 <col:9, col:13> 'unsigned int' <LValueToRValue>
+|   | | | `-MemberExpr 0x56423d7c6888 <col:9, col:13> 'unsigned int' lvalue ->depth 0x56423d7c1d50
+|   | | |   `-ImplicitCastExpr 0x56423d7c6870 <col:9> 'BN_STACK *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x56423d7c6848 <col:9> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | `-ImplicitCastExpr 0x56423d7c6950 <col:22, col:26> 'unsigned int' <LValueToRValue>
+|   | |   `-MemberExpr 0x56423d7c6900 <col:22, col:26> 'unsigned int' lvalue ->size 0x56423d7c1db0
+|   | |     `-ImplicitCastExpr 0x56423d7c68e8 <col:22> 'BN_STACK *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x56423d7c68c0 <col:22> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | |-CompoundStmt 0x56423d7c7df8 <col:32, line:266:5>
+|   | | |-DeclStmt 0x56423d7c7090 <line:256:9, line:257:64>
+|   | | | `-VarDecl 0x56423d7c69a8 <line:256:9, line:29:33> line:256:22 used newsize 'unsigned int' cinit
+|   | | |   `-ConditionalOperator 0x56423d7c7060 <line:257:13, line:29:33> 'unsigned int'
+|   | | |     |-ImplicitCastExpr 0x56423d7c6c10 <line:257:13, col:17> 'unsigned int' <LValueToRValue>
+|   | | |     | `-MemberExpr 0x56423d7c6a48 <col:13, col:17> 'unsigned int' lvalue ->size 0x56423d7c1db0
+|   | | |     |   `-ImplicitCastExpr 0x56423d7c6a30 <col:13> 'BN_STACK *' <LValueToRValue>
+|   | | |     |     `-DeclRefExpr 0x56423d7c6a08 <col:13> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | |     |-ParenExpr 0x56423d7c6bd0 <col:24, col:41> 'unsigned int'
+|   | | |     | `-BinaryOperator 0x56423d7c6ba8 <col:25, col:40> 'unsigned int' '/'
+|   | | |     |   |-BinaryOperator 0x56423d7c6b48 <col:25, col:36> 'unsigned int' '*'
+|   | | |     |   | |-ImplicitCastExpr 0x56423d7c6b18 <col:25, col:29> 'unsigned int' <LValueToRValue>
+|   | | |     |   | | `-MemberExpr 0x56423d7c6ac0 <col:25, col:29> 'unsigned int' lvalue ->size 0x56423d7c1db0
+|   | | |     |   | |   `-ImplicitCastExpr 0x56423d7c6aa8 <col:25> 'BN_STACK *' <LValueToRValue>
+|   | | |     |   | |     `-DeclRefExpr 0x56423d7c6a80 <col:25> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | |     |   | `-ImplicitCastExpr 0x56423d7c6b30 <col:36> 'unsigned int' <IntegralCast>
+|   | | |     |   |   `-IntegerLiteral 0x56423d7c6af8 <col:36> 'int' 3
+|   | | |     |   `-ImplicitCastExpr 0x56423d7c6b90 <col:40> 'unsigned int' <IntegralCast>
+|   | | |     |     `-IntegerLiteral 0x56423d7c6b70 <col:40> 'int' 2
+|   | | |     `-ImplicitCastExpr 0x56423d7c6c28 <line:29:33> 'unsigned int' <IntegralCast>
+|   | | |       `-IntegerLiteral 0x56423d7c6bf0 <col:33> 'int' 32
+|   | | |-DeclStmt 0x56423d7c73d0 <line:258:9, col:77>
+|   | | | `-VarDecl 0x56423d7c70c0 <col:9, col:76> col:23 used newitems 'unsigned int *' cinit
+|   | | |   `-ImplicitCastExpr 0x56423d7c73b8 <col:34, col:76> 'unsigned int *' <IntegralToPointer>
+|   | | |     `-CallExpr 0x56423d7c7388 <col:34, col:76> 'int'
+|   | | |       |-ImplicitCastExpr 0x56423d7c7370 <col:34> 'int (*)()' <FunctionToPointerDecay>
+|   | | |       | `-DeclRefExpr 0x56423d7c7210 <col:34> 'int ()' Function 0x56423d7c7148 'OPENSSL_malloc' 'int ()'
+|   | | |       `-BinaryOperator 0x56423d7c7348 <col:49, col:69> 'unsigned long' '*'
+|   | | |         |-UnaryExprOrTypeTraitExpr 0x56423d7c72b8 <col:49, col:65> 'unsigned long' sizeof
+|   | | |         | `-ParenExpr 0x56423d7c7298 <col:55, col:65> 'unsigned int' lvalue
+|   | | |         |   `-UnaryOperator 0x56423d7c7278 <col:56, col:57> 'unsigned int' lvalue prefix '*'
+|   | | |         |     `-ImplicitCastExpr 0x56423d7c7260 <col:57> 'unsigned int *' <LValueToRValue>
+|   | | |         |       `-DeclRefExpr 0x56423d7c7238 <col:57> 'unsigned int *' lvalue Var 0x56423d7c70c0 'newitems' 'unsigned int *'
+|   | | |         `-ImplicitCastExpr 0x56423d7c7330 <col:69> 'unsigned long' <IntegralCast>
+|   | | |           `-ImplicitCastExpr 0x56423d7c7318 <col:69> 'unsigned int' <LValueToRValue>
+|   | | |             `-DeclRefExpr 0x56423d7c72d8 <col:69> 'unsigned int' lvalue Var 0x56423d7c69a8 'newsize' 'unsigned int'
+|   | | |-IfStmt 0x56423d7c7480 <line:259:9, line:260:20>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-OpaqueValueExpr 0x56423d7c7460 <<invalid sloc>> '_Bool'
+|   | | | |-ReturnStmt 0x56423d7c7448 <col:13, col:20>
+|   | | | | `-IntegerLiteral 0x56423d7c7428 <col:20> 'int' 0
+|   | | | `-<<<NULL>>>
+|   | | |-IfStmt 0x56423d7c7b00 <line:261:9, line:262:72>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-ImplicitCastExpr 0x56423d7c7530 <line:261:13, col:17> 'unsigned int' <LValueToRValue>
+|   | | | | `-MemberExpr 0x56423d7c74f8 <col:13, col:17> 'unsigned int' lvalue ->depth 0x56423d7c1d50
+|   | | | |   `-ImplicitCastExpr 0x56423d7c74e0 <col:13> 'BN_STACK *' <LValueToRValue>
+|   | | | |     `-DeclRefExpr 0x56423d7c74b8 <col:13> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | | |-CallExpr 0x56423d7c7a60 <line:262:13, col:72> 'void *'
+|   | | | | |-ImplicitCastExpr 0x56423d7c7a48 <col:13> 'void *(*)(void *, const void *, unsigned long)' <FunctionToPointerDecay>
+|   | | | | | `-DeclRefExpr 0x56423d7c77a0 <col:13> 'void *(void *, const void *, unsigned long)' Function 0x56423d7c75c8 'memcpy' 'void *(void *, const void *, unsigned long)'
+|   | | | | |-ImplicitCastExpr 0x56423d7c7ab8 <col:20> 'void *' <BitCast>
+|   | | | | | `-ImplicitCastExpr 0x56423d7c7aa0 <col:20> 'unsigned int *' <LValueToRValue>
+|   | | | | |   `-DeclRefExpr 0x56423d7c77e0 <col:20> 'unsigned int *' lvalue Var 0x56423d7c70c0 'newitems' 'unsigned int *'
+|   | | | | |-ImplicitCastExpr 0x56423d7c7ae8 <col:30, col:34> 'const void *' <BitCast>
+|   | | | | | `-ImplicitCastExpr 0x56423d7c7ad0 <col:30, col:34> 'unsigned int *' <LValueToRValue>
+|   | | | | |   `-MemberExpr 0x56423d7c7848 <col:30, col:34> 'unsigned int *' lvalue ->indexes 0x56423d7c1cf0
+|   | | | | |     `-ImplicitCastExpr 0x56423d7c7830 <col:30> 'BN_STACK *' <LValueToRValue>
+|   | | | | |       `-DeclRefExpr 0x56423d7c7808 <col:30> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | | | `-BinaryOperator 0x56423d7c79c8 <col:43, col:67> 'unsigned long' '*'
+|   | | | |   |-UnaryExprOrTypeTraitExpr 0x56423d7c7900 <col:43, col:59> 'unsigned long' sizeof
+|   | | | |   | `-ParenExpr 0x56423d7c78e0 <col:49, col:59> 'unsigned int' lvalue
+|   | | | |   |   `-UnaryOperator 0x56423d7c78c0 <col:50, col:51> 'unsigned int' lvalue prefix '*'
+|   | | | |   |     `-ImplicitCastExpr 0x56423d7c78a8 <col:51> 'unsigned int *' <LValueToRValue>
+|   | | | |   |       `-DeclRefExpr 0x56423d7c7880 <col:51> 'unsigned int *' lvalue Var 0x56423d7c70c0 'newitems' 'unsigned int *'
+|   | | | |   `-ImplicitCastExpr 0x56423d7c79b0 <col:63, col:67> 'unsigned long' <IntegralCast>
+|   | | | |     `-ImplicitCastExpr 0x56423d7c7998 <col:63, col:67> 'unsigned int' <LValueToRValue>
+|   | | | |       `-MemberExpr 0x56423d7c7960 <col:63, col:67> 'unsigned int' lvalue ->depth 0x56423d7c1d50
+|   | | | |         `-ImplicitCastExpr 0x56423d7c7948 <col:63> 'BN_STACK *' <LValueToRValue>
+|   | | | |           `-DeclRefExpr 0x56423d7c7920 <col:63> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | | `-<<<NULL>>>
+|   | | |-CallExpr 0x56423d7c7bf0 <line:263:9, col:33> 'int'
+|   | | | |-ImplicitCastExpr 0x56423d7c7bd8 <col:9> 'int (*)()' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x56423d7c7b38 <col:9> 'int ()' Function 0x56423d7c4378 'OPENSSL_free' 'int ()'
+|   | | | `-ImplicitCastExpr 0x56423d7c7c20 <col:22, col:26> 'unsigned int *' <LValueToRValue>
+|   | | |   `-MemberExpr 0x56423d7c7ba0 <col:22, col:26> 'unsigned int *' lvalue ->indexes 0x56423d7c1cf0
+|   | | |     `-ImplicitCastExpr 0x56423d7c7b88 <col:22> 'BN_STACK *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x56423d7c7b60 <col:22> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | |-BinaryOperator 0x56423d7c7cf0 <line:264:9, col:23> 'unsigned int *' '='
+|   | | | |-MemberExpr 0x56423d7c7c78 <col:9, col:13> 'unsigned int *' lvalue ->indexes 0x56423d7c1cf0
+|   | | | | `-ImplicitCastExpr 0x56423d7c7c60 <col:9> 'BN_STACK *' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x56423d7c7c38 <col:9> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | | `-ImplicitCastExpr 0x56423d7c7cd8 <col:23> 'unsigned int *' <LValueToRValue>
+|   | | |   `-DeclRefExpr 0x56423d7c7cb0 <col:23> 'unsigned int *' lvalue Var 0x56423d7c70c0 'newitems' 'unsigned int *'
+|   | | `-BinaryOperator 0x56423d7c7dd0 <line:265:9, col:20> 'unsigned int' '='
+|   | |   |-MemberExpr 0x56423d7c7d58 <col:9, col:13> 'unsigned int' lvalue ->size 0x56423d7c1db0
+|   | |   | `-ImplicitCastExpr 0x56423d7c7d40 <col:9> 'BN_STACK *' <LValueToRValue>
+|   | |   |   `-DeclRefExpr 0x56423d7c7d18 <col:9> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | |   `-ImplicitCastExpr 0x56423d7c7db8 <col:20> 'unsigned int' <LValueToRValue>
+|   | |     `-DeclRefExpr 0x56423d7c7d90 <col:20> 'unsigned int' lvalue Var 0x56423d7c69a8 'newsize' 'unsigned int'
+|   | `-<<<NULL>>>
+|   |-BinaryOperator 0x56423d7c8028 <line:267:5, col:34> 'unsigned int' '='
+|   | |-ArraySubscriptExpr 0x56423d7c7fc0 <col:5, col:30> 'unsigned int' lvalue
+|   | | |-ImplicitCastExpr 0x56423d7c7fa8 <col:5, col:9> 'unsigned int *' <LValueToRValue>
+|   | | | `-MemberExpr 0x56423d7c7eb8 <col:5, col:9> 'unsigned int *' lvalue ->indexes 0x56423d7c1cf0
+|   | | |   `-ImplicitCastExpr 0x56423d7c7ea0 <col:5> 'BN_STACK *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x56423d7c7e78 <col:5> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | | `-UnaryOperator 0x56423d7c7f88 <col:17, col:28> 'unsigned int' postfix '++'
+|   | |   `-ParenExpr 0x56423d7c7f68 <col:17, col:27> 'unsigned int' lvalue
+|   | |     `-MemberExpr 0x56423d7c7f30 <col:18, col:22> 'unsigned int' lvalue ->depth 0x56423d7c1d50
+|   | |       `-ImplicitCastExpr 0x56423d7c7f18 <col:18> 'BN_STACK *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x56423d7c7ef0 <col:18> 'BN_STACK *' lvalue ParmVar 0x56423d7c6658 'st' 'BN_STACK *'
+|   | `-ImplicitCastExpr 0x56423d7c8010 <col:34> 'unsigned int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x56423d7c7fe8 <col:34> 'unsigned int' lvalue ParmVar 0x56423d7c66d0 'idx' 'unsigned int'
+|   `-ReturnStmt 0x56423d7c8090 <line:268:5, col:12>
+|     `-IntegerLiteral 0x56423d7c8070 <col:12> 'int' 1
+|-FunctionDecl 0x56423d7c75c8 <line:262:13> col:13 implicit used memcpy 'void *(void *, const void *, unsigned long)' extern
+| |-ParmVarDecl 0x56423d7c7668 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x56423d7c76c8 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x56423d7c7728 <<invalid sloc>> <invalid sloc> 'unsigned long'
+|-FunctionDecl 0x56423d7c8188 prev 0x56423d7c25e8 <line:271:1, line:274:1> line:271:21 used BN_STACK_pop 'unsigned int (BN_STACK *)' static
+| |-ParmVarDecl 0x56423d7c80e0 <col:34, col:44> col:44 used st 'BN_STACK *'
+| `-CompoundStmt 0x56423d7c8428 <line:272:1, line:274:1>
+|   `-ReturnStmt 0x56423d7c83b8 <line:273:5, col:37>
+|     `-ImplicitCastExpr 0x56423d7c83a0 <col:12, col:37> 'unsigned int' <LValueToRValue>
+|       `-ArraySubscriptExpr 0x56423d7c8378 <col:12, col:37> 'unsigned int' lvalue
+|         |-ImplicitCastExpr 0x56423d7c8360 <col:12, col:16> 'unsigned int *' <LValueToRValue>
+|         | `-MemberExpr 0x56423d7c8270 <col:12, col:16> 'unsigned int *' lvalue ->indexes 0x56423d7c1cf0
+|         |   `-ImplicitCastExpr 0x56423d7c8258 <col:12> 'BN_STACK *' <LValueToRValue>
+|         |     `-DeclRefExpr 0x56423d7c8230 <col:12> 'BN_STACK *' lvalue ParmVar 0x56423d7c80e0 'st' 'BN_STACK *'
+|         `-UnaryOperator 0x56423d7c8340 <col:24, col:36> 'unsigned int' prefix '--'
+|           `-ParenExpr 0x56423d7c8320 <col:26, col:36> 'unsigned int' lvalue
+|             `-MemberExpr 0x56423d7c82e8 <col:27, col:31> 'unsigned int' lvalue ->depth 0x56423d7c1d50
+|               `-ImplicitCastExpr 0x56423d7c82d0 <col:27> 'BN_STACK *' <LValueToRValue>
+|                 `-DeclRefExpr 0x56423d7c82a8 <col:27> 'BN_STACK *' lvalue ParmVar 0x56423d7c80e0 'st' 'BN_STACK *'
+|-FunctionDecl 0x56423d7c84f0 prev 0x56423d7c1430 <line:280:1, line:284:1> line:280:13 used BN_POOL_init 'void (BN_POOL *)' static
+| |-ParmVarDecl 0x56423d7c8450 <col:26, col:35> col:35 used p 'BN_POOL *'
+| |-CompoundStmt 0x56423d7c8878 <line:281:1, line:284:1>
+| | `-BinaryOperator 0x56423d7c8850 <line:283:5, col:25> 'unsigned int' '='
+| |   |-MemberExpr 0x56423d7c8740 <col:5, col:8> 'unsigned int' lvalue ->used 0x56423d7c1138
+| |   | `-ImplicitCastExpr 0x56423d7c8728 <col:5> 'BN_POOL *' <LValueToRValue>
+| |   |   `-DeclRefExpr 0x56423d7c8700 <col:5> 'BN_POOL *' lvalue ParmVar 0x56423d7c8450 'p' 'BN_POOL *'
+| |   `-BinaryOperator 0x56423d7c8828 <col:15, col:25> 'unsigned int' '='
+| |     |-MemberExpr 0x56423d7c87b8 <col:15, col:18> 'unsigned int' lvalue ->size 0x56423d7c1198
+| |     | `-ImplicitCastExpr 0x56423d7c87a0 <col:15> 'BN_POOL *' <LValueToRValue>
+| |     |   `-DeclRefExpr 0x56423d7c8778 <col:15> 'BN_POOL *' lvalue ParmVar 0x56423d7c8450 'p' 'BN_POOL *'
+| |     `-ImplicitCastExpr 0x56423d7c8810 <col:25> 'unsigned int' <IntegralCast>
+| |       `-IntegerLiteral 0x56423d7c87f0 <col:25> 'int' 0
+| `-FullComment 0x56423d7d1d30 <line:278:4, col:11>
+|   `-ParagraphComment 0x56423d7d1d00 <col:4, col:11>
+|     `-TextComment 0x56423d7d1cd0 <col:4, col:11> Text="********"
+|-FunctionDecl 0x56423d7c8940 prev 0x56423d7c15c8 <line:286:1, line:299:1> line:286:13 used BN_POOL_finish 'void (BN_POOL *)' static
+| |-ParmVarDecl 0x56423d7c88a0 <col:28, col:37> col:37 used p 'BN_POOL *'
+| `-CompoundStmt 0x56423d7c9ea0 <line:287:1, line:299:1>
+|   |-DeclStmt 0x56423d7c8a60 <line:288:5, col:22>
+|   | `-VarDecl 0x56423d7c8a00 <col:5, col:18> col:18 used loop 'unsigned int'
+|   `-WhileStmt 0x56423d7c9e80 <line:291:5, line:298:5>
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x56423d7c8af0 <line:291:12, col:15> 'BN_POOL_ITEM *' <LValueToRValue>
+|     | `-MemberExpr 0x56423d7c8ab8 <col:12, col:15> 'BN_POOL_ITEM *' lvalue ->head 0x56423d7c1028
+|     |   `-ImplicitCastExpr 0x56423d7c8aa0 <col:12> 'BN_POOL *' <LValueToRValue>
+|     |     `-DeclRefExpr 0x56423d7c8a78 <col:12> 'BN_POOL *' lvalue ParmVar 0x56423d7c88a0 'p' 'BN_POOL *'
+|     `-CompoundStmt 0x56423d7c9e58 <col:21, line:298:5>
+|       |-BinaryOperator 0x56423d7c8f50 <line:295:9, col:31> 'BN_POOL_ITEM *' '='
+|       | |-MemberExpr 0x56423d7c8e38 <col:9, col:12> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+|       | | `-ImplicitCastExpr 0x56423d7c8e20 <col:9> 'BN_POOL *' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x56423d7c8df8 <col:9> 'BN_POOL *' lvalue ParmVar 0x56423d7c88a0 'p' 'BN_POOL *'
+|       | `-ImplicitCastExpr 0x56423d7c8f38 <col:22, col:31> 'struct bignum_pool_item *' <LValueToRValue>
+|       |   `-MemberExpr 0x56423d7c8f00 <col:22, col:31> 'struct bignum_pool_item *' lvalue ->next 0x56423d7c0e30
+|       |     `-ImplicitCastExpr 0x56423d7c8ee8 <col:22, col:25> 'BN_POOL_ITEM *' <LValueToRValue>
+|       |       `-MemberExpr 0x56423d7c8eb0 <col:22, col:25> 'BN_POOL_ITEM *' lvalue ->head 0x56423d7c1028
+|       |         `-ImplicitCastExpr 0x56423d7c8e98 <col:22> 'BN_POOL *' <LValueToRValue>
+|       |           `-DeclRefExpr 0x56423d7c8e70 <col:22> 'BN_POOL *' lvalue ParmVar 0x56423d7c88a0 'p' 'BN_POOL *'
+|       |-CallExpr 0x56423d7c9030 <line:296:9, col:29> 'int'
+|       | |-ImplicitCastExpr 0x56423d7c9018 <col:9> 'int (*)()' <FunctionToPointerDecay>
+|       | | `-DeclRefExpr 0x56423d7c8f78 <col:9> 'int ()' Function 0x56423d7c4378 'OPENSSL_free' 'int ()'
+|       | `-ImplicitCastExpr 0x56423d7c9d10 <col:22, col:25> 'BN_POOL_ITEM *' <LValueToRValue>
+|       |   `-MemberExpr 0x56423d7c8fe0 <col:22, col:25> 'BN_POOL_ITEM *' lvalue ->head 0x56423d7c1028
+|       |     `-ImplicitCastExpr 0x56423d7c8fc8 <col:22> 'BN_POOL *' <LValueToRValue>
+|       |       `-DeclRefExpr 0x56423d7c8fa0 <col:22> 'BN_POOL *' lvalue ParmVar 0x56423d7c88a0 'p' 'BN_POOL *'
+|       `-BinaryOperator 0x56423d7c9e30 <line:297:9, col:22> 'BN_POOL_ITEM *' '='
+|         |-MemberExpr 0x56423d7c9d68 <col:9, col:12> 'BN_POOL_ITEM *' lvalue ->head 0x56423d7c1028
+|         | `-ImplicitCastExpr 0x56423d7c9d50 <col:9> 'BN_POOL *' <LValueToRValue>
+|         |   `-DeclRefExpr 0x56423d7c9d28 <col:9> 'BN_POOL *' lvalue ParmVar 0x56423d7c88a0 'p' 'BN_POOL *'
+|         `-ImplicitCastExpr 0x56423d7c9e18 <col:19, col:22> 'BN_POOL_ITEM *' <LValueToRValue>
+|           `-MemberExpr 0x56423d7c9de0 <col:19, col:22> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+|             `-ImplicitCastExpr 0x56423d7c9dc8 <col:19> 'BN_POOL *' <LValueToRValue>
+|               `-DeclRefExpr 0x56423d7c9da0 <col:19> 'BN_POOL *' lvalue ParmVar 0x56423d7c88a0 'p' 'BN_POOL *'
+|-FunctionDecl 0x56423d7ca010 <line:302:1, line:338:1> line:302:16 invalid BN_POOL_get 'int *(BN_POOL *, int)' static
+| |-ParmVarDecl 0x56423d7c9ed0 <col:28, col:37> col:37 used p 'BN_POOL *'
+| |-ParmVarDecl 0x56423d7c9f48 <col:40, col:44> col:44 used flag 'int'
+| `-CompoundStmt 0x56423d7d0a08 <line:303:1, line:338:1>
+|   |-DeclStmt 0x56423d7ca150 <line:305:5, col:22>
+|   | `-VarDecl 0x56423d7ca0f0 <col:5, col:18> col:18 used loop 'unsigned int'
+|   |-IfStmt 0x56423d7d02c8 <line:308:5, line:331:5>
+|   | |-<<<NULL>>>
+|   | |-<<<NULL>>>
+|   | |-BinaryOperator 0x56423d7ca288 <line:308:9, col:23> 'int' '=='
+|   | | |-ImplicitCastExpr 0x56423d7ca258 <col:9, col:12> 'unsigned int' <LValueToRValue>
+|   | | | `-MemberExpr 0x56423d7ca1a8 <col:9, col:12> 'unsigned int' lvalue ->used 0x56423d7c1138
+|   | | |   `-ImplicitCastExpr 0x56423d7ca190 <col:9> 'BN_POOL *' <LValueToRValue>
+|   | | |     `-DeclRefExpr 0x56423d7ca168 <col:9> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | `-ImplicitCastExpr 0x56423d7ca270 <col:20, col:23> 'unsigned int' <LValueToRValue>
+|   | |   `-MemberExpr 0x56423d7ca220 <col:20, col:23> 'unsigned int' lvalue ->size 0x56423d7c1198
+|   | |     `-ImplicitCastExpr 0x56423d7ca208 <col:20> 'BN_POOL *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x56423d7ca1e0 <col:20> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | |-CompoundStmt 0x56423d7d0288 <col:29, line:331:5>
+|   | | |-DeclStmt 0x56423d7ca448 <line:309:9, col:59>
+|   | | | `-VarDecl 0x56423d7ca2c0 <col:9, col:58> col:23 used item 'BN_POOL_ITEM *' cinit
+|   | | |   `-ImplicitCastExpr 0x56423d7ca430 <col:30, col:58> 'BN_POOL_ITEM *' <IntegralToPointer>
+|   | | |     `-CallExpr 0x56423d7ca400 <col:30, col:58> 'int'
+|   | | |       |-ImplicitCastExpr 0x56423d7ca3e8 <col:30> 'int (*)()' <FunctionToPointerDecay>
+|   | | |       | `-DeclRefExpr 0x56423d7ca320 <col:30> 'int ()' Function 0x56423d7c7148 'OPENSSL_malloc' 'int ()'
+|   | | |       `-UnaryExprOrTypeTraitExpr 0x56423d7ca3c8 <col:45, col:57> 'unsigned long' sizeof
+|   | | |         `-ParenExpr 0x56423d7ca3a8 <col:51, col:57> 'BN_POOL_ITEM':'struct bignum_pool_item' lvalue
+|   | | |           `-UnaryOperator 0x56423d7ca388 <col:52, col:53> 'BN_POOL_ITEM':'struct bignum_pool_item' lvalue prefix '*'
+|   | | |             `-ImplicitCastExpr 0x56423d7ca370 <col:53> 'BN_POOL_ITEM *' <LValueToRValue>
+|   | | |               `-DeclRefExpr 0x56423d7ca348 <col:53> 'BN_POOL_ITEM *' lvalue Var 0x56423d7ca2c0 'item' 'BN_POOL_ITEM *'
+|   | | |-ForStmt 0x56423d7ca8b0 <line:312:9, line:316:9>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-BinaryOperator 0x56423d7ca600 <line:312:41, line:27:33> 'int' '<'
+|   | | | | |-UnaryOperator 0x56423d7ca5a8 <line:312:41, col:45> 'unsigned int' postfix '++'
+|   | | | | | `-DeclRefExpr 0x56423d7ca580 <col:41> 'unsigned int' lvalue Var 0x56423d7ca0f0 'loop' 'unsigned int'
+|   | | | | `-ImplicitCastExpr 0x56423d7ca5e8 <line:27:33> 'unsigned int' <IntegralCast>
+|   | | | |   `-IntegerLiteral 0x56423d7ca5c8 <col:33> 'int' 16
+|   | | | |-<<<NULL>>>
+|   | | | `-CompoundStmt 0x56423d7ca8a0 <line:312:74, line:316:9>
+|   | | |-BinaryOperator 0x56423d7ca9f0 <line:317:9, col:25> 'struct bignum_pool_item *' '='
+|   | | | |-MemberExpr 0x56423d7ca928 <col:9, col:15> 'struct bignum_pool_item *' lvalue ->prev 0x56423d7c0dc0
+|   | | | | `-ImplicitCastExpr 0x56423d7ca910 <col:9> 'BN_POOL_ITEM *' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x56423d7ca8e8 <col:9> 'BN_POOL_ITEM *' lvalue Var 0x56423d7ca2c0 'item' 'BN_POOL_ITEM *'
+|   | | | `-ImplicitCastExpr 0x56423d7ca9d8 <col:22, col:25> 'BN_POOL_ITEM *' <LValueToRValue>
+|   | | |   `-MemberExpr 0x56423d7ca9a0 <col:22, col:25> 'BN_POOL_ITEM *' lvalue ->tail 0x56423d7c10d8
+|   | | |     `-ImplicitCastExpr 0x56423d7ca988 <col:22> 'BN_POOL *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x56423d7ca960 <col:22> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | |-IfStmt 0x56423d7d0090 <line:320:9, line:326:9>
+|   | | | |-<<<NULL>>>
+|   | | | |-<<<NULL>>>
+|   | | | |-OpaqueValueExpr 0x56423d7d0070 <<invalid sloc>> '_Bool'
+|   | | | |-BinaryOperator 0x56423d7cfd30 <line:321:13, col:46> 'BN_POOL_ITEM *' '='
+|   | | | | |-MemberExpr 0x56423d7cab48 <col:13, col:16> 'BN_POOL_ITEM *' lvalue ->head 0x56423d7c1028
+|   | | | | | `-ImplicitCastExpr 0x56423d7cab30 <col:13> 'BN_POOL *' <LValueToRValue>
+|   | | | | |   `-DeclRefExpr 0x56423d7cab08 <col:13> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | | | `-BinaryOperator 0x56423d7cacd8 <col:23, col:46> 'BN_POOL_ITEM *' '='
+|   | | | |   |-MemberExpr 0x56423d7cabc0 <col:23, col:26> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+|   | | | |   | `-ImplicitCastExpr 0x56423d7caba8 <col:23> 'BN_POOL *' <LValueToRValue>
+|   | | | |   |   `-DeclRefExpr 0x56423d7cab80 <col:23> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | | |   `-BinaryOperator 0x56423d7cacb0 <col:36, col:46> 'BN_POOL_ITEM *' '='
+|   | | | |     |-MemberExpr 0x56423d7cac38 <col:36, col:39> 'BN_POOL_ITEM *' lvalue ->tail 0x56423d7c10d8
+|   | | | |     | `-ImplicitCastExpr 0x56423d7cac20 <col:36> 'BN_POOL *' <LValueToRValue>
+|   | | | |     |   `-DeclRefExpr 0x56423d7cabf8 <col:36> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | | |     `-ImplicitCastExpr 0x56423d7cac98 <col:46> 'BN_POOL_ITEM *' <LValueToRValue>
+|   | | | |       `-DeclRefExpr 0x56423d7cac70 <col:46> 'BN_POOL_ITEM *' lvalue Var 0x56423d7ca2c0 'item' 'BN_POOL_ITEM *'
+|   | | | `-CompoundStmt 0x56423d7d0048 <line:322:14, line:326:9>
+|   | | |   |-BinaryOperator 0x56423d7cfe60 <line:323:13, col:29> 'struct bignum_pool_item *' '='
+|   | | |   | |-MemberExpr 0x56423d7cfde8 <col:13, col:22> 'struct bignum_pool_item *' lvalue ->next 0x56423d7c0e30
+|   | | |   | | `-ImplicitCastExpr 0x56423d7cfdd0 <col:13, col:16> 'BN_POOL_ITEM *' <LValueToRValue>
+|   | | |   | |   `-MemberExpr 0x56423d7cfd98 <col:13, col:16> 'BN_POOL_ITEM *' lvalue ->tail 0x56423d7c10d8
+|   | | |   | |     `-ImplicitCastExpr 0x56423d7cfd80 <col:13> 'BN_POOL *' <LValueToRValue>
+|   | | |   | |       `-DeclRefExpr 0x56423d7cfd58 <col:13> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | |   | `-ImplicitCastExpr 0x56423d7cfe48 <col:29> 'BN_POOL_ITEM *' <LValueToRValue>
+|   | | |   |   `-DeclRefExpr 0x56423d7cfe20 <col:29> 'BN_POOL_ITEM *' lvalue Var 0x56423d7ca2c0 'item' 'BN_POOL_ITEM *'
+|   | | |   |-BinaryOperator 0x56423d7cff40 <line:324:13, col:23> 'BN_POOL_ITEM *' '='
+|   | | |   | |-MemberExpr 0x56423d7cfec8 <col:13, col:16> 'BN_POOL_ITEM *' lvalue ->tail 0x56423d7c10d8
+|   | | |   | | `-ImplicitCastExpr 0x56423d7cfeb0 <col:13> 'BN_POOL *' <LValueToRValue>
+|   | | |   | |   `-DeclRefExpr 0x56423d7cfe88 <col:13> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | |   | `-ImplicitCastExpr 0x56423d7cff28 <col:23> 'BN_POOL_ITEM *' <LValueToRValue>
+|   | | |   |   `-DeclRefExpr 0x56423d7cff00 <col:23> 'BN_POOL_ITEM *' lvalue Var 0x56423d7ca2c0 'item' 'BN_POOL_ITEM *'
+|   | | |   `-BinaryOperator 0x56423d7d0020 <line:325:13, col:26> 'BN_POOL_ITEM *' '='
+|   | | |     |-MemberExpr 0x56423d7cffa8 <col:13, col:16> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+|   | | |     | `-ImplicitCastExpr 0x56423d7cff90 <col:13> 'BN_POOL *' <LValueToRValue>
+|   | | |     |   `-DeclRefExpr 0x56423d7cff68 <col:13> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | |     `-ImplicitCastExpr 0x56423d7d0008 <col:26> 'BN_POOL_ITEM *' <LValueToRValue>
+|   | | |       `-DeclRefExpr 0x56423d7cffe0 <col:26> 'BN_POOL_ITEM *' lvalue Var 0x56423d7ca2c0 'item' 'BN_POOL_ITEM *'
+|   | | |-CompoundAssignOperator 0x56423d7d0178 <line:327:9, line:27:33> 'unsigned int' '+=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+|   | | | |-MemberExpr 0x56423d7d0108 <line:327:9, col:12> 'unsigned int' lvalue ->size 0x56423d7c1198
+|   | | | | `-ImplicitCastExpr 0x56423d7d00f0 <col:9> 'BN_POOL *' <LValueToRValue>
+|   | | | |   `-DeclRefExpr 0x56423d7d00c8 <col:9> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | | | `-ImplicitCastExpr 0x56423d7d0160 <line:27:33> 'unsigned int' <IntegralCast>
+|   | | |   `-IntegerLiteral 0x56423d7d0140 <col:33> 'int' 16
+|   | | `-UnaryOperator 0x56423d7d0228 <line:328:9, col:16> 'unsigned int' postfix '++'
+|   | |   `-MemberExpr 0x56423d7d01f0 <col:9, col:12> 'unsigned int' lvalue ->used 0x56423d7c1138
+|   | |     `-ImplicitCastExpr 0x56423d7d01d8 <col:9> 'BN_POOL *' <LValueToRValue>
+|   | |       `-DeclRefExpr 0x56423d7d01b0 <col:9> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|   | `-<<<NULL>>>
+|   `-IfStmt 0x56423d7d0808 <line:333:5, line:336:34>
+|     |-<<<NULL>>>
+|     |-<<<NULL>>>
+|     |-UnaryOperator 0x56423d7d0390 <line:333:9, col:13> 'int' prefix '!'
+|     | `-ImplicitCastExpr 0x56423d7d0378 <col:10, col:13> 'unsigned int' <LValueToRValue>
+|     |   `-MemberExpr 0x56423d7d0340 <col:10, col:13> 'unsigned int' lvalue ->used 0x56423d7c1138
+|     |     `-ImplicitCastExpr 0x56423d7d0328 <col:10> 'BN_POOL *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x56423d7d0300 <col:10> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|     |-BinaryOperator 0x56423d7d04b8 <line:334:9, col:25> 'BN_POOL_ITEM *' '='
+|     | |-MemberExpr 0x56423d7d03f0 <col:9, col:12> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+|     | | `-ImplicitCastExpr 0x56423d7d03d8 <col:9> 'BN_POOL *' <LValueToRValue>
+|     | |   `-DeclRefExpr 0x56423d7d03b0 <col:9> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|     | `-ImplicitCastExpr 0x56423d7d04a0 <col:22, col:25> 'BN_POOL_ITEM *' <LValueToRValue>
+|     |   `-MemberExpr 0x56423d7d0468 <col:22, col:25> 'BN_POOL_ITEM *' lvalue ->head 0x56423d7c1028
+|     |     `-ImplicitCastExpr 0x56423d7d0450 <col:22> 'BN_POOL *' <LValueToRValue>
+|     |       `-DeclRefExpr 0x56423d7d0428 <col:22> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|     `-IfStmt 0x56423d7d07d0 <line:335:10, line:336:34>
+|       |-<<<NULL>>>
+|       |-<<<NULL>>>
+|       |-BinaryOperator 0x56423d7d0628 <line:335:14, col:46> 'int' '=='
+|       | |-ParenExpr 0x56423d7d05d0 <col:14, col:41> 'unsigned int'
+|       | | `-BinaryOperator 0x56423d7d05a8 <col:15, line:27:33> 'unsigned int' '%'
+|       | |   |-ImplicitCastExpr 0x56423d7d0578 <line:335:15, col:18> 'unsigned int' <LValueToRValue>
+|       | |   | `-MemberExpr 0x56423d7d0520 <col:15, col:18> 'unsigned int' lvalue ->used 0x56423d7c1138
+|       | |   |   `-ImplicitCastExpr 0x56423d7d0508 <col:15> 'BN_POOL *' <LValueToRValue>
+|       | |   |     `-DeclRefExpr 0x56423d7d04e0 <col:15> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|       | |   `-ImplicitCastExpr 0x56423d7d0590 <line:27:33> 'unsigned int' <IntegralCast>
+|       | |     `-IntegerLiteral 0x56423d7d0558 <col:33> 'int' 16
+|       | `-ImplicitCastExpr 0x56423d7d0610 <line:335:46> 'unsigned int' <IntegralCast>
+|       |   `-IntegerLiteral 0x56423d7d05f0 <col:46> 'int' 0
+|       |-BinaryOperator 0x56423d7d07a8 <line:336:9, col:34> 'BN_POOL_ITEM *' '='
+|       | |-MemberExpr 0x56423d7d0690 <col:9, col:12> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+|       | | `-ImplicitCastExpr 0x56423d7d0678 <col:9> 'BN_POOL *' <LValueToRValue>
+|       | |   `-DeclRefExpr 0x56423d7d0650 <col:9> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|       | `-ImplicitCastExpr 0x56423d7d0790 <col:22, col:34> 'struct bignum_pool_item *' <LValueToRValue>
+|       |   `-MemberExpr 0x56423d7d0758 <col:22, col:34> 'struct bignum_pool_item *' lvalue ->next 0x56423d7c0e30
+|       |     `-ImplicitCastExpr 0x56423d7d0740 <col:22, col:25> 'BN_POOL_ITEM *' <LValueToRValue>
+|       |       `-MemberExpr 0x56423d7d0708 <col:22, col:25> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+|       |         `-ImplicitCastExpr 0x56423d7d06f0 <col:22> 'BN_POOL *' <LValueToRValue>
+|       |           `-DeclRefExpr 0x56423d7d06c8 <col:22> 'BN_POOL *' lvalue ParmVar 0x56423d7c9ed0 'p' 'BN_POOL *'
+|       `-<<<NULL>>>
+`-FunctionDecl 0x56423d7d0b78 prev 0x56423d7c1aa0 <line:340:1, line:353:1> line:340:13 used BN_POOL_release 'void (BN_POOL *, unsigned int)' static
+  |-ParmVarDecl 0x56423d7d0a40 <col:29, col:38> col:38 used p 'BN_POOL *'
+  |-ParmVarDecl 0x56423d7d0ab8 <col:41, col:54> col:54 used num 'unsigned int'
+  `-CompoundStmt 0x56423d7d16a8 <line:341:1, line:353:1>
+    |-DeclStmt 0x56423d7d0fa8 <line:342:5, col:59>
+    | `-VarDecl 0x56423d7d0c40 <col:5, line:27:33> line:342:18 used offset 'unsigned int' cinit
+    |   `-BinaryOperator 0x56423d7d0f80 <col:27, line:27:33> 'unsigned int' '%'
+    |     |-ParenExpr 0x56423d7d0f28 <line:342:27, col:39> 'unsigned int'
+    |     | `-BinaryOperator 0x56423d7d0f00 <col:28, col:38> 'unsigned int' '-'
+    |     |   |-ImplicitCastExpr 0x56423d7d0ed0 <col:28, col:31> 'unsigned int' <LValueToRValue>
+    |     |   | `-MemberExpr 0x56423d7d0ce0 <col:28, col:31> 'unsigned int' lvalue ->used 0x56423d7c1138
+    |     |   |   `-ImplicitCastExpr 0x56423d7d0cc8 <col:28> 'BN_POOL *' <LValueToRValue>
+    |     |   |     `-DeclRefExpr 0x56423d7d0ca0 <col:28> 'BN_POOL *' lvalue ParmVar 0x56423d7d0a40 'p' 'BN_POOL *'
+    |     |   `-ImplicitCastExpr 0x56423d7d0ee8 <col:38> 'unsigned int' <IntegralCast>
+    |     |     `-IntegerLiteral 0x56423d7d0eb0 <col:38> 'int' 1
+    |     `-ImplicitCastExpr 0x56423d7d0f68 <line:27:33> 'unsigned int' <IntegralCast>
+    |       `-IntegerLiteral 0x56423d7d0f48 <col:33> 'int' 16
+    |-CompoundAssignOperator 0x56423d7d1078 <line:344:5, col:16> 'unsigned int' '-=' ComputeLHSTy='unsigned int' ComputeResultTy='unsigned int'
+    | |-MemberExpr 0x56423d7d1000 <col:5, col:8> 'unsigned int' lvalue ->used 0x56423d7c1138
+    | | `-ImplicitCastExpr 0x56423d7d0fe8 <col:5> 'BN_POOL *' <LValueToRValue>
+    | |   `-DeclRefExpr 0x56423d7d0fc0 <col:5> 'BN_POOL *' lvalue ParmVar 0x56423d7d0a40 'p' 'BN_POOL *'
+    | `-ImplicitCastExpr 0x56423d7d1060 <col:16> 'unsigned int' <LValueToRValue>
+    |   `-DeclRefExpr 0x56423d7d1038 <col:16> 'unsigned int' lvalue ParmVar 0x56423d7d0ab8 'num' 'unsigned int'
+    `-WhileStmt 0x56423d7d1688 <line:345:5, line:352:5>
+      |-<<<NULL>>>
+      |-UnaryOperator 0x56423d7d10d8 <line:345:12, col:15> 'unsigned int' postfix '--'
+      | `-DeclRefExpr 0x56423d7d10b0 <col:12> 'unsigned int' lvalue ParmVar 0x56423d7d0ab8 'num' 'unsigned int'
+      `-CompoundStmt 0x56423d7d1670 <col:19, line:352:5>
+        `-IfStmt 0x56423d7d1638 <line:347:9, line:351:19>
+          |-<<<NULL>>>
+          |-<<<NULL>>>
+          |-BinaryOperator 0x56423d7d1358 <line:347:13, col:23> 'int' '=='
+          | |-ImplicitCastExpr 0x56423d7d1328 <col:13> 'unsigned int' <LValueToRValue>
+          | | `-DeclRefExpr 0x56423d7d12e0 <col:13> 'unsigned int' lvalue Var 0x56423d7d0c40 'offset' 'unsigned int'
+          | `-ImplicitCastExpr 0x56423d7d1340 <col:23> 'unsigned int' <IntegralCast>
+          |   `-IntegerLiteral 0x56423d7d1308 <col:23> 'int' 0
+          |-CompoundStmt 0x56423d7d15d0 <col:26, line:350:9>
+          | |-BinaryOperator 0x56423d7d1428 <line:348:13, col:41> 'unsigned int' '='
+          | | |-DeclRefExpr 0x56423d7d1380 <col:13> 'unsigned int' lvalue Var 0x56423d7d0c40 'offset' 'unsigned int'
+          | | `-ImplicitCastExpr 0x56423d7d1410 <line:27:33, line:348:41> 'unsigned int' <IntegralCast>
+          | |   `-BinaryOperator 0x56423d7d13e8 <line:27:33, line:348:41> 'int' '-'
+          | |     |-IntegerLiteral 0x56423d7d13a8 <line:27:33> 'int' 16
+          | |     `-IntegerLiteral 0x56423d7d13c8 <line:348:41> 'int' 1
+          | `-BinaryOperator 0x56423d7d15a8 <line:349:13, col:38> 'BN_POOL_ITEM *' '='
+          |   |-MemberExpr 0x56423d7d1490 <col:13, col:16> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+          |   | `-ImplicitCastExpr 0x56423d7d1478 <col:13> 'BN_POOL *' <LValueToRValue>
+          |   |   `-DeclRefExpr 0x56423d7d1450 <col:13> 'BN_POOL *' lvalue ParmVar 0x56423d7d0a40 'p' 'BN_POOL *'
+          |   `-ImplicitCastExpr 0x56423d7d1590 <col:26, col:38> 'struct bignum_pool_item *' <LValueToRValue>
+          |     `-MemberExpr 0x56423d7d1558 <col:26, col:38> 'struct bignum_pool_item *' lvalue ->prev 0x56423d7c0dc0
+          |       `-ImplicitCastExpr 0x56423d7d1540 <col:26, col:29> 'BN_POOL_ITEM *' <LValueToRValue>
+          |         `-MemberExpr 0x56423d7d1508 <col:26, col:29> 'BN_POOL_ITEM *' lvalue ->current 0x56423d7c1080
+          |           `-ImplicitCastExpr 0x56423d7d14f0 <col:26> 'BN_POOL *' <LValueToRValue>
+          |             `-DeclRefExpr 0x56423d7d14c8 <col:26> 'BN_POOL *' lvalue ParmVar 0x56423d7d0a40 'p' 'BN_POOL *'
+          `-UnaryOperator 0x56423d7d1618 <line:351:13, col:19> 'unsigned int' postfix '--'
+            `-DeclRefExpr 0x56423d7d15f0 <col:13> 'unsigned int' lvalue Var 0x56423d7d0c40 'offset' 'unsigned int'
+

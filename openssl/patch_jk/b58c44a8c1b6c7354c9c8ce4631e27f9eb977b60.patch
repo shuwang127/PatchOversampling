@@ -1,0 +1,38 @@
+From b58c44a8c1b6c7354c9c8ce4631e27f9eb977b60 Mon Sep 17 00:00:00 2001
+From: Andy Polyakov <appro@openssl.org>
+Date: Fri, 14 Sep 2018 12:17:43 +0200
+Subject: [PATCH] rsa/rsa_ossl.c: make RSAerr call in rsa_ossl_private_decrypt
+ unconditional.
+
+Reviewed-by: Richard Levitte <levitte@openssl.org>
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(cherry picked from commit 89072e0c2a483f2ad678e723e112712567b0ceb1)
+
+(Merged from https://github.com/openssl/openssl/pull/7735)
+---
+ crypto/rsa/rsa_ossl.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/crypto/rsa/rsa_ossl.c b/crypto/rsa/rsa_ossl.c
+index a485c7ef47f7..ed77fadcba58 100644
+--- a/crypto/rsa/rsa_ossl.c
++++ b/crypto/rsa/rsa_ossl.c
+@@ -10,6 +10,7 @@
+ #include "internal/cryptlib.h"
+ #include "internal/bn_int.h"
+ #include "rsa_locl.h"
++#include "internal/constant_time_locl.h"
+ 
+ static int rsa_ossl_public_encrypt(int flen, const unsigned char *from,
+                                   unsigned char *to, RSA *rsa, int padding);
+@@ -470,8 +471,8 @@ static int rsa_ossl_private_decrypt(int flen, const unsigned char *from,
+         RSAerr(RSA_F_RSA_OSSL_PRIVATE_DECRYPT, RSA_R_UNKNOWN_PADDING_TYPE);
+         goto err;
+     }
+-    if (r < 0)
+-        RSAerr(RSA_F_RSA_OSSL_PRIVATE_DECRYPT, RSA_R_PADDING_CHECK_FAILED);
++    RSAerr(RSA_F_RSA_OSSL_PRIVATE_DECRYPT, RSA_R_PADDING_CHECK_FAILED);
++    err_clear_last_constant_time(r >= 0);
+ 
+  err:
+     if (ctx != NULL)

@@ -1,0 +1,73 @@
+From 0fbe8491fc05d280a1f00bfc26dd3c3a6c63f04a Mon Sep 17 00:00:00 2001
+From: Matt Caswell <matt@openssl.org>
+Date: Tue, 20 Nov 2018 13:42:16 +0000
+Subject: [PATCH] Prepare for 1.1.0k-dev
+
+Reviewed-by: Richard Levitte <levitte@openssl.org>
+---
+ CHANGES                    | 4 ++++
+ NEWS                       | 4 ++++
+ README                     | 2 +-
+ include/openssl/opensslv.h | 6 +++---
+ 4 files changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/CHANGES b/CHANGES
+index cf76704d15cd..60c0dd119ff3 100644
+--- a/CHANGES
++++ b/CHANGES
+@@ -7,6 +7,10 @@
+  https://github.com/openssl/openssl/commits/ and pick the appropriate
+  release branch.
+ 
++ Changes between 1.1.0j and 1.1.0k [xx XXX xxxx]
++
++  *)
++
+  Changes between 1.1.0i and 1.1.0j [20 Nov 2018]
+ 
+   *) Timing vulnerability in DSA signature generation
+diff --git a/NEWS b/NEWS
+index 983fceb2bbe7..188e9aa0b30c 100644
+--- a/NEWS
++++ b/NEWS
+@@ -5,6 +5,10 @@
+   This file gives a brief overview of the major changes between each OpenSSL
+   release. For more details please read the CHANGES file.
+ 
++  Major changes between OpenSSL 1.1.0j and OpenSSL 1.1.0k [under development]
++
++      o
++
+   Major changes between OpenSSL 1.1.0i and OpenSSL 1.1.0j [20 Nov 2018]
+ 
+       o Timing vulnerability in DSA signature generation (CVE-2018-0734)
+diff --git a/README b/README
+index 469470190970..51828a76001e 100644
+--- a/README
++++ b/README
+@@ -1,5 +1,5 @@
+ 
+- OpenSSL 1.1.0j 20 Nov 2018
++ OpenSSL 1.1.0k-dev
+ 
+  Copyright (c) 1998-2018 The OpenSSL Project
+  Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson
+diff --git a/include/openssl/opensslv.h b/include/openssl/opensslv.h
+index 49f3c0a780a0..0e2992eb6363 100644
+--- a/include/openssl/opensslv.h
++++ b/include/openssl/opensslv.h
+@@ -39,11 +39,11 @@ extern "C" {
+  * (Prior to 0.9.5a beta1, a different scheme was used: MMNNFFRBB for
+  *  major minor fix final patch/beta)
+  */
+-# define OPENSSL_VERSION_NUMBER  0x101000afL
++# define OPENSSL_VERSION_NUMBER  0x101000b0L
+ # ifdef OPENSSL_FIPS
+-#  define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.0j-fips  20 Nov 2018"
++#  define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.0k-fips-dev  xx XXX xxxx"
+ # else
+-#  define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.0j  20 Nov 2018"
++#  define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.0k-dev  xx XXX xxxx"
+ # endif
+ 
+ /*-

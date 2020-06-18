@@ -1,0 +1,74 @@
+From 0ba39c87aa386db3a97be9e11c77aac94176a2fa Mon Sep 17 00:00:00 2001
+From: Andy Polyakov <appro@openssl.org>
+Date: Sat, 1 Sep 2018 12:19:30 +0200
+Subject: [PATCH] err/err.c: add err_clear_last_constant_time.
+
+Expected usage pattern is to unconditionally set error and then
+wipe it if there was no actual error.
+
+Reviewed-by: Richard Levitte <levitte@openssl.org>
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(cherry picked from commit f658a3b64d8750642f4975090740865f770c2a1b)
+
+Resolved conflicts:
+	crypto/err/err.c
+
+(Merged from https://github.com/openssl/openssl/pull/7735)
+---
+ crypto/err/err.c                      | 21 +++++++++++++++++++++
+ include/internal/constant_time_locl.h |  6 ++++++
+ 2 files changed, 27 insertions(+)
+
+diff --git a/crypto/err/err.c b/crypto/err/err.c
+index 08c27a3e8385..638cbf235b46 100644
+--- a/crypto/err/err.c
++++ b/crypto/err/err.c
+@@ -19,6 +19,7 @@
+ #include <openssl/bio.h>
+ #include <openssl/opensslconf.h>
+ #include <internal/thread_once.h>
++#include "internal/constant_time_locl.h"
+ 
+ static void err_load_strings(int lib, ERR_STRING_DATA *str);
+ 
+@@ -822,3 +823,23 @@ int ERR_pop_to_mark(void)
+     es->err_flags[es->top] &= ~ERR_FLAG_MARK;
+     return 1;
+ }
++
++void err_clear_last_constant_time(int clear)
++{
++    ERR_STATE *es;
++    int top;
++
++    es = ERR_get_state();
++    if (es == NULL)
++        return;
++
++    top = es->top;
++
++    es->err_flags[top] &= ~(0 - clear);
++    es->err_buffer[top] &= ~(0UL - clear);
++    es->err_file[top] = (const char *)((uintptr_t)es->err_file[top] &
++                                       ~((uintptr_t)0 - clear));
++    es->err_line[top] |= 0 - clear;
++
++    es->top = (top + ERR_NUM_ERRORS - clear) % ERR_NUM_ERRORS;
++}
+diff --git a/include/internal/constant_time_locl.h b/include/internal/constant_time_locl.h
+index d27fb14c806d..18d2f5682525 100644
+--- a/include/internal/constant_time_locl.h
++++ b/include/internal/constant_time_locl.h
+@@ -178,6 +178,12 @@ static ossl_inline int constant_time_select_int(unsigned int mask, int a,
+     return (int)(constant_time_select(mask, (unsigned)(a), (unsigned)(b)));
+ }
+ 
++/*
++ * Expected usage pattern is to unconditionally set error and then
++ * wipe it if there was no actual error. |clear| is 1 or 0.
++ */
++void err_clear_last_constant_time(int clear);
++
+ #ifdef __cplusplus
+ }
+ #endif

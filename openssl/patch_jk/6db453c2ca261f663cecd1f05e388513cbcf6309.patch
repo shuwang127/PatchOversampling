@@ -1,0 +1,67 @@
+From 6db453c2ca261f663cecd1f05e388513cbcf6309 Mon Sep 17 00:00:00 2001
+From: Richard Levitte <levitte@openssl.org>
+Date: Mon, 27 May 2019 21:34:05 +0200
+Subject: [PATCH] Add CHANGES and NEWS for 1.1.0k
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/9018)
+---
+ CHANGES | 31 +++++++++++++++++++++++++++++++
+ NEWS    |  2 +-
+ 2 files changed, 32 insertions(+), 1 deletion(-)
+
+diff --git a/CHANGES b/CHANGES
+index de7a8a7a6525..fb7d91843b87 100644
+--- a/CHANGES
++++ b/CHANGES
+@@ -15,6 +15,37 @@
+      generation apps to use 2048 bits by default.
+      [Kurt Roeckx]
+ 
++  *) Prevent over long nonces in ChaCha20-Poly1305.
++
++     ChaCha20-Poly1305 is an AEAD cipher, and requires a unique nonce input
++     for every encryption operation. RFC 7539 specifies that the nonce value
++     (IV) should be 96 bits (12 bytes). OpenSSL allows a variable nonce length
++     and front pads the nonce with 0 bytes if it is less than 12
++     bytes. However it also incorrectly allows a nonce to be set of up to 16
++     bytes. In this case only the last 12 bytes are significant and any
++     additional leading bytes are ignored.
++
++     It is a requirement of using this cipher that nonce values are
++     unique. Messages encrypted using a reused nonce value are susceptible to
++     serious confidentiality and integrity attacks. If an application changes
++     the default nonce length to be longer than 12 bytes and then makes a
++     change to the leading bytes of the nonce expecting the new value to be a
++     new unique nonce then such an application could inadvertently encrypt
++     messages with a reused nonce.
++
++     Additionally the ignored bytes in a long nonce are not covered by the
++     integrity guarantee of this cipher. Any application that relies on the
++     integrity of these ignored leading bytes of a long nonce may be further
++     affected. Any OpenSSL internal use of this cipher, including in SSL/TLS,
++     is safe because no such use sets such a long nonce value. However user
++     applications that use this cipher directly and set a non-default nonce
++     length to be longer than 12 bytes may be vulnerable.
++
++     This issue was reported to OpenSSL on 16th of March 2019 by Joran Dirk
++     Greef of Ronomon.
++     (CVE-2019-1543)
++     [Matt Caswell]
++
+   *) Added SCA hardening for modular field inversion in EC_GROUP through
+      a new dedicated field_inv() pointer in EC_METHOD.
+      This also addresses a leakage affecting conversions from projective
+diff --git a/NEWS b/NEWS
+index 188e9aa0b30c..cf03be96b614 100644
+--- a/NEWS
++++ b/NEWS
+@@ -7,7 +7,7 @@
+ 
+   Major changes between OpenSSL 1.1.0j and OpenSSL 1.1.0k [under development]
+ 
+-      o
++      o Prevent over long nonces in ChaCha20-Poly1305 (CVE-2019-1543)
+ 
+   Major changes between OpenSSL 1.1.0i and OpenSSL 1.1.0j [20 Nov 2018]
+ 

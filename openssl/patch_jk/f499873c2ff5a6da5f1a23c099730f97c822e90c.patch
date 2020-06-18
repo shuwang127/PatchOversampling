@@ -1,0 +1,33 @@
+From f499873c2ff5a6da5f1a23c099730f97c822e90c Mon Sep 17 00:00:00 2001
+From: Nicola Tuveri <nic.tuv@gmail.com>
+Date: Fri, 8 Feb 2019 12:42:25 +0200
+Subject: [PATCH] Clear BN_FLG_CONSTTIME on BN_CTX_get()
+
+(cherry picked from commit c8147d37ccaaf28c430d3fb45a14af36597e48b8)
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/8294)
+---
+ crypto/bn/bn_ctx.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/crypto/bn/bn_ctx.c b/crypto/bn/bn_ctx.c
+index 68c04687437f..51db38b455a3 100644
+--- a/crypto/bn/bn_ctx.c
++++ b/crypto/bn/bn_ctx.c
+@@ -1,5 +1,5 @@
+ /*
+- * Copyright 2000-2016 The OpenSSL Project Authors. All Rights Reserved.
++ * Copyright 2000-2019 The OpenSSL Project Authors. All Rights Reserved.
+  *
+  * Licensed under the OpenSSL license (the "License").  You may not use
+  * this file except in compliance with the License.  You can obtain a copy
+@@ -227,6 +227,8 @@ BIGNUM *BN_CTX_get(BN_CTX *ctx)
+     }
+     /* OK, make sure the returned bignum is "zero" */
+     BN_zero(ret);
++    /* clear BN_FLG_CONSTTIME if leaked from previous frames */
++    ret->flags &= (~BN_FLG_CONSTTIME);
+     ctx->used++;
+     CTXDBG_RET(ctx, ret);
+     return ret;

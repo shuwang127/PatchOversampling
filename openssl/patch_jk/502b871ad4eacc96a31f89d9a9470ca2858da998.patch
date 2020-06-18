@@ -1,0 +1,27 @@
+From 502b871ad4eacc96a31f89d9a9470ca2858da998 Mon Sep 17 00:00:00 2001
+From: Bernd Edlinger <bernd.edlinger@hotmail.de>
+Date: Sun, 17 Mar 2019 17:28:24 +0100
+Subject: [PATCH] Clear the point S before freeing in ec_mul_consttime
+
+The secret point R can be recovered from S using the equation R = S - P.
+The X and Z coordinates should be sufficient for that.
+
+Reviewed-by: Paul Dale <paul.dale@oracle.com>
+(Merged from https://github.com/openssl/openssl/pull/8505)
+---
+ crypto/ec/ec_mult.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/crypto/ec/ec_mult.c b/crypto/ec/ec_mult.c
+index 8350082eb42e..47c0fc028c9d 100644
+--- a/crypto/ec/ec_mult.c
++++ b/crypto/ec/ec_mult.c
+@@ -325,7 +325,7 @@ static int ec_mul_consttime(const EC_GROUP *group, EC_POINT *r,
+     ret = 1;
+ 
+  err:
+-    EC_POINT_free(s);
++    EC_POINT_clear_free(s);
+     BN_CTX_end(ctx);
+     BN_CTX_free(new_ctx);
+ 

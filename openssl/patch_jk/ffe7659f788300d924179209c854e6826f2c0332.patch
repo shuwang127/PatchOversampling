@@ -1,0 +1,34 @@
+From ffe7659f788300d924179209c854e6826f2c0332 Mon Sep 17 00:00:00 2001
+From: Richard Levitte <levitte@openssl.org>
+Date: Sat, 24 Nov 2018 11:27:50 +0100
+Subject: [PATCH] Make sure to run util/mktar.sh from the source directory
+
+Reviewed-by: Matthias St. Pierre <Matthias.St.Pierre@ncp-e.com>
+(Merged from https://github.com/openssl/openssl/pull/7696)
+
+(cherry picked from commit b741f153b2f24139d7210b1b0c9caf561f4900e8)
+---
+ Configurations/unix-Makefile.tmpl | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/Configurations/unix-Makefile.tmpl b/Configurations/unix-Makefile.tmpl
+index b35db4fc1fc7..af84bd49c64f 100644
+--- a/Configurations/unix-Makefile.tmpl
++++ b/Configurations/unix-Makefile.tmpl
+@@ -201,6 +201,7 @@ MAKEDEPEND={- $config{makedepprog} -}
+ 
+ BASENAME=       openssl
+ NAME=           $(BASENAME)-$(VERSION)
++# Relative to $(SRCDIR)
+ TARFILE=        ../$(NAME).tar
+ 
+ # We let the C compiler driver to take care of .s files. This is done in
+@@ -666,7 +667,7 @@ tags TAGS: FORCE
+ # Release targets (note: only available on Unix) #####################
+ 
+ tar:
+-	$(SRCDIR)/util/mktar.sh --name='$(NAME)' --tarfile='$(TARFILE)'
++	(cd $(SRCDIR); ./util/mktar.sh --name='$(NAME)' --tarfile='$(TARFILE)')
+ 
+ # Helper targets #####################################################
+ 

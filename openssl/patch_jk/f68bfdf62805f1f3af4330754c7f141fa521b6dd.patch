@@ -1,0 +1,82 @@
+From f68bfdf62805f1f3af4330754c7f141fa521b6dd Mon Sep 17 00:00:00 2001
+From: Richard Levitte <levitte@openssl.org>
+Date: Thu, 22 Nov 2018 21:17:47 +0100
+Subject: [PATCH] Change tarball making procedure
+
+Since recently, OpenSSL tarballs are produced with 'make tar' rather
+than 'make dist', as the latter has turned out to be more troublesome
+than useful.
+
+The next step to look at is why we would need to configure at all to
+produce a Makefile just to produce a tarball.  After all, the tarball
+should now only contain source files that are present even without
+configuring.
+
+Furthermore, the current method for producing tarballs is a bit
+complex, and can be greatly simplified with the right tools.  Since we
+have everything versioned with git, we might as well use the tool that
+comes with it.
+
+Added: util/mktar.sh, a simple script to produce OpenSSL tarballs.  It
+takes the options --name to modify the prefix of the distribution, and
+--tarfile tp modify the tarball file name specifically.
+
+This also adds a few entries in .gitattributes to specify files that
+should never end up in a distribution tarball.
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/7692)
+
+(cherry picked from commit 8c209eeef426ded66ce99048f535f35d08b88462)
+---
+ .gitattributes |  5 +++++
+ util/mktar.sh  | 27 +++++++++++++++++++++++++++
+ 2 files changed, 32 insertions(+)
+ create mode 100755 util/mktar.sh
+
+diff --git a/.gitattributes b/.gitattributes
+index 15121c861cce..912b4ae54e1f 100644
+--- a/.gitattributes
++++ b/.gitattributes
+@@ -1,3 +1,8 @@
+ *.der binary
+ /fuzz/corpora/** binary
+ *.pfx binary
++
++# For git archive
++fuzz/corpora/**                         export-ignore
++Configurations/*.norelease.conf         export-ignore
++.*                                      export-ignore
+diff --git a/util/mktar.sh b/util/mktar.sh
+new file mode 100755
+index 000000000000..0848b7b1e157
+--- /dev/null
++++ b/util/mktar.sh
+@@ -0,0 +1,27 @@
++#! /bin/sh
++
++HERE=`dirname $0`
++
++version=`grep 'OPENSSL_VERSION_TEXT  *"OpenSSL' $HERE/../include/openssl/opensslv.h | sed -e 's|.*"OpenSSL ||' -e 's| .*||'`
++basename=openssl
++
++NAME="$basename-$version"
++
++while [ $# -gt 0 ]; do
++    case "$1" in
++        --name=* ) NAME=`echo "$1" | sed -e 's|[^=]*=||'`       ;;
++        --name ) shift; NAME="$1"                               ;;
++        --tarfile=* ) TARFILE=`echo "$1" | sed -e 's|[^=]*=||'` ;;
++        --tarfile ) shift; TARFILE="$1"                         ;;
++        * ) echo >&2 "Could not parse '$1'"; exit 1             ;;
++    esac
++    shift
++done
++
++if [ -z "$TARFILE" ]; then TARFILE="$NAME.tar"; fi
++
++# This counts on .gitattributes to specify what files should be ignored
++git archive --worktree-attributes --format=tar --prefix="$NAME/" -v HEAD \
++    | gzip -9 > "$TARFILE.gz"
++
++ls -l "$TARFILE.gz"

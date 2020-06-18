@@ -1,0 +1,25 @@
+From 0e17281a9c35077263128f721e82199a89c36cb8 Mon Sep 17 00:00:00 2001
+From: Richard Levitte <levitte@openssl.org>
+Date: Fri, 23 Nov 2018 14:43:16 +0100
+Subject: [PATCH] Don't export util/mktar.sh
+
+When creating a tarball, it's pointless to include scripts that assume
+a git workspace.
+
+Reviewed-by: Matthias St. Pierre <Matthias.St.Pierre@ncp-e.com>
+(Merged from https://github.com/openssl/openssl/pull/7696)
+
+(cherry picked from commit b9a694717902af796639e1dff641ba620703303b)
+---
+ .gitattributes | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/.gitattributes b/.gitattributes
+index 912b4ae54e1f..0902ea422549 100644
+--- a/.gitattributes
++++ b/.gitattributes
+@@ -6,3 +6,4 @@
+ fuzz/corpora/**                         export-ignore
+ Configurations/*.norelease.conf         export-ignore
+ .*                                      export-ignore
++util/mktar.sh                           export-ignore

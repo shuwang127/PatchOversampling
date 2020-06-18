@@ -1,0 +1,69 @@
+From fb83aaf6a163438149570b344c6c75a6aa977ae9 Mon Sep 17 00:00:00 2001
+From: Richard Levitte <richard@levitte.org>
+Date: Tue, 28 May 2019 14:59:16 +0200
+Subject: [PATCH] Prepare for 1.1.0k release
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+---
+ CHANGES                    | 2 +-
+ NEWS                       | 2 +-
+ README                     | 2 +-
+ include/openssl/opensslv.h | 6 +++---
+ 4 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/CHANGES b/CHANGES
+index fb7d91843b87..643200a5d51d 100644
+--- a/CHANGES
++++ b/CHANGES
+@@ -7,7 +7,7 @@
+  https://github.com/openssl/openssl/commits/ and pick the appropriate
+  release branch.
+ 
+- Changes between 1.1.0j and 1.1.0k [xx XXX xxxx]
++ Changes between 1.1.0j and 1.1.0k [28 May 2019]
+ 
+   *) Change the default RSA, DSA and DH size to 2048 bit instead of 1024.
+      This changes the size when using the genpkey app when no size is given. It
+diff --git a/NEWS b/NEWS
+index cf03be96b614..da3293c9806f 100644
+--- a/NEWS
++++ b/NEWS
+@@ -5,7 +5,7 @@
+   This file gives a brief overview of the major changes between each OpenSSL
+   release. For more details please read the CHANGES file.
+ 
+-  Major changes between OpenSSL 1.1.0j and OpenSSL 1.1.0k [under development]
++  Major changes between OpenSSL 1.1.0j and OpenSSL 1.1.0k [28 May 2019]
+ 
+       o Prevent over long nonces in ChaCha20-Poly1305 (CVE-2019-1543)
+ 
+diff --git a/README b/README
+index 51828a76001e..861ae80779ad 100644
+--- a/README
++++ b/README
+@@ -1,5 +1,5 @@
+ 
+- OpenSSL 1.1.0k-dev
++ OpenSSL 1.1.0k 28 May 2019
+ 
+  Copyright (c) 1998-2018 The OpenSSL Project
+  Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson
+diff --git a/include/openssl/opensslv.h b/include/openssl/opensslv.h
+index 0e2992eb6363..81b12f1f08f1 100644
+--- a/include/openssl/opensslv.h
++++ b/include/openssl/opensslv.h
+@@ -39,11 +39,11 @@ extern "C" {
+  * (Prior to 0.9.5a beta1, a different scheme was used: MMNNFFRBB for
+  *  major minor fix final patch/beta)
+  */
+-# define OPENSSL_VERSION_NUMBER  0x101000b0L
++# define OPENSSL_VERSION_NUMBER  0x101000bfL
+ # ifdef OPENSSL_FIPS
+-#  define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.0k-fips-dev  xx XXX xxxx"
++#  define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.0k-fips  28 May 2019"
+ # else
+-#  define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.0k-dev  xx XXX xxxx"
++#  define OPENSSL_VERSION_TEXT    "OpenSSL 1.1.0k  28 May 2019"
+ # endif
+ 
+ /*-

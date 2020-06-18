@@ -1,0 +1,26 @@
+From 403783ce05991e21a50d637398798a014e2c4f9d Mon Sep 17 00:00:00 2001
+From: Richard Levitte <levitte@openssl.org>
+Date: Sat, 24 Nov 2018 17:51:24 +0100
+Subject: [PATCH] Have util/mktar.sh display the absolute path to the tarball
+
+Reviewed-by: Matthias St. Pierre <Matthias.St.Pierre@ncp-e.com>
+(Merged from https://github.com/openssl/openssl/pull/7696)
+
+(cherry picked from commit 3be389435fc7b94623d972b622dbd9f0cd5c34f7)
+---
+ util/mktar.sh | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/util/mktar.sh b/util/mktar.sh
+index bf874a14d8a0..17115cf59dd7 100755
+--- a/util/mktar.sh
++++ b/util/mktar.sh
+@@ -30,4 +30,7 @@ if [ -z "$TARFILE" ]; then TARFILE="$NAME.tar"; fi
+ git archive --worktree-attributes --format=tar --prefix="$NAME/" -v HEAD \
+     | gzip -9 > "$TARFILE.gz"
+ 
+-ls -l "$TARFILE.gz"
++# Good old way to ensure we display an absolute path
++td=`dirname $TARFILE`
++tf=`basename $TARFILE`
++ls -l "`cd $td; pwd`/$tf.gz"

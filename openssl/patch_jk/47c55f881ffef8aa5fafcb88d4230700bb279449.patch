@@ -1,0 +1,35 @@
+From 47c55f881ffef8aa5fafcb88d4230700bb279449 Mon Sep 17 00:00:00 2001
+From: Tobias Stoeckmann <tobias@stoeckmann.org>
+Date: Tue, 11 Dec 2018 20:34:21 +0100
+Subject: [PATCH] Fixed typo (vi leftover).
+
+There was a trailing :w at a line, which didn't make sense in context
+of the sentence/styling. Removed it, because I think it's a leftover
+vi command.
+
+CLA: trivial
+Signed-off-by: Tobias Stoeckmann <tobias@stoeckmann.org>
+
+Reviewed-by: Matt Caswell <matt@openssl.org>
+Reviewed-by: Matthias St. Pierre <Matthias.St.Pierre@ncp-e.com>
+Reviewed-by: Richard Levitte <levitte@openssl.org>
+(Merged from https://github.com/openssl/openssl/pull/7875)
+
+(cherry picked from commit 143b631639f95822e5e00768254fa35c787f6396)
+---
+ doc/apps/ca.pod | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/doc/apps/ca.pod b/doc/apps/ca.pod
+index 9885bb2392a6..5e183e124615 100644
+--- a/doc/apps/ca.pod
++++ b/doc/apps/ca.pod
+@@ -223,7 +223,7 @@ the section of the configuration file containing certificate extensions
+ to be added when a certificate is issued (defaults to B<x509_extensions>
+ unless the B<-extfile> option is used). If no extension section is
+ present then, a V1 certificate is created. If the extension section
+-is present (even if it is empty), then a V3 certificate is created. See the:w
++is present (even if it is empty), then a V3 certificate is created. See the
+ L<x509v3_config(5)> manual page for details of the
+ extension section format.
+ 

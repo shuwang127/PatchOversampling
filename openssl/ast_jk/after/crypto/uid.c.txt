@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x159c731f1a8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x159c731fa40 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x159c731f740 '__int128'
+|-TypedefDecl 0x159c731fab0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x159c731f760 'unsigned __int128'
+|-TypedefDecl 0x159c731fde8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x159c731fba0 'struct __NSConstantString_tag'
+|   `-Record 0x159c731fb08 '__NSConstantString_tag'
+|-TypedefDecl 0x159c731fe58 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x159c731f380 'unsigned long long'
+|-TypedefDecl 0x159c731fef0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x159c731feb0 'char *'
+|   `-BuiltinType 0x159c731f240 'char'
+|-TypedefDecl 0x159c731ff60 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x159c731feb0 'char *'
+|   `-BuiltinType 0x159c731f240 'char'
+|-TypedefDecl 0x159c731ffd0 <D:\Microsoft Visual Studio 12.0\VC\include\sys/types.h:40:1, col:19> col:19 __time32_t 'long'
+| `-BuiltinType 0x159c731f2c0 'long'
+|-TypedefDecl 0x159c7320040 <line:45:1, col:17> col:17 referenced __time64_t 'long long'
+| `-BuiltinType 0x159c731f2e0 'long long'
+|-TypedefDecl 0x159c73200d0 <line:53:1, col:20> col:20 time_t '__time64_t':'long long'
+| `-TypedefType 0x159c73200a0 '__time64_t' sugar
+|   |-Typedef 0x159c7320040 '__time64_t'
+|   `-BuiltinType 0x159c731f2e0 'long long'
+|-TypedefDecl 0x159c7320140 <line:61:1, col:24> col:24 _ino_t 'unsigned short'
+| `-BuiltinType 0x159c731f320 'unsigned short'
+|-TypedefDecl 0x159c8c39608 <line:65:1, col:24> col:24 ino_t 'unsigned short'
+| `-BuiltinType 0x159c731f320 'unsigned short'
+|-TypedefDecl 0x159c8c39678 <line:74:1, col:22> col:22 _dev_t 'unsigned int'
+| `-BuiltinType 0x159c731f340 'unsigned int'
+|-TypedefDecl 0x159c8c396e8 <line:78:1, col:22> col:22 dev_t 'unsigned int'
+| `-BuiltinType 0x159c731f340 'unsigned int'
+|-TypedefDecl 0x159c8c39758 <line:87:1, col:14> col:14 _off_t 'long'
+| `-BuiltinType 0x159c731f2c0 'long'
+|-TypedefDecl 0x159c8c397c8 <line:91:1, col:14> col:14 off_t 'long'
+| `-BuiltinType 0x159c731f2c0 'long'
+`-FunctionDecl 0x159c8c398f0 <.//openssl//file_jk/after\crypto\uid.c:34:1, line:41:1> line:34:5 OPENSSL_issetugid 'int (void)'
+  `-CompoundStmt 0x159c8c3a080 <line:35:1, line:41:1>
+    |-IfStmt 0x159c8c39d30 <line:36:5, line:37:16>
+    | |-BinaryOperator 0x159c8c39cd8 <line:36:9, col:29> 'int' '!='
+    | | |-CallExpr 0x159c8c39b70 <col:9, col:16> 'int'
+    | | | `-ImplicitCastExpr 0x159c8c39b58 <col:9> 'int (*)()' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x159c8c39b08 <col:9> 'int ()' Function 0x159c8c39a40 'getuid' 'int ()'
+    | | `-CallExpr 0x159c8c39cb8 <col:21, col:29> 'int'
+    | |   `-ImplicitCastExpr 0x159c8c39ca0 <col:21> 'int (*)()' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x159c8c39c80 <col:21> 'int ()' Function 0x159c8c39bb8 'geteuid' 'int ()'
+    | `-ReturnStmt 0x159c8c39d20 <line:37:9, col:16>
+    |   `-IntegerLiteral 0x159c8c39cf8 <col:16> 'int' 1
+    |-IfStmt 0x159c8c3a030 <line:38:5, line:39:16>
+    | |-BinaryOperator 0x159c8c39fd8 <line:38:9, col:29> 'int' '!='
+    | | |-CallExpr 0x159c8c39e70 <col:9, col:16> 'int'
+    | | | `-ImplicitCastExpr 0x159c8c39e58 <col:9> 'int (*)()' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x159c8c39e38 <col:9> 'int ()' Function 0x159c8c39d70 'getgid' 'int ()'
+    | | `-CallExpr 0x159c8c39fb8 <col:21, col:29> 'int'
+    | |   `-ImplicitCastExpr 0x159c8c39fa0 <col:21> 'int (*)()' <FunctionToPointerDecay>
+    | |     `-DeclRefExpr 0x159c8c39f80 <col:21> 'int ()' Function 0x159c8c39eb8 'getegid' 'int ()'
+    | `-ReturnStmt 0x159c8c3a020 <line:39:9, col:16>
+    |   `-IntegerLiteral 0x159c8c39ff8 <col:16> 'int' 1
+    `-ReturnStmt 0x159c8c3a070 <line:40:5, col:12>
+      `-IntegerLiteral 0x159c8c3a048 <col:12> 'int' 0

@@ -2,20 +2,22 @@ import os
 import re
 import random
 
-rootPath = 
-datPath = './openssl/file_jk/'
-patPath = './openssl/patch_jk/'
-semPath = './openssl/ast_jk/'
-outPath = './openssl/out_jk/'
+rootPath = './'
+appPath = rootPath + '/openssl/'
+datPath = appPath + '/file_jk/'
+patPath = appPath + '/patch_jk/'
+astPath = appPath + '/ast_jk/'
+outPath = appPath + '/out_jk/'
 
 _DEBUG_ = 0 # 1: only use one sample, 0: use all samples.
 
 def main():
     global _DEBUG_
-
-    '''
-    # get patch lists.
+    # Generate AST files from program files.
+    #GenerateASTs(datPath, astPath)
+    # get patch lists from patch path.
     patchList = ScanPatches(patPath)
+    '''
     # scan the after files.
     for root, ds, fs in os.walk(datPath + '/after/'):
         for file in fs:
@@ -39,6 +41,36 @@ def main():
                             SaveToFile(contents, outPath + '/after/', file)
     '''
     return
+
+def GenerateASTs(dataPath, ASTsPath):
+    '''
+    Generate AST files from dataPath to ASTsPath.
+    clang -fmodules -fsyntax-only -Xclang -ast-dump [dataPath]/**/**.c(pp)   1>[ASTsPath]/**/**.c(pp).txt  2>NUL
+    :param dataPath:
+    :param ASTPath:
+    :return:
+    '''
+
+    # print the arguments.
+    print('Data Path: ' + dataPath)
+    print('ASTs Path: ' + ASTsPath)
+
+    # go through each file in data path.
+    for root, ds, fs in os.walk(dataPath):
+        for file in fs:
+            extname = os.path.splitext(file)[1]                 # get the file extension.
+            if '.c' == extname or '.cpp' == extname:            # if file extension is .c or .cpp.
+                outRoot = root.replace(dataPath, ASTsPath, 1)   # get the output path.
+                if not os.path.exists(outRoot):                 # if output path does not exist, build the directory.
+                    os.makedirs(outRoot)
+                filename = os.path.join(root, file)             # get the program file name.
+                astsname = os.path.join(outRoot, file + '.txt') # get the ast file name.
+                # set the shell command.
+                cmdstr = 'clang -fmodules -fsyntax-only -Xclang -ast-dump  ' + filename + '  1>' + astsname + '  2>NUL'
+                print('[shell] >>> ' + cmdstr)
+                os.system(cmdstr)                               # run the shell command.
+
+    return 0
 
 def FindIfStmts(fname):
     # check if the semantic file exists.

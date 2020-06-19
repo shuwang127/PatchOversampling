@@ -1,0 +1,203 @@
+TranslationUnitDecl 0x223eae23c38 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x223eae244d0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x223eae241d0 '__int128'
+|-TypedefDecl 0x223eae24540 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x223eae241f0 'unsigned __int128'
+|-TypedefDecl 0x223eae24878 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x223eae24630 'struct __NSConstantString_tag'
+|   `-Record 0x223eae24598 '__NSConstantString_tag'
+|-TypedefDecl 0x223eae248e8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x223eae23e10 'unsigned long long'
+|-TypedefDecl 0x223eae24980 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x223eae24940 'char *'
+|   `-BuiltinType 0x223eae23cd0 'char'
+|-TypedefDecl 0x223eae249f0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x223eae24940 'char *'
+|   `-BuiltinType 0x223eae23cd0 'char'
+`-FunctionDecl 0x223ec74e428 <.//openssl//file_jk/after\crypto\bf\bf_cbc.c:13:1, line:86:1> line:13:6 invalid BF_cbc_encrypt 'void (const unsigned char *, unsigned char *, long, const int *, unsigned char *, int)'
+  |-ParmVarDecl 0x223eae24a90 <col:21, col:42> col:42 used in 'const unsigned char *'
+  |-ParmVarDecl 0x223eae24b40 <col:46, col:61> col:61 used out 'unsigned char *'
+  |-ParmVarDecl 0x223eae24bc0 <col:66, col:71> col:71 used length 'long'
+  |-ParmVarDecl 0x223ec74e218 <line:14:21, col:35> col:35 invalid schedule 'const int *'
+  |-ParmVarDecl 0x223ec74e298 <col:45, col:60> col:60 used ivec 'unsigned char *'
+  |-ParmVarDecl 0x223ec74e318 <col:66, col:70> col:70 used encrypt 'int'
+  `-CompoundStmt 0x223ec766fe0 <line:15:1, line:86:1>
+    |-DeclStmt 0x223ec74e590 <line:16:5, col:32>
+    | `-VarDecl 0x223ec74e528 <col:5, col:22> col:22 invalid tin0 'int' register
+    |-DeclStmt 0x223ec74e628 <line:17:5, col:46>
+    | `-VarDecl 0x223ec74e5c0 <col:5, col:22> col:22 invalid tout0 'int' register
+    |-DeclStmt 0x223ec74e710 <line:18:5, col:29>
+    | `-VarDecl 0x223ec74e658 <col:5, col:23> col:19 used l 'long' register cinit
+    |   `-ImplicitCastExpr 0x223ec74e6f8 <col:23> 'long' <LValueToRValue>
+    |     `-DeclRefExpr 0x223ec74e6c0 <col:23> 'long' lvalue ParmVar 0x223eae24bc0 'length' 'long'
+    `-IfStmt 0x223ec761ea8 <line:21:5, line:83:5> has_else
+      |-ImplicitCastExpr 0x223ec74e760 <line:21:9> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x223ec74e728 <col:9> 'int' lvalue ParmVar 0x223ec74e318 'encrypt' 'int'
+      |-CompoundStmt 0x223ec748c78 <col:18, line:52:5>
+      | |-CompoundAssignOperator 0x223ec74a398 <line:24:9, col:17> 'unsigned char *' '-=' ComputeLHSTy='unsigned char *' ComputeResultTy='unsigned char *'
+      | | |-DeclRefExpr 0x223ec74a350 <col:9> 'unsigned char *' lvalue ParmVar 0x223ec74e298 'ivec' 'unsigned char *'
+      | | `-IntegerLiteral 0x223ec74a370 <col:17> 'int' 8
+      | |-ForStmt 0x223ec74fb10 <line:25:9, line:37:9>
+      | | |-CompoundAssignOperator 0x223ec74a440 <line:25:14, col:19> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+      | | | |-DeclRefExpr 0x223ec74a3c8 <col:14> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+      | | | `-ImplicitCastExpr 0x223ec74a428 <col:19> 'long' <IntegralCast>
+      | | |   `-IntegerLiteral 0x223ec74a400 <col:19> 'int' 8
+      | | |-<<<NULL>>>
+      | | |-BinaryOperator 0x223ec74a4e8 <col:22, col:27> 'int' '>='
+      | | | |-ImplicitCastExpr 0x223ec74a4b8 <col:22> 'long' <LValueToRValue>
+      | | | | `-DeclRefExpr 0x223ec74a470 <col:22> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+      | | | `-ImplicitCastExpr 0x223ec74a4d0 <col:27> 'long' <IntegralCast>
+      | | |   `-IntegerLiteral 0x223ec74a490 <col:27> 'int' 0
+      | | |-CompoundAssignOperator 0x223ec74a568 <col:30, col:35> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+      | | | |-DeclRefExpr 0x223ec74a508 <col:30> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+      | | | `-ImplicitCastExpr 0x223ec74a550 <col:35> 'long' <IntegralCast>
+      | | |   `-IntegerLiteral 0x223ec74a528 <col:35> 'int' 8
+      | | `-CompoundStmt 0x223ec74fb00 <col:38, line:37:9>
+      | `-IfStmt 0x223ec7485b0 <line:38:9, line:49:9>
+      |   |-BinaryOperator 0x223ec74fbd8 <line:38:13, col:19> 'int' '!='
+      |   | |-ImplicitCastExpr 0x223ec74fba8 <col:13> 'long' <LValueToRValue>
+      |   | | `-DeclRefExpr 0x223ec74fb48 <col:13> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+      |   | `-ImplicitCastExpr 0x223ec74fbc0 <col:18, col:19> 'long' <IntegralCast>
+      |   |   `-UnaryOperator 0x223ec74fb90 <col:18, col:19> 'int' prefix '-'
+      |   |     `-IntegerLiteral 0x223ec74fb68 <col:19> 'int' 8
+      |   `-CompoundStmt 0x223ec748590 <col:22, line:49:9>
+      |     |-CompoundStmt 0x223ec749df0 <.//openssl//file_jk/after\crypto\bf/bf_locl.h:15:26, line:35:25>
+      |     | |-CompoundAssignOperator 0x223ec74fcb0 <.//openssl//file_jk/after\crypto\bf\bf_cbc.c:39:18, col:38> 'const unsigned char *' '+=' ComputeLHSTy='const unsigned char *' ComputeResultTy='const unsigned char *'
+      |     | | |-DeclRefExpr 0x223ec74fbf8 <col:18> 'const unsigned char *' lvalue ParmVar 0x223eae24a90 'in' 'const unsigned char *'
+      |     | | `-BinaryOperator 0x223ec74fc90 <col:34, col:38> 'long' '+'
+      |     | |   |-ImplicitCastExpr 0x223ec74fc60 <col:34> 'long' <LValueToRValue>
+      |     | |   | `-DeclRefExpr 0x223ec74fc18 <col:34> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+      |     | |   `-ImplicitCastExpr 0x223ec74fc78 <col:38> 'long' <IntegralCast>
+      |     | |     `-IntegerLiteral 0x223ec74fc38 <col:38> 'int' 8
+      |     | `-SwitchStmt 0x223ec74fda0 <.//openssl//file_jk/after\crypto\bf/bf_locl.h:18:25, line:34:33>
+      |     |   |-BinaryOperator 0x223ec74fd80 <.//openssl//file_jk/after\crypto\bf\bf_cbc.c:39:34, col:38> 'long' '+'
+      |     |   | |-ImplicitCastExpr 0x223ec74fd50 <col:34> 'long' <LValueToRValue>
+      |     |   | | `-DeclRefExpr 0x223ec74fd08 <col:34> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+      |     |   | `-ImplicitCastExpr 0x223ec74fd68 <col:38> 'long' <IntegralCast>
+      |     |   |   `-IntegerLiteral 0x223ec74fd28 <col:38> 'int' 8
+      |     |   `-CompoundStmt 0x223ec749da0 <.//openssl//file_jk/after\crypto\bf/bf_locl.h:18:36, line:34:33>
+      |     |     |-CaseStmt 0x223ec74fe18 <line:19:25, <invalid sloc>>
+      |     |     | |-ImplicitCastExpr 0x223ec74fe00 <col:30> 'long' <IntegralCast>
+      |     |     | | `-ConstantExpr 0x223ec74fde8 <col:30> 'int'
+      |     |     | |   `-IntegerLiteral 0x223ec74fdc0 <col:30> 'int' 8
+      |     |     | `-NullStmt 0x223ec74ff88 <<invalid sloc>>
+      |     |     |-CaseStmt 0x223ec74ffe8 <line:21:25, <invalid sloc>>
+      |     |     | |-ImplicitCastExpr 0x223ec74ffd0 <col:30> 'long' <IntegralCast>
+      |     |     | | `-ConstantExpr 0x223ec74ffb8 <col:30> 'int'
+      |     |     | |   `-IntegerLiteral 0x223ec74ff90 <col:30> 'int' 7
+      |     |     | `-NullStmt 0x223ec7501a0 <<invalid sloc>>
+      |     |     |-CaseStmt 0x223ec7491b0 <line:23:25, <invalid sloc>>
+      |     |     | |-ImplicitCastExpr 0x223ec7501e8 <col:30> 'long' <IntegralCast>
+      |     |     | | `-ConstantExpr 0x223ec7501d0 <col:30> 'int'
+      |     |     | |   `-IntegerLiteral 0x223ec7501a8 <col:30> 'int' 6
+      |     |     | `-NullStmt 0x223ec749368 <<invalid sloc>>
+      |     |     |-CaseStmt 0x223ec7493c8 <line:25:25, <invalid sloc>>
+      |     |     | |-ImplicitCastExpr 0x223ec7493b0 <col:30> 'long' <IntegralCast>
+      |     |     | | `-ConstantExpr 0x223ec749398 <col:30> 'int'
+      |     |     | |   `-IntegerLiteral 0x223ec749370 <col:30> 'int' 5
+      |     |     | `-NullStmt 0x223ec749580 <<invalid sloc>>
+      |     |     |-CaseStmt 0x223ec7495e0 <line:27:25, <invalid sloc>>
+      |     |     | |-ImplicitCastExpr 0x223ec7495c8 <col:30> 'long' <IntegralCast>
+      |     |     | | `-ConstantExpr 0x223ec7495b0 <col:30> 'int'
+      |     |     | |   `-IntegerLiteral 0x223ec749588 <col:30> 'int' 4
+      |     |     | `-NullStmt 0x223ec749750 <<invalid sloc>>
+      |     |     |-CaseStmt 0x223ec7497b0 <line:29:25, <invalid sloc>>
+      |     |     | |-ImplicitCastExpr 0x223ec749798 <col:30> 'long' <IntegralCast>
+      |     |     | | `-ConstantExpr 0x223ec749780 <col:30> 'int'
+      |     |     | |   `-IntegerLiteral 0x223ec749758 <col:30> 'int' 3
+      |     |     | `-NullStmt 0x223ec749968 <<invalid sloc>>
+      |     |     |-CaseStmt 0x223ec7499c8 <line:31:25, <invalid sloc>>
+      |     |     | |-ImplicitCastExpr 0x223ec7499b0 <col:30> 'long' <IntegralCast>
+      |     |     | | `-ConstantExpr 0x223ec749998 <col:30> 'int'
+      |     |     | |   `-IntegerLiteral 0x223ec749970 <col:30> 'int' 2
+      |     |     | `-NullStmt 0x223ec749b80 <<invalid sloc>>
+      |     |     `-CaseStmt 0x223ec749be0 <line:33:25, <invalid sloc>>
+      |     |       |-ImplicitCastExpr 0x223ec749bc8 <col:30> 'long' <IntegralCast>
+      |     |       | `-ConstantExpr 0x223ec749bb0 <col:30> 'int'
+      |     |       |   `-IntegerLiteral 0x223ec749b88 <col:30> 'int' 1
+      |     |       `-NullStmt 0x223ec749d98 <<invalid sloc>>
+      |     `-NullStmt 0x223ec749e10 <.//openssl//file_jk/after\crypto\bf\bf_cbc.c:39:40>
+      `-CompoundStmt 0x223ec761e80 <line:52:12, line:83:5>
+        |-CompoundAssignOperator 0x223ec762688 <line:55:9, col:17> 'unsigned char *' '-=' ComputeLHSTy='unsigned char *' ComputeResultTy='unsigned char *'
+        | |-DeclRefExpr 0x223ec762640 <col:9> 'unsigned char *' lvalue ParmVar 0x223ec74e298 'ivec' 'unsigned char *'
+        | `-IntegerLiteral 0x223ec762660 <col:17> 'int' 8
+        |-ForStmt 0x223ec763cf0 <line:56:9, line:68:9>
+        | |-CompoundAssignOperator 0x223ec762718 <line:56:14, col:19> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+        | | |-DeclRefExpr 0x223ec7626b8 <col:14> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+        | | `-ImplicitCastExpr 0x223ec762700 <col:19> 'long' <IntegralCast>
+        | |   `-IntegerLiteral 0x223ec7626d8 <col:19> 'int' 8
+        | |-<<<NULL>>>
+        | |-BinaryOperator 0x223ec7627c0 <col:22, col:27> 'int' '>='
+        | | |-ImplicitCastExpr 0x223ec762790 <col:22> 'long' <LValueToRValue>
+        | | | `-DeclRefExpr 0x223ec762748 <col:22> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+        | | `-ImplicitCastExpr 0x223ec7627a8 <col:27> 'long' <IntegralCast>
+        | |   `-IntegerLiteral 0x223ec762768 <col:27> 'int' 0
+        | |-CompoundAssignOperator 0x223ec762840 <col:30, col:35> 'long' '-=' ComputeLHSTy='long' ComputeResultTy='long'
+        | | |-DeclRefExpr 0x223ec7627e0 <col:30> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+        | | `-ImplicitCastExpr 0x223ec762828 <col:35> 'long' <IntegralCast>
+        | |   `-IntegerLiteral 0x223ec762800 <col:35> 'int' 8
+        | `-CompoundStmt 0x223ec763ce0 <col:38, line:68:9>
+        `-IfStmt 0x223ec7617b8 <line:69:9, line:80:9>
+          |-BinaryOperator 0x223ec763db8 <line:69:13, col:19> 'int' '!='
+          | |-ImplicitCastExpr 0x223ec763d88 <col:13> 'long' <LValueToRValue>
+          | | `-DeclRefExpr 0x223ec763d28 <col:13> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+          | `-ImplicitCastExpr 0x223ec763da0 <col:18, col:19> 'long' <IntegralCast>
+          |   `-UnaryOperator 0x223ec763d70 <col:18, col:19> 'int' prefix '-'
+          |     `-IntegerLiteral 0x223ec763d48 <col:19> 'int' 8
+          `-CompoundStmt 0x223ec761798 <col:22, line:80:9>
+            |-CompoundStmt 0x223ec761770 <.//openssl//file_jk/after\crypto\bf/bf_locl.h:38:26, line:57:25>
+            | |-CompoundAssignOperator 0x223ec764b58 <.//openssl//file_jk/after\crypto\bf\bf_cbc.c:77:32, col:41> 'unsigned char *' '+=' ComputeLHSTy='unsigned char *' ComputeResultTy='unsigned char *'
+            | | |-DeclRefExpr 0x223ec764aa0 <col:32> 'unsigned char *' lvalue ParmVar 0x223eae24b40 'out' 'unsigned char *'
+            | | `-BinaryOperator 0x223ec764b38 <col:37, col:41> 'long' '+'
+            | |   |-ImplicitCastExpr 0x223ec764b08 <col:37> 'long' <LValueToRValue>
+            | |   | `-DeclRefExpr 0x223ec764ac0 <col:37> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+            | |   `-ImplicitCastExpr 0x223ec764b20 <col:41> 'long' <IntegralCast>
+            | |     `-IntegerLiteral 0x223ec764ae0 <col:41> 'int' 8
+            | `-SwitchStmt 0x223ec764c20 <.//openssl//file_jk/after\crypto\bf/bf_locl.h:40:25, line:56:33>
+            |   |-BinaryOperator 0x223ec764c00 <.//openssl//file_jk/after\crypto\bf\bf_cbc.c:77:37, col:41> 'long' '+'
+            |   | |-ImplicitCastExpr 0x223ec764bd0 <col:37> 'long' <LValueToRValue>
+            |   | | `-DeclRefExpr 0x223ec764b88 <col:37> 'long' lvalue Var 0x223ec74e658 'l' 'long'
+            |   | `-ImplicitCastExpr 0x223ec764be8 <col:41> 'long' <IntegralCast>
+            |   |   `-IntegerLiteral 0x223ec764ba8 <col:41> 'int' 8
+            |   `-CompoundStmt 0x223ec761720 <.//openssl//file_jk/after\crypto\bf/bf_locl.h:40:36, line:56:33>
+            |     |-CaseStmt 0x223ec764c98 <line:41:25, <invalid sloc>>
+            |     | |-ImplicitCastExpr 0x223ec764c80 <col:30> 'long' <IntegralCast>
+            |     | | `-ConstantExpr 0x223ec764c68 <col:30> 'int'
+            |     | |   `-IntegerLiteral 0x223ec764c40 <col:30> 'int' 8
+            |     | `-NullStmt 0x223ec764d78 <<invalid sloc>>
+            |     |-CaseStmt 0x223ec764dd8 <line:43:25, <invalid sloc>>
+            |     | |-ImplicitCastExpr 0x223ec764dc0 <col:30> 'long' <IntegralCast>
+            |     | | `-ConstantExpr 0x223ec764da8 <col:30> 'int'
+            |     | |   `-IntegerLiteral 0x223ec764d80 <col:30> 'int' 7
+            |     | `-NullStmt 0x223ec764ee0 <<invalid sloc>>
+            |     |-CaseStmt 0x223ec760f30 <line:45:25, <invalid sloc>>
+            |     | |-ImplicitCastExpr 0x223ec764f28 <col:30> 'long' <IntegralCast>
+            |     | | `-ConstantExpr 0x223ec764f10 <col:30> 'int'
+            |     | |   `-IntegerLiteral 0x223ec764ee8 <col:30> 'int' 6
+            |     | `-NullStmt 0x223ec761038 <<invalid sloc>>
+            |     |-CaseStmt 0x223ec761098 <line:47:25, <invalid sloc>>
+            |     | |-ImplicitCastExpr 0x223ec761080 <col:30> 'long' <IntegralCast>
+            |     | | `-ConstantExpr 0x223ec761068 <col:30> 'int'
+            |     | |   `-IntegerLiteral 0x223ec761040 <col:30> 'int' 5
+            |     | `-NullStmt 0x223ec7611a0 <<invalid sloc>>
+            |     |-CaseStmt 0x223ec761200 <line:49:25, <invalid sloc>>
+            |     | |-ImplicitCastExpr 0x223ec7611e8 <col:30> 'long' <IntegralCast>
+            |     | | `-ConstantExpr 0x223ec7611d0 <col:30> 'int'
+            |     | |   `-IntegerLiteral 0x223ec7611a8 <col:30> 'int' 4
+            |     | `-NullStmt 0x223ec7612e0 <<invalid sloc>>
+            |     |-CaseStmt 0x223ec761340 <line:51:25, <invalid sloc>>
+            |     | |-ImplicitCastExpr 0x223ec761328 <col:30> 'long' <IntegralCast>
+            |     | | `-ConstantExpr 0x223ec761310 <col:30> 'int'
+            |     | |   `-IntegerLiteral 0x223ec7612e8 <col:30> 'int' 3
+            |     | `-NullStmt 0x223ec761448 <<invalid sloc>>
+            |     |-CaseStmt 0x223ec7614a8 <line:53:25, <invalid sloc>>
+            |     | |-ImplicitCastExpr 0x223ec761490 <col:30> 'long' <IntegralCast>
+            |     | | `-ConstantExpr 0x223ec761478 <col:30> 'int'
+            |     | |   `-IntegerLiteral 0x223ec761450 <col:30> 'int' 2
+            |     | `-NullStmt 0x223ec7615b0 <<invalid sloc>>
+            |     `-CaseStmt 0x223ec761610 <line:55:25, <invalid sloc>>
+            |       |-ImplicitCastExpr 0x223ec7615f8 <col:30> 'long' <IntegralCast>
+            |       | `-ConstantExpr 0x223ec7615e0 <col:30> 'int'
+            |       |   `-IntegerLiteral 0x223ec7615b8 <col:30> 'int' 1
+            |       `-NullStmt 0x223ec761718 <<invalid sloc>>
+            `-NullStmt 0x223ec761790 <.//openssl//file_jk/after\crypto\bf\bf_cbc.c:77:43>

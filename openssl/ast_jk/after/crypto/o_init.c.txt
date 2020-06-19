@@ -1,0 +1,28 @@
+TranslationUnitDecl 0x191b770f228 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x191b770fac0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x191b770f7c0 '__int128'
+|-TypedefDecl 0x191b770fb30 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x191b770f7e0 'unsigned __int128'
+|-TypedefDecl 0x191b770fe68 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x191b770fc20 'struct __NSConstantString_tag'
+|   `-Record 0x191b770fb88 '__NSConstantString_tag'
+|-TypedefDecl 0x191b770fed8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x191b770f400 'unsigned long long'
+|-TypedefDecl 0x191b770ff70 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x191b770ff30 'char *'
+|   `-BuiltinType 0x191b770f2c0 'char'
+|-TypedefDecl 0x191b770ffe0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x191b770ff30 'char *'
+|   `-BuiltinType 0x191b770f2c0 'char'
+`-FunctionDecl 0x191b77100f8 <.//openssl//file_jk/after\crypto\o_init.c:22:1, line:34:1> line:22:6 OPENSSL_init 'void (void)'
+  `-CompoundStmt 0x191b90b7288 <line:23:1, line:34:1>
+    |-DeclStmt 0x191b90b7190 <line:24:5, col:24>
+    | `-VarDecl 0x191b90b7100 <col:5, col:23> col:16 used done 'int' static cinit
+    |   `-IntegerLiteral 0x191b90b7168 <col:23> 'int' 0
+    |-IfStmt 0x191b90b7208 <line:25:5, line:26:9>
+    | |-ImplicitCastExpr 0x191b90b71e0 <line:25:9> 'int' <LValueToRValue>
+    | | `-DeclRefExpr 0x191b90b71a8 <col:9> 'int' lvalue Var 0x191b90b7100 'done' 'int'
+    | `-ReturnStmt 0x191b90b71f8 <line:26:9>
+    `-BinaryOperator 0x191b90b7268 <line:27:5, col:12> 'int' '='
+      |-DeclRefExpr 0x191b90b7220 <col:5> 'int' lvalue Var 0x191b90b7100 'done' 'int'
+      `-IntegerLiteral 0x191b90b7240 <col:12> 'int' 1

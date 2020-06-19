@@ -1,0 +1,184 @@
+TranslationUnitDecl 0x137d9a5dde8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x137d9a5e680 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x137d9a5e380 '__int128'
+|-TypedefDecl 0x137d9a5e6f0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x137d9a5e3a0 'unsigned __int128'
+|-TypedefDecl 0x137d9a5ea28 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x137d9a5e7e0 'struct __NSConstantString_tag'
+|   `-Record 0x137d9a5e748 '__NSConstantString_tag'
+|-TypedefDecl 0x137d9a5ea98 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x137d9a5dfc0 'unsigned long long'
+|-TypedefDecl 0x137d9a5eb30 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x137d9a5eaf0 'char *'
+|   `-BuiltinType 0x137d9a5de80 'char'
+|-TypedefDecl 0x137d9a5eba0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x137d9a5eaf0 'char *'
+|   `-BuiltinType 0x137d9a5de80 'char'
+|-FunctionDecl 0x137db375ff8 <.//openssl//file_jk/before\test/testutil.h:85:1, col:60> col:6 used add_test 'void (const char *, int (*)())'
+| |-ParmVarDecl 0x137d9a5ec10 <col:15, col:27> col:27 test_case_name 'const char *'
+| `-ParmVarDecl 0x137d9a5ed70 <col:43, col:59> col:49 test_fn 'int (*)()'
+|-FunctionDecl 0x137db376508 <line:86:1, col:80> col:6 add_all_tests 'void (const char *, int (*)(int), int)'
+| |-ParmVarDecl 0x137db376120 <col:20, col:32> col:32 test_case_name 'const char *'
+| |-ParmVarDecl 0x137db376318 <col:48, col:70> col:54 test_fn 'int (*)(int)'
+| `-ParmVarDecl 0x137db376398 <col:73, col:77> col:77 num 'int'
+|-FunctionDecl 0x137db3766d0 <line:87:1, col:41> col:5 used run_tests 'int (const char *)'
+| `-ParmVarDecl 0x137db3765f0 <col:15, col:27> col:27 test_prog_name 'const char *'
+|-FunctionDecl 0x137db3769e0 <line:97:1, col:67> col:5 strings_equal 'int (const char *, const char *, const char *)'
+| |-ParmVarDecl 0x137db3767a8 <col:19, col:31> col:31 desc 'const char *'
+| |-ParmVarDecl 0x137db376828 <col:37, col:49> col:49 s1 'const char *'
+| `-ParmVarDecl 0x137db3768a8 <col:53, col:65> col:65 s2 'const char *'
+|-TypedefDecl 0x137db376b18 <D:\Microsoft Visual Studio 12.0\VC\include\vadefs.h:48:1, col:29> col:29 referenced uintptr_t 'unsigned long long'
+| `-BuiltinType 0x137d9a5dfc0 'unsigned long long'
+|-TypedefDecl 0x137db376b88 <line:59:1, col:17> col:17 referenced va_list 'char *'
+| `-PointerType 0x137d9a5eaf0 'char *'
+|   `-BuiltinType 0x137d9a5de80 'char'
+|-FunctionDecl 0x137db376dd0 <line:119:21> col:21 implicit __va_start 'void (char **, ...)' extern
+| |-ParmVarDecl 0x137db376e70 <<invalid sloc>> <invalid sloc> 'char **'
+| `-NoThrowAttr 0x137db376ee0 <col:21> Implicit
+|-FunctionDecl 0x137db53e310 prev 0x137db376dd0 <col:1, col:46> col:21 __va_start 'void (char **, ...)' extern
+| |-ParmVarDecl 0x137db376c68 <col:32, col:40> col:41 'va_list *'
+| `-NoThrowAttr 0x137db53e400 <col:21> Inherited Implicit
+|-TypedefDecl 0x137db53e440 prev 0x137d9a5ea98 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:494:1, col:29> col:29 referenced size_t 'unsigned long long'
+| `-BuiltinType 0x137d9a5dfc0 'unsigned long long'
+|-TypedefDecl 0x137db53e4e0 <line:503:1, col:16> col:16 rsize_t 'size_t':'unsigned long long'
+| `-TypedefType 0x137db53e4b0 'size_t' sugar
+|   |-Typedef 0x137db53e440 'size_t'
+|   `-BuiltinType 0x137d9a5dfc0 'unsigned long long'
+|-TypedefDecl 0x137db53e550 <line:510:1, col:29> col:29 intptr_t 'long long'
+| `-BuiltinType 0x137d9a5df20 'long long'
+|-TypedefDecl 0x137db53e5c0 <line:528:1, col:29> col:29 ptrdiff_t 'long long'
+| `-BuiltinType 0x137d9a5df20 'long long'
+|-TypedefDecl 0x137db53e630 <line:536:1, col:24> col:24 referenced wchar_t 'unsigned short'
+| `-BuiltinType 0x137d9a5df60 'unsigned short'
+|-TypedefDecl 0x137db53e6a0 <line:541:1, col:24> col:24 wint_t 'unsigned short'
+| `-BuiltinType 0x137d9a5df60 'unsigned short'
+|-TypedefDecl 0x137db53e710 <line:542:1, col:24> col:24 wctype_t 'unsigned short'
+| `-BuiltinType 0x137d9a5df60 'unsigned short'
+|-TypedefDecl 0x137db53e780 <line:563:1, col:13> col:13 referenced errno_t 'int'
+| `-BuiltinType 0x137d9a5dee0 'int'
+|-TypedefDecl 0x137db53e7f0 <line:567:1, col:19> col:19 __time32_t 'long'
+| `-BuiltinType 0x137d9a5df00 'long'
+|-TypedefDecl 0x137db53e860 <line:572:1, col:17> col:17 referenced __time64_t 'long long'
+| `-BuiltinType 0x137d9a5df20 'long long'
+|-TypedefDecl 0x137db53e8f0 <line:580:1, col:20> col:20 time_t '__time64_t':'long long'
+| `-TypedefType 0x137db53e8c0 '__time64_t' sugar
+|   |-Typedef 0x137db53e860 '__time64_t'
+|   `-BuiltinType 0x137d9a5df20 'long long'
+|-FunctionDecl 0x137db53ea68 <line:637:10, col:53> col:23 _invalid_parameter_noinfo 'void (void) __attribute__((cdecl))':'void (void)'
+|-FunctionDecl 0x137db53ec48 <line:638:10, col:83> col:44 _invalid_parameter_noinfo_noreturn 'void (void) __attribute__((noreturn)) __attribute__((cdecl))':'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x137db53f1f0 <line:641:9, line:642:136> col:14 _invoke_watson 'void (const wchar_t *, const wchar_t *, const wchar_t *, unsigned int, uintptr_t) __attribute__((noreturn)) __attribute__((cdecl))':'void (const wchar_t *, const wchar_t *, const wchar_t *, unsigned int, uintptr_t) __attribute__((noreturn))'
+| |-ParmVarDecl 0x137db53ed88 <col:40, col:54> col:55 'const wchar_t *'
+| |-ParmVarDecl 0x137db53ee00 <col:68, col:82> col:83 'const wchar_t *'
+| |-ParmVarDecl 0x137db53ee78 <col:96, col:110> col:111 'const wchar_t *'
+| |-ParmVarDecl 0x137db53eef8 <col:113, col:122> col:125 'unsigned int'
+| `-ParmVarDecl 0x137db53ef90 <col:127> col:136 'uintptr_t':'unsigned long long'
+|-RecordDecl 0x137db57e5d0 <line:2072:1, col:8> col:8 struct threadlocaleinfostruct
+|-RecordDecl 0x137db57e690 <line:2073:1, col:8> col:8 struct threadmbcinfostruct
+|-TypedefDecl 0x137db57e800 <line:2074:1, col:41> col:41 referenced pthreadlocinfo 'struct threadlocaleinfostruct *'
+| `-PointerType 0x137db57e7b0 'struct threadlocaleinfostruct *'
+|   `-ElaboratedType 0x137db57e750 'struct threadlocaleinfostruct' sugar
+|     `-RecordType 0x137db57e670 'struct threadlocaleinfostruct'
+|       `-Record 0x137db57f228 'threadlocaleinfostruct'
+|-TypedefDecl 0x137db57e910 <line:2075:1, col:38> col:38 referenced pthreadmbcinfo 'struct threadmbcinfostruct *'
+| `-PointerType 0x137db57e8c0 'struct threadmbcinfostruct *'
+|   `-ElaboratedType 0x137db57e860 'struct threadmbcinfostruct' sugar
+|     `-RecordType 0x137db57e730 'struct threadmbcinfostruct'
+|       `-Record 0x137db57e690 'threadmbcinfostruct'
+|-RecordDecl 0x137db57e968 <line:2076:1, col:8> col:8 struct __lc_time_data
+|-RecordDecl 0x137db57ea20 <line:2078:9, line:2082:1> line:2078:16 struct localeinfo_struct definition
+| |-MaxFieldAlignmentAttr 0x137db57eae0 <<invalid sloc>> Implicit 64
+| |-FieldDecl 0x137db57eb70 <line:2080:5, col:20> col:20 locinfo 'pthreadlocinfo':'struct threadlocaleinfostruct *'
+| `-FieldDecl 0x137db57ec00 <line:2081:5, col:20> col:20 mbcinfo 'pthreadmbcinfo':'struct threadmbcinfostruct *'
+|-TypedefDecl 0x137db57ecb8 <line:2078:1, line:2082:3> col:3 _locale_tstruct 'struct localeinfo_struct':'struct localeinfo_struct'
+| `-ElaboratedType 0x137db57ec60 'struct localeinfo_struct' sugar
+|   `-RecordType 0x137db57eac0 'struct localeinfo_struct'
+|     `-Record 0x137db57ea20 'localeinfo_struct'
+|-TypedefDecl 0x137db57ed90 <line:2078:1, line:2082:21> col:21 _locale_t 'struct localeinfo_struct *'
+| `-PointerType 0x137db57ed40 'struct localeinfo_struct *'
+|   `-ElaboratedType 0x137db57ec60 'struct localeinfo_struct' sugar
+|     `-RecordType 0x137db57eac0 'struct localeinfo_struct'
+|       `-Record 0x137db57ea20 'localeinfo_struct'
+|-RecordDecl 0x137db57ee08 <line:2085:9, line:2090:1> line:2085:16 struct localerefcount definition
+| |-MaxFieldAlignmentAttr 0x137db57eec0 <<invalid sloc>> Implicit 64
+| |-FieldDecl 0x137db57ef38 <line:2086:9, col:15> col:15 locale 'char *'
+| |-FieldDecl 0x137db57eff8 <line:2087:9, col:18> col:18 wlocale 'wchar_t *'
+| |-FieldDecl 0x137db57f090 <line:2088:9, col:14> col:14 refcount 'int *'
+| `-FieldDecl 0x137db57f100 <line:2089:9, col:14> col:14 wrefcount 'int *'
+|-TypedefDecl 0x137db57f1b8 <line:2085:1, line:2090:3> col:3 referenced locrefcount 'struct localerefcount':'struct localerefcount'
+| `-ElaboratedType 0x137db57f160 'struct localerefcount' sugar
+|   `-RecordType 0x137db57eea0 'struct localerefcount'
+|     `-Record 0x137db57ee08 'localerefcount'
+|-RecordDecl 0x137db57f228 prev 0x137db57e5d0 <line:2092:9, line:2111:1> line:2092:16 struct threadlocaleinfostruct definition
+| |-MaxFieldAlignmentAttr 0x137db57f2a8 <<invalid sloc>> Implicit 64
+| |-FieldDecl 0x137db57f320 <line:2093:9, col:13> col:13 refcount 'int'
+| |-FieldDecl 0x137db57f390 <line:2094:9, col:22> col:22 lc_codepage 'unsigned int'
+| |-FieldDecl 0x137db57f400 <line:2095:9, col:22> col:22 lc_collate_cp 'unsigned int'
+| |-FieldDecl 0x137db57f470 <line:2096:9, col:22> col:22 lc_time_cp 'unsigned int'
+| |-FieldDecl 0x137db578608 <line:2097:9, col:34> col:21 lc_category 'locrefcount [6]'
+| |-FieldDecl 0x137db578678 <line:2098:9, col:13> col:13 lc_clike 'int'
+| |-FieldDecl 0x137db5786e8 <line:2099:9, col:13> col:13 mb_cur_max 'int'
+| |-FieldDecl 0x137db578758 <line:2100:9, col:15> col:15 lconv_intl_refcount 'int *'
+| |-FieldDecl 0x137db5787c8 <line:2101:9, col:15> col:15 lconv_num_refcount 'int *'
+| |-FieldDecl 0x137db578838 <line:2102:9, col:15> col:15 lconv_mon_refcount 'int *'
+| |-RecordDecl 0x137db578890 parent 0x137d9a5dde8 <line:2103:9, col:16> col:16 struct lconv
+| |-FieldDecl 0x137db578a20 <col:9, col:24> col:24 lconv 'struct lconv *'
+| |-FieldDecl 0x137db578a90 <line:2104:9, col:15> col:15 ctype1_refcount 'int *'
+| |-FieldDecl 0x137db578b00 <line:2105:9, col:26> col:26 ctype1 'unsigned short *'
+| |-FieldDecl 0x137db578b70 <line:2106:9, col:32> col:32 pctype 'const unsigned short *'
+| |-FieldDecl 0x137db578c10 <line:2107:9, col:31> col:31 pclmap 'const unsigned char *'
+| |-FieldDecl 0x137db578c80 <line:2108:9, col:31> col:31 pcumap 'const unsigned char *'
+| |-FieldDecl 0x137db578d90 <line:2109:9, col:33> col:33 lc_time_curr 'struct __lc_time_data *'
+| `-FieldDecl 0x137db578ec8 <line:2110:9, col:32> col:19 locale_name 'wchar_t *[6]'
+|-TypedefDecl 0x137db578f78 <line:2092:1, line:2111:3> col:3 threadlocinfo 'struct threadlocaleinfostruct':'struct threadlocaleinfostruct'
+| `-ElaboratedType 0x137db578f20 'struct threadlocaleinfostruct' sugar
+|   `-RecordType 0x137db57e670 'struct threadlocaleinfostruct'
+|     `-Record 0x137db57f228 'threadlocaleinfostruct'
+|-FunctionDecl 0x137db579110 <D:\Microsoft Visual Studio 12.0\VC\include\errno.h:31:9, col:41> col:30 used _errno 'int *(void) __attribute__((cdecl))':'int *(void)' extern
+|-FunctionDecl 0x137db579350 <line:34:1, col:43> col:17 _set_errno 'errno_t (int) __attribute__((cdecl))':'errno_t (int)'
+| `-ParmVarDecl 0x137db579208 <col:33, col:37> col:37 _Value 'int'
+|-FunctionDecl 0x137db585670 <line:35:1, col:46> col:17 _get_errno 'errno_t (int *) __attribute__((cdecl))':'errno_t (int *)'
+| `-ParmVarDecl 0x137db579428 <col:34, col:40> col:40 _Value 'int *'
+|-FunctionDecl 0x137db585800 <.//openssl//file_jk/before\test\errtest.c:22:1, line:33:1> line:22:12 used preserves_system_error 'int (void)' static
+| `-CompoundStmt 0x137db585c38 <line:23:1, line:33:1>
+|   |-BinaryOperator 0x137db5859d0 <D:\Microsoft Visual Studio 12.0\VC\include\errno.h:32:17, line:81:25> 'int' '='
+|   | |-ParenExpr 0x137db585988 <line:32:17, col:27> 'int' lvalue
+|   | | `-UnaryOperator 0x137db585970 <col:18, col:26> 'int' lvalue prefix '*' cannot overflow
+|   | |   `-CallExpr 0x137db585950 <col:19, col:26> 'int *'
+|   | |     `-ImplicitCastExpr 0x137db585938 <col:19> 'int *(*)(void) __attribute__((cdecl))' <FunctionToPointerDecay>
+|   | |       `-DeclRefExpr 0x137db5858b8 <col:19> 'int *(void) __attribute__((cdecl))':'int *(void)' Function 0x137db579110 '_errno' 'int *(void) __attribute__((cdecl))':'int *(void)'
+|   | `-IntegerLiteral 0x137db5859a8 <line:81:25> 'int' 22
+|   |-CallExpr 0x137db585b18 <.//openssl//file_jk/before\test\errtest.c:30:5, col:19> 'int'
+|   | `-ImplicitCastExpr 0x137db585b00 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   |   `-DeclRefExpr 0x137db585ae0 <col:5> 'int ()' Function 0x137db585a18 'ERR_get_error' 'int ()'
+|   `-ReturnStmt 0x137db585c28 <line:31:5, D:\Microsoft Visual Studio 12.0\VC\include\errno.h:81:25>
+|     `-BinaryOperator 0x137db585c08 <line:32:17, line:81:25> 'int' '=='
+|       |-ImplicitCastExpr 0x137db585bf0 <line:32:17, col:27> 'int' <LValueToRValue>
+|       | `-ParenExpr 0x137db585ba8 <col:17, col:27> 'int' lvalue
+|       |   `-UnaryOperator 0x137db585b90 <col:18, col:26> 'int' lvalue prefix '*' cannot overflow
+|       |     `-CallExpr 0x137db585b70 <col:19, col:26> 'int *'
+|       |       `-ImplicitCastExpr 0x137db585b58 <col:19> 'int *(*)(void) __attribute__((cdecl))' <FunctionToPointerDecay>
+|       |         `-DeclRefExpr 0x137db585b38 <col:19> 'int *(void) __attribute__((cdecl))':'int *(void)' Function 0x137db579110 '_errno' 'int *(void) __attribute__((cdecl))':'int *(void)'
+|       `-IntegerLiteral 0x137db585bc8 <line:81:25> 'int' 22
+`-FunctionDecl 0x137db585e00 <.//openssl//file_jk/before\test\errtest.c:35:1, line:40:1> line:35:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x137db585c78 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x137db585cf8 <col:20, col:27> col:27 used argv 'char **'
+  `-CompoundStmt 0x137db5861f8 <line:36:1, line:40:1>
+    |-CallExpr 0x137db585ff0 <.//openssl//file_jk/before\test/testutil.h:76:34, col:72> 'void'
+    | |-ImplicitCastExpr 0x137db585fd8 <col:34> 'void (*)(const char *, int (*)())' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x137db585ec8 <col:34> 'void (const char *, int (*)())' Function 0x137db375ff8 'add_test' 'void (const char *, int (*)())'
+    | |-ImplicitCastExpr 0x137db586038 <<scratch space>:13:1> 'const char *' <NoOp>
+    | | `-ImplicitCastExpr 0x137db586020 <col:1> 'char *' <ArrayToPointerDecay>
+    | |   `-StringLiteral 0x137db585f28 <col:1> 'char [23]' lvalue "preserves_system_error"
+    | `-ImplicitCastExpr 0x137db586090 <.//openssl//file_jk/before\test\errtest.c:37:14> 'int (*)()' <BitCast>
+    |   `-ImplicitCastExpr 0x137db586078 <col:14> 'int (*)(void)' <FunctionToPointerDecay>
+    |     `-DeclRefExpr 0x137db585f58 <col:14> 'int (void)' Function 0x137db585800 'preserves_system_error' 'int (void)'
+    `-ReturnStmt 0x137db5861e8 <line:39:5, col:29>
+      `-CallExpr 0x137db586190 <col:12, col:29> 'int'
+        |-ImplicitCastExpr 0x137db586178 <col:12> 'int (*)(const char *)' <FunctionToPointerDecay>
+        | `-DeclRefExpr 0x137db5860a8 <col:12> 'int (const char *)' Function 0x137db3766d0 'run_tests' 'int (const char *)'
+        `-ImplicitCastExpr 0x137db5861d0 <col:22, col:28> 'const char *' <NoOp>
+          `-ImplicitCastExpr 0x137db5861b8 <col:22, col:28> 'char *' <LValueToRValue>
+            `-ArraySubscriptExpr 0x137db586128 <col:22, col:28> 'char *' lvalue
+              |-ImplicitCastExpr 0x137db586110 <col:22> 'char **' <LValueToRValue>
+              | `-DeclRefExpr 0x137db5860c8 <col:22> 'char **' lvalue ParmVar 0x137db585cf8 'argv' 'char **'
+              `-IntegerLiteral 0x137db5860e8 <col:27> 'int' 0

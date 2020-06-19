@@ -1,0 +1,30 @@
+TranslationUnitDecl 0x1a8e00f1b48 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x1a8e00f23e0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x1a8e00f20e0 '__int128'
+|-TypedefDecl 0x1a8e00f2450 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x1a8e00f2100 'unsigned __int128'
+|-TypedefDecl 0x1a8e00f2788 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x1a8e00f2540 'struct __NSConstantString_tag'
+|   `-Record 0x1a8e00f24a8 '__NSConstantString_tag'
+|-TypedefDecl 0x1a8e00f27f8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x1a8e00f1d20 'unsigned long long'
+|-TypedefDecl 0x1a8e00f2890 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x1a8e00f2850 'char *'
+|   `-BuiltinType 0x1a8e00f1be0 'char'
+|-TypedefDecl 0x1a8e00f2900 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x1a8e00f2850 'char *'
+|   `-BuiltinType 0x1a8e00f1be0 'char'
+`-FunctionDecl 0x1a8e1a289e0 <.//openssl//file_jk/before\test\aborttest.c:12:1, line:16:1> line:12:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x1a8e00f2970 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x1a8e00f2a20 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x1a8e1a28e20 <line:13:1, line:16:1>
+    |-CallExpr 0x1a8e1a28d80 <line:14:5, col:54> 'int'
+    | |-ImplicitCastExpr 0x1a8e1a28d68 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x1a8e1a28c08 <col:5> 'int ()' Function 0x1a8e1a28b40 'OPENSSL_die' 'int ()'
+    | |-ImplicitCastExpr 0x1a8e1a28db8 <col:17> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x1a8e1a28c68 <col:17> 'char [16]' lvalue "Voluntary abort"
+    | |-ImplicitCastExpr 0x1a8e1a28dd0 <<scratch space>:2:1> 'char *' <ArrayToPointerDecay>
+    | | `-StringLiteral 0x1a8e1a28cc8 <col:1> 'char [44]' lvalue ".//openssl//file_jk/before\\test\\aborttest.c"
+    | `-IntegerLiteral 0x1a8e1a28d10 <line:3:1> 'int' 14
+    `-ReturnStmt 0x1a8e1a28e10 <.//openssl//file_jk/before\test\aborttest.c:15:5, col:12>
+      `-IntegerLiteral 0x1a8e1a28de8 <col:12> 'int' 0

@@ -1,0 +1,1381 @@
+TranslationUnitDecl 0x2c74d435528 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x2c74d435dc0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x2c74d435ac0 '__int128'
+|-TypedefDecl 0x2c74d435e30 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x2c74d435ae0 'unsigned __int128'
+|-TypedefDecl 0x2c74d436168 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x2c74d435f20 'struct __NSConstantString_tag'
+|   `-Record 0x2c74d435e88 '__NSConstantString_tag'
+|-TypedefDecl 0x2c74d4361d8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x2c74d435700 'unsigned long long'
+|-TypedefDecl 0x2c74d436270 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x2c74d436230 'char *'
+|   `-BuiltinType 0x2c74d4355c0 'char'
+|-TypedefDecl 0x2c74d4362e0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x2c74d436230 'char *'
+|   `-BuiltinType 0x2c74d4355c0 'char'
+|-VarDecl 0x2c74d4363e0 <.//openssl//file_jk/after\crypto\cryptlib.c:23:1, col:40> col:21 OPENSSL_ia32cap_P 'unsigned int [4]' extern
+|-VarDecl 0x2c74ee3a920 prev 0x2c74d4363e0 <line:162:1, col:33> col:14 OPENSSL_ia32cap_P 'unsigned int [4]'
+|-VarDecl 0x2c74ee3a9a0 <line:165:1, col:32> col:5 OPENSSL_NONPIC_relocated 'int' cinit
+| `-IntegerLiteral 0x2c74ee3aa08 <col:32> 'int' 0
+|-FunctionDecl 0x2c74ee3ab08 <line:167:1, line:169:1> line:167:6 OPENSSL_cpuid_setup 'void (void)'
+| `-CompoundStmt 0x2c74ee3abc0 <line:168:1, line:169:1>
+|-TypedefDecl 0x2c74ee3ac38 <D:\Microsoft Visual Studio 12.0\VC\include\vadefs.h:48:1, col:29> col:29 referenced uintptr_t 'unsigned long long'
+| `-BuiltinType 0x2c74d435700 'unsigned long long'
+|-TypedefDecl 0x2c74ee3aca8 <line:59:1, col:17> col:17 referenced va_list 'char *'
+| `-PointerType 0x2c74d436230 'char *'
+|   `-BuiltinType 0x2c74d4355c0 'char'
+|-FunctionDecl 0x2c74ee3aef0 <line:119:21> col:21 implicit __va_start 'void (char **, ...)' extern
+| |-ParmVarDecl 0x2c74ee3af90 <<invalid sloc>> <invalid sloc> 'char **'
+| `-NoThrowAttr 0x2c74ee3b000 <col:21> Implicit
+|-FunctionDecl 0x2c74ee3b058 prev 0x2c74ee3aef0 <col:1, col:46> col:21 __va_start 'void (char **, ...)' extern
+| |-ParmVarDecl 0x2c74ee3ad88 <col:32, col:40> col:41 'va_list *'
+| `-NoThrowAttr 0x2c74ee3b148 <col:21> Inherited Implicit
+|-TypedefDecl 0x2c74ee3b188 prev 0x2c74d4361d8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:494:1, col:29> col:29 referenced size_t 'unsigned long long'
+| `-BuiltinType 0x2c74d435700 'unsigned long long'
+|-TypedefDecl 0x2c74ee3b230 <line:503:1, col:16> col:16 referenced rsize_t 'size_t':'unsigned long long'
+| `-TypedefType 0x2c74ee3b200 'size_t' sugar
+|   |-Typedef 0x2c74ee3b188 'size_t'
+|   `-BuiltinType 0x2c74d435700 'unsigned long long'
+|-TypedefDecl 0x2c74ee3b2a0 <line:510:1, col:29> col:29 intptr_t 'long long'
+| `-BuiltinType 0x2c74d435660 'long long'
+|-TypedefDecl 0x2c74ee3b310 <line:528:1, col:29> col:29 ptrdiff_t 'long long'
+| `-BuiltinType 0x2c74d435660 'long long'
+|-TypedefDecl 0x2c74ee3b380 <line:536:1, col:24> col:24 referenced wchar_t 'unsigned short'
+| `-BuiltinType 0x2c74d4356a0 'unsigned short'
+|-TypedefDecl 0x2c74ee3b3f0 <line:541:1, col:24> col:24 wint_t 'unsigned short'
+| `-BuiltinType 0x2c74d4356a0 'unsigned short'
+|-TypedefDecl 0x2c74ee3b460 <line:542:1, col:24> col:24 wctype_t 'unsigned short'
+| `-BuiltinType 0x2c74d4356a0 'unsigned short'
+|-TypedefDecl 0x2c74ee3b4d0 <line:563:1, col:13> col:13 referenced errno_t 'int'
+| `-BuiltinType 0x2c74d435620 'int'
+|-TypedefDecl 0x2c74ee3b540 <line:567:1, col:19> col:19 __time32_t 'long'
+| `-BuiltinType 0x2c74d435640 'long'
+|-TypedefDecl 0x2c74ee3b5b0 <line:572:1, col:17> col:17 referenced __time64_t 'long long'
+| `-BuiltinType 0x2c74d435660 'long long'
+|-TypedefDecl 0x2c74ee3b640 <line:580:1, col:20> col:20 time_t '__time64_t':'long long'
+| `-TypedefType 0x2c74ee3b610 '__time64_t' sugar
+|   |-Typedef 0x2c74ee3b5b0 '__time64_t'
+|   `-BuiltinType 0x2c74d435660 'long long'
+|-FunctionDecl 0x2c74ee3b798 <line:637:10, col:53> col:23 _invalid_parameter_noinfo 'void (void) __attribute__((cdecl))':'void (void)'
+|-FunctionDecl 0x2c74ef4a778 <line:638:10, col:83> col:44 _invalid_parameter_noinfo_noreturn 'void (void) __attribute__((noreturn)) __attribute__((cdecl))':'void (void) __attribute__((noreturn))'
+|-FunctionDecl 0x2c74ef4ad20 <line:641:9, line:642:136> col:14 _invoke_watson 'void (const wchar_t *, const wchar_t *, const wchar_t *, unsigned int, uintptr_t) __attribute__((noreturn)) __attribute__((cdecl))':'void (const wchar_t *, const wchar_t *, const wchar_t *, unsigned int, uintptr_t) __attribute__((noreturn))'
+| |-ParmVarDecl 0x2c74ef4a8b8 <col:40, col:54> col:55 'const wchar_t *'
+| |-ParmVarDecl 0x2c74ef4a930 <col:68, col:82> col:83 'const wchar_t *'
+| |-ParmVarDecl 0x2c74ef4a9a8 <col:96, col:110> col:111 'const wchar_t *'
+| |-ParmVarDecl 0x2c74ef4aa28 <col:113, col:122> col:125 'unsigned int'
+| `-ParmVarDecl 0x2c74ef4aac0 <col:127> col:136 'uintptr_t':'unsigned long long'
+|-RecordDecl 0x2c74ef4ae00 <line:2072:1, col:8> col:8 struct threadlocaleinfostruct
+|-RecordDecl 0x2c74ef4aec0 <line:2073:1, col:8> col:8 struct threadmbcinfostruct
+|-TypedefDecl 0x2c74ef4b030 <line:2074:1, col:41> col:41 referenced pthreadlocinfo 'struct threadlocaleinfostruct *'
+| `-PointerType 0x2c74ef4afe0 'struct threadlocaleinfostruct *'
+|   `-ElaboratedType 0x2c74ef4af80 'struct threadlocaleinfostruct' sugar
+|     `-RecordType 0x2c74ef4aea0 'struct threadlocaleinfostruct'
+|       `-Record 0x2c74ef57b28 'threadlocaleinfostruct'
+|-TypedefDecl 0x2c74ef4b140 <line:2075:1, col:38> col:38 referenced pthreadmbcinfo 'struct threadmbcinfostruct *'
+| `-PointerType 0x2c74ef4b0f0 'struct threadmbcinfostruct *'
+|   `-ElaboratedType 0x2c74ef4b090 'struct threadmbcinfostruct' sugar
+|     `-RecordType 0x2c74ef4af60 'struct threadmbcinfostruct'
+|       `-Record 0x2c74ef4aec0 'threadmbcinfostruct'
+|-RecordDecl 0x2c74ef4b198 <line:2076:1, col:8> col:8 struct __lc_time_data
+|-RecordDecl 0x2c74ef4b250 <line:2078:9, line:2082:1> line:2078:16 struct localeinfo_struct definition
+| |-MaxFieldAlignmentAttr 0x2c74ef4b310 <<invalid sloc>> Implicit 64
+| |-FieldDecl 0x2c74ef4b3a0 <line:2080:5, col:20> col:20 locinfo 'pthreadlocinfo':'struct threadlocaleinfostruct *'
+| `-FieldDecl 0x2c74ef4b430 <line:2081:5, col:20> col:20 mbcinfo 'pthreadmbcinfo':'struct threadmbcinfostruct *'
+|-TypedefDecl 0x2c74ef4b4e8 <line:2078:1, line:2082:3> col:3 _locale_tstruct 'struct localeinfo_struct':'struct localeinfo_struct'
+| `-ElaboratedType 0x2c74ef4b490 'struct localeinfo_struct' sugar
+|   `-RecordType 0x2c74ef4b2f0 'struct localeinfo_struct'
+|     `-Record 0x2c74ef4b250 'localeinfo_struct'
+|-TypedefDecl 0x2c74ef4b5c0 <line:2078:1, line:2082:21> col:21 referenced _locale_t 'struct localeinfo_struct *'
+| `-PointerType 0x2c74ef4b570 'struct localeinfo_struct *'
+|   `-ElaboratedType 0x2c74ef4b490 'struct localeinfo_struct' sugar
+|     `-RecordType 0x2c74ef4b2f0 'struct localeinfo_struct'
+|       `-Record 0x2c74ef4b250 'localeinfo_struct'
+|-RecordDecl 0x2c74ef4b638 <line:2085:9, line:2090:1> line:2085:16 struct localerefcount definition
+| |-MaxFieldAlignmentAttr 0x2c74ef4b6f0 <<invalid sloc>> Implicit 64
+| |-FieldDecl 0x2c74ef57838 <line:2086:9, col:15> col:15 locale 'char *'
+| |-FieldDecl 0x2c74ef578f8 <line:2087:9, col:18> col:18 wlocale 'wchar_t *'
+| |-FieldDecl 0x2c74ef57990 <line:2088:9, col:14> col:14 refcount 'int *'
+| `-FieldDecl 0x2c74ef57a00 <line:2089:9, col:14> col:14 wrefcount 'int *'
+|-TypedefDecl 0x2c74ef57ab8 <line:2085:1, line:2090:3> col:3 referenced locrefcount 'struct localerefcount':'struct localerefcount'
+| `-ElaboratedType 0x2c74ef57a60 'struct localerefcount' sugar
+|   `-RecordType 0x2c74ef4b6d0 'struct localerefcount'
+|     `-Record 0x2c74ef4b638 'localerefcount'
+|-RecordDecl 0x2c74ef57b28 prev 0x2c74ef4ae00 <line:2092:9, line:2111:1> line:2092:16 struct threadlocaleinfostruct definition
+| |-MaxFieldAlignmentAttr 0x2c74ef57ba8 <<invalid sloc>> Implicit 64
+| |-FieldDecl 0x2c74ef57c20 <line:2093:9, col:13> col:13 refcount 'int'
+| |-FieldDecl 0x2c74ef57c90 <line:2094:9, col:22> col:22 lc_codepage 'unsigned int'
+| |-FieldDecl 0x2c74ef57d00 <line:2095:9, col:22> col:22 lc_collate_cp 'unsigned int'
+| |-FieldDecl 0x2c74ef57d70 <line:2096:9, col:22> col:22 lc_time_cp 'unsigned int'
+| |-FieldDecl 0x2c74ef57f38 <line:2097:9, col:34> col:21 lc_category 'locrefcount [6]'
+| |-FieldDecl 0x2c74ef57fa8 <line:2098:9, col:13> col:13 lc_clike 'int'
+| |-FieldDecl 0x2c74ef58018 <line:2099:9, col:13> col:13 mb_cur_max 'int'
+| |-FieldDecl 0x2c74ef58088 <line:2100:9, col:15> col:15 lconv_intl_refcount 'int *'
+| |-FieldDecl 0x2c74ef580f8 <line:2101:9, col:15> col:15 lconv_num_refcount 'int *'
+| |-FieldDecl 0x2c74ef58168 <line:2102:9, col:15> col:15 lconv_mon_refcount 'int *'
+| |-RecordDecl 0x2c74ef581c0 parent 0x2c74d435528 <line:2103:9, col:16> col:16 struct lconv
+| |-FieldDecl 0x2c74ef58350 <col:9, col:24> col:24 lconv 'struct lconv *'
+| |-FieldDecl 0x2c74ef583c0 <line:2104:9, col:15> col:15 ctype1_refcount 'int *'
+| |-FieldDecl 0x2c74ef58430 <line:2105:9, col:26> col:26 ctype1 'unsigned short *'
+| |-FieldDecl 0x2c74ef584a0 <line:2106:9, col:32> col:32 pctype 'const unsigned short *'
+| |-FieldDecl 0x2c74ef58540 <line:2107:9, col:31> col:31 pclmap 'const unsigned char *'
+| |-FieldDecl 0x2c74ef585b0 <line:2108:9, col:31> col:31 pcumap 'const unsigned char *'
+| |-FieldDecl 0x2c74ef586c0 <line:2109:9, col:33> col:33 lc_time_curr 'struct __lc_time_data *'
+| `-FieldDecl 0x2c74ef5f890 <line:2110:9, col:32> col:19 locale_name 'wchar_t *[6]'
+|-TypedefDecl 0x2c74ef5f948 <line:2092:1, line:2111:3> col:3 threadlocinfo 'struct threadlocaleinfostruct':'struct threadlocaleinfostruct'
+| `-ElaboratedType 0x2c74ef5f8f0 'struct threadlocaleinfostruct' sugar
+|   `-RecordType 0x2c74ef4aea0 'struct threadlocaleinfostruct'
+|     `-Record 0x2c74ef57b28 'threadlocaleinfostruct'
+|-FunctionDecl 0x2c74ef5fd80 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:47:9, col:142> col:25 _memccpy 'void *(void *, const void *, int, size_t) __attribute__((cdecl))':'void *(void *, const void *, int, size_t)'
+| |-ParmVarDecl 0x2c74ef5f9d0 <col:69, col:76> col:76 _Dst 'void *'
+| |-ParmVarDecl 0x2c74ef5fa80 <col:87, col:100> col:100 _Src 'const void *'
+| |-ParmVarDecl 0x2c74ef5fb00 <col:111, col:115> col:115 _Val 'int'
+| `-ParmVarDecl 0x2c74ef5fb78 <col:126, col:133> col:133 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef60148 <line:48:54> col:54 implicit memchr 'void *(const void *, int, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74ef601e8 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x2c74ef60250 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x2c74ef602b8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74ef60338 prev 0x2c74ef60148 <col:38, col:150> col:54 memchr 'void *(const void *, int, unsigned long long)'
+| |-ParmVarDecl 0x2c74ef5fe70 <col:94, col:107> col:107 _Buf 'const void *'
+| |-ParmVarDecl 0x2c74ef5fef0 <col:119, col:123> col:123 _Val 'int'
+| `-ParmVarDecl 0x2c74ef5ff68 <col:134, col:141> col:141 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef606f8 <line:49:24, col:162> col:40 _memicmp 'int (const void *, const void *, size_t) __attribute__((cdecl))':'int (const void *, const void *, size_t)'
+| |-ParmVarDecl 0x2c74ef60420 <col:77, col:90> col:90 _Buf1 'const void *'
+| |-ParmVarDecl 0x2c74ef604a0 <col:125, col:138> col:138 _Buf2 'const void *'
+| `-ParmVarDecl 0x2c74ef60518 <col:150, col:157> col:157 _Size 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef5cb60 <line:50:24, col:192> col:40 _memicmp_l 'int (const void *, const void *, size_t, _locale_t) __attribute__((cdecl))':'int (const void *, const void *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74ef607e0 <col:79, col:92> col:92 _Buf1 'const void *'
+| |-ParmVarDecl 0x2c74ef5c840 <col:127, col:140> col:140 _Buf2 'const void *'
+| |-ParmVarDecl 0x2c74ef5c8b8 <col:152, col:159> col:159 _Size 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74ef5c950 <col:175, col:185> col:185 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74ef5ce68 <line:51:32> col:32 implicit memcmp 'int (const void *, const void *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74ef5cf08 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x2c74ef5cf70 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x2c74ef5cfd8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74ef5d058 prev 0x2c74ef5ce68 <col:16, col:144> col:32 memcmp 'int (const void *, const void *, unsigned long long)'
+| |-ParmVarDecl 0x2c74ef5cc50 <col:63, col:76> col:76 _Buf1 'const void *'
+| |-ParmVarDecl 0x2c74ef5ccd0 <col:107, col:120> col:120 _Buf2 'const void *'
+| `-ParmVarDecl 0x2c74ef5cd48 <col:132, col:139> col:139 _Size 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef5d418 <line:55:17> col:17 implicit memcpy 'void *(void *, const void *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74ef5d4b8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x2c74ef5d520 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x2c74ef5d588 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74ef5d608 prev 0x2c74ef5d418 <col:1, col:127> col:17 memcpy 'void *(void *, const void *, unsigned long long)'
+| |-ParmVarDecl 0x2c74ef5d140 <col:54, col:61> col:61 _Dst 'void *'
+| |-ParmVarDecl 0x2c74ef5d1c0 <col:91, col:104> col:104 _Src 'const void *'
+| `-ParmVarDecl 0x2c74ef5d238 <col:115, col:122> col:122 _Size 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef5ead8 <line:57:9, col:191> col:26 memcpy_s 'errno_t (void *, rsize_t, const void *, rsize_t) __attribute__((cdecl))':'errno_t (void *, rsize_t, const void *, rsize_t)'
+| |-ParmVarDecl 0x2c74ef5d718 <col:82, col:89> col:89 _Dst 'void *'
+| |-ParmVarDecl 0x2c74ef5d7b0 <col:100, col:108> col:108 _DstSize 'rsize_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74ef5e860 <col:150, col:163> col:163 _Src 'const void *'
+| `-ParmVarDecl 0x2c74ef5e8d8 <col:174, col:182> col:182 _MaxCount 'rsize_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef5ee98 <line:94:25> col:25 implicit memset 'void *(void *, int, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74ef5ef38 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x2c74ef5efa0 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x2c74ef5f008 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74ef5f088 prev 0x2c74ef5ee98 <col:9, col:107> col:25 memset 'void *(void *, int, unsigned long long)'
+| |-ParmVarDecl 0x2c74ef5ebc8 <col:62, col:69> col:69 _Dst 'void *'
+| |-ParmVarDecl 0x2c74ef5ec48 <col:80, col:84> col:84 _Val 'int'
+| `-ParmVarDecl 0x2c74ef5ecc0 <col:95, col:102> col:102 _Size 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef5f508 <line:98:57> col:57 implicit memccpy 'void *(void *, const void *, int, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74ef5f5a8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x2c74ef5f610 <<invalid sloc>> <invalid sloc> 'const void *'
+| |-ParmVarDecl 0x2c74ef5f678 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x2c74ef5f6e0 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74ef5f768 prev 0x2c74ef5f508 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:98:187> col:57 memccpy 'void *(void *, const void *, int, unsigned long long)'
+| |-ParmVarDecl 0x2c74ef5f250 <col:95, col:102> col:102 _Dst 'void *'
+| |-ParmVarDecl 0x2c74ef5f2d0 <col:136, col:149> col:149 _Src 'const void *'
+| |-ParmVarDecl 0x2c74ef5f350 <col:160, col:164> col:164 _Val 'int'
+| |-ParmVarDecl 0x2c74ef5f3c8 <col:175, col:182> col:182 _Size 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74ef628a0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _memccpy. See online help for details." ""
+|-FunctionDecl 0x2c74ef62c80 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:99:190> col:69 memicmp 'int (const void *, const void *, size_t) __attribute__((cdecl))':'int (const void *, const void *, size_t)'
+| |-ParmVarDecl 0x2c74ef62a68 <col:105, col:118> col:118 _Buf1 'const void *'
+| |-ParmVarDecl 0x2c74ef62ae8 <col:153, col:166> col:166 _Buf2 'const void *'
+| |-ParmVarDecl 0x2c74ef62b60 <col:178, col:185> col:185 _Size 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74ef62d38 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _memicmp. See online help for details." ""
+|-FunctionDecl 0x2c74ef63130 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:105:40, col:144> col:56 used _strset_s 'errno_t (char *, size_t, int) __attribute__((cdecl))':'errno_t (char *, size_t, int)'
+| |-ParmVarDecl 0x2c74ef62e60 <col:94, col:101> col:101 _Dst 'char *'
+| |-ParmVarDecl 0x2c74ef62ed8 <col:112, col:119> col:119 _DstSize 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74ef62f58 <col:134, col:138> col:138 _Value 'int'
+|-FunctionDecl 0x2c74ef63500 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:107:88 used _strset 'char *(char *, int) __attribute__((cdecl))':'char *(char *, int)'
+| |-ParmVarDecl 0x2c74ef63310 <col:108, col:114> col:114 _Dest 'char *'
+| |-ParmVarDecl 0x2c74ef63390 <col:126, col:131> col:131 _Value 'int'
+| `-DeprecatedAttr 0x2c74ef635b0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strset_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74ef5b950 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:109:40, col:158> col:56 strcpy_s 'errno_t (char *, rsize_t, const char *) __attribute__((cdecl))':'errno_t (char *, rsize_t, const char *)'
+| |-ParmVarDecl 0x2c74ef636f8 <col:94, col:101> col:101 _Dst 'char *'
+| |-ParmVarDecl 0x2c74ef63770 <col:112, col:120> col:120 _SizeInBytes 'rsize_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74ef637f0 <col:141, col:154> col:154 _Src 'const char *'
+|-FunctionDecl 0x2c74ef5bd20 <line:112:88> col:88 implicit strcpy 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x2c74ef5bdc0 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x2c74ef5be28 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74ef5bea0 prev 0x2c74ef5bd20 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:112:88 strcpy 'char *(char *, const char *)'
+| |-ParmVarDecl 0x2c74ef5bb30 <col:142, col:148> col:148 _Dest 'char *'
+| |-ParmVarDecl 0x2c74ef5bbb0 <col:162, col:176> col:176 _Source 'const char *'
+| `-DeprecatedAttr 0x2c74ef5bf50 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74ef5c2a8 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:114:40, col:161> col:56 strcat_s 'errno_t (char *, rsize_t, const char *) __attribute__((cdecl))':'errno_t (char *, rsize_t, const char *)'
+| |-ParmVarDecl 0x2c74ef5c098 <col:97, col:104> col:104 _Dst 'char *'
+| |-ParmVarDecl 0x2c74ef5c110 <col:115, col:123> col:123 _SizeInBytes 'rsize_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74ef5c190 <col:144, col:157> col:157 _Src 'const char *'
+|-FunctionDecl 0x2c74ef5c5d0 <line:118:88> col:88 implicit strcat 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x2c74ef5c670 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x2c74ef5c6d8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74ef5c750 prev 0x2c74ef5c5d0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:118:88 strcat 'char *(char *, const char *)'
+| |-ParmVarDecl 0x2c74ef5c450 <col:170, col:176> col:176 _Dest 'char *'
+| |-ParmVarDecl 0x2c74ef5c4d0 <col:190, col:204> col:204 _Source 'const char *'
+| `-DeprecatedAttr 0x2c74ef668e0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74ef66c10 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:120:32> col:32 implicit strcmp 'int (const char *, const char *)' extern
+| |-ParmVarDecl 0x2c74ef66cb0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74ef66d18 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74ef66d90 prev 0x2c74ef66c10 <col:16, col:91> col:32 strcmp 'int (const char *, const char *)'
+| |-ParmVarDecl 0x2c74ef66a28 <col:46, col:59> col:59 _Str1 'const char *'
+| `-ParmVarDecl 0x2c74ef66aa8 <col:73, col:86> col:86 _Str2 'const char *'
+|-FunctionDecl 0x2c74ef66fe0 <line:121:32> col:32 implicit used strlen 'unsigned long long (const char *)' extern
+| `-ParmVarDecl 0x2c74ef67080 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74ef670f0 prev 0x2c74ef66fe0 <col:16, col:63> col:32 used strlen 'unsigned long long (const char *)'
+| `-ParmVarDecl 0x2c74ef66e70 <col:46, col:59> col:59 _Str 'const char *'
+|-FunctionDecl 0x2c74ef673e8 <line:125:1, col:92> col:17 used strnlen 'size_t (const char *, size_t) __attribute__((cdecl))':'size_t (const char *, size_t)'
+| |-ParmVarDecl 0x2c74ef671c8 <col:52, col:65> col:65 _Str 'const char *'
+| `-ParmVarDecl 0x2c74ef67240 <col:76, col:83> col:83 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef67638 <line:127:16, line:133:1> line:130:19 strnlen_s 'size_t (const char *, size_t) __attribute__((cdecl))':'size_t (const char *, size_t)' static inline
+| |-ParmVarDecl 0x2c74ef674c8 <col:56, col:69> col:69 used _Str 'const char *'
+| |-ParmVarDecl 0x2c74ef67540 <col:80, col:87> col:87 used _MaxCount 'size_t':'unsigned long long'
+| `-CompoundStmt 0x2c74ef67978 <line:131:1, line:133:1>
+|   `-ReturnStmt 0x2c74ef67968 <line:132:5, col:51>
+|     `-ConditionalOperator 0x2c74ef67938 <col:12, col:51> 'unsigned long long'
+|       |-ParenExpr 0x2c74ef67798 <col:12, col:20> 'int'
+|       | `-BinaryOperator 0x2c74ef67778 <col:13, col:19> 'int' '=='
+|       |   |-ImplicitCastExpr 0x2c74ef67748 <col:13> 'const char *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x2c74ef67700 <col:13> 'const char *' lvalue ParmVar 0x2c74ef674c8 '_Str' 'const char *'
+|       |   `-ImplicitCastExpr 0x2c74ef67760 <col:19> 'const char *' <NullToPointer>
+|       |     `-IntegerLiteral 0x2c74ef67720 <col:19> 'int' 0
+|       |-ImplicitCastExpr 0x2c74ef67920 <col:24> 'unsigned long long' <IntegralCast>
+|       | `-IntegerLiteral 0x2c74ef677b8 <col:24> 'int' 0
+|       `-CallExpr 0x2c74ef678b0 <col:28, col:51> 'size_t':'unsigned long long'
+|         |-ImplicitCastExpr 0x2c74ef67898 <col:28> 'size_t (*)(const char *, size_t) __attribute__((cdecl))' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x2c74ef677e0 <col:28> 'size_t (const char *, size_t) __attribute__((cdecl))':'size_t (const char *, size_t)' Function 0x2c74ef673e8 'strnlen' 'size_t (const char *, size_t) __attribute__((cdecl))':'size_t (const char *, size_t)'
+|         |-ImplicitCastExpr 0x2c74ef678f0 <col:36> 'const char *' <LValueToRValue>
+|         | `-DeclRefExpr 0x2c74ef67800 <col:36> 'const char *' lvalue ParmVar 0x2c74ef674c8 '_Str' 'const char *'
+|         `-ImplicitCastExpr 0x2c74ef67908 <col:42> 'size_t':'unsigned long long' <LValueToRValue>
+|           `-DeclRefExpr 0x2c74ef67820 <col:42> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74ef67540 '_MaxCount' 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef67c50 <line:136:28, col:209> col:44 memmove_s 'errno_t (void *, rsize_t, const void *, rsize_t) __attribute__((cdecl))':'errno_t (void *, rsize_t, const void *, rsize_t)'
+| |-ParmVarDecl 0x2c74ef679a8 <col:100, col:107> col:107 _Dst 'void *'
+| |-ParmVarDecl 0x2c74ef67a20 <col:118, col:126> col:126 _DstSize 'rsize_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74ef67aa0 <col:168, col:181> col:181 _Src 'const void *'
+| `-ParmVarDecl 0x2c74ef67b18 <col:192, col:200> col:200 _MaxCount 'rsize_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef67f58 <line:139:67> col:67 implicit memmove 'void *(void *, const void *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74ef67ff8 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x2c74ef68060 <<invalid sloc>> <invalid sloc> 'const void *'
+| `-ParmVarDecl 0x2c74ef680c8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74ef68148 prev 0x2c74ef67f58 <col:51, col:186> col:67 memmove 'void *(void *, const void *, unsigned long long)'
+| |-ParmVarDecl 0x2c74ef67d40 <col:109, col:116> col:116 _Dst 'void *'
+| |-ParmVarDecl 0x2c74ef67dc0 <col:150, col:163> col:163 _Src 'const void *'
+| `-ParmVarDecl 0x2c74ef67e38 <col:174, col:181> col:181 _Size 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef68378 <line:146:24, col:76> col:40 _strdup 'char *(const char *) __attribute__((cdecl))':'char *(const char *)'
+| `-ParmVarDecl 0x2c74ef68230 <col:59, col:72> col:72 _Src 'const char *'
+|-FunctionDecl 0x2c74ef68640 <line:152:54> col:54 implicit strchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x2c74ef686e0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74ef68748 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x2c74ef687c0 prev 0x2c74ef68640 <col:38, col:100> col:54 strchr 'char *(const char *, int)'
+| |-ParmVarDecl 0x2c74ef68450 <col:68, col:81> col:81 _Str 'const char *'
+| `-ParmVarDecl 0x2c74ef684d0 <col:92, col:96> col:96 _Val 'int'
+|-FunctionDecl 0x2c74ef65a50 <line:153:24, col:103> col:40 _stricmp 'int (const char *, const char *) __attribute__((cdecl))':'int (const char *, const char *)'
+| |-ParmVarDecl 0x2c74ef658d0 <col:57, col:70> col:70 _Str1 'const char *'
+| `-ParmVarDecl 0x2c74ef65950 <col:85, col:98> col:98 _Str2 'const char *'
+|-FunctionDecl 0x2c74ef65cb0 <line:154:24, col:103> col:40 _strcmpi 'int (const char *, const char *) __attribute__((cdecl))':'int (const char *, const char *)'
+| |-ParmVarDecl 0x2c74ef65b30 <col:57, col:70> col:70 _Str1 'const char *'
+| `-ParmVarDecl 0x2c74ef65bb0 <col:85, col:98> col:98 _Str2 'const char *'
+|-FunctionDecl 0x2c74ef66068 <line:155:24, col:133> col:40 _stricmp_l 'int (const char *, const char *, _locale_t) __attribute__((cdecl))':'int (const char *, const char *, _locale_t)'
+| |-ParmVarDecl 0x2c74ef65d90 <col:59, col:72> col:72 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74ef65e10 <col:87, col:100> col:100 _Str2 'const char *'
+| `-ParmVarDecl 0x2c74ef65e88 <col:116, col:126> col:126 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74ef662d0 <line:156:24, col:103> col:40 strcoll 'int (const char *, const char *) __attribute__((cdecl))':'int (const char *, const char *)'
+| |-ParmVarDecl 0x2c74ef66150 <col:56, col:69> col:69 _Str1 'const char *'
+| `-ParmVarDecl 0x2c74ef661d0 <col:84, col:98> col:98 _Str2 'const char *'
+|-FunctionDecl 0x2c74ef665c8 <line:157:24, col:133> col:40 _strcoll_l 'int (const char *, const char *, _locale_t) __attribute__((cdecl))':'int (const char *, const char *, _locale_t)'
+| |-ParmVarDecl 0x2c74ef663b0 <col:59, col:72> col:72 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74ef66430 <col:87, col:100> col:100 _Str2 'const char *'
+| `-ParmVarDecl 0x2c74ef664a8 <col:116, col:126> col:126 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74ef66830 <line:158:24, col:104> col:40 _stricoll 'int (const char *, const char *) __attribute__((cdecl))':'int (const char *, const char *)'
+| |-ParmVarDecl 0x2c74ef666b0 <col:58, col:71> col:71 _Str1 'const char *'
+| `-ParmVarDecl 0x2c74ef66730 <col:86, col:99> col:99 _Str2 'const char *'
+|-FunctionDecl 0x2c74ef63b08 <line:159:24, col:134> col:40 _stricoll_l 'int (const char *, const char *, _locale_t) __attribute__((cdecl))':'int (const char *, const char *, _locale_t)'
+| |-ParmVarDecl 0x2c74ef638f0 <col:60, col:73> col:73 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74ef63970 <col:88, col:101> col:101 _Str2 'const char *'
+| `-ParmVarDecl 0x2c74ef639e8 <col:117, col:127> col:127 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74ef63ec8 <line:160:24, col:167> col:40 _strncoll 'int (const char *, const char *, size_t) __attribute__((cdecl))':'int (const char *, const char *, size_t)'
+| |-ParmVarDecl 0x2c74ef63bf0 <col:79, col:92> col:92 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74ef63c70 <col:126, col:139> col:139 _Str2 'const char *'
+| `-ParmVarDecl 0x2c74ef63ce8 <col:151, col:158> col:158 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef64330 <line:161:24, col:195> col:40 _strncoll_l 'int (const char *, const char *, size_t, _locale_t) __attribute__((cdecl))':'int (const char *, const char *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74ef63fb0 <col:79, col:92> col:92 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74ef64030 <col:126, col:139> col:139 _Str2 'const char *'
+| |-ParmVarDecl 0x2c74ef640a8 <col:151, col:158> col:158 _MaxCount 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74ef64120 <col:178, col:188> col:188 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74ef64638 <line:162:24, col:167> col:40 _strnicoll 'int (const char *, const char *, size_t) __attribute__((cdecl))':'int (const char *, const char *, size_t)'
+| |-ParmVarDecl 0x2c74ef64420 <col:79, col:92> col:92 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74ef644a0 <col:126, col:139> col:139 _Str2 'const char *'
+| `-ParmVarDecl 0x2c74ef64518 <col:151, col:158> col:158 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74ef64a00 <line:163:24, col:196> col:40 _strnicoll_l 'int (const char *, const char *, size_t, _locale_t) __attribute__((cdecl))':'int (const char *, const char *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74ef64720 <col:80, col:93> col:93 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74ef647a0 <col:127, col:140> col:140 _Str2 'const char *'
+| |-ParmVarDecl 0x2c74ef64818 <col:152, col:159> col:159 _MaxCount 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74ef648c0 <col:179, col:189> col:189 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74ef64d18 <line:164:40> col:40 implicit strcspn 'unsigned long long (const char *, const char *)' extern
+| |-ParmVarDecl 0x2c74ef64db8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74ef64e20 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74ef64e98 prev 0x2c74ef64d18 <col:24, col:104> col:40 strcspn 'unsigned long long (const char *, const char *)'
+| |-ParmVarDecl 0x2c74ef64af0 <col:56, col:69> col:69 _Str 'const char *'
+| `-ParmVarDecl 0x2c74ef64b70 <col:83, col:96> col:96 _Control 'const char *'
+|-FunctionDecl 0x2c74ef65150 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:165:118> col:77 _strerror 'char *(const char *) __attribute__((cdecl))':'char *(const char *)'
+| |-ParmVarDecl 0x2c74ef65070 <col:98, col:111> col:111 _ErrMsg 'const char *'
+| `-DeprecatedAttr 0x2c74ef651f8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74ef655d0 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:166:28, col:155> col:44 _strerror_s 'errno_t (char *, size_t, const char *) __attribute__((cdecl))':'errno_t (char *, size_t, const char *)'
+| |-ParmVarDecl 0x2c74ef65340 <col:85, col:92> col:92 _Buf 'char *'
+| |-ParmVarDecl 0x2c74ef653b8 <col:103, col:110> col:110 _SizeInBytes 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74ef65438 <col:135, col:148> col:148 _ErrMsg 'const char *'
+|-FunctionDecl 0x2c74efb8f88 <line:168:76> col:76 implicit strerror 'char *(int)' extern
+| `-ParmVarDecl 0x2c74efb9028 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x2c74efb9098 prev 0x2c74efb8f88 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:168:93> col:76 strerror 'char *(int)'
+| |-ParmVarDecl 0x2c74ef657b0 <col:90> col:93 'int'
+| `-DeprecatedAttr 0x2c74efb9140 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efb9498 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:170:28, col:139> col:44 strerror_s 'errno_t (char *, size_t, int) __attribute__((cdecl))':'errno_t (char *, size_t, int)'
+| |-ParmVarDecl 0x2c74efb9288 <col:84, col:91> col:91 _Buf 'char *'
+| |-ParmVarDecl 0x2c74efb9300 <col:102, col:109> col:109 _SizeInBytes 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efb9380 <col:128, col:132> col:132 _ErrNum 'int'
+|-FunctionDecl 0x2c74efb9798 <line:173:28, col:109> col:44 _strlwr_s 'errno_t (char *, size_t) __attribute__((cdecl))':'errno_t (char *, size_t)'
+| |-ParmVarDecl 0x2c74efb9580 <col:79, col:86> col:86 _Str 'char *'
+| `-ParmVarDecl 0x2c74efb95f8 <col:97, col:104> col:104 _Size 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efb9a88 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1933:117> D:\Microsoft Visual Studio 12.0\VC\include\string.h:175:79 _strlwr 'char *(char *) __attribute__((cdecl))':'char *(char *)'
+| |-ParmVarDecl 0x2c74efb9938 <col:99, col:105> col:105 _String 'char *'
+| `-DeprecatedAttr 0x2c74efb9b30 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strlwr_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efb4f10 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:176:28, col:139> col:44 _strlwr_s_l 'errno_t (char *, size_t, _locale_t) __attribute__((cdecl))':'errno_t (char *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efb9c78 <col:81, col:88> col:88 _Str 'char *'
+| |-ParmVarDecl 0x2c74efb9cf0 <col:99, col:106> col:106 _Size 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efb9d68 <col:122, col:132> col:132 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efb52e0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:178:82 _strlwr_l 'char *(char *, _locale_t) __attribute__((cdecl))':'char *(char *, _locale_t)'
+| |-ParmVarDecl 0x2c74efb50b8 <col:148, col:154> col:154 _String 'char *'
+| |-ParmVarDecl 0x2c74efb5130 <col:172, col:183> col:183 _Locale '_locale_t':'struct localeinfo_struct *'
+| `-DeprecatedAttr 0x2c74efb5390 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strlwr_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efb5848 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:180:40, col:206> col:56 used strncat_s 'errno_t (char *, rsize_t, const char *, rsize_t) __attribute__((cdecl))':'errno_t (char *, rsize_t, const char *, rsize_t)'
+| |-ParmVarDecl 0x2c74efb54d8 <col:98, col:105> col:105 _Dst 'char *'
+| |-ParmVarDecl 0x2c74efb5550 <col:116, col:124> col:124 _SizeInBytes 'rsize_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efb55d0 <col:165, col:178> col:178 _Src 'const char *'
+| `-ParmVarDecl 0x2c74efb5648 <col:189, col:197> col:197 _MaxCount 'rsize_t':'unsigned long long'
+|-FunctionDecl 0x2c74efb5cc8 <line:186:83> col:83 implicit used strncat 'char *(char *, const char *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74efb5d68 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x2c74efb5dd0 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74efb5e38 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74efb5f20 prev 0x2c74efb5cc8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1980:149> D:\Microsoft Visual Studio 12.0\VC\include\string.h:186:83 used strncat 'char *(char *, const char *, unsigned long long)'
+| |-ParmVarDecl 0x2c74efb59f8 <col:161, col:167> col:167 _Dest 'char *'
+| |-ParmVarDecl 0x2c74efb5a78 <col:198, col:212> col:212 _Source 'const char *'
+| |-ParmVarDecl 0x2c74efb5af0 <col:226, col:234> col:234 _Count 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efb5fd8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efb6338 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:188:40> col:40 implicit strncmp 'int (const char *, const char *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74efb63d8 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x2c74efb6440 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74efb64a8 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74efb6528 prev 0x2c74efb6338 <col:24, col:163> col:40 strncmp 'int (const char *, const char *, unsigned long long)'
+| |-ParmVarDecl 0x2c74efb6120 <col:75, col:88> col:88 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74efb61a0 <col:122, col:135> col:135 _Str2 'const char *'
+| `-ParmVarDecl 0x2c74efb6218 <col:147, col:154> col:154 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efb6828 <line:189:24, col:165> col:40 _strnicmp 'int (const char *, const char *, size_t) __attribute__((cdecl))':'int (const char *, const char *, size_t)'
+| |-ParmVarDecl 0x2c74efb6610 <col:77, col:90> col:90 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74efb6690 <col:124, col:137> col:137 _Str2 'const char *'
+| `-ParmVarDecl 0x2c74efb6708 <col:149, col:156> col:156 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efb6bc0 <line:190:24, col:195> col:40 _strnicmp_l 'int (const char *, const char *, size_t, _locale_t) __attribute__((cdecl))':'int (const char *, const char *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efb6910 <col:79, col:92> col:92 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74efb6990 <col:126, col:139> col:139 _Str2 'const char *'
+| |-ParmVarDecl 0x2c74efb6a08 <col:151, col:158> col:158 _MaxCount 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efb6a80 <col:178, col:188> col:188 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efbbfc8 <line:192:40, col:203> col:56 used strncpy_s 'errno_t (char *, rsize_t, const char *, rsize_t) __attribute__((cdecl))':'errno_t (char *, rsize_t, const char *, rsize_t)'
+| |-ParmVarDecl 0x2c74efb6cb0 <col:95, col:102> col:102 _Dst 'char *'
+| |-ParmVarDecl 0x2c74efb6d28 <col:113, col:121> col:121 _SizeInBytes 'rsize_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efb6da8 <col:162, col:175> col:175 _Src 'const char *'
+| `-ParmVarDecl 0x2c74efb6e20 <col:186, col:194> col:194 _MaxCount 'rsize_t':'unsigned long long'
+|-FunctionDecl 0x2c74efbc390 <line:195:83> col:83 implicit used strncpy 'char *(char *, const char *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74efbc430 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x2c74efbc498 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74efbc500 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74efbc580 prev 0x2c74efbc390 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1980:149> D:\Microsoft Visual Studio 12.0\VC\include\string.h:195:83 used strncpy 'char *(char *, const char *, unsigned long long)'
+| |-ParmVarDecl 0x2c74efbc178 <col:167, col:173> col:173 _Dest 'char *'
+| |-ParmVarDecl 0x2c74efbc1f8 <col:204, col:218> col:218 _Source 'const char *'
+| |-ParmVarDecl 0x2c74efbc270 <col:232, col:240> col:240 _Count 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efbc638 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efbcaf8 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:196:40, col:174> col:56 used _strnset_s 'errno_t (char *, size_t, int, size_t) __attribute__((cdecl))':'errno_t (char *, size_t, int, size_t)'
+| |-ParmVarDecl 0x2c74efbc780 <col:99, col:106> col:106 _Str 'char *'
+| |-ParmVarDecl 0x2c74efbc7f8 <col:117, col:124> col:124 _SizeInBytes 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efbc878 <col:143, col:147> col:147 _Val 'int'
+| `-ParmVarDecl 0x2c74efbc8f0 <col:158, col:165> col:165 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efbcf90 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1980:149> D:\Microsoft Visual Studio 12.0\VC\include\string.h:198:83 used _strnset 'char *(char *, int, size_t) __attribute__((cdecl))':'char *(char *, int, size_t)'
+| |-ParmVarDecl 0x2c74efbcca8 <col:163, col:169> col:169 _Dest 'char *'
+| |-ParmVarDecl 0x2c74efbcd28 <col:181, col:186> col:186 _Val 'int'
+| |-ParmVarDecl 0x2c74efbcda0 <col:197, col:205> col:205 _Count 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efbd048 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strnset_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efbd380 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:199:54> col:54 implicit strpbrk 'char *(const char *, const char *)' extern
+| |-ParmVarDecl 0x2c74efbd420 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74efbd488 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74efbd500 prev 0x2c74efbd380 <col:38, col:116> col:54 strpbrk 'char *(const char *, const char *)'
+| |-ParmVarDecl 0x2c74efbd190 <col:69, col:82> col:82 _Str 'const char *'
+| `-ParmVarDecl 0x2c74efbd210 <col:95, col:108> col:108 _Control 'const char *'
+|-FunctionDecl 0x2c74efbd760 <line:200:54> col:54 implicit strrchr 'char *(const char *, int)' extern
+| |-ParmVarDecl 0x2c74efbd800 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74efbd868 <<invalid sloc>> <invalid sloc> 'int'
+|-FunctionDecl 0x2c74efbd8e0 prev 0x2c74efbd760 <col:38, col:100> col:54 strrchr 'char *(const char *, int)'
+| |-ParmVarDecl 0x2c74efbd5e0 <col:69, col:82> col:82 _Str 'const char *'
+| `-ParmVarDecl 0x2c74efbd660 <col:93, col:97> col:97 _Ch 'int'
+|-FunctionDecl 0x2c74efbdaa0 <line:201:9, col:54> col:25 _strrev 'char *(char *) __attribute__((cdecl))':'char *(char *)'
+| `-ParmVarDecl 0x2c74efbd9c0 <col:43, col:50> col:50 _Str 'char *'
+|-FunctionDecl 0x2c74efbdcf0 <line:202:40> col:40 implicit used strspn 'unsigned long long (const char *, const char *)' extern
+| |-ParmVarDecl 0x2c74efbdd90 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74efbddf8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74efbde70 prev 0x2c74efbdcf0 <col:24, col:101> col:40 used strspn 'unsigned long long (const char *, const char *)'
+| |-ParmVarDecl 0x2c74efbdb78 <col:54, col:67> col:67 _Str 'const char *'
+| `-ParmVarDecl 0x2c74efbdbf8 <col:80, col:93> col:93 _Control 'const char *'
+|-FunctionDecl 0x2c74efbb0f0 <line:203:70> col:70 implicit strstr 'char *(const char *, const char *)' extern
+| |-ParmVarDecl 0x2c74efbb190 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74efbb1f8 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74efbb270 prev 0x2c74efbb0f0 <col:54, col:130> col:70 strstr 'char *(const char *, const char *)'
+| |-ParmVarDecl 0x2c74efbaf70 <col:84, col:97> col:97 _Str 'const char *'
+| `-ParmVarDecl 0x2c74efbaff0 <col:110, col:123> col:123 _SubStr 'const char *'
+|-FunctionDecl 0x2c74efbb590 <line:204:74> col:74 implicit used strtok 'char *(char *, const char *)' extern
+| |-ParmVarDecl 0x2c74efbb630 <<invalid sloc>> <invalid sloc> 'char *'
+| `-ParmVarDecl 0x2c74efbb698 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74efbb710 prev 0x2c74efbb590 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:204:134> col:74 used strtok 'char *(char *, const char *)'
+| |-ParmVarDecl 0x2c74efbb410 <col:95, col:102> col:102 _Str 'char *'
+| |-ParmVarDecl 0x2c74efbb490 <col:115, col:128> col:128 _Delim 'const char *'
+| `-DeprecatedAttr 0x2c74efbb7c0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efbbba8 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:206:36, col:162> col:52 used strtok_s 'char *(char *, const char *, char **) __attribute__((cdecl))':'char *(char *, const char *, char **)'
+| |-ParmVarDecl 0x2c74efbb908 <col:75, col:82> col:82 _Str 'char *'
+| |-ParmVarDecl 0x2c74efbb988 <col:95, col:108> col:108 _Delim 'const char *'
+| `-ParmVarDecl 0x2c74efbba08 <col:146, col:154> col:154 _Context 'char **'
+|-FunctionDecl 0x2c74efbbe00 <line:208:28, col:109> col:44 _strupr_s 'errno_t (char *, size_t) __attribute__((cdecl))':'errno_t (char *, size_t)'
+| |-ParmVarDecl 0x2c74efbbc90 <col:79, col:86> col:86 _Str 'char *'
+| `-ParmVarDecl 0x2c74efbbd08 <col:97, col:104> col:104 _Size 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efbe158 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1933:117> D:\Microsoft Visual Studio 12.0\VC\include\string.h:210:79 _strupr 'char *(char *) __attribute__((cdecl))':'char *(char *)'
+| |-ParmVarDecl 0x2c74efbe078 <col:99, col:105> col:105 _String 'char *'
+| `-DeprecatedAttr 0x2c74efbe200 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strupr_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efbe550 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:211:28, col:130> col:44 _strupr_s_l 'errno_t (char *, size_t, _locale_t) __attribute__((cdecl))':'errno_t (char *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efbe348 <col:81, col:88> col:88 _Str 'char *'
+| |-ParmVarDecl 0x2c74efbe3c0 <col:99, col:106> col:106 _Size 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efbe438 <col:113, col:123> col:123 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efbe870 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:213:82 _strupr_l 'char *(char *, _locale_t) __attribute__((cdecl))':'char *(char *, _locale_t)'
+| |-ParmVarDecl 0x2c74efbe6f8 <col:148, col:154> col:154 _String 'char *'
+| |-ParmVarDecl 0x2c74efbe770 <col:172, col:183> col:183 _Locale '_locale_t':'struct localeinfo_struct *'
+| `-DeprecatedAttr 0x2c74efbe920 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strupr_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efbed30 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:214:44> col:44 implicit strxfrm 'unsigned long long (char *, const char *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74efbedd0 <<invalid sloc>> <invalid sloc> 'char *'
+| |-ParmVarDecl 0x2c74efbee38 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c74efbeea0 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74efb6f30 prev 0x2c74efbed30 <col:28, col:155> col:44 strxfrm 'unsigned long long (char *, const char *, unsigned long long)'
+| |-ParmVarDecl 0x2c74efbea68 <col:95, col:102> col:102 _Dst 'char *'
+| |-ParmVarDecl 0x2c74efbeae8 <col:115, col:128> col:128 _Src 'const char *'
+| `-ParmVarDecl 0x2c74efbeb60 <col:139, col:146> col:146 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efb7388 <line:215:28, col:185> col:44 _strxfrm_l 'size_t (char *, const char *, size_t, _locale_t) __attribute__((cdecl))':'size_t (char *, const char *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efb7018 <col:97, col:104> col:104 _Dst 'char *'
+| |-ParmVarDecl 0x2c74efb7098 <col:117, col:130> col:130 _Src 'const char *'
+| |-ParmVarDecl 0x2c74efb7110 <col:141, col:148> col:148 _MaxCount 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efb7188 <col:168, col:178> col:178 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efb7630 <line:245:71> col:71 implicit strdup 'char *(const char *)' extern
+| `-ParmVarDecl 0x2c74efb76d0 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c74efb7740 prev 0x2c74efb7630 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:245:106> col:71 strdup 'char *(const char *)'
+| |-ParmVarDecl 0x2c74efb7550 <col:89, col:102> col:102 _Src 'const char *'
+| `-DeprecatedAttr 0x2c74efb77e8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details." ""
+|-FunctionDecl 0x2c74efb7b30 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:252:129> col:69 strcmpi 'int (const char *, const char *) __attribute__((cdecl))':'int (const char *, const char *)'
+| |-ParmVarDecl 0x2c74efb79b0 <col:84, col:97> col:97 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74efb7a30 <col:111, col:124> col:124 _Str2 'const char *'
+| `-DeprecatedAttr 0x2c74efb7be0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strcmpi. See online help for details." ""
+|-FunctionDecl 0x2c74efbefb0 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:253:129> col:69 stricmp 'int (const char *, const char *) __attribute__((cdecl))':'int (const char *, const char *)'
+| |-ParmVarDecl 0x2c74efb7da8 <col:84, col:97> col:97 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74efb7e28 <col:111, col:124> col:124 _Str2 'const char *'
+| `-DeprecatedAttr 0x2c74efbf060 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details." ""
+|-FunctionDecl 0x2c74efbf308 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:254:84> col:56 strlwr 'char *(char *) __attribute__((cdecl))':'char *(char *)'
+| |-ParmVarDecl 0x2c74efbf228 <col:73, col:80> col:80 _Str 'char *'
+| `-DeprecatedAttr 0x2c74efbf3b0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strlwr. See online help for details." ""
+|-FunctionDecl 0x2c74efbf7c8 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:255:193> col:70 strnicmp 'int (const char *, const char *, size_t) __attribute__((cdecl))':'int (const char *, const char *, size_t)'
+| |-ParmVarDecl 0x2c74efbf5b0 <col:106, col:119> col:119 _Str1 'const char *'
+| |-ParmVarDecl 0x2c74efbf630 <col:153, col:166> col:166 _Str 'const char *'
+| |-ParmVarDecl 0x2c74efbf6a8 <col:177, col:184> col:184 _MaxCount 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efbf880 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strnicmp. See online help for details." ""
+|-FunctionDecl 0x2c74efbfc60 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:256:143> col:57 strnset 'char *(char *, int, size_t) __attribute__((cdecl))':'char *(char *, int, size_t)'
+| |-ParmVarDecl 0x2c74efbfa48 <col:94, col:101> col:101 _Str 'char *'
+| |-ParmVarDecl 0x2c74efbfac8 <col:112, col:116> col:116 _Val 'int'
+| |-ParmVarDecl 0x2c74efbfb40 <col:127, col:134> col:134 _MaxCount 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efbfd18 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strnset. See online help for details." ""
+|-FunctionDecl 0x2c74efbfff8 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:257:84> col:56 strrev 'char *(char *) __attribute__((cdecl))':'char *(char *)'
+| |-ParmVarDecl 0x2c74efbfee0 <col:73, col:80> col:80 _Str 'char *'
+| `-DeprecatedAttr 0x2c74efc00a0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strrev. See online help for details." ""
+|-FunctionDecl 0x2c74efc03e8 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:258:99> col:56 strset 'char *(char *, int) __attribute__((cdecl))':'char *(char *, int)'
+| |-ParmVarDecl 0x2c74efc0268 <col:73, col:80> col:80 _Str 'char *'
+| |-ParmVarDecl 0x2c74efc02e8 <col:91, col:95> col:95 _Val 'int'
+| `-DeprecatedAttr 0x2c74efc0498 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strset. See online help for details." ""
+|-FunctionDecl 0x2c74efc0740 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:259:84> col:56 strupr 'char *(char *) __attribute__((cdecl))':'char *(char *)'
+| |-ParmVarDecl 0x2c74efc0660 <col:73, col:80> col:80 _Str 'char *'
+| `-DeprecatedAttr 0x2c74efc07e8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strupr. See online help for details." ""
+|-FunctionDecl 0x2c74efc0a80 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:273:24, col:77> col:42 _wcsdup 'wchar_t *(const wchar_t *) __attribute__((cdecl))':'wchar_t *(const wchar_t *)'
+| `-ParmVarDecl 0x2c74efc0908 <col:57, col:73> col:73 _Str 'const wchar_t *'
+|-FunctionDecl 0x2c74efc0e10 <line:280:40, col:167> col:56 wcscat_s 'errno_t (wchar_t *, rsize_t, const wchar_t *) __attribute__((cdecl))':'errno_t (wchar_t *, rsize_t, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc0b50 <col:97, col:107> col:107 _Dst 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc0bc8 <col:118, col:126> col:126 _SizeInWords 'rsize_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efc0c40 <col:147, col:163> col:163 _Src 'const wchar_t *'
+|-FunctionDecl 0x2c74efc11e8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:284:82 wcscat 'wchar_t *(wchar_t *, const wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc0fd0 <col:164, col:173> col:173 _Dest 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc1048 <col:187, col:204> col:204 _Source 'const wchar_t *'
+| `-DeprecatedAttr 0x2c74efc1298 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc15f8 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:288:41> col:41 implicit wcschr 'unsigned short *(const unsigned short *, unsigned short)' extern
+| |-ParmVarDecl 0x2c74efc1698 <<invalid sloc>> <invalid sloc> 'const unsigned short *'
+| `-ParmVarDecl 0x2c74efc1700 <<invalid sloc>> <invalid sloc> 'unsigned short'
+|-FunctionDecl 0x2c74efc1778 prev 0x2c74efc15f8 <col:23, col:88> col:41 wcschr 'unsigned short *(const unsigned short *, unsigned short)'
+| |-ParmVarDecl 0x2c74efc13d8 <col:55, col:71> col:71 _Str 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc1450 <col:77, col:85> col:85 _Ch 'wchar_t':'unsigned short'
+|-FunctionDecl 0x2c74efc1a70 <line:289:36> col:36 implicit wcscmp 'int (const unsigned short *, const unsigned short *)' extern
+| |-ParmVarDecl 0x2c74efc1b10 <<invalid sloc>> <invalid sloc> 'const unsigned short *'
+| `-ParmVarDecl 0x2c74efc1b78 <<invalid sloc>> <invalid sloc> 'const unsigned short *'
+|-FunctionDecl 0x2c74efc1bf0 prev 0x2c74efc1a70 <col:24, col:101> col:36 wcscmp 'int (const unsigned short *, const unsigned short *)'
+| |-ParmVarDecl 0x2c74efc1850 <col:50, col:66> col:66 _Str1 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc18c8 <col:80, col:96> col:96 _Str2 'const wchar_t *'
+|-FunctionDecl 0x2c74efc1ed0 <line:291:40, col:164> col:56 wcscpy_s 'errno_t (wchar_t *, rsize_t, const wchar_t *) __attribute__((cdecl))':'errno_t (wchar_t *, rsize_t, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc1cc8 <col:94, col:104> col:104 _Dst 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc1d40 <col:115, col:123> col:123 _SizeInWords 'rsize_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efc1db8 <col:144, col:160> col:160 _Src 'const wchar_t *'
+|-FunctionDecl 0x2c74efba1a0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:294:82 wcscpy 'wchar_t *(wchar_t *, const wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efba030 <col:136, col:145> col:145 _Dest 'wchar_t *'
+| |-ParmVarDecl 0x2c74efba0a8 <col:159, col:176> col:176 _Source 'const wchar_t *'
+| `-DeprecatedAttr 0x2c74efba250 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efba5a8 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:295:24, col:107> col:39 wcscspn 'size_t (const wchar_t *, const wchar_t *) __attribute__((cdecl))':'size_t (const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efba390 <col:54, col:70> col:70 _Str 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efba408 <col:83, col:99> col:99 _Control 'const wchar_t *'
+|-FunctionDecl 0x2c74efba7f0 <line:296:39> col:39 implicit wcslen 'unsigned long long (const unsigned short *)' extern
+| `-ParmVarDecl 0x2c74efba890 <<invalid sloc>> <invalid sloc> 'const unsigned short *'
+|-FunctionDecl 0x2c74efba900 prev 0x2c74efba7f0 <col:24, col:73> col:39 wcslen 'unsigned long long (const unsigned short *)'
+| `-ParmVarDecl 0x2c74efba680 <col:53, col:69> col:69 _Str 'const wchar_t *'
+|-FunctionDecl 0x2c74efbabe8 <line:300:1, col:94> col:16 used wcsnlen 'size_t (const wchar_t *, size_t) __attribute__((cdecl))':'size_t (const wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efba9d0 <col:51, col:67> col:67 _Src 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efbaa48 <col:78, col:85> col:85 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efbae30 <line:302:16, line:308:1> line:305:18 wcsnlen_s 'size_t (const wchar_t *, size_t) __attribute__((cdecl))':'size_t (const wchar_t *, size_t)' static inline
+| |-ParmVarDecl 0x2c74efbacc0 <col:55, col:71> col:71 used _Src 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efbad38 <col:82, col:89> col:89 used _MaxCount 'size_t':'unsigned long long'
+| `-CompoundStmt 0x2c74efc5278 <line:306:1, line:308:1>
+|   `-ReturnStmt 0x2c74efc5268 <line:307:5, col:56>
+|     `-ConditionalOperator 0x2c74efc5238 <col:12, col:56> 'unsigned long long'
+|       |-ParenExpr 0x2c74efc50a8 <col:12, col:25> 'int'
+|       | `-BinaryOperator 0x2c74efc5088 <col:13, line:36:27> 'int' '=='
+|       |   |-ImplicitCastExpr 0x2c74efc5058 <line:307:13> 'const wchar_t *' <LValueToRValue>
+|       |   | `-DeclRefExpr 0x2c74efbaef8 <col:13> 'const wchar_t *' lvalue ParmVar 0x2c74efbacc0 '_Src' 'const wchar_t *'
+|       |   `-ImplicitCastExpr 0x2c74efc5070 <line:36:17, col:27> 'const wchar_t *' <BitCast>
+|       |     `-ParenExpr 0x2c74efc5038 <col:17, col:27> 'void *'
+|       |       `-CStyleCastExpr 0x2c74efc5010 <col:18, col:26> 'void *' <NullToPointer>
+|       |         `-IntegerLiteral 0x2c74efbaf18 <col:26> 'int' 0
+|       |-ImplicitCastExpr 0x2c74efc5220 <line:307:29> 'unsigned long long' <IntegralCast>
+|       | `-IntegerLiteral 0x2c74efc50c8 <col:29> 'int' 0
+|       `-CallExpr 0x2c74efc51c0 <col:33, col:56> 'size_t':'unsigned long long'
+|         |-ImplicitCastExpr 0x2c74efc51a8 <col:33> 'size_t (*)(const wchar_t *, size_t) __attribute__((cdecl))' <FunctionToPointerDecay>
+|         | `-DeclRefExpr 0x2c74efc50f0 <col:33> 'size_t (const wchar_t *, size_t) __attribute__((cdecl))':'size_t (const wchar_t *, size_t)' Function 0x2c74efbabe8 'wcsnlen' 'size_t (const wchar_t *, size_t) __attribute__((cdecl))':'size_t (const wchar_t *, size_t)'
+|         |-ImplicitCastExpr 0x2c74efc51f0 <col:41> 'const wchar_t *' <LValueToRValue>
+|         | `-DeclRefExpr 0x2c74efc5110 <col:41> 'const wchar_t *' lvalue ParmVar 0x2c74efbacc0 '_Src' 'const wchar_t *'
+|         `-ImplicitCastExpr 0x2c74efc5208 <col:47> 'size_t':'unsigned long long' <LValueToRValue>
+|           `-DeclRefExpr 0x2c74efc5130 <col:47> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efbad38 '_MaxCount' 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efc5608 <line:311:40, col:212> col:56 wcsncat_s 'errno_t (wchar_t *, rsize_t, const wchar_t *, rsize_t) __attribute__((cdecl))':'errno_t (wchar_t *, rsize_t, const wchar_t *, rsize_t)'
+| |-ParmVarDecl 0x2c74efc52a0 <col:98, col:108> col:108 _Dst 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc5318 <col:119, col:127> col:127 _SizeInWords 'rsize_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efc5390 <col:168, col:184> col:184 _Src 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc5408 <col:195, col:203> col:203 _MaxCount 'rsize_t':'unsigned long long'
+|-FunctionDecl 0x2c74efc5a70 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1980:149> D:\Microsoft Visual Studio 12.0\VC\include\string.h:316:86 wcsncat 'wchar_t *(wchar_t *, const wchar_t *, size_t) __attribute__((cdecl))':'wchar_t *(wchar_t *, const wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efc57b0 <col:167, col:176> col:176 _Dest 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc5828 <col:207, col:224> col:224 _Source 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efc58a0 <col:238, col:246> col:246 _Count 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efc5b28 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using wcsncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc5f38 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:318:36> col:36 implicit wcsncmp 'int (const unsigned short *, const unsigned short *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c74efc9050 <<invalid sloc>> <invalid sloc> 'const unsigned short *'
+| |-ParmVarDecl 0x2c74efc90b8 <<invalid sloc>> <invalid sloc> 'const unsigned short *'
+| `-ParmVarDecl 0x2c74efc9120 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-FunctionDecl 0x2c74efc91a0 prev 0x2c74efc5f38 <col:24, col:165> col:36 wcsncmp 'int (const unsigned short *, const unsigned short *, unsigned long long)'
+| |-ParmVarDecl 0x2c74efc5c68 <col:71, col:87> col:87 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efc5ce0 <col:121, col:137> col:137 _Str2 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc5d58 <col:149, col:156> col:156 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efc9520 <line:320:40, col:209> col:56 wcsncpy_s 'errno_t (wchar_t *, rsize_t, const wchar_t *, rsize_t) __attribute__((cdecl))':'errno_t (wchar_t *, rsize_t, const wchar_t *, rsize_t)'
+| |-ParmVarDecl 0x2c74efc9280 <col:95, col:105> col:105 _Dst 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc92f8 <col:116, col:124> col:124 _SizeInWords 'rsize_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efc9370 <col:165, col:181> col:181 _Src 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc93e8 <col:192, col:200> col:200 _MaxCount 'rsize_t':'unsigned long long'
+|-FunctionDecl 0x2c74efc98d0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1980:149> D:\Microsoft Visual Studio 12.0\VC\include\string.h:323:86 wcsncpy 'wchar_t *(wchar_t *, const wchar_t *, size_t) __attribute__((cdecl))':'wchar_t *(wchar_t *, const wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efc96c8 <col:179, col:188> col:188 _Dest 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc9740 <col:219, col:236> col:236 _Source 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efc97b8 <col:250, col:258> col:258 _Count 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efc9988 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc9ce8 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:324:38, col:124> col:56 wcspbrk 'wchar_t *(const wchar_t *, const wchar_t *) __attribute__((cdecl))':'wchar_t *(const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc9ac8 <col:71, col:87> col:87 _Str 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc9b40 <col:100, col:116> col:116 _Control 'const wchar_t *'
+|-FunctionDecl 0x2c74efc9f30 <line:325:38, col:109> col:56 wcsrchr 'wchar_t *(const wchar_t *, wchar_t) __attribute__((cdecl))':'wchar_t *(const wchar_t *, wchar_t)'
+| |-ParmVarDecl 0x2c74efc9dc0 <col:71, col:87> col:87 _Str 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc9e38 <col:98, col:106> col:106 _Ch 'wchar_t':'unsigned short'
+|-FunctionDecl 0x2c74efc2150 <line:326:24, col:106> col:39 wcsspn 'size_t (const wchar_t *, const wchar_t *) __attribute__((cdecl))':'size_t (const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc1fe0 <col:53, col:69> col:69 _Str 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc2058 <col:82, col:98> col:98 _Control 'const wchar_t *'
+|-FunctionDecl 0x2c74efc2398 <line:329:23, col:107> col:41 wcsstr 'wchar_t *(const wchar_t *, const wchar_t *) __attribute__((cdecl))':'wchar_t *(const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc2228 <col:55, col:71> col:71 _Str 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc22a0 <col:84, col:100> col:100 _SubStr 'const wchar_t *'
+|-FunctionDecl 0x2c74efc26a0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:330:142> col:76 wcstok 'wchar_t *(wchar_t *, const wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc2530 <col:97, col:107> col:107 _Str 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc25a8 <col:120, col:136> col:136 _Delim 'const wchar_t *'
+| `-DeprecatedAttr 0x2c74efc2750 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using wcstok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc2bb0 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:332:36, col:173> col:54 wcstok_s 'wchar_t *(wchar_t *, const wchar_t *, wchar_t **) __attribute__((cdecl))':'wchar_t *(wchar_t *, const wchar_t *, wchar_t **)'
+| |-ParmVarDecl 0x2c74efc2890 <col:77, col:87> col:87 _Str 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc2908 <col:100, col:116> col:116 _Delim 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc29e0 <col:154, col:165> col:165 _Context 'wchar_t **'
+|-FunctionDecl 0x2c74efc2ed0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:334:105> col:79 _wcserror 'wchar_t *(int) __attribute__((cdecl))':'wchar_t *(int)'
+| |-ParmVarDecl 0x2c74efc2d58 <col:94, col:98> col:98 _ErrNum 'int'
+| `-DeprecatedAttr 0x2c74efc2f78 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _wcserror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc8400 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:335:28, col:147> col:44 _wcserror_s 'errno_t (wchar_t *, size_t, int) __attribute__((cdecl))':'errno_t (wchar_t *, size_t, int)'
+| |-ParmVarDecl 0x2c74efc8138 <col:89, col:99> col:99 _Buf 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc81b0 <col:110, col:117> col:117 _SizeInWords 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efc8230 <col:136, col:140> col:140 _ErrNum 'int'
+|-FunctionDecl 0x2c74efc86b0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:337:122> col:80 __wcserror 'wchar_t *(const wchar_t *) __attribute__((cdecl))':'wchar_t *(const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc85d8 <col:102, col:118> col:118 _Str 'const wchar_t *'
+| `-DeprecatedAttr 0x2c74efc8758 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using __wcserror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc8b20 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:338:28, col:165> col:44 __wcserror_s 'errno_t (wchar_t *, size_t, const wchar_t *) __attribute__((cdecl))':'errno_t (wchar_t *, size_t, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc8898 <col:90, col:100> col:100 _Buffer 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc8910 <col:114, col:121> col:121 _SizeInWords 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efc8988 <col:142, col:158> col:158 _ErrMsg 'const wchar_t *'
+|-FunctionDecl 0x2c74efc8d78 <line:341:24, col:103> col:36 _wcsicmp 'int (const wchar_t *, const wchar_t *) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efc8c00 <col:52, col:68> col:68 _Str1 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc8c78 <col:82, col:98> col:98 _Str2 'const wchar_t *'
+|-FunctionDecl 0x2c74efc7118 <line:342:24, col:133> col:36 _wcsicmp_l 'int (const wchar_t *, const wchar_t *, _locale_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, _locale_t)'
+| |-ParmVarDecl 0x2c74efc8e50 <col:54, col:70> col:70 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efc8ec8 <col:84, col:100> col:100 _Str2 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc8f40 <col:116, col:126> col:126 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efc7408 <line:343:24, col:167> col:36 _wcsnicmp 'int (const wchar_t *, const wchar_t *, size_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efc71f8 <col:73, col:89> col:89 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efc7270 <col:123, col:139> col:139 _Str2 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc72e8 <col:151, col:158> col:158 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efc7860 <line:344:24, col:197> col:36 _wcsnicmp_l 'int (const wchar_t *, const wchar_t *, size_t, _locale_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efc74e8 <col:75, col:91> col:91 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efc7560 <col:125, col:141> col:141 _Str2 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efc75d8 <col:153, col:160> col:160 _MaxCount 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efc7650 <col:180, col:190> col:190 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efc7cb8 <line:345:40, col:181> col:56 _wcsnset_s 'errno_t (wchar_t *, size_t, wchar_t, size_t) __attribute__((cdecl))':'errno_t (wchar_t *, size_t, wchar_t, size_t)'
+| |-ParmVarDecl 0x2c74efc7948 <col:99, col:109> col:109 _Dst 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc79c0 <col:120, col:127> col:127 _SizeInWords 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efc7a38 <col:146, col:154> col:154 _Val 'wchar_t':'unsigned short'
+| `-ParmVarDecl 0x2c74efc7ab0 <col:165, col:172> col:172 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efca180 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1980:149> D:\Microsoft Visual Studio 12.0\VC\include\string.h:347:86 _wcsnset 'wchar_t *(wchar_t *, wchar_t, size_t) __attribute__((cdecl))':'wchar_t *(wchar_t *, wchar_t, size_t)'
+| |-ParmVarDecl 0x2c74efc7e60 <col:172, col:181> col:181 _Str 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc7ed8 <col:187, col:196> col:196 _Val 'wchar_t':'unsigned short'
+| |-ParmVarDecl 0x2c74efc7f50 <col:207, col:215> col:215 _MaxCount 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efca238 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _wcsnset_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efca4f0 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:348:9, col:59> col:27 _wcsrev 'wchar_t *(wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *)'
+| `-ParmVarDecl 0x2c74efca378 <col:45, col:55> col:55 _Str 'wchar_t *'
+|-FunctionDecl 0x2c74efca880 <line:349:40, col:159> col:56 _wcsset_s 'errno_t (wchar_t *, size_t, wchar_t) __attribute__((cdecl))':'errno_t (wchar_t *, size_t, wchar_t)'
+| |-ParmVarDecl 0x2c74efca5c0 <col:98, col:108> col:108 _Dst 'wchar_t *'
+| |-ParmVarDecl 0x2c74efca638 <col:119, col:126> col:126 _SizeInWords 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efca6b0 <col:145, col:153> col:153 _Value 'wchar_t':'unsigned short'
+|-FunctionDecl 0x2c74efcac38 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:351:85 _wcsset 'wchar_t *(wchar_t *, wchar_t) __attribute__((cdecl))':'wchar_t *(wchar_t *, wchar_t)'
+| |-ParmVarDecl 0x2c74efcaa20 <col:150, col:159> col:159 _Str 'wchar_t *'
+| |-ParmVarDecl 0x2c74efcaa98 <col:165, col:174> col:174 _Val 'wchar_t':'unsigned short'
+| `-DeprecatedAttr 0x2c74efcace8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _wcsset_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc6020 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:353:28, col:126> col:44 _wcslwr_s 'errno_t (wchar_t *, size_t) __attribute__((cdecl))':'errno_t (wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efcae28 <col:86, col:96> col:96 _Str 'wchar_t *'
+| `-ParmVarDecl 0x2c74efcaea0 <col:107, col:114> col:114 _SizeInWords 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efc6290 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1933:117> D:\Microsoft Visual Studio 12.0\VC\include\string.h:355:82 _wcslwr 'wchar_t *(wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *)'
+| |-ParmVarDecl 0x2c74efc61b8 <col:102, col:111> col:111 _String 'wchar_t *'
+| `-DeprecatedAttr 0x2c74efc6338 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _wcslwr_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc6740 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:356:28, col:156> col:44 _wcslwr_s_l 'errno_t (wchar_t *, size_t, _locale_t) __attribute__((cdecl))':'errno_t (wchar_t *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efc6478 <col:88, col:98> col:98 _Str 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc64f0 <col:109, col:116> col:116 _SizeInWords 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efc6568 <col:139, col:149> col:149 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efc6af8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:358:85 _wcslwr_l 'wchar_t *(wchar_t *, _locale_t) __attribute__((cdecl))':'wchar_t *(wchar_t *, _locale_t)'
+| |-ParmVarDecl 0x2c74efc68e0 <col:154, col:163> col:163 _String 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc6958 <col:181, col:192> col:192 _Locale '_locale_t':'struct localeinfo_struct *'
+| `-DeprecatedAttr 0x2c74efc6ba8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _wcslwr_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc6e58 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:359:28, col:112> col:44 _wcsupr_s 'errno_t (wchar_t *, size_t) __attribute__((cdecl))':'errno_t (wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efc6ce8 <col:79, col:89> col:89 _Str 'wchar_t *'
+| `-ParmVarDecl 0x2c74efc6d60 <col:100, col:107> col:107 _Size 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efc30c8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1933:117> D:\Microsoft Visual Studio 12.0\VC\include\string.h:361:82 _wcsupr 'wchar_t *(wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *)'
+| |-ParmVarDecl 0x2c74efc2ff0 <col:102, col:111> col:111 _String 'wchar_t *'
+| `-DeprecatedAttr 0x2c74efc3170 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _wcsupr_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc34b8 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:362:28, col:142> col:44 _wcsupr_s_l 'errno_t (wchar_t *, size_t, _locale_t) __attribute__((cdecl))':'errno_t (wchar_t *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efc32b0 <col:81, col:91> col:91 _Str 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc3328 <col:102, col:109> col:109 _Size 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efc33a0 <col:125, col:135> col:135 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efc37c8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, line:1939:133> D:\Microsoft Visual Studio 12.0\VC\include\string.h:364:85 _wcsupr_l 'wchar_t *(wchar_t *, _locale_t) __attribute__((cdecl))':'wchar_t *(wchar_t *, _locale_t)'
+| |-ParmVarDecl 0x2c74efc3658 <col:154, col:163> col:163 _String 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc36d0 <col:181, col:192> col:192 _Locale '_locale_t':'struct localeinfo_struct *'
+| `-DeprecatedAttr 0x2c74efc3878 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _wcsupr_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efc3c80 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:365:28, col:159> col:43 wcsxfrm 'size_t (wchar_t *, const wchar_t *, size_t) __attribute__((cdecl))':'size_t (wchar_t *, const wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efc39b8 <col:93, col:103> col:103 _Dst 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc3a30 <col:116, col:132> col:132 _Src 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efc3aa8 <col:143, col:150> col:150 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efce188 <line:366:28, col:189> col:43 _wcsxfrm_l 'size_t (wchar_t *, const wchar_t *, size_t, _locale_t) __attribute__((cdecl))':'size_t (wchar_t *, const wchar_t *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efc3d60 <col:96, col:106> col:106 _Dst 'wchar_t *'
+| |-ParmVarDecl 0x2c74efc3dd8 <col:119, col:134> col:134 _Src 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efc3e50 <col:145, col:152> col:152 _MaxCount 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efc3ec8 <col:172, col:182> col:182 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efce3e8 <line:367:24, col:102> col:36 wcscoll 'int (const wchar_t *, const wchar_t *) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efce270 <col:51, col:67> col:67 _Str1 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efce2e8 <col:81, col:97> col:97 _Str2 'const wchar_t *'
+|-FunctionDecl 0x2c74efce6d0 <line:368:24, col:133> col:36 _wcscoll_l 'int (const wchar_t *, const wchar_t *, _locale_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, _locale_t)'
+| |-ParmVarDecl 0x2c74efce4c0 <col:54, col:70> col:70 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efce538 <col:84, col:100> col:100 _Str2 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efce5b0 <col:116, col:126> col:126 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efce928 <line:369:24, col:104> col:36 _wcsicoll 'int (const wchar_t *, const wchar_t *) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efce7b0 <col:53, col:69> col:69 _Str1 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efce828 <col:83, col:99> col:99 _Str2 'const wchar_t *'
+|-FunctionDecl 0x2c74efcec10 <line:370:24, col:133> col:36 _wcsicoll_l 'int (const wchar_t *, const wchar_t *, _locale_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, _locale_t)'
+| |-ParmVarDecl 0x2c74efcea00 <col:55, col:71> col:71 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efcea78 <col:85, col:100> col:100 _Str2 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efceaf0 <col:116, col:126> col:126 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efcef00 <line:371:24, col:167> col:36 _wcsncoll 'int (const wchar_t *, const wchar_t *, size_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efcecf0 <col:73, col:89> col:89 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efced68 <col:123, col:139> col:139 _Str2 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efcede0 <col:151, col:158> col:158 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efd1300 <line:372:24, col:197> col:36 _wcsncoll_l 'int (const wchar_t *, const wchar_t *, size_t, _locale_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efcefe0 <col:75, col:91> col:91 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efd10d0 <col:125, col:141> col:141 _Str2 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efd1148 <col:153, col:160> col:160 _MaxCount 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efd11c0 <col:180, col:190> col:190 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efd15f8 <line:373:24, col:168> col:36 _wcsnicoll 'int (const wchar_t *, const wchar_t *, size_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efd13e8 <col:74, col:90> col:90 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efd1460 <col:124, col:140> col:140 _Str2 'const wchar_t *'
+| `-ParmVarDecl 0x2c74efd14d8 <col:152, col:159> col:159 _MaxCount 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efd1980 <line:374:24, col:198> col:36 _wcsnicoll_l 'int (const wchar_t *, const wchar_t *, size_t, _locale_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, size_t, _locale_t)'
+| |-ParmVarDecl 0x2c74efd16d8 <col:76, col:92> col:92 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efd1750 <col:126, col:142> col:142 _Str2 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efd17c8 <col:154, col:161> col:161 _MaxCount 'size_t':'unsigned long long'
+| `-ParmVarDecl 0x2c74efd1840 <col:181, col:191> col:191 _Locale '_locale_t':'struct localeinfo_struct *'
+|-FunctionDecl 0x2c74efd1be0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:403:108> col:74 wcsdup 'wchar_t *(const wchar_t *) __attribute__((cdecl))':'wchar_t *(const wchar_t *)'
+| |-ParmVarDecl 0x2c74efd1b08 <col:88, col:104> col:104 _Str 'const wchar_t *'
+| `-DeprecatedAttr 0x2c74efd1c88 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsdup. See online help for details." ""
+|-FunctionDecl 0x2c74efd1fc0 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:413:135> col:69 wcsicmp 'int (const wchar_t *, const wchar_t *) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efd1e48 <col:84, col:100> col:100 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efd1ec0 <col:114, col:130> col:130 _Str2 'const wchar_t *'
+| `-DeprecatedAttr 0x2c74efd2070 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsicmp. See online help for details." ""
+|-FunctionDecl 0x2c74efcc408 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:414:200> col:70 wcsnicmp 'int (const wchar_t *, const wchar_t *, size_t) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *, size_t)'
+| |-ParmVarDecl 0x2c74efcc1f8 <col:106, col:122> col:122 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efcc270 <col:156, col:172> col:172 _Str2 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efcc2e8 <col:184, col:191> col:191 _MaxCount 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efcc4c0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsnicmp. See online help for details." ""
+|-FunctionDecl 0x2c74efcc888 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:415:153> col:60 wcsnset 'wchar_t *(wchar_t *, wchar_t, size_t) __attribute__((cdecl))':'wchar_t *(wchar_t *, wchar_t, size_t)'
+| |-ParmVarDecl 0x2c74efcc680 <col:97, col:107> col:107 _Str 'wchar_t *'
+| |-ParmVarDecl 0x2c74efcc6f8 <col:118, col:126> col:126 _Val 'wchar_t':'unsigned short'
+| |-ParmVarDecl 0x2c74efcc770 <col:137, col:144> col:144 _MaxCount 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efcc940 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsnset. See online help for details." ""
+|-FunctionDecl 0x2c74efccbd8 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:416:90> col:59 wcsrev 'wchar_t *(wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *)'
+| |-ParmVarDecl 0x2c74efccb00 <col:76, col:86> col:86 _Str 'wchar_t *'
+| `-DeprecatedAttr 0x2c74efccc80 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsrev. See online help for details." ""
+|-FunctionDecl 0x2c74efccfb0 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:417:104> col:59 wcsset 'wchar_t *(wchar_t *, wchar_t) __attribute__((cdecl))':'wchar_t *(wchar_t *, wchar_t)'
+| |-ParmVarDecl 0x2c74efcce40 <col:76, col:86> col:86 _Str 'wchar_t *'
+| |-ParmVarDecl 0x2c74efcceb8 <col:92, col:100> col:100 _Val 'wchar_t':'unsigned short'
+| `-DeprecatedAttr 0x2c74efd00c0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsset. See online help for details." ""
+|-FunctionDecl 0x2c74efd0358 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:418:90> col:59 wcslwr 'wchar_t *(wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *)'
+| |-ParmVarDecl 0x2c74efd0280 <col:76, col:86> col:86 _Str 'wchar_t *'
+| `-DeprecatedAttr 0x2c74efd0400 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcslwr. See online help for details." ""
+|-FunctionDecl 0x2c74efd0698 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:419:90> col:59 wcsupr 'wchar_t *(wchar_t *) __attribute__((cdecl))':'wchar_t *(wchar_t *)'
+| |-ParmVarDecl 0x2c74efd05c0 <col:76, col:86> col:86 _Str 'wchar_t *'
+| `-DeprecatedAttr 0x2c74efd0740 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsupr. See online help for details." ""
+|-FunctionDecl 0x2c74efd0a78 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\string.h:420:137> col:70 wcsicoll 'int (const wchar_t *, const wchar_t *) __attribute__((cdecl))':'int (const wchar_t *, const wchar_t *)'
+| |-ParmVarDecl 0x2c74efd0900 <col:86, col:102> col:102 _Str1 'const wchar_t *'
+| |-ParmVarDecl 0x2c74efd0978 <col:116, col:132> col:132 _Str2 'const wchar_t *'
+| `-DeprecatedAttr 0x2c74efd0b28 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsicoll. See online help for details." ""
+|-TypedefDecl 0x2c74efd0c48 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2128:1, col:25> col:25 _TCHAR 'char'
+| `-BuiltinType 0x2c74d4355c0 'char'
+|-TypedefDecl 0x2c74efd0cb8 <line:2129:1, col:25> col:25 _TSCHAR 'signed char'
+| `-BuiltinType 0x2c74d4355e0 'signed char'
+|-TypedefDecl 0x2c74efd0d28 <line:2130:1, col:25> col:25 _TUCHAR 'unsigned char'
+| `-BuiltinType 0x2c74d435680 'unsigned char'
+|-TypedefDecl 0x2c74efd0d90 <line:2131:1, col:25> col:25 _TXCHAR 'char'
+| `-BuiltinType 0x2c74d4355c0 'char'
+|-TypedefDecl 0x2c74efd0e00 <line:2132:1, col:25> col:25 _TINT 'int'
+| `-BuiltinType 0x2c74d435620 'int'
+|-TypedefDecl 0x2c74efd0e68 <line:2138:1, col:25> col:25 referenced TCHAR 'char'
+| `-BuiltinType 0x2c74d4355c0 'char'
+|-FunctionDecl 0x2c74efd0fb0 <line:2248:16, line:2253:1> line:2248:42 _tclen 'size_t (const char *) __attribute__((cdecl))':'size_t (const char *)' inline
+| |-ParmVarDecl 0x2c74efd0ed8 <col:56, col:68> col:68 used _cpc 'const char *'
+| `-CompoundStmt 0x2c74efe70b8 <line:2249:1, line:2253:1>
+|   |-CStyleCastExpr 0x2c74efe7040 <line:2251:5, col:13> 'void *' <BitCast>
+|   | `-ImplicitCastExpr 0x2c74efd10a8 <col:13> 'const char *' <LValueToRValue> part_of_explicit_cast
+|   |   `-DeclRefExpr 0x2c74efd1070 <col:13> 'const char *' lvalue ParmVar 0x2c74efd0ed8 '_cpc' 'const char *'
+|   `-ReturnStmt 0x2c74efe70a8 <line:2252:5, col:12>
+|     `-ImplicitCastExpr 0x2c74efe7090 <col:12> 'size_t':'unsigned long long' <IntegralCast>
+|       `-IntegerLiteral 0x2c74efe7068 <col:12> 'int' 1
+|-FunctionDecl 0x2c74efe72d8 <line:2254:1, col:94> col:25 used _tccpy 'void (char *, const char *) __attribute__((cdecl))':'void (char *, const char *)' inline
+| |-ParmVarDecl 0x2c74efe70f0 <col:38, col:44> col:44 used _pc1 'char *'
+| |-ParmVarDecl 0x2c74efe7170 <col:57, col:69> col:69 used _cpc2 'const char *'
+| `-CompoundStmt 0x2c74efe7478 <col:76, col:94>
+|   `-BinaryOperator 0x2c74efe7458 <col:78, col:87> 'char' '='
+|     |-UnaryOperator 0x2c74efe73d8 <col:78, col:79> 'char' lvalue prefix '*' cannot overflow
+|     | `-ImplicitCastExpr 0x2c74efe73c0 <col:79> 'char *' <LValueToRValue>
+|     |   `-DeclRefExpr 0x2c74efe73a0 <col:79> 'char *' lvalue ParmVar 0x2c74efe70f0 '_pc1' 'char *'
+|     `-ImplicitCastExpr 0x2c74efe7440 <col:86, col:87> 'char' <LValueToRValue>
+|       `-UnaryOperator 0x2c74efe7428 <col:86, col:87> 'const char' lvalue prefix '*' cannot overflow
+|         `-ImplicitCastExpr 0x2c74efe7410 <col:87> 'const char *' <LValueToRValue>
+|           `-DeclRefExpr 0x2c74efe73f0 <col:87> 'const char *' lvalue ParmVar 0x2c74efe7170 '_cpc2' 'const char *'
+|-FunctionDecl 0x2c74efe7770 <line:2255:1, line:2262:1> line:2255:25 _tccpy_l 'void (char *, const char *, _locale_t) __attribute__((cdecl))':'void (char *, const char *, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efe74a8 <col:40, col:46> col:46 used _Pc1 'char *'
+| |-ParmVarDecl 0x2c74efe7528 <col:59, col:71> col:71 used _Cpc2 'const char *'
+| |-ParmVarDecl 0x2c74efe75a0 <col:87, col:97> col:97 used _Locale '_locale_t':'struct localeinfo_struct *'
+| `-CompoundStmt 0x2c74efe79e0 <line:2256:1, line:2262:1>
+|   |-CStyleCastExpr 0x2c74efe7888 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2257:17> 'void' <ToVoid>
+|   | `-ImplicitCastExpr 0x2c74efe7870 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+|   |   `-DeclRefExpr 0x2c74efe7840 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efe75a0 '_Locale' '_locale_t':'struct localeinfo_struct *'
+|   `-CallExpr 0x2c74efe7980 <line:2260:5, col:23> 'void'
+|     |-ImplicitCastExpr 0x2c74efe7968 <col:5> 'void (*)(char *, const char *) __attribute__((cdecl))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x2c74efe78b0 <col:5> 'void (char *, const char *) __attribute__((cdecl))':'void (char *, const char *)' Function 0x2c74efe72d8 '_tccpy' 'void (char *, const char *) __attribute__((cdecl))':'void (char *, const char *)'
+|     |-ImplicitCastExpr 0x2c74efe79b0 <col:12> 'char *' <LValueToRValue>
+|     | `-DeclRefExpr 0x2c74efe78d0 <col:12> 'char *' lvalue ParmVar 0x2c74efe74a8 '_Pc1' 'char *'
+|     `-ImplicitCastExpr 0x2c74efe79c8 <col:18> 'const char *' <LValueToRValue>
+|       `-DeclRefExpr 0x2c74efe78f0 <col:18> 'const char *' lvalue ParmVar 0x2c74efe7528 '_Cpc2' 'const char *'
+|-FunctionDecl 0x2c74efe7b98 <line:2263:16, col:164> col:39 _tccmp 'int (const char *, const char *) __attribute__((cdecl))':'int (const char *, const char *)' inline
+| |-ParmVarDecl 0x2c74efe7a18 <col:53, col:65> col:65 used _cpc1 'const char *'
+| |-ParmVarDecl 0x2c74efe7a98 <col:79, col:91> col:91 used _cpc2 'const char *'
+| `-CompoundStmt 0x2c74efe7ed0 <col:98, col:164>
+|   `-ReturnStmt 0x2c74efe7ec0 <col:100, col:161>
+|     `-CStyleCastExpr 0x2c74efe7e98 <col:107, col:161> 'int' <NoOp>
+|       `-ParenExpr 0x2c74efe7e78 <col:113, col:161> 'int'
+|         `-BinaryOperator 0x2c74efe7e20 <col:114, col:160> 'int' '-'
+|           |-ImplicitCastExpr 0x2c74efe7df0 <col:114, col:136> 'int' <IntegralCast>
+|           | `-ParenExpr 0x2c74efe7d08 <col:114, col:136> 'unsigned char'
+|           |   `-CStyleCastExpr 0x2c74efe7ce0 <col:115, col:131> 'unsigned char' <IntegralCast>
+|           |     `-ImplicitCastExpr 0x2c74efe7cc8 <col:130, col:131> 'char' <LValueToRValue> part_of_explicit_cast
+|           |       `-UnaryOperator 0x2c74efe7c98 <col:130, col:131> 'const char' lvalue prefix '*' cannot overflow
+|           |         `-ImplicitCastExpr 0x2c74efe7c80 <col:131> 'const char *' <LValueToRValue>
+|           |           `-DeclRefExpr 0x2c74efe7c60 <col:131> 'const char *' lvalue ParmVar 0x2c74efe7a18 '_cpc1' 'const char *'
+|           `-ImplicitCastExpr 0x2c74efe7e08 <col:138, col:160> 'int' <IntegralCast>
+|             `-ParenExpr 0x2c74efe7dd0 <col:138, col:160> 'unsigned char'
+|               `-CStyleCastExpr 0x2c74efe7da8 <col:139, col:155> 'unsigned char' <IntegralCast>
+|                 `-ImplicitCastExpr 0x2c74efe7d90 <col:154, col:155> 'char' <LValueToRValue> part_of_explicit_cast
+|                   `-UnaryOperator 0x2c74efe7d60 <col:154, col:155> 'const char' lvalue prefix '*' cannot overflow
+|                     `-ImplicitCastExpr 0x2c74efe7d48 <col:155> 'const char *' <LValueToRValue>
+|                       `-DeclRefExpr 0x2c74efe7d28 <col:155> 'const char *' lvalue ParmVar 0x2c74efe7a98 '_cpc2' 'const char *'
+|-FunctionDecl 0x2c74efe0010 <line:2336:16, col:181> col:42 _strdec 'char *(const char *, const char *) __attribute__((cdecl))':'char *(const char *, const char *)' inline
+| |-ParmVarDecl 0x2c74efe7f00 <col:78, col:91> col:91 used _Cpc1 'const char *'
+| |-ParmVarDecl 0x2c74efe7f80 <col:105, col:118> col:118 used _Cpc2 'const char *'
+| `-CompoundStmt 0x2c74efe03a8 <col:125, col:181>
+|   `-ReturnStmt 0x2c74efe0398 <col:127, col:178>
+|     `-CStyleCastExpr 0x2c74efe0370 <col:134, col:178> 'char *' <NoOp>
+|       `-ParenExpr 0x2c74efe0350 <col:142, col:178> 'const char *'
+|         `-ConditionalOperator 0x2c74efe02e8 <col:143, col:177> 'const char *'
+|           |-BinaryOperator 0x2c74efe0188 <col:143, col:158> 'int' '>='
+|           | |-ImplicitCastExpr 0x2c74efe0158 <col:143, col:149> 'const char *' <LValueToRValue>
+|           | | `-ParenExpr 0x2c74efe00f8 <col:143, col:149> 'const char *' lvalue
+|           | |   `-DeclRefExpr 0x2c74efe00d8 <col:144> 'const char *' lvalue ParmVar 0x2c74efe7f00 '_Cpc1' 'const char *'
+|           | `-ImplicitCastExpr 0x2c74efe0170 <col:152, col:158> 'const char *' <LValueToRValue>
+|           |   `-ParenExpr 0x2c74efe0138 <col:152, col:158> 'const char *' lvalue
+|           |     `-DeclRefExpr 0x2c74efe0118 <col:153> 'const char *' lvalue ParmVar 0x2c74efe7f80 '_Cpc2' 'const char *'
+|           |-ImplicitCastExpr 0x2c74efe02d0 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:36:17, col:27> 'const char *' <NullToPointer>
+|           | `-ParenExpr 0x2c74efe0210 <col:17, col:27> 'void *'
+|           |   `-CStyleCastExpr 0x2c74efe01e8 <col:18, col:26> 'void *' <NullToPointer>
+|           |     `-IntegerLiteral 0x2c74efe01a8 <col:26> 'int' 0
+|           `-ParenExpr 0x2c74efe02b0 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2336:169, col:177> 'const char *'
+|             `-BinaryOperator 0x2c74efe0290 <col:170, col:176> 'const char *' '-'
+|               |-ImplicitCastExpr 0x2c74efe0278 <col:170> 'const char *' <LValueToRValue>
+|               | `-DeclRefExpr 0x2c74efe0230 <col:170> 'const char *' lvalue ParmVar 0x2c74efe7f80 '_Cpc2' 'const char *'
+|               `-IntegerLiteral 0x2c74efe0250 <col:176> 'int' 1
+|-FunctionDecl 0x2c74efe04b8 <line:2337:16, col:101> col:42 _strinc 'char *(const char *) __attribute__((cdecl))':'char *(const char *)' inline
+| |-ParmVarDecl 0x2c74efe03d8 <col:57, col:70> col:70 used _Pc 'const char *'
+| `-CompoundStmt 0x2c74efe0688 <col:75, col:101>
+|   `-ReturnStmt 0x2c74efe0678 <col:77, col:98>
+|     `-CStyleCastExpr 0x2c74efe0650 <col:84, col:98> 'char *' <NoOp>
+|       `-ParenExpr 0x2c74efe0630 <col:92, col:98> 'const char *'
+|         `-BinaryOperator 0x2c74efe05d8 <col:93, col:97> 'const char *' '+'
+|           |-ImplicitCastExpr 0x2c74efe05c0 <col:93> 'const char *' <LValueToRValue>
+|           | `-DeclRefExpr 0x2c74efe0578 <col:93> 'const char *' lvalue ParmVar 0x2c74efe03d8 '_Pc' 'const char *'
+|           `-IntegerLiteral 0x2c74efe0598 <col:97> 'int' 1
+|-FunctionDecl 0x2c74efe0808 <line:2338:16, col:137> col:48 _strnextc 'unsigned int (const char *) __attribute__((cdecl))':'unsigned int (const char *)' inline
+| |-ParmVarDecl 0x2c74efe06b8 <col:65, col:78> col:78 used _Cpc 'const char *'
+| `-CompoundStmt 0x2c74efe09c0 <col:84, col:137>
+|   `-ReturnStmt 0x2c74efe09b0 <col:86, col:131>
+|     `-CStyleCastExpr 0x2c74efe0988 <col:93, col:131> 'unsigned int' <IntegralCast>
+|       `-ImplicitCastExpr 0x2c74efe0970 <col:107, col:131> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+|         `-UnaryOperator 0x2c74efe0940 <col:107, col:131> 'const unsigned char' lvalue prefix '*' cannot overflow
+|           `-CStyleCastExpr 0x2c74efe0918 <col:108, col:131> 'const unsigned char *' <BitCast>
+|             `-ImplicitCastExpr 0x2c74efe0900 <col:131> 'const char *' <LValueToRValue> part_of_explicit_cast
+|               `-DeclRefExpr 0x2c74efe08c8 <col:131> 'const char *' lvalue ParmVar 0x2c74efe06b8 '_Cpc' 'const char *'
+|-FunctionDecl 0x2c74efe0c10 <line:2339:16, col:135> col:42 _strninc 'char *(const char *, size_t) __attribute__((cdecl))':'char *(const char *, size_t)' inline
+| |-ParmVarDecl 0x2c74efe09f0 <col:72, col:85> col:85 used _Pc 'const char *'
+| |-ParmVarDecl 0x2c74efe0a68 <col:95, col:102> col:102 used _Sz 'size_t':'unsigned long long'
+| `-CompoundStmt 0x2c74efe0df8 <col:107, col:135>
+|   `-ReturnStmt 0x2c74efe0de8 <col:109, col:132>
+|     `-CStyleCastExpr 0x2c74efe0dc0 <col:116, col:132> 'char *' <NoOp>
+|       `-ParenExpr 0x2c74efe0da0 <col:124, col:132> 'const char *'
+|         `-BinaryOperator 0x2c74efe0d48 <col:125, col:129> 'const char *' '+'
+|           |-ImplicitCastExpr 0x2c74efe0d18 <col:125> 'const char *' <LValueToRValue>
+|           | `-DeclRefExpr 0x2c74efe0cd8 <col:125> 'const char *' lvalue ParmVar 0x2c74efe09f0 '_Pc' 'const char *'
+|           `-ImplicitCastExpr 0x2c74efe0d30 <col:129> 'size_t':'unsigned long long' <LValueToRValue>
+|             `-DeclRefExpr 0x2c74efe0cf8 <col:129> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efe0a68 '_Sz' 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efe8050 <line:2340:16, line:2347:1> line:2340:42 _strncnt 'size_t (const char *, size_t) __attribute__((cdecl))':'size_t (const char *, size_t)' inline
+| |-ParmVarDecl 0x2c74efe0e28 <col:73, col:86> col:86 used _String 'const char *'
+| |-ParmVarDecl 0x2c74efe0ea0 <col:100, col:107> col:107 used _Cnt 'size_t':'unsigned long long'
+| `-CompoundStmt 0x2c74efe8570 <line:2341:1, line:2347:1>
+|   |-DeclStmt 0x2c74efe81c8 <line:2342:9, col:24>
+|   | `-VarDecl 0x2c74efe8128 <col:9, col:20> col:16 used n 'size_t':'unsigned long long' cinit
+|   |   `-ImplicitCastExpr 0x2c74efe81b0 <col:20> 'size_t':'unsigned long long' <LValueToRValue>
+|   |     `-DeclRefExpr 0x2c74efe8190 <col:20> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efe0ea0 '_Cnt' 'size_t':'unsigned long long'
+|   |-DeclStmt 0x2c74efe82d8 <line:2343:9, col:35>
+|   | `-VarDecl 0x2c74efe81f8 <col:9, col:28> col:15 used cp 'char *' cinit
+|   |   `-CStyleCastExpr 0x2c74efe82b0 <col:20, col:28> 'char *' <NoOp>
+|   |     `-ImplicitCastExpr 0x2c74efe8298 <col:28> 'const char *' <LValueToRValue> part_of_explicit_cast
+|   |       `-DeclRefExpr 0x2c74efe8260 <col:28> 'const char *' lvalue ParmVar 0x2c74efe0e28 '_String' 'const char *'
+|   |-WhileStmt 0x2c74efe8458 <line:2344:9, line:2345:19>
+|   | |-BinaryOperator 0x2c74efe8400 <line:2344:16, col:24> 'int' '&&'
+|   | | |-UnaryOperator 0x2c74efe8328 <col:16, col:17> 'size_t':'unsigned long long' postfix '--'
+|   | | | `-DeclRefExpr 0x2c74efe82f0 <col:16> 'size_t':'unsigned long long' lvalue Var 0x2c74efe8128 'n' 'size_t':'unsigned long long'
+|   | | `-ImplicitCastExpr 0x2c74efe83e8 <col:23, col:24> 'int' <IntegralCast>
+|   | |   `-ImplicitCastExpr 0x2c74efe83d0 <col:23, col:24> 'char' <LValueToRValue>
+|   | |     `-UnaryOperator 0x2c74efe83b8 <col:23, col:24> 'char' lvalue prefix '*' cannot overflow
+|   | |       `-ImplicitCastExpr 0x2c74efe83a0 <col:24> 'char *' <LValueToRValue>
+|   | |         `-DeclRefExpr 0x2c74efe8368 <col:24> 'char *' lvalue Var 0x2c74efe81f8 'cp' 'char *'
+|   | `-UnaryOperator 0x2c74efe8440 <line:2345:17, col:19> 'char *' postfix '++'
+|   |   `-DeclRefExpr 0x2c74efe8420 <col:17> 'char *' lvalue Var 0x2c74efe81f8 'cp' 'char *'
+|   `-ReturnStmt 0x2c74efe8560 <line:2346:9, col:27>
+|     `-BinaryOperator 0x2c74efe8540 <col:16, col:27> 'unsigned long long' '-'
+|       |-BinaryOperator 0x2c74efe84e0 <col:16, col:23> 'unsigned long long' '-'
+|       | |-ImplicitCastExpr 0x2c74efe84b0 <col:16> 'size_t':'unsigned long long' <LValueToRValue>
+|       | | `-DeclRefExpr 0x2c74efe8470 <col:16> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efe0ea0 '_Cnt' 'size_t':'unsigned long long'
+|       | `-ImplicitCastExpr 0x2c74efe84c8 <col:23> 'size_t':'unsigned long long' <LValueToRValue>
+|       |   `-DeclRefExpr 0x2c74efe8490 <col:23> 'size_t':'unsigned long long' lvalue Var 0x2c74efe8128 'n' 'size_t':'unsigned long long'
+|       `-ImplicitCastExpr 0x2c74efe8528 <col:27> 'unsigned long long' <IntegralCast>
+|         `-IntegerLiteral 0x2c74efe8500 <col:27> 'int' 1
+|-FunctionDecl 0x2c74efe8738 <line:2348:16, line:2355:1> line:2348:42 _strspnp 'char *(const char *, const char *) __attribute__((cdecl))':'char *(const char *, const char *)' inline
+| |-ParmVarDecl 0x2c74efe85b8 <line:2350:12, col:25> col:25 used _Cpc1 'const char *'
+| |-ParmVarDecl 0x2c74efe8638 <line:2351:12, col:25> col:25 used _Cpc2 'const char *'
+| `-CompoundStmt 0x2c74efe8d80 <line:2353:1, line:2355:1>
+|   `-ReturnStmt 0x2c74efe8d70 <line:2354:5, col:95>
+|     `-ConditionalOperator 0x2c74efe8d40 <col:12, col:95> 'char *'
+|       |-BinaryOperator 0x2c74efe88d8 <col:12, D:\Microsoft Visual Studio 12.0\VC\include\string.h:36:27> 'int' '=='
+|       | |-ImplicitCastExpr 0x2c74efe88a8 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2354:12> 'const char *' <LValueToRValue>
+|       | | `-DeclRefExpr 0x2c74efe8800 <col:12> 'const char *' lvalue ParmVar 0x2c74efe85b8 '_Cpc1' 'const char *'
+|       | `-ImplicitCastExpr 0x2c74efe88c0 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:36:17, col:27> 'const char *' <BitCast>
+|       |   `-ParenExpr 0x2c74efe8888 <col:17, col:27> 'void *'
+|       |     `-CStyleCastExpr 0x2c74efe8860 <col:18, col:26> 'void *' <NullToPointer>
+|       |       `-IntegerLiteral 0x2c74efe8820 <col:26> 'int' 0
+|       |-ImplicitCastExpr 0x2c74efe8d28 <col:17, col:27> 'char *' <NullToPointer>
+|       | `-ParenExpr 0x2c74efe8960 <col:17, col:27> 'void *'
+|       |   `-CStyleCastExpr 0x2c74efe8938 <col:18, col:26> 'void *' <NullToPointer>
+|       |     `-IntegerLiteral 0x2c74efe88f8 <col:26> 'int' 0
+|       `-ParenExpr 0x2c74efe8d08 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2354:33, col:95> 'char *'
+|         `-ConditionalOperator 0x2c74efe8cd8 <col:34, D:\Microsoft Visual Studio 12.0\VC\include\string.h:36:27> 'char *'
+|           |-ParenExpr 0x2c74efe8ba0 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2354:34, col:72> 'int'
+|           | `-BinaryOperator 0x2c74efe8b80 <col:35, col:68> 'int' '!='
+|           |   |-ImplicitCastExpr 0x2c74efe8b68 <col:35, col:65> 'int' <IntegralCast>
+|           |   | `-ImplicitCastExpr 0x2c74efe8b50 <col:35, col:65> 'char' <LValueToRValue>
+|           |   |   `-UnaryOperator 0x2c74efe8b20 <col:35, col:65> 'const char' lvalue prefix '*' cannot overflow
+|           |   |     `-ParenExpr 0x2c74efe8b00 <col:36, col:65> 'const char *'
+|           |   |       `-CompoundAssignOperator 0x2c74efe8ad0 <col:37, col:64> 'const char *' '+=' ComputeLHSTy='const char *' ComputeResultTy='const char *'
+|           |   |         |-DeclRefExpr 0x2c74efe8980 <col:37> 'const char *' lvalue ParmVar 0x2c74efe85b8 '_Cpc1' 'const char *'
+|           |   |         `-CallExpr 0x2c74efe8a70 <col:46, col:64> 'unsigned long long'
+|           |   |           |-ImplicitCastExpr 0x2c74efe8a58 <col:46> 'unsigned long long (*)(const char *, const char *)' <FunctionToPointerDecay>
+|           |   |           | `-DeclRefExpr 0x2c74efe89a0 <col:46> 'unsigned long long (const char *, const char *)' Function 0x2c74efbde70 'strspn' 'unsigned long long (const char *, const char *)'
+|           |   |           |-ImplicitCastExpr 0x2c74efe8aa0 <col:53> 'const char *' <LValueToRValue>
+|           |   |           | `-DeclRefExpr 0x2c74efe89c0 <col:53> 'const char *' lvalue ParmVar 0x2c74efe85b8 '_Cpc1' 'const char *'
+|           |   |           `-ImplicitCastExpr 0x2c74efe8ab8 <col:59> 'const char *' <LValueToRValue>
+|           |   |             `-DeclRefExpr 0x2c74efe89e0 <col:59> 'const char *' lvalue ParmVar 0x2c74efe8638 '_Cpc2' 'const char *'
+|           |   `-CharacterLiteral 0x2c74efe8b38 <col:68> 'int' 0
+|           |-CStyleCastExpr 0x2c74efe8c10 <col:76, col:83> 'char *' <NoOp>
+|           | `-ImplicitCastExpr 0x2c74efe8bf8 <col:83> 'const char *' <LValueToRValue> part_of_explicit_cast
+|           |   `-DeclRefExpr 0x2c74efe8bc0 <col:83> 'const char *' lvalue ParmVar 0x2c74efe85b8 '_Cpc1' 'const char *'
+|           `-ImplicitCastExpr 0x2c74efe8cc0 <D:\Microsoft Visual Studio 12.0\VC\include\string.h:36:17, col:27> 'char *' <NullToPointer>
+|             `-ParenExpr 0x2c74efe8ca0 <col:17, col:27> 'void *'
+|               `-CStyleCastExpr 0x2c74efe8c78 <col:18, col:26> 'void *' <NullToPointer>
+|                 `-IntegerLiteral 0x2c74efe8c38 <col:26> 'int' 0
+|-FunctionDecl 0x2c74efe91e0 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2358:20, line:2362:1> line:2358:47 _strncpy_s_l 'errno_t (char *, size_t, const char *, size_t, _locale_t) __attribute__((cdecl))':'errno_t (char *, size_t, const char *, size_t, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efe8db0 <col:100, col:106> col:106 used _Destination 'char *'
+| |-ParmVarDecl 0x2c74efe8e28 <col:125, col:132> col:132 used _Destination_size_chars 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efe8ea8 <col:164, col:176> col:176 used _Source 'const char *'
+| |-ParmVarDecl 0x2c74efe8f20 <col:190, col:197> col:197 used _Count 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efe8f98 <col:214, col:224> col:224 used _Locale '_locale_t':'struct localeinfo_struct *'
+| `-CompoundStmt 0x2c74efe94f0 <line:2359:1, line:2362:1>
+|   |-CStyleCastExpr 0x2c74efe9308 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2360:17> 'void' <ToVoid>
+|   | `-ImplicitCastExpr 0x2c74efe92f0 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+|   |   `-DeclRefExpr 0x2c74efe92c0 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efe8f98 '_Locale' '_locale_t':'struct localeinfo_struct *'
+|   `-ReturnStmt 0x2c74efe94e0 <line:2361:5, col:76>
+|     `-CallExpr 0x2c74efe9440 <col:12, col:76> 'errno_t':'int'
+|       |-ImplicitCastExpr 0x2c74efe9428 <col:12> 'errno_t (*)(char *, rsize_t, const char *, rsize_t) __attribute__((cdecl))' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x2c74efe9330 <col:12> 'errno_t (char *, rsize_t, const char *, rsize_t) __attribute__((cdecl))':'errno_t (char *, rsize_t, const char *, rsize_t)' Function 0x2c74efbbfc8 'strncpy_s' 'errno_t (char *, rsize_t, const char *, rsize_t) __attribute__((cdecl))':'errno_t (char *, rsize_t, const char *, rsize_t)'
+|       |-ImplicitCastExpr 0x2c74efe9480 <col:22> 'char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efe9350 <col:22> 'char *' lvalue ParmVar 0x2c74efe8db0 '_Destination' 'char *'
+|       |-ImplicitCastExpr 0x2c74efe9498 <col:36> 'size_t':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efe9370 <col:36> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efe8e28 '_Destination_size_chars' 'size_t':'unsigned long long'
+|       |-ImplicitCastExpr 0x2c74efe94b0 <col:61> 'const char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efe9390 <col:61> 'const char *' lvalue ParmVar 0x2c74efe8ea8 '_Source' 'const char *'
+|       `-ImplicitCastExpr 0x2c74efe94c8 <col:70> 'size_t':'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x2c74efe93b0 <col:70> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efe8f20 '_Count' 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efe9960 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2374:1> line:2367:73 _strncpy_l 'char *(char *, const char *, size_t, _locale_t) __attribute__((cdecl))':'char *(char *, const char *, size_t, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efe95e8 <col:148, col:154> col:154 used _Dst 'char *'
+| |-ParmVarDecl 0x2c74efe9668 <col:167, col:181> col:181 used _Source 'const char *'
+| |-ParmVarDecl 0x2c74efe96e0 <col:195, col:203> col:203 used _Count 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efe9758 <col:220, col:231> col:231 used _Locale '_locale_t':'struct localeinfo_struct *'
+| |-CompoundStmt 0x2c74efe9d60 <line:2368:1, line:2374:1>
+| | |-CStyleCastExpr 0x2c74efe9b98 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2369:17> 'void' <ToVoid>
+| | | `-ImplicitCastExpr 0x2c74efe9b80 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+| | |   `-DeclRefExpr 0x2c74efe9b50 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efe9758 '_Locale' '_locale_t':'struct localeinfo_struct *'
+| | `-ReturnStmt 0x2c74efe9d50 <line:2372:5, col:41>
+| |   `-CallExpr 0x2c74efe9cd0 <col:12, col:41> 'char *'
+| |     |-ImplicitCastExpr 0x2c74efe9cb8 <col:12> 'char *(*)(char *, const char *, unsigned long long)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x2c74efe9bc0 <col:12> 'char *(char *, const char *, unsigned long long)' Function 0x2c74efbc580 'strncpy' 'char *(char *, const char *, unsigned long long)'
+| |     |-ImplicitCastExpr 0x2c74efe9d08 <col:20> 'char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x2c74efe9be0 <col:20> 'char *' lvalue ParmVar 0x2c74efe95e8 '_Dst' 'char *'
+| |     |-ImplicitCastExpr 0x2c74efe9d20 <col:26> 'const char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x2c74efe9c00 <col:26> 'const char *' lvalue ParmVar 0x2c74efe9668 '_Source' 'const char *'
+| |     `-ImplicitCastExpr 0x2c74efe9d38 <col:35> 'size_t':'unsigned long long' <LValueToRValue>
+| |       `-DeclRefExpr 0x2c74efe9c20 <col:35> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efe96e0 '_Count' 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efe9a20 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strncpy_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efec108 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2379:20, line:2383:1> line:2379:47 _strncat_s_l 'errno_t (char *, size_t, const char *, size_t, _locale_t) __attribute__((cdecl))':'errno_t (char *, size_t, const char *, size_t, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efe9d98 <col:103, col:109> col:109 used _Destination 'char *'
+| |-ParmVarDecl 0x2c74efe9e10 <col:128, col:135> col:135 used _Destination_size_chars 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efe9e90 <col:167, col:179> col:179 used _Source 'const char *'
+| |-ParmVarDecl 0x2c74efe9f08 <col:193, col:200> col:200 used _Count 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efe9f80 <col:217, col:227> col:227 used _Locale '_locale_t':'struct localeinfo_struct *'
+| `-CompoundStmt 0x2c74efec3c0 <line:2380:1, line:2383:1>
+|   |-CStyleCastExpr 0x2c74efec230 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2381:17> 'void' <ToVoid>
+|   | `-ImplicitCastExpr 0x2c74efec218 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+|   |   `-DeclRefExpr 0x2c74efec1e8 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efe9f80 '_Locale' '_locale_t':'struct localeinfo_struct *'
+|   `-ReturnStmt 0x2c74efec3b0 <line:2382:5, col:76>
+|     `-CallExpr 0x2c74efec310 <col:12, col:76> 'errno_t':'int'
+|       |-ImplicitCastExpr 0x2c74efec2f8 <col:12> 'errno_t (*)(char *, rsize_t, const char *, rsize_t) __attribute__((cdecl))' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x2c74efec258 <col:12> 'errno_t (char *, rsize_t, const char *, rsize_t) __attribute__((cdecl))':'errno_t (char *, rsize_t, const char *, rsize_t)' Function 0x2c74efb5848 'strncat_s' 'errno_t (char *, rsize_t, const char *, rsize_t) __attribute__((cdecl))':'errno_t (char *, rsize_t, const char *, rsize_t)'
+|       |-ImplicitCastExpr 0x2c74efec350 <col:22> 'char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efec278 <col:22> 'char *' lvalue ParmVar 0x2c74efe9d98 '_Destination' 'char *'
+|       |-ImplicitCastExpr 0x2c74efec368 <col:36> 'size_t':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efec298 <col:36> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efe9e10 '_Destination_size_chars' 'size_t':'unsigned long long'
+|       |-ImplicitCastExpr 0x2c74efec380 <col:61> 'const char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efec2b8 <col:61> 'const char *' lvalue ParmVar 0x2c74efe9e90 '_Source' 'const char *'
+|       `-ImplicitCastExpr 0x2c74efec398 <col:70> 'size_t':'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x2c74efec2d8 <col:70> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efe9f08 '_Count' 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efec768 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2395:1> line:2388:73 _strncat_l 'char *(char *, const char *, size_t, _locale_t) __attribute__((cdecl))':'char *(char *, const char *, size_t, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efec4b8 <col:140, col:146> col:146 used _Dst 'char *'
+| |-ParmVarDecl 0x2c74efec538 <col:159, col:173> col:173 used _Source 'const char *'
+| |-ParmVarDecl 0x2c74efec5b0 <col:187, col:195> col:195 used _Count 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efec628 <col:212, col:223> col:223 used _Locale '_locale_t':'struct localeinfo_struct *'
+| |-CompoundStmt 0x2c74efecb38 <line:2389:1, line:2395:1>
+| | |-CStyleCastExpr 0x2c74efec9a0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2390:17> 'void' <ToVoid>
+| | | `-ImplicitCastExpr 0x2c74efec988 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+| | |   `-DeclRefExpr 0x2c74efec958 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efec628 '_Locale' '_locale_t':'struct localeinfo_struct *'
+| | `-ReturnStmt 0x2c74efecb28 <line:2393:5, col:41>
+| |   `-CallExpr 0x2c74efecaa8 <col:12, col:41> 'char *'
+| |     |-ImplicitCastExpr 0x2c74efeca90 <col:12> 'char *(*)(char *, const char *, unsigned long long)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x2c74efec9c8 <col:12> 'char *(char *, const char *, unsigned long long)' Function 0x2c74efb5f20 'strncat' 'char *(char *, const char *, unsigned long long)'
+| |     |-ImplicitCastExpr 0x2c74efecae0 <col:20> 'char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x2c74efec9e8 <col:20> 'char *' lvalue ParmVar 0x2c74efec4b8 '_Dst' 'char *'
+| |     |-ImplicitCastExpr 0x2c74efecaf8 <col:26> 'const char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x2c74efeca08 <col:26> 'const char *' lvalue ParmVar 0x2c74efec538 '_Source' 'const char *'
+| |     `-ImplicitCastExpr 0x2c74efecb10 <col:35> 'size_t':'unsigned long long' <LValueToRValue>
+| |       `-DeclRefExpr 0x2c74efeca28 <col:35> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efec5b0 '_Count' 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efec828 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strncat_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efecea0 <col:36, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2406:1> line:2399:70 _strtok_l 'char *(char *, const char *, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efecc30 <col:94, col:101> col:101 used _String 'char *'
+| |-ParmVarDecl 0x2c74efeccb0 <col:117, col:130> col:130 used _Delimiters 'const char *'
+| |-ParmVarDecl 0x2c74efecd28 <col:152, col:162> col:162 used _Locale '_locale_t':'struct localeinfo_struct *'
+| |-CompoundStmt 0x2c74efee260 <line:2400:1, line:2406:1>
+| | |-CStyleCastExpr 0x2c74efee0f8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2401:17> 'void' <ToVoid>
+| | | `-ImplicitCastExpr 0x2c74efee0e0 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+| | |   `-DeclRefExpr 0x2c74efee0b0 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efecd28 '_Locale' '_locale_t':'struct localeinfo_struct *'
+| | `-ReturnStmt 0x2c74efee250 <line:2404:5, col:38>
+| |   `-CallExpr 0x2c74efee1f0 <col:12, col:38> 'char *'
+| |     |-ImplicitCastExpr 0x2c74efee1d8 <col:12> 'char *(*)(char *, const char *)' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x2c74efee120 <col:12> 'char *(char *, const char *)' Function 0x2c74efbb710 'strtok' 'char *(char *, const char *)'
+| |     |-ImplicitCastExpr 0x2c74efee220 <col:19> 'char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x2c74efee140 <col:19> 'char *' lvalue ParmVar 0x2c74efecc30 '_String' 'char *'
+| |     `-ImplicitCastExpr 0x2c74efee238 <col:27> 'const char *' <LValueToRValue>
+| |       `-DeclRefExpr 0x2c74efee160 <col:27> 'const char *' lvalue ParmVar 0x2c74efeccb0 '_Delimiters' 'const char *'
+| `-DeprecatedAttr 0x2c74efecf58 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strtok_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efee5c0 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2409:16, line:2413:1> line:2409:33 _strtok_s_l 'char *(char *, const char *, char **, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efee298 <col:59, col:66> col:66 used _String 'char *'
+| |-ParmVarDecl 0x2c74efee318 <col:82, col:95> col:95 used _Delimiters 'const char *'
+| |-ParmVarDecl 0x2c74efee398 <col:138, col:145> col:145 used _Current_position 'char **'
+| |-ParmVarDecl 0x2c74efee410 <col:173, col:183> col:183 used _Locale '_locale_t':'struct localeinfo_struct *'
+| `-CompoundStmt 0x2c74efee890 <line:2410:1, line:2413:1>
+|   |-CStyleCastExpr 0x2c74efee6e0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2411:17> 'void' <ToVoid>
+|   | `-ImplicitCastExpr 0x2c74efee6c8 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+|   |   `-DeclRefExpr 0x2c74efee698 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efee410 '_Locale' '_locale_t':'struct localeinfo_struct *'
+|   `-ReturnStmt 0x2c74efee880 <line:2412:5, col:60>
+|     `-CallExpr 0x2c74efee800 <col:12, col:60> 'char *'
+|       |-ImplicitCastExpr 0x2c74efee7e8 <col:12> 'char *(*)(char *, const char *, char **) __attribute__((cdecl))' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x2c74efee708 <col:12> 'char *(char *, const char *, char **) __attribute__((cdecl))':'char *(char *, const char *, char **)' Function 0x2c74efbbba8 'strtok_s' 'char *(char *, const char *, char **) __attribute__((cdecl))':'char *(char *, const char *, char **)'
+|       |-ImplicitCastExpr 0x2c74efee838 <col:21> 'char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efee728 <col:21> 'char *' lvalue ParmVar 0x2c74efee298 '_String' 'char *'
+|       |-ImplicitCastExpr 0x2c74efee850 <col:30> 'const char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efee748 <col:30> 'const char *' lvalue ParmVar 0x2c74efee318 '_Delimiters' 'const char *'
+|       `-ImplicitCastExpr 0x2c74efee868 <col:43> 'char **' <LValueToRValue>
+|         `-DeclRefExpr 0x2c74efee768 <col:43> 'char **' lvalue ParmVar 0x2c74efee398 '_Current_position' 'char **'
+|-FunctionDecl 0x2c74efeece0 <line:2416:1, line:2420:1> line:2416:28 _strnset_s_l 'errno_t (char *, size_t, int, size_t, _locale_t) __attribute__((cdecl))':'errno_t (char *, size_t, int, size_t, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efee8c8 <col:84, col:90> col:90 used _Destination 'char *'
+| |-ParmVarDecl 0x2c74efee940 <col:109, col:116> col:116 used _Destination_size_chars 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efee9c0 <col:146, col:150> col:150 used _Value 'int'
+| |-ParmVarDecl 0x2c74efeea38 <col:163, col:170> col:170 used _Count 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efeeab0 <col:187, col:197> col:197 used _Locale '_locale_t':'struct localeinfo_struct *'
+| `-CompoundStmt 0x2c74efeeff0 <line:2417:1, line:2420:1>
+|   |-CStyleCastExpr 0x2c74efeee08 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2418:17> 'void' <ToVoid>
+|   | `-ImplicitCastExpr 0x2c74efeedf0 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+|   |   `-DeclRefExpr 0x2c74efeedc0 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efeeab0 '_Locale' '_locale_t':'struct localeinfo_struct *'
+|   `-ReturnStmt 0x2c74efeefe0 <line:2419:5, col:76>
+|     `-CallExpr 0x2c74efeef40 <col:12, col:76> 'errno_t':'int'
+|       |-ImplicitCastExpr 0x2c74efeef28 <col:12> 'errno_t (*)(char *, size_t, int, size_t) __attribute__((cdecl))' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x2c74efeee30 <col:12> 'errno_t (char *, size_t, int, size_t) __attribute__((cdecl))':'errno_t (char *, size_t, int, size_t)' Function 0x2c74efbcaf8 '_strnset_s' 'errno_t (char *, size_t, int, size_t) __attribute__((cdecl))':'errno_t (char *, size_t, int, size_t)'
+|       |-ImplicitCastExpr 0x2c74efeef80 <col:23> 'char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efeee50 <col:23> 'char *' lvalue ParmVar 0x2c74efee8c8 '_Destination' 'char *'
+|       |-ImplicitCastExpr 0x2c74efeef98 <col:37> 'size_t':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efeee70 <col:37> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efee940 '_Destination_size_chars' 'size_t':'unsigned long long'
+|       |-ImplicitCastExpr 0x2c74efeefb0 <col:62> 'int' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efeee90 <col:62> 'int' lvalue ParmVar 0x2c74efee9c0 '_Value' 'int'
+|       `-ImplicitCastExpr 0x2c74efeefc8 <col:70> 'size_t':'unsigned long long' <LValueToRValue>
+|         `-DeclRefExpr 0x2c74efeeeb0 <col:70> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efeea38 '_Count' 'size_t':'unsigned long long'
+|-FunctionDecl 0x2c74efea4c0 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2431:1> line:2424:73 _strnset_l 'char *(char *, int, size_t, _locale_t) __attribute__((cdecl))':'char *(char *, int, size_t, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efea148 <col:159, col:165> col:165 used _Dst 'char *'
+| |-ParmVarDecl 0x2c74efea1c8 <col:176, col:181> col:181 used _Value 'int'
+| |-ParmVarDecl 0x2c74efea240 <col:194, col:202> col:202 used _MaxCount 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efea2b8 <col:222, col:233> col:233 used _Locale '_locale_t':'struct localeinfo_struct *'
+| |-CompoundStmt 0x2c74efea8a0 <line:2425:1, line:2431:1>
+| | |-CStyleCastExpr 0x2c74efea6f8 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2426:17> 'void' <ToVoid>
+| | | `-ImplicitCastExpr 0x2c74efea6e0 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+| | |   `-DeclRefExpr 0x2c74efea6b0 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efea2b8 '_Locale' '_locale_t':'struct localeinfo_struct *'
+| | `-ReturnStmt 0x2c74efea890 <line:2429:5, col:44>
+| |   `-CallExpr 0x2c74efea810 <col:12, col:44> 'char *'
+| |     |-ImplicitCastExpr 0x2c74efea7f8 <col:12> 'char *(*)(char *, int, size_t) __attribute__((cdecl))' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x2c74efea720 <col:12> 'char *(char *, int, size_t) __attribute__((cdecl))':'char *(char *, int, size_t)' Function 0x2c74efbcf90 '_strnset' 'char *(char *, int, size_t) __attribute__((cdecl))':'char *(char *, int, size_t)'
+| |     |-ImplicitCastExpr 0x2c74efea848 <col:21> 'char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x2c74efea740 <col:21> 'char *' lvalue ParmVar 0x2c74efea148 '_Dst' 'char *'
+| |     |-ImplicitCastExpr 0x2c74efea860 <col:27> 'int' <LValueToRValue>
+| |     | `-DeclRefExpr 0x2c74efea760 <col:27> 'int' lvalue ParmVar 0x2c74efea1c8 '_Value' 'int'
+| |     `-ImplicitCastExpr 0x2c74efea878 <col:35> 'size_t':'unsigned long long' <LValueToRValue>
+| |       `-DeclRefExpr 0x2c74efea780 <col:35> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efea240 '_MaxCount' 'size_t':'unsigned long long'
+| `-DeprecatedAttr 0x2c74efea580 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strnset_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-FunctionDecl 0x2c74efeac48 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2435:1, line:2439:1> line:2435:28 _strset_s_l 'errno_t (char *, size_t, int, _locale_t) __attribute__((cdecl))':'errno_t (char *, size_t, int, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efea8d8 <col:83, col:89> col:89 used _Destination 'char *'
+| |-ParmVarDecl 0x2c74efea950 <col:108, col:115> col:115 used _Destination_size_chars 'size_t':'unsigned long long'
+| |-ParmVarDecl 0x2c74efea9d0 <col:145, col:149> col:149 used _Value 'int'
+| |-ParmVarDecl 0x2c74efeaa48 <col:166, col:176> col:176 used _Locale '_locale_t':'struct localeinfo_struct *'
+| `-CompoundStmt 0x2c74efeaf10 <line:2436:1, line:2439:1>
+|   |-CStyleCastExpr 0x2c74efead68 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2437:17> 'void' <ToVoid>
+|   | `-ImplicitCastExpr 0x2c74efead50 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+|   |   `-DeclRefExpr 0x2c74efead20 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74efeaa48 '_Locale' '_locale_t':'struct localeinfo_struct *'
+|   `-ReturnStmt 0x2c74efeaf00 <line:2438:5, col:67>
+|     `-CallExpr 0x2c74efeae80 <col:12, col:67> 'errno_t':'int'
+|       |-ImplicitCastExpr 0x2c74efeae68 <col:12> 'errno_t (*)(char *, size_t, int) __attribute__((cdecl))' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x2c74efead90 <col:12> 'errno_t (char *, size_t, int) __attribute__((cdecl))':'errno_t (char *, size_t, int)' Function 0x2c74ef63130 '_strset_s' 'errno_t (char *, size_t, int) __attribute__((cdecl))':'errno_t (char *, size_t, int)'
+|       |-ImplicitCastExpr 0x2c74efeaeb8 <col:22> 'char *' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efeadb0 <col:22> 'char *' lvalue ParmVar 0x2c74efea8d8 '_Destination' 'char *'
+|       |-ImplicitCastExpr 0x2c74efeaed0 <col:36> 'size_t':'unsigned long long' <LValueToRValue>
+|       | `-DeclRefExpr 0x2c74efeadd0 <col:36> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74efea950 '_Destination_size_chars' 'size_t':'unsigned long long'
+|       `-ImplicitCastExpr 0x2c74efeaee8 <col:61> 'int' <LValueToRValue>
+|         `-DeclRefExpr 0x2c74efeadf0 <col:61> 'int' lvalue ParmVar 0x2c74efea9d0 '_Value' 'int'
+|-FunctionDecl 0x2c74eff1348 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:36, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2450:1> line:2443:72 _strset_l 'char *(char *, int, _locale_t) __attribute__((cdecl))':'char *(char *, int, _locale_t)' inline
+| |-ParmVarDecl 0x2c74efeb008 <col:137, col:143> col:143 used _Dst 'char *'
+| |-ParmVarDecl 0x2c74eff10f8 <col:154, col:159> col:159 used _Value 'int'
+| |-ParmVarDecl 0x2c74eff1170 <col:176, col:187> col:187 used _Locale '_locale_t':'struct localeinfo_struct *'
+| |-CompoundStmt 0x2c74eff16e0 <line:2444:1, line:2450:1>
+| | |-CStyleCastExpr 0x2c74eff1578 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:2145:24, D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:2445:17> 'void' <ToVoid>
+| | | `-ImplicitCastExpr 0x2c74eff1560 <col:17> '_locale_t':'struct localeinfo_struct *' <LValueToRValue> part_of_explicit_cast
+| | |   `-DeclRefExpr 0x2c74eff1530 <col:17> '_locale_t':'struct localeinfo_struct *' lvalue ParmVar 0x2c74eff1170 '_Locale' '_locale_t':'struct localeinfo_struct *'
+| | `-ReturnStmt 0x2c74eff16d0 <line:2448:5, col:32>
+| |   `-CallExpr 0x2c74eff1670 <col:12, col:32> 'char *'
+| |     |-ImplicitCastExpr 0x2c74eff1658 <col:12> 'char *(*)(char *, int) __attribute__((cdecl))' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x2c74eff15a0 <col:12> 'char *(char *, int) __attribute__((cdecl))':'char *(char *, int)' Function 0x2c74ef63500 '_strset' 'char *(char *, int) __attribute__((cdecl))':'char *(char *, int)'
+| |     |-ImplicitCastExpr 0x2c74eff16a0 <col:20> 'char *' <LValueToRValue>
+| |     | `-DeclRefExpr 0x2c74eff15c0 <col:20> 'char *' lvalue ParmVar 0x2c74efeb008 '_Dst' 'char *'
+| |     `-ImplicitCastExpr 0x2c74eff16b8 <col:26> 'int' <LValueToRValue>
+| |       `-DeclRefExpr 0x2c74eff15e0 <col:26> 'int' lvalue ParmVar 0x2c74eff10f8 '_Value' 'int'
+| `-DeprecatedAttr 0x2c74eff1400 <D:\Microsoft Visual Studio 12.0\VC\include\crtdefs.h:275:47, col:63> "This function or variable may be unsafe. Consider using _strset_s_l instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details." ""
+|-TypedefDecl 0x2c74eff1718 <D:\Microsoft Visual Studio 12.0\VC\include\signal.h:28:1, col:13> col:13 sig_atomic_t 'int'
+| `-BuiltinType 0x2c74d435620 'int'
+|-FunctionDecl 0x2c74eff18d0 <line:88:1, col:45> col:25 __pxcptinfoptrs 'void **(void) __attribute__((cdecl))':'void **(void)' extern
+|-FunctionDecl 0x2c74eff1e50 <line:94:9, col:100> col:33 signal 'void (*(int, void (*)(int) __attribute__((cdecl))))(int) __attribute__((cdecl)) __attribute__((cdecl))'
+| |-ParmVarDecl 0x2c74eff19a0 <col:45, col:49> col:49 _SigNum 'int'
+| `-ParmVarDecl 0x2c74eff1bd8 <col:67, col:83> col:83 _Func 'void (*)(int) __attribute__((cdecl))'
+|-FunctionDecl 0x2c74eff20f0 <line:97:9, col:43> col:21 used raise 'int (int) __attribute__((cdecl))':'int (int)'
+| `-ParmVarDecl 0x2c74eff1f30 <col:32, col:36> col:36 _SigNum 'int'
+|-FunctionDecl 0x2c74eff2280 <.//openssl//file_jk/after\crypto\cryptlib.c:248:1, line:251:1> line:248:5 OPENSSL_isservice 'int (void)'
+| `-CompoundStmt 0x2c74eff2370 <line:249:1, line:251:1>
+|   `-ReturnStmt 0x2c74eff2360 <line:250:5, col:12>
+|     `-IntegerLiteral 0x2c74eff2338 <col:12> 'int' 0
+|-FunctionDecl 0x2c74eff2480 <line:254:1, line:362:1> line:254:6 used OPENSSL_showfatal 'void (const char *, ...)'
+| |-ParmVarDecl 0x2c74eff23a0 <col:24, col:36> col:36 used fmta 'const char *'
+| `-CompoundStmt 0x2c74efeb9c0 <line:255:1, line:362:1>
+|   |-DeclStmt 0x2c74eff25b8 <line:256:5, col:15>
+|   | `-VarDecl 0x2c74eff2550 <col:5, col:13> col:13 used ap 'va_list':'char *'
+|   |-DeclStmt 0x2c74eff2730 <line:257:5, col:19>
+|   | `-VarDecl 0x2c74eff26c8 <col:5, col:18> col:11 used buf 'TCHAR [256]'
+|   |-DeclStmt 0x2c74eff27f0 <line:258:5, col:21>
+|   | `-VarDecl 0x2c74eff2788 <col:5, col:18> col:18 used fmt 'const TCHAR *'
+|   |-IfStmt 0x2c74eff0b08 <line:276:5, line:329:19> has_else
+|   | |-BinaryOperator 0x2c74eff2868 <line:276:9, col:37> 'int' '=='
+|   | | |-UnaryExprOrTypeTraitExpr 0x2c74eff2818 <col:9, col:21> 'unsigned long long' sizeof 'TCHAR':'char'
+|   | | `-UnaryExprOrTypeTraitExpr 0x2c74eff2848 <col:26, col:37> 'unsigned long long' sizeof 'char'
+|   | |-BinaryOperator 0x2c74eff2930 <line:277:9, col:30> 'const TCHAR *' '='
+|   | | |-DeclRefExpr 0x2c74eff2888 <col:9> 'const TCHAR *' lvalue Var 0x2c74eff2788 'fmt' 'const TCHAR *'
+|   | | `-CStyleCastExpr 0x2c74eff2908 <col:15, col:30> 'const TCHAR *' <NoOp>
+|   | |   `-ImplicitCastExpr 0x2c74eff28f0 <col:30> 'const char *' <LValueToRValue> part_of_explicit_cast
+|   | |     `-DeclRefExpr 0x2c74eff28c0 <col:30> 'const char *' lvalue ParmVar 0x2c74eff23a0 'fmta' 'const char *'
+|   | `-DoStmt 0x2c74eff0ae8 <line:279:9, line:329:19>
+|   |   |-CompoundStmt 0x2c74eff0a90 <line:279:12, line:329:9>
+|   |   | |-DeclStmt 0x2c74eff29d0 <line:280:13, col:26>
+|   |   | | `-VarDecl 0x2c74eff2968 <col:13, col:17> col:17 used keepgoing 'int'
+|   |   | |-DeclStmt 0x2c74eff2c30 <line:281:13, col:47>
+|   |   | | |-VarDecl 0x2c74eff29f8 <col:13, col:43> col:20 used len_0 'size_t':'unsigned long long' cinit
+|   |   | | | `-BinaryOperator 0x2c74eff2b80 <col:28, col:43> 'unsigned long long' '+'
+|   |   | | |   |-CallExpr 0x2c74eff2b00 <col:28, col:39> 'unsigned long long'
+|   |   | | |   | |-ImplicitCastExpr 0x2c74eff2ae8 <col:28> 'unsigned long long (*)(const char *)' <FunctionToPointerDecay>
+|   |   | | |   | | `-DeclRefExpr 0x2c74eff2a60 <col:28> 'unsigned long long (const char *)' Function 0x2c74ef670f0 'strlen' 'unsigned long long (const char *)'
+|   |   | | |   | `-ImplicitCastExpr 0x2c74eff2b28 <col:35> 'const char *' <LValueToRValue>
+|   |   | | |   |   `-DeclRefExpr 0x2c74eff2a80 <col:35> 'const char *' lvalue ParmVar 0x2c74eff23a0 'fmta' 'const char *'
+|   |   | | |   `-ImplicitCastExpr 0x2c74eff2b68 <col:43> 'unsigned long long' <IntegralCast>
+|   |   | | |     `-IntegerLiteral 0x2c74eff2b40 <col:43> 'int' 1
+|   |   | | `-VarDecl 0x2c74eff2bb0 <col:13, col:46> col:46 used i 'size_t':'unsigned long long'
+|   |   | |-IfStmt 0x2c74eff2e08 <line:285:13, line:288:13>
+|   |   | | |-OpaqueValueExpr 0x2c74eff2df0 <<invalid sloc>> '_Bool'
+|   |   | | `-CompoundStmt 0x2c74eff2dd0 <line:285:31, line:288:13>
+|   |   | |   |-BinaryOperator 0x2c74eff2da8 <line:286:17, col:38> 'const TCHAR *' '='
+|   |   | |   | |-DeclRefExpr 0x2c74eff2cd0 <col:17> 'const TCHAR *' lvalue Var 0x2c74eff2788 'fmt' 'const TCHAR *'
+|   |   | |   | `-CStyleCastExpr 0x2c74eff2d80 <col:23, col:38> 'const TCHAR *' <BitCast>
+|   |   | |   |   `-ImplicitCastExpr 0x2c74eff2d68 <col:38> 'unsigned short *' <ArrayToPointerDecay> part_of_explicit_cast
+|   |   | |   |     `-StringLiteral 0x2c74eff2d28 <col:38> 'unsigned short [10]' lvalue L"no stack?"
+|   |   | |   `-BreakStmt 0x2c74eff2dc8 <line:287:17>
+|   |   | `-ForStmt 0x2c74eff0a38 <line:292:13, line:327:13>
+|   |   |   |-BinaryOperator 0x2c74eff01c0 <line:292:18, col:22> 'size_t':'unsigned long long' '='
+|   |   |   | |-DeclRefExpr 0x2c74eff0160 <col:18> 'size_t':'unsigned long long' lvalue Var 0x2c74eff2bb0 'i' 'size_t':'unsigned long long'
+|   |   |   | `-ImplicitCastExpr 0x2c74eff01a8 <col:22> 'size_t':'unsigned long long' <IntegralCast>
+|   |   |   |   `-IntegerLiteral 0x2c74eff0180 <col:22> 'int' 0
+|   |   |   |-<<<NULL>>>
+|   |   |   |-BinaryOperator 0x2c74eff0250 <col:25, col:29> 'int' '<'
+|   |   |   | |-ImplicitCastExpr 0x2c74eff0220 <col:25> 'size_t':'unsigned long long' <LValueToRValue>
+|   |   |   | | `-DeclRefExpr 0x2c74eff01e0 <col:25> 'size_t':'unsigned long long' lvalue Var 0x2c74eff2bb0 'i' 'size_t':'unsigned long long'
+|   |   |   | `-ImplicitCastExpr 0x2c74eff0238 <col:29> 'size_t':'unsigned long long' <LValueToRValue>
+|   |   |   |   `-DeclRefExpr 0x2c74eff0200 <col:29> 'size_t':'unsigned long long' lvalue Var 0x2c74eff29f8 'len_0' 'size_t':'unsigned long long'
+|   |   |   |-UnaryOperator 0x2c74eff0290 <col:36, col:37> 'size_t':'unsigned long long' postfix '++'
+|   |   |   | `-DeclRefExpr 0x2c74eff0270 <col:36> 'size_t':'unsigned long long' lvalue Var 0x2c74eff2bb0 'i' 'size_t':'unsigned long long'
+|   |   |   `-CompoundStmt 0x2c74eff0a20 <col:41, line:327:13>
+|   |   |     `-IfStmt 0x2c74eff0a08 <line:293:17, line:326:39>
+|   |   |       |-OpaqueValueExpr 0x2c74eff09f0 <<invalid sloc>> '_Bool'
+|   |   |       `-DoStmt 0x2c74eff09d0 <line:294:21, line:326:39>
+|   |   |         |-CompoundStmt 0x2c74eff0980 <line:294:24, line:326:21>
+|   |   |         | `-BinaryOperator 0x2c74eff0340 <line:295:25, col:37> 'int' '='
+|   |   |         |   |-DeclRefExpr 0x2c74eff02e0 <col:25> 'int' lvalue Var 0x2c74eff2968 'keepgoing' 'int'
+|   |   |         |   `-IntegerLiteral 0x2c74eff0318 <col:37> 'int' 0
+|   |   |         `-ImplicitCastExpr 0x2c74eff09b8 <line:326:30> 'int' <LValueToRValue>
+|   |   |           `-DeclRefExpr 0x2c74eff0998 <col:30> 'int' lvalue Var 0x2c74eff2968 'keepgoing' 'int'
+|   |   `-IntegerLiteral 0x2c74eff0ac0 <line:329:18> 'int' 0
+|   |-CallExpr 0x2c74eff0e90 <line:331:5, col:22> 'void'
+|   | |-ImplicitCastExpr 0x2c74eff0e78 <col:5> 'void (*)(__builtin_va_list &, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x2c74eff0d90 <col:5> 'void (__builtin_va_list &, ...)' Function 0x2c74eff0c28 'va_start' 'void (__builtin_va_list &, ...)'
+|   | |-DeclRefExpr 0x2c74eff0dc8 <col:14> 'va_list':'char *' lvalue Var 0x2c74eff2550 'ap' 'va_list':'char *'
+|   | `-ImplicitCastExpr 0x2c74eff0ec0 <col:18> 'const char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x2c74eff0e00 <col:18> 'const char *' lvalue ParmVar 0x2c74eff23a0 'fmta' 'const char *'
+|   |-CallExpr 0x2c74efeb2e0 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:987:25, .//openssl//file_jk/after\crypto\cryptlib.c:332:50> 'int'
+|   | |-ImplicitCastExpr 0x2c74efeb2c8 <D:\Microsoft Visual Studio 12.0\VC\include\tchar.h:987:25> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x2c74eff0fc8 <col:25> 'int ()' Function 0x2c74eff0f00 '_vsnprintf' 'int ()'
+|   | |-ImplicitCastExpr 0x2c74efeb320 <.//openssl//file_jk/after\crypto\cryptlib.c:332:17> 'TCHAR *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x2c74eff0fe8 <col:17> 'TCHAR [256]' lvalue Var 0x2c74eff26c8 'buf' 'TCHAR [256]'
+|   | |-BinaryOperator 0x2c74efeb268 <col:22, col:40> 'int' '-'
+|   | | |-CallExpr 0x2c74efeb1d0 <col:22, col:36> 'int'
+|   | | | |-ImplicitCastExpr 0x2c74efeb1b8 <col:22> 'int (*)()' <FunctionToPointerDecay>
+|   | | | | `-DeclRefExpr 0x2c74efeb148 <col:22> 'int ()' Function 0x2c74efeb080 'OSSL_NELEM' 'int ()'
+|   | | | `-ImplicitCastExpr 0x2c74efeb228 <col:33> 'TCHAR *' <ArrayToPointerDecay>
+|   | | |   `-DeclRefExpr 0x2c74efeb168 <col:33> 'TCHAR [256]' lvalue Var 0x2c74eff26c8 'buf' 'TCHAR [256]'
+|   | | `-IntegerLiteral 0x2c74efeb240 <col:40> 'int' 1
+|   | |-ImplicitCastExpr 0x2c74efeb338 <col:43> 'const TCHAR *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x2c74efeb288 <col:43> 'const TCHAR *' lvalue Var 0x2c74eff2788 'fmt' 'const TCHAR *'
+|   | `-ImplicitCastExpr 0x2c74efeb350 <col:48> 'va_list':'char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x2c74efeb2a8 <col:48> 'va_list':'char *' lvalue Var 0x2c74eff2550 'ap' 'va_list':'char *'
+|   |-BinaryOperator 0x2c74efeb4d0 <line:333:5, col:35> 'TCHAR':'char' '='
+|   | |-ArraySubscriptExpr 0x2c74efeb480 <col:5, col:28> 'TCHAR':'char' lvalue
+|   | | |-ImplicitCastExpr 0x2c74efeb468 <col:5> 'TCHAR *' <ArrayToPointerDecay>
+|   | | | `-DeclRefExpr 0x2c74efeb368 <col:5> 'TCHAR [256]' lvalue Var 0x2c74eff26c8 'buf' 'TCHAR [256]'
+|   | | `-BinaryOperator 0x2c74efeb448 <col:9, col:27> 'int' '-'
+|   | |   |-CallExpr 0x2c74efeb3e0 <col:9, col:23> 'int'
+|   | |   | |-ImplicitCastExpr 0x2c74efeb3c8 <col:9> 'int (*)()' <FunctionToPointerDecay>
+|   | |   | | `-DeclRefExpr 0x2c74efeb388 <col:9> 'int ()' Function 0x2c74efeb080 'OSSL_NELEM' 'int ()'
+|   | |   | `-ImplicitCastExpr 0x2c74efeb408 <col:20> 'TCHAR *' <ArrayToPointerDecay>
+|   | |   |   `-DeclRefExpr 0x2c74efeb3a8 <col:20> 'TCHAR [256]' lvalue Var 0x2c74eff26c8 'buf' 'TCHAR [256]'
+|   | |   `-IntegerLiteral 0x2c74efeb420 <col:27> 'int' 1
+|   | `-ImplicitCastExpr 0x2c74efeb4b8 <col:35> 'TCHAR':'char' <IntegralCast>
+|   |   `-CharacterLiteral 0x2c74efeb4a0 <col:35> 'int' 0
+|   `-CallExpr 0x2c74efeb780 <line:334:5, col:14> 'void'
+|     |-ImplicitCastExpr 0x2c74efeb768 <col:5> 'void (*)(__builtin_va_list &)' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x2c74efeb6b8 <col:5> 'void (__builtin_va_list &)' Function 0x2c74efeb550 'va_end' 'void (__builtin_va_list &)'
+|     `-DeclRefExpr 0x2c74efeb6f0 <col:12> 'va_list':'char *' lvalue Var 0x2c74eff2550 'ap' 'va_list':'char *'
+|-FunctionDecl 0x2c74eff0c28 <line:331:5> col:5 implicit used va_start 'void (__builtin_va_list &, ...)' extern
+| |-ParmVarDecl 0x2c74eff0cc8 <<invalid sloc>> <invalid sloc> '__builtin_va_list &'
+| `-NoThrowAttr 0x2c74eff0d38 <col:5> Implicit
+|-FunctionDecl 0x2c74efeb550 <line:334:5> col:5 implicit used va_end 'void (__builtin_va_list &)' extern
+| |-ParmVarDecl 0x2c74efeb5f0 <<invalid sloc>> <invalid sloc> '__builtin_va_list &'
+| `-NoThrowAttr 0x2c74efeb660 <col:5> Implicit
+|-FunctionDecl 0x2c74efebc58 <line:381:1, line:396:1> line:381:6 OPENSSL_die 'void (const char *, const char *, int)'
+| |-ParmVarDecl 0x2c74efeba28 <col:18, col:30> col:30 used message 'const char *'
+| |-ParmVarDecl 0x2c74efebaa8 <col:39, col:51> col:51 used file 'const char *'
+| |-ParmVarDecl 0x2c74efebb28 <col:57, col:61> col:61 used line 'int'
+| `-CompoundStmt 0x2c74eff32d8 <line:382:1, line:396:1>
+|   |-CallExpr 0x2c74efebe70 <line:383:5, line:384:42> 'void'
+|   | |-ImplicitCastExpr 0x2c74efebe58 <line:383:5> 'void (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x2c74efebd28 <col:5> 'void (const char *, ...)' Function 0x2c74eff2480 'OPENSSL_showfatal' 'void (const char *, ...)'
+|   | |-ImplicitCastExpr 0x2c74efebec8 <col:23> 'const char *' <NoOp>
+|   | | `-ImplicitCastExpr 0x2c74efebeb0 <col:23> 'char *' <ArrayToPointerDecay>
+|   | |   `-StringLiteral 0x2c74efebd88 <col:23> 'char [35]' lvalue "%s:%d: OpenSSL internal error: %s\n"
+|   | |-ImplicitCastExpr 0x2c74efebee0 <line:384:23> 'const char *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x2c74efebdc8 <col:23> 'const char *' lvalue ParmVar 0x2c74efebaa8 'file' 'const char *'
+|   | |-ImplicitCastExpr 0x2c74efebef8 <col:29> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x2c74efebde8 <col:29> 'int' lvalue ParmVar 0x2c74efebb28 'line' 'int'
+|   | `-ImplicitCastExpr 0x2c74efebf10 <col:35> 'const char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x2c74efebe08 <col:35> 'const char *' lvalue ParmVar 0x2c74efeba28 'message' 'const char *'
+|   |-CallExpr 0x2c74efebfe0 <line:392:5, col:18> 'int'
+|   | |-ImplicitCastExpr 0x2c74efebfc8 <col:5> 'int (*)(int) __attribute__((cdecl))' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x2c74efebf28 <col:5> 'int (int) __attribute__((cdecl))':'int (int)' Function 0x2c74eff20f0 'raise' 'int (int) __attribute__((cdecl))':'int (int)'
+|   | `-IntegerLiteral 0x2c74efebf48 <D:\Microsoft Visual Studio 12.0\VC\include\signal.h:43:25> 'int' 22
+|   `-CallExpr 0x2c74eff32b0 <.//openssl//file_jk/after\crypto\cryptlib.c:394:5, col:12> 'void'
+|     |-ImplicitCastExpr 0x2c74eff3298 <col:5> 'void (*)(int) __attribute__((noreturn))' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x2c74eff3210 <col:5> 'void (int) __attribute__((noreturn))' Function 0x2c74eff3100 '_exit' 'void (int) __attribute__((noreturn))'
+|     `-IntegerLiteral 0x2c74eff3248 <col:11> 'int' 3
+|-FunctionDecl 0x2c74eff3100 <col:5> col:5 implicit used _exit 'void (int) __attribute__((noreturn))' extern
+| `-ParmVarDecl 0x2c74eff31a0 <<invalid sloc>> <invalid sloc> 'int'
+`-FunctionDecl 0x2c74eff35b0 <line:416:1, line:429:1> line:416:5 CRYPTO_memcmp 'int (const volatile void *volatile, const volatile void *volatile, size_t)'
+  |-ParmVarDecl 0x2c74eff3340 <col:19, col:50> col:50 used in_a 'const volatile void *volatile'
+  |-ParmVarDecl 0x2c74eff33c0 <line:417:19, col:50> col:50 used in_b 'const volatile void *volatile'
+  |-ParmVarDecl 0x2c74eff3438 <line:418:19, col:26> col:26 used len 'size_t':'unsigned long long'
+  `-CompoundStmt 0x2c74eff3e10 <line:419:1, line:429:1>
+    |-DeclStmt 0x2c74eff36f8 <line:420:5, col:13>
+    | `-VarDecl 0x2c74eff3690 <col:5, col:12> col:12 used i 'size_t':'unsigned long long'
+    |-DeclStmt 0x2c74eff3808 <line:421:5, col:43>
+    | `-VarDecl 0x2c74eff3750 <col:5, col:39> col:35 used a 'const volatile unsigned char *' cinit
+    |   `-ImplicitCastExpr 0x2c74eff37f0 <col:39> 'const volatile unsigned char *' <BitCast>
+    |     `-ImplicitCastExpr 0x2c74eff37d8 <col:39> 'const volatile void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x2c74eff37b8 <col:39> 'const volatile void *volatile' lvalue ParmVar 0x2c74eff3340 'in_a' 'const volatile void *volatile'
+    |-DeclStmt 0x2c74eff38f0 <line:422:5, col:43>
+    | `-VarDecl 0x2c74eff3838 <col:5, col:39> col:35 used b 'const volatile unsigned char *' cinit
+    |   `-ImplicitCastExpr 0x2c74eff38d8 <col:39> 'const volatile unsigned char *' <BitCast>
+    |     `-ImplicitCastExpr 0x2c74eff38c0 <col:39> 'const volatile void *' <LValueToRValue>
+    |       `-DeclRefExpr 0x2c74eff38a0 <col:39> 'const volatile void *volatile' lvalue ParmVar 0x2c74eff33c0 'in_b' 'const volatile void *volatile'
+    |-DeclStmt 0x2c74eff39c8 <line:423:5, col:24>
+    | `-VarDecl 0x2c74eff3920 <col:5, col:23> col:19 used x 'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x2c74eff39b0 <col:23> 'unsigned char' <IntegralCast>
+    |     `-IntegerLiteral 0x2c74eff3988 <col:23> 'int' 0
+    |-ForStmt 0x2c74eff3d78 <line:425:5, line:426:24>
+    | |-BinaryOperator 0x2c74eff3a58 <line:425:10, col:14> 'size_t':'unsigned long long' '='
+    | | |-DeclRefExpr 0x2c74eff39e0 <col:10> 'size_t':'unsigned long long' lvalue Var 0x2c74eff3690 'i' 'size_t':'unsigned long long'
+    | | `-ImplicitCastExpr 0x2c74eff3a40 <col:14> 'size_t':'unsigned long long' <IntegralCast>
+    | |   `-IntegerLiteral 0x2c74eff3a18 <col:14> 'int' 0
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x2c74eff3ae8 <col:17, col:21> 'int' '<'
+    | | |-ImplicitCastExpr 0x2c74eff3ab8 <col:17> 'size_t':'unsigned long long' <LValueToRValue>
+    | | | `-DeclRefExpr 0x2c74eff3a78 <col:17> 'size_t':'unsigned long long' lvalue Var 0x2c74eff3690 'i' 'size_t':'unsigned long long'
+    | | `-ImplicitCastExpr 0x2c74eff3ad0 <col:21> 'size_t':'unsigned long long' <LValueToRValue>
+    | |   `-DeclRefExpr 0x2c74eff3a98 <col:21> 'size_t':'unsigned long long' lvalue ParmVar 0x2c74eff3438 'len' 'size_t':'unsigned long long'
+    | |-UnaryOperator 0x2c74eff3b28 <col:26, col:27> 'size_t':'unsigned long long' postfix '++'
+    | | `-DeclRefExpr 0x2c74eff3b08 <col:26> 'size_t':'unsigned long long' lvalue Var 0x2c74eff3690 'i' 'size_t':'unsigned long long'
+    | `-CompoundAssignOperator 0x2c74eff3d48 <line:426:9, col:24> 'unsigned char' '|=' ComputeLHSTy='int' ComputeResultTy='int'
+    |   |-DeclRefExpr 0x2c74eff3b40 <col:9> 'unsigned char' lvalue Var 0x2c74eff3920 'x' 'unsigned char'
+    |   `-BinaryOperator 0x2c74eff3d28 <col:14, col:24> 'int' '^'
+    |     |-ImplicitCastExpr 0x2c74eff3ce0 <col:14, col:17> 'int' <IntegralCast>
+    |     | `-ImplicitCastExpr 0x2c74eff3cc8 <col:14, col:17> 'unsigned char' <LValueToRValue>
+    |     |   `-ArraySubscriptExpr 0x2c74eff3c00 <col:14, col:17> 'const volatile unsigned char' lvalue
+    |     |     |-ImplicitCastExpr 0x2c74eff3bd0 <col:14> 'const volatile unsigned char *' <LValueToRValue>
+    |     |     | `-DeclRefExpr 0x2c74eff3b78 <col:14> 'const volatile unsigned char *' lvalue Var 0x2c74eff3750 'a' 'const volatile unsigned char *'
+    |     |     `-ImplicitCastExpr 0x2c74eff3be8 <col:16> 'size_t':'unsigned long long' <LValueToRValue>
+    |     |       `-DeclRefExpr 0x2c74eff3bb0 <col:16> 'size_t':'unsigned long long' lvalue Var 0x2c74eff3690 'i' 'size_t':'unsigned long long'
+    |     `-ImplicitCastExpr 0x2c74eff3d10 <col:21, col:24> 'int' <IntegralCast>
+    |       `-ImplicitCastExpr 0x2c74eff3cf8 <col:21, col:24> 'unsigned char' <LValueToRValue>
+    |         `-ArraySubscriptExpr 0x2c74eff3ca8 <col:21, col:24> 'const volatile unsigned char' lvalue
+    |           |-ImplicitCastExpr 0x2c74eff3c78 <col:21> 'const volatile unsigned char *' <LValueToRValue>
+    |           | `-DeclRefExpr 0x2c74eff3c20 <col:21> 'const volatile unsigned char *' lvalue Var 0x2c74eff3838 'b' 'const volatile unsigned char *'
+    |           `-ImplicitCastExpr 0x2c74eff3c90 <col:23> 'size_t':'unsigned long long' <LValueToRValue>
+    |             `-DeclRefExpr 0x2c74eff3c58 <col:23> 'size_t':'unsigned long long' lvalue Var 0x2c74eff3690 'i' 'size_t':'unsigned long long'
+    `-ReturnStmt 0x2c74eff3e00 <line:428:5, col:12>
+      `-ImplicitCastExpr 0x2c74eff3de8 <col:12> 'int' <IntegralCast>
+        `-ImplicitCastExpr 0x2c74eff3dd0 <col:12> 'unsigned char' <LValueToRValue>
+          `-DeclRefExpr 0x2c74eff3db0 <col:12> 'unsigned char' lvalue Var 0x2c74eff3920 'x' 'unsigned char'

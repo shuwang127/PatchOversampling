@@ -1,0 +1,200 @@
+TranslationUnitDecl 0x18ea24d4098 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x18ea24d4930 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x18ea24d4630 '__int128'
+|-TypedefDecl 0x18ea24d49a0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x18ea24d4650 'unsigned __int128'
+|-TypedefDecl 0x18ea24d4cd8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x18ea24d4a90 'struct __NSConstantString_tag'
+|   `-Record 0x18ea24d49f8 '__NSConstantString_tag'
+|-TypedefDecl 0x18ea24d4d48 <<invalid sloc>> <invalid sloc> implicit referenced size_t 'unsigned long long'
+| `-BuiltinType 0x18ea24d4270 'unsigned long long'
+|-TypedefDecl 0x18ea24d4de0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x18ea24d4da0 'char *'
+|   `-BuiltinType 0x18ea24d4130 'char'
+|-TypedefDecl 0x18ea24d4e50 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x18ea24d4da0 'char *'
+|   `-BuiltinType 0x18ea24d4130 'char'
+|-FunctionDecl 0x18ea2541080 <.//openssl//file_jk/before\crypto\srp\srp_lib.c:19:1, line:39:1> line:19:16 invalid srp_Calc_xy 'int *(const int *, const int *, const int *)' static
+| |-ParmVarDecl 0x18ea24d4ec0 <col:28, col:42> col:42 invalid x 'const int *'
+| |-ParmVarDecl 0x18ea24d4f40 <col:45, col:59> col:59 invalid y 'const int *'
+| |-ParmVarDecl 0x18ea24d4fc0 <col:62, col:76> col:76 invalid N 'const int *'
+| `-CompoundStmt 0x18ea25401d8 <line:20:1, line:39:1>
+|   |-DeclStmt 0x18ea25411d0 <line:21:5, col:44>
+|   | `-VarDecl 0x18ea2541168 <col:5, col:19> col:19 invalid digest 'unsigned char'
+|   |-DeclStmt 0x18ea2541298 <line:22:5, col:30>
+|   | `-VarDecl 0x18ea2541230 <col:5, col:20> col:20 used tmp 'unsigned char *'
+|   |-DeclStmt 0x18ea25414b8 <line:23:5, col:31>
+|   | `-VarDecl 0x18ea25412c8 <col:5, col:9> col:9 used numN 'int'
+|   |-IfStmt 0x18ea2541970 <line:29:5, line:30:14>
+|   | |-OpaqueValueExpr 0x18ea2541958 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2541940 <col:9, col:14> 'err' 0x18ea25418f0
+|   |-IfStmt 0x18ea2541f20 <line:31:5, line:34:14>
+|   | |-OpaqueValueExpr 0x18ea2541f08 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2541ef0 <col:9, col:14> 'err' 0x18ea25418f0
+|   `-LabelStmt 0x18ea25401c0 <line:36:2, line:37:21> 'err'
+|     `-CallExpr 0x18ea2540180 <col:5, col:21> 'int'
+|       |-ImplicitCastExpr 0x18ea2540168 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x18ea2540128 <col:5> 'int ()' Function 0x18ea2540060 'OPENSSL_free' 'int ()'
+|       `-ImplicitCastExpr 0x18ea25401a8 <col:18> 'unsigned char *' <LValueToRValue>
+|         `-DeclRefExpr 0x18ea2540148 <col:18> 'unsigned char *' lvalue Var 0x18ea2541230 'tmp' 'unsigned char *'
+|-FunctionDecl 0x18ea2540390 <line:41:1, line:45:1> line:41:16 invalid srp_Calc_k 'int *(const int *, const int *)' static
+| |-ParmVarDecl 0x18ea2540230 <col:27, col:41> col:41 invalid N 'const int *'
+| |-ParmVarDecl 0x18ea25402b0 <col:44, col:58> col:58 invalid g 'const int *'
+| `-CompoundStmt 0x18ea2540458 <line:42:1, line:45:1>
+|-FunctionDecl 0x18ea2540628 <line:47:1, line:51:1> line:47:9 invalid SRP_Calc_u 'int *(const int *, const int *, const int *)'
+| |-ParmVarDecl 0x18ea2540480 <col:20, col:34> col:34 invalid A 'const int *'
+| |-ParmVarDecl 0x18ea2540500 <col:37, col:51> col:51 invalid B 'const int *'
+| |-ParmVarDecl 0x18ea2540580 <col:54, col:68> col:68 invalid N 'const int *'
+| `-CompoundStmt 0x18ea25406f8 <line:48:1, line:51:1>
+|-FunctionDecl 0x18ea2540a30 <line:53:1, line:81:1> line:53:9 invalid SRP_Calc_server_key 'int *(const int *, const int *, const int *, const int *, const int *)'
+| |-ParmVarDecl 0x18ea2540720 <col:29, col:43> col:43 invalid A 'const int *'
+| |-ParmVarDecl 0x18ea25407a0 <col:46, col:60> col:60 invalid v 'const int *'
+| |-ParmVarDecl 0x18ea2540820 <col:63, col:77> col:77 invalid u 'const int *'
+| |-ParmVarDecl 0x18ea25408a0 <line:54:29, col:43> col:43 invalid b 'const int *'
+| |-ParmVarDecl 0x18ea2540920 <col:46, col:60> col:60 invalid N 'const int *'
+| `-CompoundStmt 0x18ea253e508 <line:55:1, line:81:1>
+|   |-IfStmt 0x18ea2540e20 <line:62:5, line:63:14>
+|   | |-OpaqueValueExpr 0x18ea2540e08 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2540df0 <col:9, col:14> 'err' 0x18ea2540da0
+|   |-IfStmt 0x18ea2540f78 <line:67:5, line:68:14>
+|   | |-OpaqueValueExpr 0x18ea2540f60 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2540f48 <col:9, col:14> 'err' 0x18ea2540da0
+|   |-IfStmt 0x18ea253e0e8 <line:69:5, line:70:14>
+|   | |-OpaqueValueExpr 0x18ea253e0d0 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253e0b8 <col:9, col:14> 'err' 0x18ea2540da0
+|   |-IfStmt 0x18ea253e2b0 <line:73:5, line:76:5>
+|   | |-OpaqueValueExpr 0x18ea253e298 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x18ea253e288 <line:73:57, line:76:5>
+|   `-LabelStmt 0x18ea253e3e0 <line:77:2, col:5> 'err'
+|     `-NullStmt 0x18ea253e3d8 <col:5>
+|-FunctionDecl 0x18ea253e7d0 <line:83:1, line:113:1> line:83:9 invalid SRP_Calc_B 'int *(const int *, const int *, const int *, const int *)'
+| |-ParmVarDecl 0x18ea253e558 <col:20, col:34> col:34 invalid b 'const int *'
+| |-ParmVarDecl 0x18ea253e5d8 <col:37, col:51> col:51 invalid N 'const int *'
+| |-ParmVarDecl 0x18ea253e658 <col:54, col:68> col:68 invalid g 'const int *'
+| |-ParmVarDecl 0x18ea253e6d8 <line:84:20, col:34> col:34 invalid v 'const int *'
+| `-CompoundStmt 0x18ea253ecf0 <line:85:1, line:113:1>
+|   |-IfStmt 0x18ea253ea88 <line:94:5, line:96:14>
+|   | |-OpaqueValueExpr 0x18ea253ea70 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253ea58 <col:9, col:14> 'err' 0x18ea253ea08
+|   |-IfStmt 0x18ea253ec38 <line:100:5, line:106:5>
+|   | |-OpaqueValueExpr 0x18ea253ec20 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x18ea253ec10 <line:103:47, line:106:5>
+|   `-LabelStmt 0x18ea253ec78 <line:107:2, col:5> 'err'
+|     `-NullStmt 0x18ea253ec70 <col:5>
+|-FunctionDecl 0x18ea253ef20 <line:115:1, line:152:1> line:115:9 invalid SRP_Calc_x 'int *(const int *, const char *, const char *)'
+| |-ParmVarDecl 0x18ea253ed30 <col:20, col:34> col:34 invalid s 'const int *'
+| |-ParmVarDecl 0x18ea253edb0 <col:37, col:49> col:49 used user 'const char *'
+| |-ParmVarDecl 0x18ea253ee30 <col:55, col:67> col:67 used pass 'const char *'
+| `-CompoundStmt 0x18ea25420f8 <line:116:1, line:152:1>
+|   |-DeclStmt 0x18ea253a040 <line:117:5, col:41>
+|   | `-VarDecl 0x18ea2539fd8 <col:5, col:19> col:19 invalid dig 'unsigned char'
+|   |-DeclStmt 0x18ea253a0d8 <line:119:5, col:29>
+|   | `-VarDecl 0x18ea253a070 <col:5, col:20> col:20 used cs 'unsigned char *'
+|   |-IfStmt 0x18ea253a3a0 <line:128:5, line:129:14>
+|   | |-OpaqueValueExpr 0x18ea253a388 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253a370 <col:9, col:14> 'err' 0x18ea253a320
+|   |-IfStmt 0x18ea253abc8 <line:131:5, line:137:14>
+|   | |-OpaqueValueExpr 0x18ea253abb0 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253ab98 <col:9, col:14> 'err' 0x18ea253a320
+|   |-IfStmt 0x18ea253ada0 <line:139:5, line:140:14>
+|   | |-OpaqueValueExpr 0x18ea253ad88 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253ad70 <col:9, col:14> 'err' 0x18ea253a320
+|   |-IfStmt 0x18ea253ae28 <line:142:5, line:144:14>
+|   | |-OpaqueValueExpr 0x18ea253ae10 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253adf8 <col:9, col:14> 'err' 0x18ea253a320
+|   `-LabelStmt 0x18ea253aef8 <line:148:2, line:149:20> 'err'
+|     `-CallExpr 0x18ea253aeb8 <col:5, col:20> 'int'
+|       |-ImplicitCastExpr 0x18ea253aea0 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|       | `-DeclRefExpr 0x18ea253ae60 <col:5> 'int ()' Function 0x18ea2540060 'OPENSSL_free' 'int ()'
+|       `-ImplicitCastExpr 0x18ea253aee0 <col:18> 'unsigned char *' <LValueToRValue>
+|         `-DeclRefExpr 0x18ea253ae80 <col:18> 'unsigned char *' lvalue Var 0x18ea253a070 'cs' 'unsigned char *'
+|-FunctionDecl 0x18ea253a680 <line:132:42> col:42 implicit used strlen 'unsigned long long (const char *)' extern
+| `-ParmVarDecl 0x18ea253a720 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x18ea2542300 <line:154:1, line:168:1> line:154:9 invalid SRP_Calc_A 'int *(const int *, const int *, const int *)'
+| |-ParmVarDecl 0x18ea2542158 <col:20, col:34> col:34 invalid a 'const int *'
+| |-ParmVarDecl 0x18ea25421d8 <col:37, col:51> col:51 invalid N 'const int *'
+| |-ParmVarDecl 0x18ea2542258 <col:54, col:68> col:68 invalid g 'const int *'
+| `-CompoundStmt 0x18ea2542520 <line:155:1, line:168:1>
+|   `-IfStmt 0x18ea25424e8 <line:162:5, line:165:5>
+|     |-OpaqueValueExpr 0x18ea25424d0 <<invalid sloc>> '_Bool'
+|     `-CompoundStmt 0x18ea25424c0 <line:162:68, line:165:5>
+|-FunctionDecl 0x18ea25428f0 <line:170:1, line:210:1> line:170:9 invalid SRP_Calc_client_key 'int *(const int *, const int *, const int *, const int *, const int *, const int *)'
+| |-ParmVarDecl 0x18ea2542550 <col:29, col:43> col:43 invalid N 'const int *'
+| |-ParmVarDecl 0x18ea25425d0 <col:46, col:60> col:60 invalid B 'const int *'
+| |-ParmVarDecl 0x18ea2542650 <col:63, col:77> col:77 invalid g 'const int *'
+| |-ParmVarDecl 0x18ea25426d0 <line:171:29, col:43> col:43 invalid x 'const int *'
+| |-ParmVarDecl 0x18ea2542750 <col:46, col:60> col:60 invalid a 'const int *'
+| |-ParmVarDecl 0x18ea25427d0 <col:63, col:77> col:77 invalid u 'const int *'
+| `-CompoundStmt 0x18ea253b268 <line:172:1, line:210:1>
+|   |-IfStmt 0x18ea2542bb8 <line:180:5, line:183:14>
+|   | |-OpaqueValueExpr 0x18ea2542ba0 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2542b88 <col:9, col:14> 'err' 0x18ea2542b38
+|   |-IfStmt 0x18ea2542c20 <line:185:5, line:186:14>
+|   | |-OpaqueValueExpr 0x18ea2542c08 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2542bf0 <col:9, col:14> 'err' 0x18ea2542b38
+|   |-IfStmt 0x18ea2542c68 <line:187:5, line:188:14>
+|   | |-OpaqueValueExpr 0x18ea2542c50 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2542c38 <col:9, col:14> 'err' 0x18ea2542b38
+|   |-IfStmt 0x18ea2542cd0 <line:189:5, line:190:14>
+|   | |-OpaqueValueExpr 0x18ea2542cb8 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2542ca0 <col:9, col:14> 'err' 0x18ea2542b38
+|   |-IfStmt 0x18ea2542e28 <line:191:5, line:192:14>
+|   | |-OpaqueValueExpr 0x18ea2542e10 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2542df8 <col:9, col:14> 'err' 0x18ea2542b38
+|   |-IfStmt 0x18ea2542f80 <line:193:5, line:194:14>
+|   | |-OpaqueValueExpr 0x18ea2542f68 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea2542f50 <col:9, col:14> 'err' 0x18ea2542b38
+|   |-IfStmt 0x18ea253b0b8 <line:195:5, line:196:14>
+|   | |-OpaqueValueExpr 0x18ea253b0a0 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253b088 <col:9, col:14> 'err' 0x18ea2542b38
+|   |-IfStmt 0x18ea253b190 <line:198:5, line:201:5>
+|   | |-OpaqueValueExpr 0x18ea253b178 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x18ea253b168 <line:198:60, line:201:5>
+|   `-LabelStmt 0x18ea253b1d0 <line:203:2, col:5> 'err'
+|     `-NullStmt 0x18ea253b1c8 <col:5>
+|-FunctionDecl 0x18ea253b430 <line:212:1, line:231:1> line:212:5 invalid SRP_Verify_B_mod_N 'int (const int *, const int *)'
+| |-ParmVarDecl 0x18ea253b2d8 <col:24, col:38> col:38 invalid B 'const int *'
+| |-ParmVarDecl 0x18ea253b358 <col:41, col:55> col:55 invalid N 'const int *'
+| `-CompoundStmt 0x18ea253bab0 <line:213:1, line:231:1>
+|   |-DeclStmt 0x18ea253b5a0 <line:216:5, col:16>
+|   | `-VarDecl 0x18ea253b510 <col:5, col:15> col:9 used ret 'int' cinit
+|   |   `-IntegerLiteral 0x18ea253b578 <col:15> 'int' 0
+|   |-IfStmt 0x18ea253b660 <line:218:5, line:219:16>
+|   | |-OpaqueValueExpr 0x18ea253b648 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x18ea253b638 <col:9, col:16>
+|   |   `-IntegerLiteral 0x18ea253b610 <col:16> 'int' 0
+|   |-IfStmt 0x18ea253b750 <line:221:5, line:222:14>
+|   | |-OpaqueValueExpr 0x18ea253b738 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253b720 <col:9, col:14> 'err' 0x18ea253b6d0
+|   |-IfStmt 0x18ea253b8a8 <line:224:5, line:225:14>
+|   | |-OpaqueValueExpr 0x18ea253b890 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ea253b878 <col:9, col:14> 'err' 0x18ea253b6d0
+|   |-LabelStmt 0x18ea253ba30 <line:227:2, col:5> 'err'
+|   | `-NullStmt 0x18ea253ba28 <col:5>
+|   `-ReturnStmt 0x18ea253baa0 <line:230:5, col:12>
+|     `-ImplicitCastExpr 0x18ea253ba88 <col:12> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x18ea253ba68 <col:12> 'int' lvalue Var 0x18ea253b510 'ret' 'int'
+|-FunctionDecl 0x18ea253bc28 <line:233:1, line:237:1> line:233:5 invalid SRP_Verify_A_mod_N 'int (const int *, const int *)'
+| |-ParmVarDecl 0x18ea253bb08 <col:24, col:38> col:38 invalid A 'const int *'
+| |-ParmVarDecl 0x18ea253bb88 <col:41, col:55> col:55 invalid N 'const int *'
+| `-CompoundStmt 0x18ea253bcf0 <line:234:1, line:237:1>
+|-VarDecl 0x18ea253bd50 <line:239:1, <invalid sloc>> col:15 invalid knowngN 'int []' static
+|-FunctionDecl 0x18ea2547830 <line:255:1, line:266:1> line:255:7 invalid SRP_check_known_gN_param 'char *(const int *, const int *)'
+| |-ParmVarDecl 0x18ea253bef0 <col:32, col:46> col:46 invalid g 'const int *'
+| |-ParmVarDecl 0x18ea2547750 <col:49, col:63> col:63 invalid N 'const int *'
+| `-CompoundStmt 0x18ea2547d10 <line:256:1, line:266:1>
+|   |-DeclStmt 0x18ea2547998 <line:257:5, col:13>
+|   | `-VarDecl 0x18ea2547930 <col:5, col:12> col:12 used i 'size_t':'unsigned long long'
+|   `-IfStmt 0x18ea2547a18 <line:258:5, line:259:16>
+|     |-OpaqueValueExpr 0x18ea2547a00 <<invalid sloc>> '_Bool'
+|     `-ReturnStmt 0x18ea25479f0 <col:9, col:16>
+|       `-ImplicitCastExpr 0x18ea25479d8 <col:16> 'char *' <NullToPointer>
+|         `-IntegerLiteral 0x18ea25479b0 <col:16> 'int' 0
+|-FunctionDecl 0x18ea2547e30 <line:268:1, line:279:1> line:268:9 invalid SRP_get_default_gN 'int *(const char *)'
+| |-ParmVarDecl 0x18ea2547d48 <col:28, col:40> col:40 used id 'const char *'
+| `-CompoundStmt 0x18ea2548318 <line:269:1, line:279:1>
+|   `-DeclStmt 0x18ea2547f68 <line:270:5, col:13>
+|     `-VarDecl 0x18ea2547f00 <col:5, col:12> col:12 used i 'size_t':'unsigned long long'
+`-FunctionDecl 0x18ea25480c8 <line:275:13> col:13 implicit used strcmp 'int (const char *, const char *)' extern
+  |-ParmVarDecl 0x18ea2548168 <<invalid sloc>> <invalid sloc> 'const char *'
+  `-ParmVarDecl 0x18ea25481d0 <<invalid sloc>> <invalid sloc> 'const char *'

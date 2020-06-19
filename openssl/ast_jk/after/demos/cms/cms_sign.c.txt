@@ -1,0 +1,60 @@
+TranslationUnitDecl 0x1a886a6f608 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x1a886a6fea0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x1a886a6fba0 '__int128'
+|-TypedefDecl 0x1a886a6ff10 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x1a886a6fbc0 'unsigned __int128'
+|-TypedefDecl 0x1a886a70248 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x1a886a70000 'struct __NSConstantString_tag'
+|   `-Record 0x1a886a6ff68 '__NSConstantString_tag'
+|-TypedefDecl 0x1a886a702b8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x1a886a6f7e0 'unsigned long long'
+|-TypedefDecl 0x1a886a70350 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x1a886a70310 'char *'
+|   `-BuiltinType 0x1a886a6f6a0 'char'
+|-TypedefDecl 0x1a886a703c0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x1a886a70310 'char *'
+|   `-BuiltinType 0x1a886a6f6a0 'char'
+`-FunctionDecl 0x1a888413a00 <.//openssl//file_jk/after\demos\cms\cms_sign.c:15:1, line:88:1> line:15:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x1a886a70430 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x1a886a704e0 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x1a888419520 <line:16:1, line:88:1>
+    |-DeclStmt 0x1a888413bb8 <line:21:5, col:16>
+    | `-VarDecl 0x1a888413b28 <col:5, col:15> col:9 used ret 'int' cinit
+    |   `-IntegerLiteral 0x1a888413b90 <col:15> 'int' 1
+    |-DeclStmt 0x1a888413c50 <line:28:5, col:42>
+    | `-VarDecl 0x1a888413be8 <col:5, col:9> col:9 used flags 'int'
+    |-CallExpr 0x1a888413df0 <line:30:5, col:32> 'int'
+    | `-ImplicitCastExpr 0x1a888413dd8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x1a888413d88 <col:5> 'int ()' Function 0x1a888413cc0 'OpenSSL_add_all_algorithms' 'int ()'
+    |-CallExpr 0x1a888413f38 <line:31:5, col:29> 'int'
+    | `-ImplicitCastExpr 0x1a888413f20 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x1a888413f00 <col:5> 'int ()' Function 0x1a888413e38 'ERR_load_crypto_strings' 'int ()'
+    |-IfStmt 0x1a888414220 <line:36:5, line:37:14>
+    | |-OpaqueValueExpr 0x1a888414208 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x1a8884141f0 <col:9, col:14> 'err' 0x1a8884141a0
+    |-IfStmt 0x1a8884145e8 <line:45:5, line:46:14>
+    | |-OpaqueValueExpr 0x1a8884145d0 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x1a8884145b8 <col:9, col:14> 'err' 0x1a8884141a0
+    |-IfStmt 0x1a888414740 <line:52:5, line:53:14>
+    | |-OpaqueValueExpr 0x1a888414728 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x1a888414710 <col:9, col:14> 'err' 0x1a8884141a0
+    |-IfStmt 0x1a8884148d0 <line:58:5, line:59:14>
+    | |-OpaqueValueExpr 0x1a8884148b8 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x1a8884148a0 <col:9, col:14> 'err' 0x1a8884141a0
+    |-IfStmt 0x1a888418a98 <line:62:5, line:63:14>
+    | |-OpaqueValueExpr 0x1a888418a80 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x1a888418a68 <col:9, col:14> 'err' 0x1a8884141a0
+    |-IfStmt 0x1a888418c50 <line:69:5, line:70:14>
+    | |-OpaqueValueExpr 0x1a888418c38 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x1a888418c20 <col:9, col:14> 'err' 0x1a8884141a0
+    |-BinaryOperator 0x1a888418cc8 <line:72:5, col:11> 'int' '='
+    | |-DeclRefExpr 0x1a888418c68 <col:5> 'int' lvalue Var 0x1a888413b28 'ret' 'int'
+    | `-IntegerLiteral 0x1a888418ca0 <col:11> 'int' 0
+    |-LabelStmt 0x1a888419040 <line:74:2, line:79:5> 'err'
+    | `-IfStmt 0x1a888419028 <line:76:5, line:79:5>
+    |   |-ImplicitCastExpr 0x1a888418d08 <line:76:9> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x1a888418ce8 <col:9> 'int' lvalue Var 0x1a888413b28 'ret' 'int'
+    |   `-CompoundStmt 0x1a888419018 <col:14, line:79:5>
+    `-ReturnStmt 0x1a888419510 <line:87:5, col:12>
+      `-ImplicitCastExpr 0x1a8884194f8 <col:12> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x1a8884194d8 <col:12> 'int' lvalue Var 0x1a888413b28 'ret' 'int'

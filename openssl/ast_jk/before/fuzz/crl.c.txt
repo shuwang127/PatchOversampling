@@ -1,0 +1,46 @@
+TranslationUnitDecl 0x1fe2c69de78 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x1fe2c69e710 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x1fe2c69e410 '__int128'
+|-TypedefDecl 0x1fe2c69e780 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x1fe2c69e430 'unsigned __int128'
+|-TypedefDecl 0x1fe2c69eab8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x1fe2c69e870 'struct __NSConstantString_tag'
+|   `-Record 0x1fe2c69e7d8 '__NSConstantString_tag'
+|-TypedefDecl 0x1fe2c69eb28 <<invalid sloc>> <invalid sloc> implicit referenced size_t 'unsigned long long'
+| `-BuiltinType 0x1fe2c69e050 'unsigned long long'
+|-TypedefDecl 0x1fe2c69ebc0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x1fe2c69eb80 'char *'
+|   `-BuiltinType 0x1fe2c69df10 'char'
+|-TypedefDecl 0x1fe2c69ec30 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x1fe2c69eb80 'char *'
+|   `-BuiltinType 0x1fe2c69df10 'char'
+|-FunctionDecl 0x1fe2e0e8010 <.//openssl//file_jk/before\fuzz/fuzzer.h:11:1, col:54> col:5 invalid FuzzerTestOneInput 'int (const int *, size_t)'
+| |-ParmVarDecl 0x1fe2c69eca0 <col:24, col:39> col:39 invalid buf 'const int *'
+| `-ParmVarDecl 0x1fe2c69ed40 <col:44, col:51> col:51 len 'size_t':'unsigned long long'
+|-FunctionDecl 0x1fe2e0e82f0 <line:12:1, col:45> col:5 FuzzerInitialize 'int (int *, char ***)'
+| |-ParmVarDecl 0x1fe2e0e8100 <col:22, col:27> col:27 argc 'int *'
+| `-ParmVarDecl 0x1fe2e0e81e8 <col:33, col:41> col:41 argv 'char ***'
+|-FunctionDecl 0x1fe2e0e8570 prev 0x1fe2e0e82f0 <.//openssl//file_jk/before\fuzz\crl.c:15:1, line:17:1> line:15:5 FuzzerInitialize 'int (int *, char ***)'
+| |-ParmVarDecl 0x1fe2e0e8418 <col:22, col:27> col:27 argc 'int *'
+| |-ParmVarDecl 0x1fe2e0e84a0 <col:33, col:41> col:41 argv 'char ***'
+| `-CompoundStmt 0x1fe2e0e8658 <col:47, line:17:1>
+|   `-ReturnStmt 0x1fe2e0e8648 <line:16:5, col:12>
+|     `-IntegerLiteral 0x1fe2e0e8620 <col:12> 'int' 1
+`-FunctionDecl 0x1fe2e0e87a0 <line:19:1, line:35:1> line:19:5 invalid FuzzerTestOneInput 'int (const int *, size_t)'
+  |-ParmVarDecl 0x1fe2e0e8688 <col:24, col:39> col:39 invalid buf 'const int *'
+  |-ParmVarDecl 0x1fe2e0e8700 <col:44, col:51> col:51 used len 'size_t':'unsigned long long'
+  `-CompoundStmt 0x1fe2e0e3548 <col:56, line:35:1>
+    |-DeclStmt 0x1fe2e0e8918 <line:20:5, col:33>
+    | `-VarDecl 0x1fe2e0e88b0 <col:5, col:26> col:26 used p 'const unsigned char *'
+    |-DeclStmt 0x1fe2e0e89d8 <line:21:5, col:30>
+    | `-VarDecl 0x1fe2e0e8970 <col:5, col:20> col:20 used der 'unsigned char *'
+    |-IfStmt 0x1fe2e0e34f8 <line:24:5, line:33:5>
+    | |-OpaqueValueExpr 0x1fe2e0e34e0 <<invalid sloc>> '_Bool'
+    | `-CompoundStmt 0x1fe2e0e34c8 <line:24:22, line:33:5>
+    |   `-CallExpr 0x1fe2e0e3378 <line:30:9, col:25> 'int'
+    |     |-ImplicitCastExpr 0x1fe2e0e3360 <col:9> 'int (*)()' <FunctionToPointerDecay>
+    |     | `-DeclRefExpr 0x1fe2e0e3320 <col:9> 'int ()' Function 0x1fe2e0e3258 'OPENSSL_free' 'int ()'
+    |     `-ImplicitCastExpr 0x1fe2e0e33a0 <col:22> 'unsigned char *' <LValueToRValue>
+    |       `-DeclRefExpr 0x1fe2e0e3340 <col:22> 'unsigned char *' lvalue Var 0x1fe2e0e8970 'der' 'unsigned char *'
+    `-ReturnStmt 0x1fe2e0e3538 <line:34:5, col:12>
+      `-IntegerLiteral 0x1fe2e0e3510 <col:12> 'int' 0

@@ -1,0 +1,259 @@
+TranslationUnitDecl 0x2c60469c288 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x2c60469cb20 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x2c60469c820 '__int128'
+|-TypedefDecl 0x2c60469cb90 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x2c60469c840 'unsigned __int128'
+|-TypedefDecl 0x2c60469cec8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x2c60469cc80 'struct __NSConstantString_tag'
+|   `-Record 0x2c60469cbe8 '__NSConstantString_tag'
+|-TypedefDecl 0x2c60469cf38 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x2c60469c460 'unsigned long long'
+|-TypedefDecl 0x2c60469cfd0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x2c60469cf90 'char *'
+|   `-BuiltinType 0x2c60469c320 'char'
+|-TypedefDecl 0x2c60469d040 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x2c60469cf90 'char *'
+|   `-BuiltinType 0x2c60469c320 'char'
+|-VarDecl 0x2c60469d0e0 <.//openssl//file_jk/after\crypto\engine/eng_int.h:27:1, col:23> col:23 invalid global_engine_lock 'int *' extern
+|-TypedefDecl 0x2c6048106e0 <line:58:1, col:39> col:15 referenced ENGINE_CLEANUP_CB 'void (void)':'void (void)'
+| `-ParenType 0x2c60469d1f0 'void (void)' sugar
+|   `-FunctionProtoType 0x2c60469d1c0 'void (void)' cdecl
+|     `-BuiltinType 0x2c60469c2e0 'void'
+|-RecordDecl 0x2c604810738 <line:59:9, line:61:1> line:59:16 struct st_engine_cleanup_item definition
+| `-FieldDecl 0x2c604810878 <line:60:5, col:24> col:24 cb 'ENGINE_CLEANUP_CB *'
+|-TypedefDecl 0x2c604810928 <line:59:1, line:61:3> col:3 referenced ENGINE_CLEANUP_ITEM 'struct st_engine_cleanup_item':'struct st_engine_cleanup_item'
+| `-ElaboratedType 0x2c6048108d0 'struct st_engine_cleanup_item' sugar
+|   `-RecordType 0x2c6048107d0 'struct st_engine_cleanup_item'
+|     `-Record 0x2c604810738 'st_engine_cleanup_item'
+|-FunctionDecl 0x2c604810ad0 <line:62:1, col:36> col:1 DEFINE_STACK_OF 'int (ENGINE_CLEANUP_ITEM)'
+| `-ParmVarDecl 0x2c6048109d0 <col:17> col:36 'ENGINE_CLEANUP_ITEM':'struct st_engine_cleanup_item'
+|-FunctionDecl 0x2c604810cf8 <line:63:1, col:52> col:6 engine_cleanup_add_first 'void (ENGINE_CLEANUP_CB *)'
+| `-ParmVarDecl 0x2c604810be8 <col:31, col:50> col:50 cb 'ENGINE_CLEANUP_CB *'
+|-FunctionDecl 0x2c604810e70 <line:64:1, col:51> col:6 engine_cleanup_add_last 'void (ENGINE_CLEANUP_CB *)'
+| `-ParmVarDecl 0x2c604810dc8 <col:30, col:49> col:49 cb 'ENGINE_CLEANUP_CB *'
+|-RecordDecl 0x2c604810f30 <line:81:9, col:16> col:16 struct st_engine_table
+|-EmptyDecl 0x2c604817b28 <line:88:59> col:59
+|-TypedefDecl 0x2c604817dd0 <line:94:1, line:95:61> line:94:15 referenced engine_table_doall_cb 'void (int, int (*)())':'void (int, int (*)())'
+| `-ParenType 0x2c604817d70 'void (int, int (*)())' sugar
+|   `-FunctionProtoType 0x2c604817d30 'void (int, int (*)())' cdecl
+|     |-BuiltinType 0x2c60469c2e0 'void'
+|     |-BuiltinType 0x2c60469c380 'int'
+|     `-DecayedType 0x2c604817c50 'int (*)()' sugar
+|       |-FunctionNoProtoType 0x2c604817bd0 'int ()' cdecl
+|       | `-BuiltinType 0x2c60469c380 'int'
+|       `-PointerType 0x2c604817c20 'int (*)()'
+|         `-FunctionNoProtoType 0x2c604817bd0 'int ()' cdecl
+|           `-BuiltinType 0x2c60469c380 'int'
+|-FunctionDecl 0x2c6048180d8 <line:96:1, line:97:34> line:96:6 invalid engine_table_doall 'void (int *, engine_table_doall_cb *, void *)'
+| |-ParmVarDecl 0x2c604817e40 <col:25, col:39> col:39 invalid table 'int *'
+| |-ParmVarDecl 0x2c604817f38 <col:46, col:69> col:69 cb 'engine_table_doall_cb *'
+| `-ParmVarDecl 0x2c604817fb8 <line:97:25, col:31> col:31 arg 'void *'
+|-FunctionDecl 0x2c604818270 <line:104:1, col:35> col:5 invalid engine_unlocked_init 'int (int *)'
+| `-ParmVarDecl 0x2c6048181a8 <col:26, col:34> col:34 invalid e 'int *'
+|-FunctionDecl 0x2c604818490 <line:105:1, col:62> col:5 invalid engine_unlocked_finish 'int (int *, int)'
+| |-ParmVarDecl 0x2c604818330 <col:28, col:36> col:36 invalid e 'int *'
+| `-ParmVarDecl 0x2c6048183b0 <col:39, col:43> col:43 unlock_for_handlers 'int'
+|-FunctionDecl 0x2c604818678 <line:106:1, col:43> col:5 invalid engine_free_util 'int (int *, int)'
+| |-ParmVarDecl 0x2c604818558 <col:22, col:30> col:30 invalid e 'int *'
+| `-ParmVarDecl 0x2c6048185d8 <col:33, col:37> col:37 locked 'int'
+|-FunctionDecl 0x2c6048127c8 <line:113:1, col:35> col:6 invalid engine_set_all_null 'void (int *)'
+| `-ParmVarDecl 0x2c604812700 <col:26, col:34> col:34 invalid e 'int *'
+|-FunctionDecl 0x2c604812918 <line:122:1, col:38> col:6 invalid engine_pkey_meths_free 'void (int *)'
+| `-ParmVarDecl 0x2c604812888 <col:29, col:37> col:37 invalid e 'int *'
+|-FunctionDecl 0x2c604812a68 <line:123:1, col:43> col:6 invalid engine_pkey_asn1_meths_free 'void (int *)'
+| `-ParmVarDecl 0x2c6048129d8 <col:34, col:42> col:42 invalid e 'int *'
+|-VarDecl 0x2c604812b28 <line:126:1, col:20> col:20 invalid engine_lock_init 'int' extern
+|-RecordDecl 0x2c604812b90 <line:133:1, line:173:1> line:133:8 invalid struct engine_st definition
+| |-FieldDecl 0x2c604812c68 <line:134:5, col:17> col:17 id 'const char *'
+| |-FieldDecl 0x2c604812cd8 <line:135:5, col:17> col:17 name 'const char *'
+| |-FieldDecl 0x2c604812d48 <line:136:5, col:23> col:23 invalid rsa_meth 'const int *'
+| |-FieldDecl 0x2c604812db8 <line:137:5, col:23> col:23 invalid dsa_meth 'const int *'
+| |-FieldDecl 0x2c604812e28 <line:138:5, col:22> col:22 invalid dh_meth 'const int *'
+| |-FieldDecl 0x2c604812e98 <line:139:5, col:26> col:26 invalid ec_meth 'const int *'
+| |-FieldDecl 0x2c604812f08 <line:140:5, col:24> col:24 invalid rand_meth 'const int *'
+| |-FieldDecl 0x2c604812f78 <line:142:5, col:24> col:24 invalid ciphers 'int'
+| |-FieldDecl 0x2c604812fe8 <line:144:5, col:24> col:24 invalid digests 'int'
+| |-FieldDecl 0x2c604813058 <line:146:5, col:27> col:27 invalid pkey_meths 'int'
+| |-FieldDecl 0x2c6048130c8 <line:148:5, col:32> col:32 invalid pkey_asn1_meths 'int'
+| |-FieldDecl 0x2c604813138 <line:149:5, col:29> col:29 invalid destroy 'int'
+| |-FieldDecl 0x2c6048131a8 <line:150:5, col:29> col:29 invalid init 'int'
+| |-FieldDecl 0x2c604813218 <line:151:5, col:29> col:29 invalid finish 'int'
+| |-FieldDecl 0x2c604813288 <line:152:5, col:26> col:26 invalid ctrl 'int'
+| |-FieldDecl 0x2c6048132f8 <line:153:5, col:25> col:25 invalid load_privkey 'int'
+| |-FieldDecl 0x2c604813368 <line:154:5, col:25> col:25 invalid load_pubkey 'int'
+| |-FieldDecl 0x2c6048133d8 <line:155:5, col:32> col:32 invalid load_ssl_client_cert 'int'
+| |-FieldDecl 0x2c604813448 <line:156:5, col:28> col:28 invalid cmd_defns 'const int *'
+| |-FieldDecl 0x2c6048134b8 <line:157:5, col:9> col:9 flags 'int'
+| |-FieldDecl 0x2c604813528 <line:159:5, col:9> col:9 struct_ref 'int'
+| |-FieldDecl 0x2c604813598 <line:167:5, col:9> col:9 funct_ref 'int'
+| |-FieldDecl 0x2c604813608 <line:169:5, col:20> col:20 invalid ex_data 'int'
+| |-FieldDecl 0x2c604819798 <line:171:5, col:23> col:23 prev 'struct engine_st *'
+| `-FieldDecl 0x2c604819818 <line:172:5, col:23> col:23 next 'struct engine_st *'
+|-RecordDecl 0x2c604819870 <line:175:9, col:16> col:16 struct st_engine_pile
+|-EmptyDecl 0x2c604819a70 <line:177:29> col:29
+|-VarDecl 0x2c604819ab0 <.//openssl//file_jk/after\crypto\engine\tb_asnmth.c:22:1, col:22> col:22 invalid pkey_asn1_meth_table 'int *' static
+|-FunctionDecl 0x2c604819bc0 <line:24:1, line:27:1> line:24:6 invalid ENGINE_unregister_pkey_asn1_meths 'void (int *)'
+| |-ParmVarDecl 0x2c604819b30 <col:40, col:48> col:48 invalid e 'int *'
+| `-CompoundStmt 0x2c604819d90 <line:25:1, line:27:1>
+|-FunctionDecl 0x2c604819e38 <line:29:1, line:32:1> line:29:13 used engine_unregister_all_pkey_asn1_meths 'void (void)' static
+| `-CompoundStmt 0x2c60481a000 <line:30:1, line:32:1>
+|-FunctionDecl 0x2c60481a0c0 <line:34:1, line:45:1> line:34:5 invalid ENGINE_register_pkey_asn1_meths 'int (int *)'
+| |-ParmVarDecl 0x2c60481a028 <col:37, col:45> col:45 invalid e 'int *'
+| `-CompoundStmt 0x2c60481a608 <line:35:1, line:45:1>
+|   |-IfStmt 0x2c60481a5b8 <line:36:5, line:43:5>
+|   | |-OpaqueValueExpr 0x2c60481a5a0 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x2c60481a580 <line:36:29, line:43:5>
+|   |   |-DeclStmt 0x2c60481a200 <line:37:9, col:24>
+|   |   | `-VarDecl 0x2c60481a198 <col:9, col:20> col:20 used nids 'const int *'
+|   |   `-DeclStmt 0x2c60481a338 <line:38:9, col:61>
+|   |     `-VarDecl 0x2c60481a230 <col:9, col:13> col:13 used num_nids 'int'
+|   `-ReturnStmt 0x2c60481a5f8 <line:44:5, col:12>
+|     `-IntegerLiteral 0x2c60481a5d0 <col:12> 'int' 1
+|-FunctionDecl 0x2c60481a6c0 <line:47:1, line:53:1> line:47:6 ENGINE_register_all_pkey_asn1_meths 'void (void)'
+| `-CompoundStmt 0x2c60481a9f0 <line:48:1, line:53:1>
+|-FunctionDecl 0x2c60481aab0 <line:55:1, line:66:1> line:55:5 invalid ENGINE_set_default_pkey_asn1_meths 'int (int *)'
+| |-ParmVarDecl 0x2c60481aa18 <col:40, col:48> col:48 invalid e 'int *'
+| `-CompoundStmt 0x2c60481aee0 <line:56:1, line:66:1>
+|   |-IfStmt 0x2c60481ae90 <line:57:5, line:64:5>
+|   | |-OpaqueValueExpr 0x2c60481ae78 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x2c60481ae58 <line:57:29, line:64:5>
+|   |   |-DeclStmt 0x2c60481abf0 <line:58:9, col:24>
+|   |   | `-VarDecl 0x2c60481ab88 <col:9, col:20> col:20 used nids 'const int *'
+|   |   `-DeclStmt 0x2c60481ad00 <line:59:9, col:61>
+|   |     `-VarDecl 0x2c60481ac20 <col:9, col:13> col:13 used num_nids 'int'
+|   `-ReturnStmt 0x2c60481aed0 <line:65:5, col:12>
+|     `-IntegerLiteral 0x2c60481aea8 <col:12> 'int' 1
+|-FunctionDecl 0x2c60481b000 <line:73:1, line:76:1> line:73:9 invalid ENGINE_get_pkey_asn1_meth_engine 'int *(int)'
+| |-ParmVarDecl 0x2c60481af18 <col:42, col:46> col:46 used nid 'int'
+| `-CompoundStmt 0x2c60481b1f0 <line:74:1, line:76:1>
+|-FunctionDecl 0x2c60481b370 <line:82:1, line:92:1> line:82:29 invalid ENGINE_get_pkey_asn1_meth 'const int *(int *, int)'
+| |-ParmVarDecl 0x2c60481b218 <col:55, col:63> col:63 invalid e 'int *'
+| |-ParmVarDecl 0x2c60481b298 <col:66, col:70> col:70 used nid 'int'
+| `-CompoundStmt 0x2c60481b6d0 <line:83:1, line:92:1>
+|   `-IfStmt 0x2c60481b6b8 <line:86:5, line:90:5>
+|     |-OpaqueValueExpr 0x2c60481b6a0 <<invalid sloc>> '_Bool'
+|     `-CompoundStmt 0x2c60481b690 <line:86:41, line:90:5>
+|-FunctionDecl 0x2c604813770 <line:95:1, line:98:1> line:95:28 invalid ENGINE_get_pkey_asn1_meths 'int (const int *)'
+| |-ParmVarDecl 0x2c60481b700 <col:55, col:69> col:69 invalid e 'const int *'
+| `-CompoundStmt 0x2c604813830 <line:96:1, line:98:1>
+|-FunctionDecl 0x2c604813978 <line:101:1, line:105:1> line:101:5 invalid ENGINE_set_pkey_asn1_meths 'int (int *, int)'
+| |-ParmVarDecl 0x2c604813858 <col:32, col:40> col:40 invalid e 'int *'
+| |-ParmVarDecl 0x2c6048138d8 <col:43, col:70> col:70 invalid f 'int'
+| `-CompoundStmt 0x2c604813a78 <line:102:1, line:105:1>
+|   `-ReturnStmt 0x2c604813a68 <line:104:5, col:12>
+|     `-IntegerLiteral 0x2c604813a40 <col:12> 'int' 1
+|-FunctionDecl 0x2c604813b38 <line:112:1, line:126:1> line:112:6 invalid engine_pkey_asn1_meths_free 'void (int *)'
+| |-ParmVarDecl 0x2c604813aa8 <col:34, col:42> col:42 invalid e 'int *'
+| `-CompoundStmt 0x2c604814240 <line:113:1, line:126:1>
+|   |-DeclStmt 0x2c604813c78 <line:114:5, col:10>
+|   | `-VarDecl 0x2c604813c10 <col:5, col:9> col:9 used i 'int'
+|   `-IfStmt 0x2c604814228 <line:116:5, line:125:5>
+|     |-OpaqueValueExpr 0x2c604814210 <<invalid sloc>> '_Bool'
+|     `-CompoundStmt 0x2c6048141e8 <line:116:29, line:125:5>
+|       |-DeclStmt 0x2c604813d10 <line:117:9, col:26>
+|       | `-VarDecl 0x2c604813ca8 <col:9, col:20> col:20 used pknids 'const int *'
+|       |-DeclStmt 0x2c604813da8 <line:118:9, col:20>
+|       | `-VarDecl 0x2c604813d40 <col:9, col:13> col:13 used npknids 'int'
+|       `-ForStmt 0x2c6048141b0 <line:120:9, line:124:9>
+|         |-BinaryOperator 0x2c604813ed0 <line:120:14, col:18> 'int' '='
+|         | |-DeclRefExpr 0x2c604813e70 <col:14> 'int' lvalue Var 0x2c604813c10 'i' 'int'
+|         | `-IntegerLiteral 0x2c604813ea8 <col:18> 'int' 0
+|         |-<<<NULL>>>
+|         |-BinaryOperator 0x2c604813f60 <col:21, col:25> 'int' '<'
+|         | |-ImplicitCastExpr 0x2c604813f30 <col:21> 'int' <LValueToRValue>
+|         | | `-DeclRefExpr 0x2c604813ef0 <col:21> 'int' lvalue Var 0x2c604813c10 'i' 'int'
+|         | `-ImplicitCastExpr 0x2c604813f48 <col:25> 'int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x2c604813f10 <col:25> 'int' lvalue Var 0x2c604813d40 'npknids' 'int'
+|         |-UnaryOperator 0x2c604813fa0 <col:34, col:35> 'int' postfix '++'
+|         | `-DeclRefExpr 0x2c604813f80 <col:34> 'int' lvalue Var 0x2c604813c10 'i' 'int'
+|         `-CompoundStmt 0x2c604814198 <col:39, line:124:9>
+|           `-IfStmt 0x2c604814180 <line:121:13, line:123:13>
+|             |-OpaqueValueExpr 0x2c604814168 <<invalid sloc>> '_Bool'
+|             `-CompoundStmt 0x2c604814158 <line:121:63, line:123:13>
+|-FunctionDecl 0x2c604814460 <line:135:1, line:154:1> line:135:29 invalid ENGINE_get_pkey_asn1_meth_str 'const int *(int *, const char *, int)'
+| |-ParmVarDecl 0x2c604814278 <col:59, col:67> col:67 invalid e 'int *'
+| |-ParmVarDecl 0x2c6048142f8 <line:136:59, col:71> col:71 used str 'const char *'
+| |-ParmVarDecl 0x2c604814378 <line:137:59, col:63> col:63 used len 'int'
+| `-CompoundStmt 0x2c60482be78 <line:138:1, line:154:1>
+|   |-DeclStmt 0x2c604814648 <line:139:5, col:20>
+|   | |-VarDecl 0x2c604814548 <col:5, col:9> col:9 used i 'int'
+|   | `-VarDecl 0x2c6048145c8 <col:5, col:12> col:12 used nidcount 'int'
+|   |-DeclStmt 0x2c6048146e0 <line:140:5, col:20>
+|   | `-VarDecl 0x2c604814678 <col:5, col:16> col:16 used nids 'const int *'
+|   |-IfStmt 0x2c60482b878 <line:144:5, line:145:25>
+|   | |-BinaryOperator 0x2c60482b5b0 <line:144:9, col:17> 'int' '=='
+|   | | |-ImplicitCastExpr 0x2c60482b598 <col:9> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x2c60482b520 <col:9> 'int' lvalue ParmVar 0x2c604814378 'len' 'int'
+|   | | `-UnaryOperator 0x2c60482b580 <col:16, col:17> 'int' prefix '-'
+|   | |   `-IntegerLiteral 0x2c60482b558 <col:17> 'int' 1
+|   | `-BinaryOperator 0x2c60482b858 <line:145:9, col:25> 'int' '='
+|   |   |-DeclRefExpr 0x2c60482b5d0 <col:9> 'int' lvalue ParmVar 0x2c604814378 'len' 'int'
+|   |   `-ImplicitCastExpr 0x2c60482b840 <col:15, col:25> 'int' <IntegralCast>
+|   |     `-CallExpr 0x2c60482b800 <col:15, col:25> 'unsigned long long'
+|   |       |-ImplicitCastExpr 0x2c60482b7e8 <col:15> 'unsigned long long (*)(const char *)' <FunctionToPointerDecay>
+|   |       | `-DeclRefExpr 0x2c60482b730 <col:15> 'unsigned long long (const char *)' Function 0x2c60482b620 'strlen' 'unsigned long long (const char *)'
+|   |       `-ImplicitCastExpr 0x2c60482b828 <col:22> 'const char *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x2c60482b768 <col:22> 'const char *' lvalue ParmVar 0x2c6048142f8 'str' 'const char *'
+|   `-ForStmt 0x2c60482be40 <line:147:5, line:152:5>
+|     |-BinaryOperator 0x2c60482b9a0 <line:147:10, col:14> 'int' '='
+|     | |-DeclRefExpr 0x2c60482b940 <col:10> 'int' lvalue Var 0x2c604814548 'i' 'int'
+|     | `-IntegerLiteral 0x2c60482b978 <col:14> 'int' 0
+|     |-<<<NULL>>>
+|     |-BinaryOperator 0x2c60482ba30 <col:17, col:21> 'int' '<'
+|     | |-ImplicitCastExpr 0x2c60482ba00 <col:17> 'int' <LValueToRValue>
+|     | | `-DeclRefExpr 0x2c60482b9c0 <col:17> 'int' lvalue Var 0x2c604814548 'i' 'int'
+|     | `-ImplicitCastExpr 0x2c60482ba18 <col:21> 'int' <LValueToRValue>
+|     |   `-DeclRefExpr 0x2c60482b9e0 <col:21> 'int' lvalue Var 0x2c6048145c8 'nidcount' 'int'
+|     |-UnaryOperator 0x2c60482ba70 <col:31, col:32> 'int' postfix '++'
+|     | `-DeclRefExpr 0x2c60482ba50 <col:31> 'int' lvalue Var 0x2c604814548 'i' 'int'
+|     `-CompoundStmt 0x2c60482be30 <col:36, line:152:5>
+|-FunctionDecl 0x2c60482b620 <line:145:15> col:15 implicit used strlen 'unsigned long long (const char *)' extern
+| `-ParmVarDecl 0x2c60482b6c0 <<invalid sloc>> <invalid sloc> 'const char *'
+|-FunctionDecl 0x2c60482bba0 <line:150:16> col:16 implicit used strncasecmp 'int (const char *, const char *, unsigned long long)' extern
+| |-ParmVarDecl 0x2c60482bc40 <<invalid sloc>> <invalid sloc> 'const char *'
+| |-ParmVarDecl 0x2c60482bca8 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-ParmVarDecl 0x2c60482bd10 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-RecordDecl 0x2c60482bea8 <line:156:9, line:161:1> line:156:9 invalid struct definition
+| |-FieldDecl 0x2c60482bf78 <line:157:5, col:13> col:13 invalid e 'int *'
+| |-FieldDecl 0x2c60482bfe8 <line:158:5, col:33> col:33 invalid ameth 'const int *'
+| |-FieldDecl 0x2c60482c058 <line:159:5, col:17> col:17 referenced str 'const char *'
+| `-FieldDecl 0x2c60482c0c8 <line:160:5, col:9> col:9 referenced len 'int'
+|-TypedefDecl 0x2c60482c178 <line:156:1, line:161:3> col:3 referenced ENGINE_FIND_STR 'struct (anonymous struct at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)':'struct (anonymous at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)'
+| `-ElaboratedType 0x2c60482c120 'struct (anonymous struct at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)' sugar
+|   `-RecordType 0x2c60482bf40 'struct (anonymous at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)'
+|     `-Record 0x2c60482bea8 ''
+|-FunctionDecl 0x2c60482c328 <line:163:1, line:181:1> line:163:13 invalid look_str_cb 'void (int, int (*)())' static
+| |-ParmVarDecl 0x2c60482c200 <col:25, col:29> col:29 used nid 'int'
+| |-ParmVarDecl 0x2c60482c290 <col:34, <invalid sloc>> col:34 invalid STACK_OF 'int (*)()':'int (*)()'
+| `-CompoundStmt 0x2c604827bc0 <line:164:1, line:181:1>
+|   |-DeclStmt 0x2c60482c4e0 <line:165:5, col:30>
+|   | `-VarDecl 0x2c60482c478 <col:5, col:22> col:22 used lk 'ENGINE_FIND_STR *'
+|   |-DeclStmt 0x2c604827548 <line:166:5, col:10>
+|   | `-VarDecl 0x2c6048274e0 <col:5, col:9> col:9 used i 'int'
+|   `-IfStmt 0x2c6048275d8 <line:167:5, line:168:9>
+|     |-OpaqueValueExpr 0x2c6048275c0 <<invalid sloc>> '_Bool'
+|     `-ReturnStmt 0x2c6048275b0 <col:9>
+`-FunctionDecl 0x2c604827df0 <line:183:1, line:208:1> line:183:29 invalid ENGINE_pkey_asn1_find_str 'const int *(int **, const char *, int)'
+  |-ParmVarDecl 0x2c604827c08 <col:55, col:64> col:64 invalid pe 'int **'
+  |-ParmVarDecl 0x2c604827c88 <line:184:55, col:67> col:67 used str 'const char *'
+  |-ParmVarDecl 0x2c604827d08 <line:185:55, col:59> col:59 used len 'int'
+  `-CompoundStmt 0x2c6048285f8 <line:186:1, line:208:1>
+    |-DeclStmt 0x2c604827f38 <line:187:5, col:25>
+    | `-VarDecl 0x2c604827ed0 <col:5, col:21> col:21 used fstr 'ENGINE_FIND_STR':'struct (anonymous at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)'
+    |-BinaryOperator 0x2c604828048 <line:190:5, col:16> 'const char *' '='
+    | |-MemberExpr 0x2c604827fc8 <col:5, col:10> 'const char *' lvalue .str 0x2c60482c058
+    | | `-DeclRefExpr 0x2c604827fa8 <col:5> 'ENGINE_FIND_STR':'struct (anonymous at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)' lvalue Var 0x2c604827ed0 'fstr' 'ENGINE_FIND_STR':'struct (anonymous at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)'
+    | `-ImplicitCastExpr 0x2c604828030 <col:16> 'const char *' <LValueToRValue>
+    |   `-DeclRefExpr 0x2c604827ff8 <col:16> 'const char *' lvalue ParmVar 0x2c604827c88 'str' 'const char *'
+    |-BinaryOperator 0x2c604828108 <line:191:5, col:16> 'int' '='
+    | |-MemberExpr 0x2c604828088 <col:5, col:10> 'int' lvalue .len 0x2c60482c0c8
+    | | `-DeclRefExpr 0x2c604828068 <col:5> 'ENGINE_FIND_STR':'struct (anonymous at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)' lvalue Var 0x2c604827ed0 'fstr' 'ENGINE_FIND_STR':'struct (anonymous at .//openssl//file_jk/after\crypto\engine\tb_asnmth.c:156:9)'
+    | `-ImplicitCastExpr 0x2c6048280f0 <col:16> 'int' <LValueToRValue>
+    |   `-DeclRefExpr 0x2c6048280b8 <col:16> 'int' lvalue ParmVar 0x2c604827d08 'len' 'int'
+    |-IfStmt 0x2c604828280 <line:193:5, line:196:5>
+    | |-OpaqueValueExpr 0x2c604828268 <<invalid sloc>> '_Bool'
+    | `-CompoundStmt 0x2c604828258 <line:193:60, line:196:5>
+    `-IfStmt 0x2c604828458 <line:201:5, line:204:5>
+      |-OpaqueValueExpr 0x2c604828440 <<invalid sloc>> '_Bool'
+      `-CompoundStmt 0x2c604828428 <line:201:17, line:204:5>
+        `-NullStmt 0x2c604828420 <line:203:39>

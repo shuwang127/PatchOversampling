@@ -1,0 +1,152 @@
+TranslationUnitDecl 0x2021f056858 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x2021f0570f0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x2021f056df0 '__int128'
+|-TypedefDecl 0x2021f057160 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x2021f056e10 'unsigned __int128'
+|-TypedefDecl 0x2021f057498 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x2021f057250 'struct __NSConstantString_tag'
+|   `-Record 0x2021f0571b8 '__NSConstantString_tag'
+|-TypedefDecl 0x2021f057508 <<invalid sloc>> <invalid sloc> implicit referenced size_t 'unsigned long long'
+| `-BuiltinType 0x2021f056a30 'unsigned long long'
+|-TypedefDecl 0x2021f0575a0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x2021f057560 'char *'
+|   `-BuiltinType 0x2021f0568f0 'char'
+|-TypedefDecl 0x2021f057610 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x2021f057560 'char *'
+|   `-BuiltinType 0x2021f0568f0 'char'
+|-RecordDecl 0x2021f057668 <.//openssl//file_jk/before\crypto\evp\m_md5_sha1.c:21:1, line:24:1> line:21:8 invalid struct md5_sha1_ctx definition
+| |-FieldDecl 0x2021f057738 <line:22:5, col:13> col:13 invalid md5 'int'
+| `-FieldDecl 0x2021f0577a8 <line:23:5, col:13> col:13 invalid sha1 'int'
+|-FunctionDecl 0x2021f0c0430 <line:26:1, line:32:1> line:26:12 invalid init 'int (int *)' static
+| |-ParmVarDecl 0x2021f0c0360 <col:17, col:29> col:29 invalid ctx 'int *'
+| `-CompoundStmt 0x2021f0c0ab0 <line:27:1, line:32:1>
+|   |-DeclStmt 0x2021f0c0788 <line:28:5, col:56>
+|   | `-VarDecl 0x2021f0c05a0 <col:5, col:26> col:26 used mctx 'struct md5_sha1_ctx *'
+|   `-IfStmt 0x2021f0c0950 <line:29:5, line:30:16>
+|     |-OpaqueValueExpr 0x2021f0c0938 <<invalid sloc>> '_Bool'
+|     `-ReturnStmt 0x2021f0c0928 <col:9, col:16>
+|       `-IntegerLiteral 0x2021f0c0900 <col:16> 'int' 0
+|-FunctionDecl 0x2021f0c0d60 <line:34:1, line:40:1> line:34:12 invalid update 'int (int *, const void *, size_t)' static
+| |-ParmVarDecl 0x2021f0c0ae8 <col:19, col:31> col:31 invalid ctx 'int *'
+| |-ParmVarDecl 0x2021f0c0b90 <col:36, col:48> col:48 used data 'const void *'
+| |-ParmVarDecl 0x2021f0c0c30 <col:54, col:61> col:61 used count 'size_t':'unsigned long long'
+| `-CompoundStmt 0x2021f0c12b8 <line:35:1, line:40:1>
+|   |-DeclStmt 0x2021f0c0ee0 <line:36:5, col:56>
+|   | `-VarDecl 0x2021f0c0e58 <col:5, col:26> col:26 used mctx 'struct md5_sha1_ctx *'
+|   `-IfStmt 0x2021f0c1118 <line:37:5, line:38:16>
+|     |-OpaqueValueExpr 0x2021f0c1100 <<invalid sloc>> '_Bool'
+|     `-ReturnStmt 0x2021f0c10f0 <col:9, col:16>
+|       `-IntegerLiteral 0x2021f0c10c8 <col:16> 'int' 0
+|-FunctionDecl 0x2021f0c44c0 <line:42:1, line:48:1> line:42:12 invalid final 'int (int *, unsigned char *)' static
+| |-ParmVarDecl 0x2021f0c12f0 <col:18, col:30> col:30 invalid ctx 'int *'
+| |-ParmVarDecl 0x2021f0c43e0 <col:35, col:50> col:50 used md 'unsigned char *'
+| `-CompoundStmt 0x2021f0c49b8 <line:43:1, line:48:1>
+|   |-DeclStmt 0x2021f0c4638 <line:44:5, col:56>
+|   | `-VarDecl 0x2021f0c45b0 <col:5, col:26> col:26 used mctx 'struct md5_sha1_ctx *'
+|   `-IfStmt 0x2021f0c4838 <line:45:5, line:46:16>
+|     |-OpaqueValueExpr 0x2021f0c4820 <<invalid sloc>> '_Bool'
+|     `-ReturnStmt 0x2021f0c4810 <col:9, col:16>
+|       `-IntegerLiteral 0x2021f0c47e8 <col:16> 'int' 0
+|-FunctionDecl 0x2021f0c4c70 <line:50:1, line:121:1> line:50:12 invalid ctrl 'int (int *, int, int, void *)' static
+| |-ParmVarDecl 0x2021f0c49f0 <col:17, col:29> col:29 invalid ctx 'int *'
+| |-ParmVarDecl 0x2021f0c4a70 <col:34, col:38> col:38 used cmd 'int'
+| |-ParmVarDecl 0x2021f0c4af0 <col:43, col:47> col:47 used mslen 'int'
+| |-ParmVarDecl 0x2021f0c4b70 <col:54, col:60> col:60 used ms 'void *'
+| `-CompoundStmt 0x2021f0c2380 <line:51:1, line:121:1>
+|   |-DeclStmt 0x2021f0c4e58 <line:52:5, col:29>
+|   | `-VarDecl 0x2021f0c4df0 <col:5, col:28> col:19 used padtmp 'unsigned char [48]'
+|   |-DeclStmt 0x2021f0c4ef0 <line:53:5, col:44>
+|   | `-VarDecl 0x2021f0c4e88 <col:5, col:19> col:19 invalid md5tmp 'unsigned char'
+|   |-DeclStmt 0x2021f0c4f88 <line:54:5, col:45>
+|   | `-VarDecl 0x2021f0c4f20 <col:5, col:19> col:19 invalid sha1tmp 'unsigned char'
+|   |-DeclStmt 0x2021f0c5030 <line:55:5, col:30>
+|   | `-VarDecl 0x2021f0c4fc8 <col:5, col:26> col:26 used mctx 'struct md5_sha1_ctx *'
+|   |-IfStmt 0x2021f0c50e8 <line:57:5, line:58:17>
+|   | |-OpaqueValueExpr 0x2021f0c50d0 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c50c0 <col:9, col:17>
+|   |   `-UnaryOperator 0x2021f0c50a8 <col:16, col:17> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x2021f0c5080 <col:17> 'int' 2
+|   |-IfStmt 0x2021f0c5150 <line:60:5, line:61:16>
+|   | |-OpaqueValueExpr 0x2021f0c5138 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c5128 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c5100 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c5290 <line:66:5, line:67:16>
+|   | |-BinaryOperator 0x2021f0c5238 <line:66:9, col:18> 'int' '!='
+|   | | |-ImplicitCastExpr 0x2021f0c5220 <col:9> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x2021f0c51c0 <col:9> 'int' lvalue ParmVar 0x2021f0c4af0 'mslen' 'int'
+|   | | `-IntegerLiteral 0x2021f0c51f8 <col:18> 'int' 48
+|   | `-ReturnStmt 0x2021f0c5280 <line:67:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c5258 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c5378 <line:73:5, line:74:16>
+|   | |-OpaqueValueExpr 0x2021f0c5360 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c5350 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c5328 <col:16> 'int' 0
+|   |-CallExpr 0x2021f0c16f0 <line:77:5, col:40> 'void *'
+|   | |-ImplicitCastExpr 0x2021f0c16d8 <col:5> 'void *(*)(void *, int, unsigned long long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x2021f0c15a0 <col:5> 'void *(void *, int, unsigned long long)' Function 0x2021f0c13b0 'memset' 'void *(void *, int, unsigned long long)'
+|   | |-ImplicitCastExpr 0x2021f0c1740 <col:12> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x2021f0c1728 <col:12> 'unsigned char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x2021f0c15d8 <col:12> 'unsigned char [48]' lvalue Var 0x2021f0c4df0 'padtmp' 'unsigned char [48]'
+|   | |-IntegerLiteral 0x2021f0c1610 <col:20> 'int' 54
+|   | `-UnaryExprOrTypeTraitExpr 0x2021f0c1678 <col:26, col:39> 'unsigned long long' sizeof
+|   |   `-ParenExpr 0x2021f0c1658 <col:32, col:39> 'unsigned char [48]' lvalue
+|   |     `-DeclRefExpr 0x2021f0c1638 <col:33> 'unsigned char [48]' lvalue Var 0x2021f0c4df0 'padtmp' 'unsigned char [48]' non_odr_use_unevaluated
+|   |-IfStmt 0x2021f0c1880 <line:79:5, line:80:16>
+|   | |-OpaqueValueExpr 0x2021f0c1868 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c1858 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c1830 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c1940 <line:82:5, line:83:16>
+|   | |-OpaqueValueExpr 0x2021f0c1928 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c1918 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c18f0 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c1a48 <line:85:5, line:86:16>
+|   | |-OpaqueValueExpr 0x2021f0c1a30 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c1a20 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c19f8 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c1b08 <line:88:5, line:89:16>
+|   | |-OpaqueValueExpr 0x2021f0c1af0 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c1ae0 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c1ab8 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c1b70 <line:93:5, line:94:16>
+|   | |-OpaqueValueExpr 0x2021f0c1b58 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c1b48 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c1b20 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c1c40 <line:96:5, line:97:16>
+|   | |-OpaqueValueExpr 0x2021f0c1c28 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c1c18 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c1bf0 <col:16> 'int' 0
+|   |-CallExpr 0x2021f0c1d50 <line:100:5, col:40> 'void *'
+|   | |-ImplicitCastExpr 0x2021f0c1d38 <col:5> 'void *(*)(void *, int, unsigned long long)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x2021f0c1c58 <col:5> 'void *(void *, int, unsigned long long)' Function 0x2021f0c13b0 'memset' 'void *(void *, int, unsigned long long)'
+|   | |-ImplicitCastExpr 0x2021f0c1da0 <col:12> 'void *' <BitCast>
+|   | | `-ImplicitCastExpr 0x2021f0c1d88 <col:12> 'unsigned char *' <ArrayToPointerDecay>
+|   | |   `-DeclRefExpr 0x2021f0c1c78 <col:12> 'unsigned char [48]' lvalue Var 0x2021f0c4df0 'padtmp' 'unsigned char [48]'
+|   | |-IntegerLiteral 0x2021f0c1c98 <col:20> 'int' 92
+|   | `-UnaryExprOrTypeTraitExpr 0x2021f0c1d00 <col:26, col:39> 'unsigned long long' sizeof
+|   |   `-ParenExpr 0x2021f0c1ce0 <col:32, col:39> 'unsigned char [48]' lvalue
+|   |     `-DeclRefExpr 0x2021f0c1cc0 <col:33> 'unsigned char [48]' lvalue Var 0x2021f0c4df0 'padtmp' 'unsigned char [48]' non_odr_use_unevaluated
+|   |-IfStmt 0x2021f0c1ee0 <line:102:5, line:103:16>
+|   | |-OpaqueValueExpr 0x2021f0c1ec8 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c1eb8 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c1e90 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c1fa0 <line:105:5, line:106:16>
+|   | |-OpaqueValueExpr 0x2021f0c1f88 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c1f78 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c1f50 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c20a8 <line:108:5, line:109:16>
+|   | |-OpaqueValueExpr 0x2021f0c2090 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c2080 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c2058 <col:16> 'int' 0
+|   |-IfStmt 0x2021f0c2168 <line:111:5, line:112:16>
+|   | |-OpaqueValueExpr 0x2021f0c2150 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x2021f0c2140 <col:9, col:16>
+|   |   `-IntegerLiteral 0x2021f0c2118 <col:16> 'int' 0
+|   `-ReturnStmt 0x2021f0c22d8 <line:119:5, col:12>
+|     `-IntegerLiteral 0x2021f0c22b0 <col:12> 'int' 1
+|-FunctionDecl 0x2021f0c13b0 <line:77:5> col:5 implicit used memset 'void *(void *, int, unsigned long long)' extern
+| |-ParmVarDecl 0x2021f0c1450 <<invalid sloc>> <invalid sloc> 'void *'
+| |-ParmVarDecl 0x2021f0c14b8 <<invalid sloc>> <invalid sloc> 'int'
+| `-ParmVarDecl 0x2021f0c1520 <<invalid sloc>> <invalid sloc> 'unsigned long long'
+|-VarDecl 0x2021f0c2450 <line:123:1, col:21> col:21 invalid md5_sha1_md 'const int' static
+`-FunctionDecl 0x2021f0c25f0 <line:138:1, line:141:1> line:138:15 invalid EVP_md5_sha1 'const int *(void)'
+  `-CompoundStmt 0x2021f0c26a8 <line:139:1, line:141:1>

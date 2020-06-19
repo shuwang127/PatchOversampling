@@ -1,0 +1,535 @@
+TranslationUnitDecl 0x16200924e58 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x162009256f0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x162009253f0 '__int128'
+|-TypedefDecl 0x16200925760 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x16200925410 'unsigned __int128'
+|-TypedefDecl 0x16200925a98 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x16200925850 'struct __NSConstantString_tag'
+|   `-Record 0x162009257b8 '__NSConstantString_tag'
+|-TypedefDecl 0x16200925b08 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x16200925030 'unsigned long long'
+|-TypedefDecl 0x16200925ba0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x16200925b60 'char *'
+|   `-BuiltinType 0x16200924ef0 'char'
+|-TypedefDecl 0x16200925c10 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x16200925b60 'char *'
+|   `-BuiltinType 0x16200924ef0 'char'
+|-RecordDecl 0x16200925c68 <.//openssl//file_jk/before\crypto\objects/obj_xref.h:14:9, line:18:1> line:14:9 struct definition
+| |-FieldDecl 0x16200925d38 <line:15:5, col:9> col:9 referenced sign_id 'int'
+| |-FieldDecl 0x16200925da8 <line:16:5, col:9> col:9 referenced hash_id 'int'
+| `-FieldDecl 0x162022fcc10 <line:17:5, col:9> col:9 referenced pkey_id 'int'
+|-TypedefDecl 0x162022fccc8 <line:14:1, line:18:3> col:3 referenced nid_triple 'struct nid_triple':'nid_triple'
+| `-ElaboratedType 0x162022fcc70 'struct nid_triple' sugar
+|   `-RecordType 0x16200925d00 'nid_triple'
+|     `-Record 0x16200925c68 ''
+|-FunctionDecl 0x162022fce70 <line:20:1, col:27> col:1 DEFINE_STACK_OF 'int (nid_triple)'
+| `-ParmVarDecl 0x162022fcd70 <col:17> col:27 'nid_triple':'nid_triple'
+|-VarDecl 0x162022fcff8 <line:22:1, col:36> col:25 used sigoid_srt 'const nid_triple []' static
+|-VarDecl 0x162022fd158 <line:78:1, line:118:1> line:78:32 used sigoid_srt_xref 'const nid_triple *const [39]' static cinit
+| `-InitListExpr 0x162022f8a50 <col:52, line:118:1> 'const nid_triple *const [39]'
+|   |-UnaryOperator 0x162022fd240 <line:79:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd220 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd208 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd1c0 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd1e0 <col:17> 'int' 0
+|   |-UnaryOperator 0x162022fd2d8 <line:80:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd2b8 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd2a0 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd258 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd278 <col:17> 'int' 1
+|   |-UnaryOperator 0x162022fd370 <line:81:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd350 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd338 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd2f0 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd310 <col:17> 'int' 7
+|   |-UnaryOperator 0x162022fd408 <line:82:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd3e8 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd3d0 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd388 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd3a8 <col:17> 'int' 2
+|   |-UnaryOperator 0x162022fd4a0 <line:83:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd480 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd468 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd420 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd440 <col:17> 'int' 4
+|   |-UnaryOperator 0x162022fd538 <line:84:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd518 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd500 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd4b8 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd4d8 <col:17> 'int' 3
+|   |-UnaryOperator 0x162022fd5d0 <line:85:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd5b0 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd598 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd550 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd570 <col:17> 'int' 9
+|   |-UnaryOperator 0x162022fd668 <line:86:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd648 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd630 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd5e8 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd608 <col:17> 'int' 5
+|   |-UnaryOperator 0x162022fd700 <line:87:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd6e0 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd6c8 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd680 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd6a0 <col:17> 'int' 8
+|   |-UnaryOperator 0x162022fd798 <line:88:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd778 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd760 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd718 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd738 <col:17> 'int' 12
+|   |-UnaryOperator 0x162022fd830 <line:89:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd810 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd7f8 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd7b0 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd7d0 <col:17> 'int' 30
+|   |-UnaryOperator 0x162022fd8c8 <line:90:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd8a8 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd890 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd848 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd868 <col:17> 'int' 35
+|   |-UnaryOperator 0x162022fd960 <line:91:5, col:18> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd940 <col:6, col:18> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd928 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd8e0 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd900 <col:17> 'int' 6
+|   |-UnaryOperator 0x162022fd9f8 <line:92:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fd9d8 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fd9c0 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fd978 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fd998 <col:17> 'int' 10
+|   |-UnaryOperator 0x162022fda90 <line:93:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fda70 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fda58 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fda10 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fda30 <col:17> 'int' 11
+|   |-UnaryOperator 0x162022fdb28 <line:94:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fdb08 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fdaf0 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fdaa8 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fdac8 <col:17> 'int' 13
+|   |-UnaryOperator 0x162022fdbc0 <line:95:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022fdba0 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022fdb88 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fdb40 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022fdb60 <col:17> 'int' 24
+|   |-UnaryOperator 0x162022f7c20 <line:96:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f7c00 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f7be8 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022fdbd8 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f7bc0 <col:17> 'int' 20
+|   |-UnaryOperator 0x162022f7cb8 <line:97:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f7c98 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f7c80 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f7c38 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f7c58 <col:17> 'int' 32
+|   |-UnaryOperator 0x162022f7d50 <line:98:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f7d30 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f7d18 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f7cd0 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f7cf0 <col:17> 'int' 37
+|   |-UnaryOperator 0x162022f7de8 <line:99:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f7dc8 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f7db0 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f7d68 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f7d88 <col:17> 'int' 14
+|   |-UnaryOperator 0x162022f7e80 <line:100:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f7e60 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f7e48 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f7e00 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f7e20 <col:17> 'int' 21
+|   |-UnaryOperator 0x162022f7f18 <line:101:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f7ef8 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f7ee0 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f7e98 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f7eb8 <col:17> 'int' 33
+|   |-UnaryOperator 0x162022f7fb0 <line:102:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f7f90 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f7f78 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f7f30 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f7f50 <col:17> 'int' 38
+|   |-UnaryOperator 0x162022f8048 <line:103:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f8028 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8010 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f7fc8 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f7fe8 <col:17> 'int' 15
+|   |-UnaryOperator 0x162022f80e0 <line:104:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f80c0 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f80a8 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f8060 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f8080 <col:17> 'int' 22
+|   |-UnaryOperator 0x162022f8178 <line:105:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f8158 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8140 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f80f8 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f8118 <col:17> 'int' 34
+|   |-UnaryOperator 0x162022f8210 <line:106:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f81f0 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f81d8 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f8190 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f81b0 <col:17> 'int' 39
+|   |-UnaryOperator 0x162022f82a8 <line:107:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f8288 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8270 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f8228 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f8248 <col:17> 'int' 16
+|   |-UnaryOperator 0x162022f8340 <line:108:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f8320 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8308 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f82c0 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f82e0 <col:17> 'int' 23
+|   |-UnaryOperator 0x162022f83d8 <line:109:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f83b8 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f83a0 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f8358 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f8378 <col:17> 'int' 19
+|   |-UnaryOperator 0x162022f8470 <line:110:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f8450 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8438 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f83f0 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f8410 <col:17> 'int' 31
+|   |-UnaryOperator 0x162022f8508 <line:111:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f84e8 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f84d0 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f8488 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f84a8 <col:17> 'int' 36
+|   |-UnaryOperator 0x162022f85a0 <line:112:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f8580 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8568 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f8520 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f8540 <col:17> 'int' 25
+|   |-UnaryOperator 0x162022f8638 <line:113:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f8618 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8600 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f85b8 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f85d8 <col:17> 'int' 26
+|   |-UnaryOperator 0x162022f86d0 <line:114:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f86b0 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8698 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f8650 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f8670 <col:17> 'int' 27
+|   |-UnaryOperator 0x162022f8768 <line:115:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f8748 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f8730 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f86e8 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f8708 <col:17> 'int' 28
+|   |-UnaryOperator 0x162022f8800 <line:116:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|   | `-ArraySubscriptExpr 0x162022f87e0 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|   |   |-ImplicitCastExpr 0x162022f87c8 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|   |   | `-DeclRefExpr 0x162022f8780 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |   `-IntegerLiteral 0x162022f87a0 <col:17> 'int' 40
+|   `-UnaryOperator 0x162022f8898 <line:117:5, col:19> 'const nid_triple *' prefix '&' cannot overflow
+|     `-ArraySubscriptExpr 0x162022f8878 <col:6, col:19> 'const nid_triple':'const nid_triple' lvalue
+|       |-ImplicitCastExpr 0x162022f8860 <col:6> 'const nid_triple *' <ArrayToPointerDecay>
+|       | `-DeclRefExpr 0x162022f8818 <col:6> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|       `-IntegerLiteral 0x162022f8838 <col:17> 'int' 41
+|-FunctionDecl 0x16202301270 <.//openssl//file_jk/before\crypto\objects\obj_xref.c:16:1, line:19:1> line:16:12 sig_cmp 'int (const nid_triple *, const nid_triple *)' static
+| |-ParmVarDecl 0x162023010b0 <col:20, col:38> col:38 used a 'const nid_triple *'
+| |-ParmVarDecl 0x16202301128 <col:41, col:59> col:59 used b 'const nid_triple *'
+| `-CompoundStmt 0x16202301468 <line:17:1, line:19:1>
+|   `-ReturnStmt 0x16202301458 <line:18:5, col:28>
+|     `-BinaryOperator 0x16202301438 <col:12, col:28> 'int' '-'
+|       |-ImplicitCastExpr 0x16202301408 <col:12, col:15> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x16202301370 <col:12, col:15> 'const int' lvalue ->sign_id 0x16200925d38
+|       |   `-ImplicitCastExpr 0x16202301358 <col:12> 'const nid_triple *' <LValueToRValue>
+|       |     `-DeclRefExpr 0x16202301338 <col:12> 'const nid_triple *' lvalue ParmVar 0x162023010b0 'a' 'const nid_triple *'
+|       `-ImplicitCastExpr 0x16202301420 <col:25, col:28> 'int' <LValueToRValue>
+|         `-MemberExpr 0x162023013d8 <col:25, col:28> 'const int' lvalue ->sign_id 0x16200925d38
+|           `-ImplicitCastExpr 0x162023013c0 <col:25> 'const nid_triple *' <LValueToRValue>
+|             `-DeclRefExpr 0x162023013a0 <col:25> 'const nid_triple *' lvalue ParmVar 0x16202301128 'b' 'const nid_triple *'
+|-FunctionDecl 0x162023016d0 <line:21:1, col:55> col:1 DECLARE_OBJ_BSEARCH_CMP_FN 'int (nid_triple, nid_triple, int)'
+| |-ParmVarDecl 0x16202301490 <col:28> col:38 'nid_triple':'nid_triple'
+| |-ParmVarDecl 0x16202301508 <col:40> col:50 'nid_triple':'nid_triple'
+| `-ParmVarDecl 0x16202301588 <col:52> col:52 sig 'int'
+|-FunctionDecl 0x16202301968 <line:22:1, col:57> col:1 IMPLEMENT_OBJ_BSEARCH_CMP_FN 'int (nid_triple, nid_triple, int)'
+| |-ParmVarDecl 0x162023017b0 <col:30> col:40 'nid_triple':'nid_triple'
+| |-ParmVarDecl 0x16202301828 <col:42> col:52 'nid_triple':'nid_triple'
+| `-ParmVarDecl 0x162023018a8 <col:54> col:54 sig 'int'
+|-FunctionDecl 0x162022ffc78 <line:24:1, line:27:1> line:24:12 used sig_sk_cmp 'int (const nid_triple *const *, const nid_triple *const *)' static
+| |-ParmVarDecl 0x16202301ab0 <col:23, col:48> col:48 used a 'const nid_triple *const *'
+| |-ParmVarDecl 0x16202301b30 <col:51, col:76> col:76 used b 'const nid_triple *const *'
+| `-CompoundStmt 0x162022fff38 <line:25:1, line:27:1>
+|   `-ReturnStmt 0x162022fff28 <line:26:5, col:34>
+|     `-BinaryOperator 0x162022fff08 <col:12, col:34> 'int' '-'
+|       |-ImplicitCastExpr 0x162022ffed8 <col:12, col:18> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x162022ffdf0 <col:12, col:18> 'const int' lvalue ->sign_id 0x16200925d38
+|       |   `-ImplicitCastExpr 0x162022ffdd8 <col:12, col:15> 'const nid_triple *' <LValueToRValue>
+|       |     `-ParenExpr 0x162022ffdb8 <col:12, col:15> 'const nid_triple *const' lvalue
+|       |       `-UnaryOperator 0x162022ffda0 <col:13, col:14> 'const nid_triple *const' lvalue prefix '*' cannot overflow
+|       |         `-ImplicitCastExpr 0x162022ffd88 <col:14> 'const nid_triple *const *' <LValueToRValue>
+|       |           `-DeclRefExpr 0x162022ffd68 <col:14> 'const nid_triple *const *' lvalue ParmVar 0x16202301ab0 'a' 'const nid_triple *const *'
+|       `-ImplicitCastExpr 0x162022ffef0 <col:28, col:34> 'int' <LValueToRValue>
+|         `-MemberExpr 0x162022ffea8 <col:28, col:34> 'const int' lvalue ->sign_id 0x16200925d38
+|           `-ImplicitCastExpr 0x162022ffe90 <col:28, col:31> 'const nid_triple *' <LValueToRValue>
+|             `-ParenExpr 0x162022ffe70 <col:28, col:31> 'const nid_triple *const' lvalue
+|               `-UnaryOperator 0x162022ffe58 <col:29, col:30> 'const nid_triple *const' lvalue prefix '*' cannot overflow
+|                 `-ImplicitCastExpr 0x162022ffe40 <col:30> 'const nid_triple *const *' <LValueToRValue>
+|                   `-DeclRefExpr 0x162022ffe20 <col:30> 'const nid_triple *const *' lvalue ParmVar 0x16202301b30 'b' 'const nid_triple *const *'
+|-FunctionDecl 0x162023001a0 <line:29:1, col:72> col:1 invalid DECLARE_OBJ_BSEARCH_CMP_FN 'int (const nid_triple *, const nid_triple *, int)'
+| |-ParmVarDecl 0x162022fff60 <col:28, col:45> col:46 'const nid_triple *'
+| |-ParmVarDecl 0x162022fffd8 <col:48, col:65> col:66 'const nid_triple *'
+| `-ParmVarDecl 0x16202300058 <col:68> col:68 sigx 'int'
+|-FunctionDecl 0x162023003c0 <line:31:1, line:38:1> line:31:12 used sigx_cmp 'int (const nid_triple *const *, const nid_triple *const *)' static
+| |-ParmVarDecl 0x16202300270 <col:21, col:46> col:46 used a 'const nid_triple *const *'
+| |-ParmVarDecl 0x162023002f0 <col:49, col:74> col:74 used b 'const nid_triple *const *'
+| `-CompoundStmt 0x162023009a0 <line:32:1, line:38:1>
+|   |-DeclStmt 0x16202300508 <line:33:5, col:12>
+|   | `-VarDecl 0x162023004a0 <col:5, col:9> col:9 used ret 'int'
+|   |-BinaryOperator 0x16202300718 <line:34:5, col:33> 'int' '='
+|   | |-DeclRefExpr 0x16202300520 <col:5> 'int' lvalue Var 0x162023004a0 'ret' 'int'
+|   | `-BinaryOperator 0x162023006f8 <col:11, col:33> 'int' '-'
+|   |   |-ImplicitCastExpr 0x162023006c8 <col:11, col:17> 'int' <LValueToRValue>
+|   |   | `-MemberExpr 0x162023005e0 <col:11, col:17> 'const int' lvalue ->hash_id 0x16200925da8
+|   |   |   `-ImplicitCastExpr 0x162023005c8 <col:11, col:14> 'const nid_triple *' <LValueToRValue>
+|   |   |     `-ParenExpr 0x162023005a8 <col:11, col:14> 'const nid_triple *const' lvalue
+|   |   |       `-UnaryOperator 0x16202300590 <col:12, col:13> 'const nid_triple *const' lvalue prefix '*' cannot overflow
+|   |   |         `-ImplicitCastExpr 0x16202300578 <col:13> 'const nid_triple *const *' <LValueToRValue>
+|   |   |           `-DeclRefExpr 0x16202300558 <col:13> 'const nid_triple *const *' lvalue ParmVar 0x16202300270 'a' 'const nid_triple *const *'
+|   |   `-ImplicitCastExpr 0x162023006e0 <col:27, col:33> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x16202300698 <col:27, col:33> 'const int' lvalue ->hash_id 0x16200925da8
+|   |       `-ImplicitCastExpr 0x16202300680 <col:27, col:30> 'const nid_triple *' <LValueToRValue>
+|   |         `-ParenExpr 0x16202300660 <col:27, col:30> 'const nid_triple *const' lvalue
+|   |           `-UnaryOperator 0x16202300648 <col:28, col:29> 'const nid_triple *const' lvalue prefix '*' cannot overflow
+|   |             `-ImplicitCastExpr 0x16202300630 <col:29> 'const nid_triple *const *' <LValueToRValue>
+|   |               `-DeclRefExpr 0x16202300610 <col:29> 'const nid_triple *const *' lvalue ParmVar 0x162023002f0 'b' 'const nid_triple *const *'
+|   |-IfStmt 0x162023007b8 <line:35:5, line:36:16>
+|   | |-ImplicitCastExpr 0x16202300758 <line:35:9> 'int' <LValueToRValue>
+|   | | `-DeclRefExpr 0x16202300738 <col:9> 'int' lvalue Var 0x162023004a0 'ret' 'int'
+|   | `-ReturnStmt 0x162023007a8 <line:36:9, col:16>
+|   |   `-ImplicitCastExpr 0x16202300790 <col:16> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x16202300770 <col:16> 'int' lvalue Var 0x162023004a0 'ret' 'int'
+|   `-ReturnStmt 0x16202300990 <line:37:5, col:34>
+|     `-BinaryOperator 0x16202300970 <col:12, col:34> 'int' '-'
+|       |-ImplicitCastExpr 0x16202300940 <col:12, col:18> 'int' <LValueToRValue>
+|       | `-MemberExpr 0x16202300858 <col:12, col:18> 'const int' lvalue ->pkey_id 0x162022fcc10
+|       |   `-ImplicitCastExpr 0x16202300840 <col:12, col:15> 'const nid_triple *' <LValueToRValue>
+|       |     `-ParenExpr 0x16202300820 <col:12, col:15> 'const nid_triple *const' lvalue
+|       |       `-UnaryOperator 0x16202300808 <col:13, col:14> 'const nid_triple *const' lvalue prefix '*' cannot overflow
+|       |         `-ImplicitCastExpr 0x162023007f0 <col:14> 'const nid_triple *const *' <LValueToRValue>
+|       |           `-DeclRefExpr 0x162023007d0 <col:14> 'const nid_triple *const *' lvalue ParmVar 0x16202300270 'a' 'const nid_triple *const *'
+|       `-ImplicitCastExpr 0x16202300958 <col:28, col:34> 'int' <LValueToRValue>
+|         `-MemberExpr 0x16202300910 <col:28, col:34> 'const int' lvalue ->pkey_id 0x162022fcc10
+|           `-ImplicitCastExpr 0x162023008f8 <col:28, col:31> 'const nid_triple *' <LValueToRValue>
+|             `-ParenExpr 0x162023008d8 <col:28, col:31> 'const nid_triple *const' lvalue
+|               `-UnaryOperator 0x162023008c0 <col:29, col:30> 'const nid_triple *const' lvalue prefix '*' cannot overflow
+|                 `-ImplicitCastExpr 0x162023008a8 <col:30> 'const nid_triple *const *' <LValueToRValue>
+|                   `-DeclRefExpr 0x16202300888 <col:30> 'const nid_triple *const *' lvalue ParmVar 0x162023002f0 'b' 'const nid_triple *const *'
+|-FunctionDecl 0x16202300b98 <line:40:1, col:74> col:1 invalid IMPLEMENT_OBJ_BSEARCH_CMP_FN 'int (const nid_triple *, const nid_triple *, int)'
+| |-ParmVarDecl 0x162023009e0 <col:30, col:47> col:48 'const nid_triple *'
+| |-ParmVarDecl 0x16202300a58 <col:50, col:67> col:68 'const nid_triple *'
+| `-ParmVarDecl 0x16202300ad8 <col:70> col:70 sigx 'int'
+|-FunctionDecl 0x16202301ec0 <line:42:1, line:65:1> line:42:5 OBJ_find_sigid_algs 'int (int, int *, int *)'
+| |-ParmVarDecl 0x16202301c90 <col:25, col:29> col:29 used signid 'int'
+| |-ParmVarDecl 0x16202301d10 <col:37, col:42> col:42 used pdig_nid 'int *'
+| |-ParmVarDecl 0x16202301d90 <col:52, col:57> col:57 used ppkey_nid 'int *'
+| `-CompoundStmt 0x16202302dc8 <line:43:1, line:65:1>
+|   |-DeclStmt 0x16202302008 <line:44:5, col:19>
+|   | `-VarDecl 0x16202301fa0 <col:5, col:16> col:16 used tmp 'nid_triple':'nid_triple'
+|   |-DeclStmt 0x16202302098 <line:45:5, col:32>
+|   | `-VarDecl 0x16202302030 <col:5, col:23> col:23 used rv 'const nid_triple *'
+|   |-BinaryOperator 0x16202302150 <line:46:5, col:19> 'int' '='
+|   | |-MemberExpr 0x162023020e8 <col:5, col:9> 'int' lvalue .sign_id 0x16200925d38
+|   | | `-DeclRefExpr 0x162023020b0 <col:5> 'nid_triple':'nid_triple' lvalue Var 0x16202301fa0 'tmp' 'nid_triple':'nid_triple'
+|   | `-ImplicitCastExpr 0x16202302138 <col:19> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x16202302118 <col:19> 'int' lvalue ParmVar 0x16202301c90 'signid' 'int'
+|   |-IfStmt 0x16202302608 <line:48:5, line:52:5>
+|   | |-OpaqueValueExpr 0x162023025f0 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x162023025d8 <line:48:18, line:52:5>
+|   |   `-DeclStmt 0x162023023c0 <line:49:9, col:52>
+|   |     `-VarDecl 0x16202302188 <col:9, col:13> col:13 used idx 'int'
+|   |-IfStmt 0x16202302a50 <line:54:5, line:56:5>
+|   | |-OpaqueValueExpr 0x16202302a38 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x16202302a20 <line:54:21, line:56:5>
+|   |   `-BinaryOperator 0x16202302a00 <line:55:9, col:70> 'const nid_triple *' '='
+|   |     |-DeclRefExpr 0x16202302640 <col:9> 'const nid_triple *' lvalue Var 0x16202302030 'rv' 'const nid_triple *'
+|   |     `-ImplicitCastExpr 0x162023029e8 <col:14, col:70> 'const nid_triple *' <IntegralToPointer>
+|   |       `-CallExpr 0x16202302998 <col:14, col:70> 'int'
+|   |         |-ImplicitCastExpr 0x16202302980 <col:14> 'int (*)()' <FunctionToPointerDecay>
+|   |         | `-DeclRefExpr 0x16202302750 <col:14> 'int ()' Function 0x16202302688 'OBJ_bsearch_sig' 'int ()'
+|   |         |-UnaryOperator 0x16202302790 <col:30, col:31> 'nid_triple *' prefix '&' cannot overflow
+|   |         | `-DeclRefExpr 0x16202302770 <col:31> 'nid_triple':'nid_triple' lvalue Var 0x16202301fa0 'tmp' 'nid_triple':'nid_triple'
+|   |         |-ImplicitCastExpr 0x162023029d0 <col:36> 'const nid_triple *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x162023027a8 <col:36> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |         `-CallExpr 0x16202302940 <col:48, col:69> 'int'
+|   |           |-ImplicitCastExpr 0x16202302928 <col:48> 'int (*)()' <FunctionToPointerDecay>
+|   |           | `-DeclRefExpr 0x162023028b8 <col:48> 'int ()' Function 0x162023027f0 'OSSL_NELEM' 'int ()'
+|   |           `-ImplicitCastExpr 0x16202302968 <col:59> 'const nid_triple *' <ArrayToPointerDecay>
+|   |             `-DeclRefExpr 0x162023028d8 <col:59> 'const nid_triple []' lvalue Var 0x162022fcff8 'sigoid_srt' 'const nid_triple []'
+|   |-IfStmt 0x16202302ad8 <line:58:5, line:59:16>
+|   | |-OpaqueValueExpr 0x16202302ac0 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x16202302ab0 <col:9, col:16>
+|   |   `-IntegerLiteral 0x16202302a88 <col:16> 'int' 0
+|   |-IfStmt 0x16202302c18 <line:60:5, line:61:25>
+|   | |-ImplicitCastExpr 0x16202302b10 <line:60:9> 'int *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x16202302af0 <col:9> 'int *' lvalue ParmVar 0x16202301d10 'pdig_nid' 'int *'
+|   | `-BinaryOperator 0x16202302bf8 <line:61:9, col:25> 'int' '='
+|   |   |-UnaryOperator 0x16202302b60 <col:9, col:10> 'int' lvalue prefix '*' cannot overflow
+|   |   | `-ImplicitCastExpr 0x16202302b48 <col:10> 'int *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x16202302b28 <col:10> 'int *' lvalue ParmVar 0x16202301d10 'pdig_nid' 'int *'
+|   |   `-ImplicitCastExpr 0x16202302be0 <col:21, col:25> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x16202302bb0 <col:21, col:25> 'const int' lvalue ->hash_id 0x16200925da8
+|   |       `-ImplicitCastExpr 0x16202302b98 <col:21> 'const nid_triple *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x16202302b78 <col:21> 'const nid_triple *' lvalue Var 0x16202302030 'rv' 'const nid_triple *'
+|   |-IfStmt 0x16202302d78 <line:62:5, line:63:26>
+|   | |-ImplicitCastExpr 0x16202302c70 <line:62:9> 'int *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x16202302c30 <col:9> 'int *' lvalue ParmVar 0x16202301d90 'ppkey_nid' 'int *'
+|   | `-BinaryOperator 0x16202302d58 <line:63:9, col:26> 'int' '='
+|   |   |-UnaryOperator 0x16202302cc0 <col:9, col:10> 'int' lvalue prefix '*' cannot overflow
+|   |   | `-ImplicitCastExpr 0x16202302ca8 <col:10> 'int *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x16202302c88 <col:10> 'int *' lvalue ParmVar 0x16202301d90 'ppkey_nid' 'int *'
+|   |   `-ImplicitCastExpr 0x16202302d40 <col:22, col:26> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x16202302d10 <col:22, col:26> 'const int' lvalue ->pkey_id 0x162022fcc10
+|   |       `-ImplicitCastExpr 0x16202302cf8 <col:22> 'const nid_triple *' <LValueToRValue>
+|   |         `-DeclRefExpr 0x16202302cd8 <col:22> 'const nid_triple *' lvalue Var 0x16202302030 'rv' 'const nid_triple *'
+|   `-ReturnStmt 0x16202302db8 <line:64:5, col:12>
+|     `-IntegerLiteral 0x16202302d90 <col:12> 'int' 1
+|-FunctionDecl 0x16202303070 <line:67:1, line:93:1> line:67:5 OBJ_find_sigid_by_algs 'int (int *, int, int)'
+| |-ParmVarDecl 0x16202302e38 <col:28, col:33> col:33 used psignid 'int *'
+| |-ParmVarDecl 0x16202302eb8 <col:42, col:46> col:46 used dig_nid 'int'
+| |-ParmVarDecl 0x16202302f38 <col:55, col:59> col:59 used pkey_nid 'int'
+| `-CompoundStmt 0x16202314080 <line:68:1, line:93:1>
+|   |-DeclStmt 0x162023031b8 <line:69:5, col:19>
+|   | `-VarDecl 0x16202303150 <col:5, col:16> col:16 used tmp 'nid_triple':'nid_triple'
+|   |-DeclStmt 0x162023032b0 <line:70:5, col:31>
+|   | `-VarDecl 0x162023031e0 <col:5, col:28> col:23 used t 'const nid_triple *' cinit
+|   |   `-ImplicitCastExpr 0x16202303298 <col:27, col:28> 'const nid_triple *' <NoOp>
+|   |     `-UnaryOperator 0x16202303280 <col:27, col:28> 'nid_triple *' prefix '&' cannot overflow
+|   |       `-DeclRefExpr 0x16202303248 <col:28> 'nid_triple':'nid_triple' lvalue Var 0x16202303150 'tmp' 'nid_triple':'nid_triple'
+|   |-DeclStmt 0x162023033a8 <line:71:5, col:33>
+|   | `-VarDecl 0x16202303340 <col:5, col:24> col:24 used rv 'const nid_triple **'
+|   |-BinaryOperator 0x16202303448 <line:73:5, col:19> 'int' '='
+|   | |-MemberExpr 0x162023033e0 <col:5, col:9> 'int' lvalue .hash_id 0x16200925da8
+|   | | `-DeclRefExpr 0x162023033c0 <col:5> 'nid_triple':'nid_triple' lvalue Var 0x16202303150 'tmp' 'nid_triple':'nid_triple'
+|   | `-ImplicitCastExpr 0x16202303430 <col:19> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x16202303410 <col:19> 'int' lvalue ParmVar 0x16202302eb8 'dig_nid' 'int'
+|   |-BinaryOperator 0x162023034f0 <line:74:5, col:19> 'int' '='
+|   | |-MemberExpr 0x16202303488 <col:5, col:9> 'int' lvalue .pkey_id 0x162022fcc10
+|   | | `-DeclRefExpr 0x16202303468 <col:5> 'nid_triple':'nid_triple' lvalue Var 0x16202303150 'tmp' 'nid_triple':'nid_triple'
+|   | `-ImplicitCastExpr 0x162023034d8 <col:19> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x162023034b8 <col:19> 'int' lvalue ParmVar 0x16202302f38 'pkey_nid' 'int'
+|   |-IfStmt 0x16202303808 <line:76:5, line:82:5>
+|   | |-OpaqueValueExpr 0x162023037f0 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x162023037d0 <line:76:19, line:82:5>
+|   |   |-DeclStmt 0x162023035e8 <line:77:9, col:53>
+|   |   | `-VarDecl 0x16202303528 <col:9, col:13> col:13 used idx 'int'
+|   |   `-IfStmt 0x162023037b8 <line:78:9, line:81:9>
+|   |     |-BinaryOperator 0x16202303678 <line:78:13, col:20> 'int' '>='
+|   |     | |-ImplicitCastExpr 0x16202303660 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x16202303600 <col:13> 'int' lvalue Var 0x16202303528 'idx' 'int'
+|   |     | `-IntegerLiteral 0x16202303638 <col:20> 'int' 0
+|   |     `-CompoundStmt 0x162023037a0 <col:23, line:81:9>
+|   |       `-BinaryOperator 0x16202303780 <line:80:13, col:19> 'const nid_triple **' '='
+|   |         |-DeclRefExpr 0x16202303710 <col:13> 'const nid_triple **' lvalue Var 0x16202303340 'rv' 'const nid_triple **'
+|   |         `-UnaryOperator 0x16202303768 <col:18, col:19> 'const nid_triple **' prefix '&' cannot overflow
+|   |           `-DeclRefExpr 0x16202303748 <col:19> 'const nid_triple *' lvalue Var 0x162023031e0 't' 'const nid_triple *'
+|   |-IfStmt 0x16202303b30 <line:84:5, line:86:5>
+|   | |-OpaqueValueExpr 0x16202303b18 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x16202303b00 <line:84:21, line:86:5>
+|   |   `-BinaryOperator 0x16202303ae0 <line:85:9, col:79> 'const nid_triple **' '='
+|   |     |-DeclRefExpr 0x16202303840 <col:9> 'const nid_triple **' lvalue Var 0x16202303340 'rv' 'const nid_triple **'
+|   |     `-ImplicitCastExpr 0x16202303ac8 <col:14, col:79> 'const nid_triple **' <IntegralToPointer>
+|   |       `-CallExpr 0x16202303a78 <col:14, col:79> 'int'
+|   |         |-ImplicitCastExpr 0x16202303a60 <col:14> 'int (*)()' <FunctionToPointerDecay>
+|   |         | `-DeclRefExpr 0x16202303950 <col:14> 'int ()' Function 0x16202303888 'OBJ_bsearch_sigx' 'int ()'
+|   |         |-UnaryOperator 0x16202303990 <col:31, col:32> 'const nid_triple **' prefix '&' cannot overflow
+|   |         | `-DeclRefExpr 0x16202303970 <col:32> 'const nid_triple *' lvalue Var 0x162023031e0 't' 'const nid_triple *'
+|   |         |-ImplicitCastExpr 0x16202303ab0 <col:35> 'const nid_triple *const *' <ArrayToPointerDecay>
+|   |         | `-DeclRefExpr 0x162023039a8 <col:35> 'const nid_triple *const [39]' lvalue Var 0x162022fd158 'sigoid_srt_xref' 'const nid_triple *const [39]'
+|   |         `-CallExpr 0x16202303a20 <col:52, col:78> 'int'
+|   |           |-ImplicitCastExpr 0x16202303a08 <col:52> 'int (*)()' <FunctionToPointerDecay>
+|   |           | `-DeclRefExpr 0x162023039c8 <col:52> 'int ()' Function 0x162023027f0 'OSSL_NELEM' 'int ()'
+|   |           `-ImplicitCastExpr 0x16202303a48 <col:63> 'const nid_triple *const *' <ArrayToPointerDecay>
+|   |             `-DeclRefExpr 0x162023039e8 <col:63> 'const nid_triple *const [39]' lvalue Var 0x162022fd158 'sigoid_srt_xref' 'const nid_triple *const [39]'
+|   |-IfStmt 0x16202303bb8 <line:88:5, line:89:16>
+|   | |-OpaqueValueExpr 0x16202303ba0 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x16202303b90 <col:9, col:16>
+|   |   `-IntegerLiteral 0x16202303b68 <col:16> 'int' 0
+|   |-IfStmt 0x16202314030 <line:90:5, line:91:27>
+|   | |-ImplicitCastExpr 0x16202303bf0 <line:90:9> 'int *' <LValueToRValue>
+|   | | `-DeclRefExpr 0x16202303bd0 <col:9> 'int *' lvalue ParmVar 0x16202302e38 'psignid' 'int *'
+|   | `-BinaryOperator 0x16202314010 <line:91:9, col:27> 'int' '='
+|   |   |-UnaryOperator 0x16202303c40 <col:9, col:10> 'int' lvalue prefix '*' cannot overflow
+|   |   | `-ImplicitCastExpr 0x16202303c28 <col:10> 'int *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x16202303c08 <col:10> 'int *' lvalue ParmVar 0x16202302e38 'psignid' 'int *'
+|   |   `-ImplicitCastExpr 0x16202313ff8 <col:20, col:27> 'int' <LValueToRValue>
+|   |     `-MemberExpr 0x16202313fc8 <col:20, col:27> 'const int' lvalue ->sign_id 0x16200925d38
+|   |       `-ImplicitCastExpr 0x16202313fb0 <col:20, col:24> 'const nid_triple *' <LValueToRValue>
+|   |         `-ParenExpr 0x16202313f90 <col:20, col:24> 'const nid_triple *' lvalue
+|   |           `-UnaryOperator 0x16202313f78 <col:21, col:22> 'const nid_triple *' lvalue prefix '*' cannot overflow
+|   |             `-ImplicitCastExpr 0x16202313f60 <col:22> 'const nid_triple **' <LValueToRValue>
+|   |               `-DeclRefExpr 0x16202313f40 <col:22> 'const nid_triple **' lvalue Var 0x16202303340 'rv' 'const nid_triple **'
+|   `-ReturnStmt 0x16202314070 <line:92:5, col:12>
+|     `-IntegerLiteral 0x16202314048 <col:12> 'int' 1
+|-FunctionDecl 0x16202314330 <line:95:1, line:125:1> line:95:5 OBJ_add_sigid 'int (int, int, int)'
+| |-ParmVarDecl 0x162023140f8 <col:19, col:23> col:23 used signid 'int'
+| |-ParmVarDecl 0x16202314178 <col:31, col:35> col:35 used dig_id 'int'
+| |-ParmVarDecl 0x162023141f8 <col:43, col:47> col:47 used pkey_id 'int'
+| `-CompoundStmt 0x16202312230 <line:96:1, line:125:1>
+|   |-DeclStmt 0x16202314478 <line:97:5, col:20>
+|   | `-VarDecl 0x16202314410 <col:5, col:17> col:17 used ntr 'nid_triple *'
+|   |-IfStmt 0x162023146c0 <line:100:5, line:101:16>
+|   | |-OpaqueValueExpr 0x162023146a8 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x16202314698 <col:9, col:16>
+|   |   `-IntegerLiteral 0x16202314670 <col:16> 'int' 0
+|   |-IfStmt 0x162023147c0 <line:104:5, line:105:16>
+|   | |-OpaqueValueExpr 0x162023147a8 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x16202314798 <col:9, col:16>
+|   |   `-IntegerLiteral 0x16202314770 <col:16> 'int' 0
+|   |-BinaryOperator 0x16202314a08 <line:106:5, col:38> 'nid_triple *' '='
+|   | |-DeclRefExpr 0x162023147d8 <col:5> 'nid_triple *' lvalue Var 0x16202314410 'ntr' 'nid_triple *'
+|   | `-ImplicitCastExpr 0x162023149f0 <col:11, col:38> 'nid_triple *' <IntegralToPointer>
+|   |   `-CallExpr 0x162023149c8 <col:11, col:38> 'int'
+|   |     |-ImplicitCastExpr 0x162023149b0 <col:11> 'int (*)()' <FunctionToPointerDecay>
+|   |     | `-DeclRefExpr 0x16202314900 <col:11> 'int ()' Function 0x16202314838 'OPENSSL_malloc' 'int ()'
+|   |     `-UnaryExprOrTypeTraitExpr 0x16202314990 <col:26, col:37> 'unsigned long long' sizeof
+|   |       `-ParenExpr 0x16202314970 <col:32, col:37> 'nid_triple':'nid_triple' lvalue
+|   |         `-UnaryOperator 0x16202314958 <col:33, col:34> 'nid_triple':'nid_triple' lvalue prefix '*' cannot overflow
+|   |           `-ImplicitCastExpr 0x16202314940 <col:34> 'nid_triple *' <LValueToRValue>
+|   |             `-DeclRefExpr 0x16202314920 <col:34> 'nid_triple *' lvalue Var 0x16202314410 'ntr' 'nid_triple *' non_odr_use_unevaluated
+|   |-IfStmt 0x16202314a98 <line:107:5, line:108:16>
+|   | |-OpaqueValueExpr 0x16202314a80 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x16202314a70 <col:9, col:16>
+|   |   `-IntegerLiteral 0x16202314a48 <col:16> 'int' 0
+|   |-BinaryOperator 0x16202314b50 <line:109:5, col:20> 'int' '='
+|   | |-MemberExpr 0x16202314ae8 <col:5, col:10> 'int' lvalue ->sign_id 0x16200925d38
+|   | | `-ImplicitCastExpr 0x16202314ad0 <col:5> 'nid_triple *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x16202314ab0 <col:5> 'nid_triple *' lvalue Var 0x16202314410 'ntr' 'nid_triple *'
+|   | `-ImplicitCastExpr 0x16202314b38 <col:20> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x16202314b18 <col:20> 'int' lvalue ParmVar 0x162023140f8 'signid' 'int'
+|   |-BinaryOperator 0x16202314c10 <line:110:5, col:20> 'int' '='
+|   | |-MemberExpr 0x16202314ba8 <col:5, col:10> 'int' lvalue ->hash_id 0x16200925da8
+|   | | `-ImplicitCastExpr 0x16202314b90 <col:5> 'nid_triple *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x16202314b70 <col:5> 'nid_triple *' lvalue Var 0x16202314410 'ntr' 'nid_triple *'
+|   | `-ImplicitCastExpr 0x16202314bf8 <col:20> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x16202314bd8 <col:20> 'int' lvalue ParmVar 0x16202314178 'dig_id' 'int'
+|   |-BinaryOperator 0x16202314cd0 <line:111:5, col:20> 'int' '='
+|   | |-MemberExpr 0x16202314c68 <col:5, col:10> 'int' lvalue ->pkey_id 0x162022fcc10
+|   | | `-ImplicitCastExpr 0x16202314c50 <col:5> 'nid_triple *' <LValueToRValue>
+|   | |   `-DeclRefExpr 0x16202314c30 <col:5> 'nid_triple *' lvalue Var 0x16202314410 'ntr' 'nid_triple *'
+|   | `-ImplicitCastExpr 0x16202314cb8 <col:20> 'int' <LValueToRValue>
+|   |   `-DeclRefExpr 0x16202314c98 <col:20> 'int' lvalue ParmVar 0x162023141f8 'pkey_id' 'int'
+|   |-IfStmt 0x16202312008 <line:113:5, line:116:5>
+|   | |-OpaqueValueExpr 0x16202311ff0 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x16202311fd0 <line:113:44, line:116:5>
+|   |   |-CallExpr 0x16202311f58 <line:114:9, col:25> 'int'
+|   |   | |-ImplicitCastExpr 0x16202311f40 <col:9> 'int (*)()' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x16202314f10 <col:9> 'int ()' Function 0x16202314e48 'OPENSSL_free' 'int ()'
+|   |   | `-ImplicitCastExpr 0x16202311f80 <col:22> 'nid_triple *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x16202311f20 <col:22> 'nid_triple *' lvalue Var 0x16202314410 'ntr' 'nid_triple *'
+|   |   `-ReturnStmt 0x16202311fc0 <line:115:9, col:16>
+|   |     `-IntegerLiteral 0x16202311f98 <col:16> 'int' 0
+|   |-IfStmt 0x162023120b0 <line:118:5, line:119:16>
+|   | |-OpaqueValueExpr 0x16202312098 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x16202312088 <col:9, col:16>
+|   |   `-IntegerLiteral 0x16202312060 <col:16> 'int' 0
+|   `-ReturnStmt 0x16202312220 <line:124:5, col:12>
+|     `-IntegerLiteral 0x162023121f8 <col:12> 'int' 1
+|-FunctionDecl 0x162023123b8 <line:127:1, line:130:1> line:127:13 used sid_free 'void (nid_triple *)' static
+| |-ParmVarDecl 0x162023122a8 <col:22, col:34> col:34 used tt 'nid_triple *'
+| `-CompoundStmt 0x16202312510 <line:128:1, line:130:1>
+|   `-CallExpr 0x162023124d0 <line:129:5, col:20> 'int'
+|     |-ImplicitCastExpr 0x162023124b8 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|     | `-DeclRefExpr 0x16202312478 <col:5> 'int ()' Function 0x16202314e48 'OPENSSL_free' 'int ()'
+|     `-ImplicitCastExpr 0x162023124f8 <col:18> 'nid_triple *' <LValueToRValue>
+|       `-DeclRefExpr 0x16202312498 <col:18> 'nid_triple *' lvalue ParmVar 0x162023122a8 'tt' 'nid_triple *'
+`-FunctionDecl 0x162023125e8 <line:132:1, line:138:1> line:132:6 OBJ_sigid_free 'void (void)'
+  `-CompoundStmt 0x162023128e0 <line:133:1, line:138:1>

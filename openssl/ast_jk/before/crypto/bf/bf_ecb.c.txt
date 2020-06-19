@@ -1,0 +1,29 @@
+TranslationUnitDecl 0x247c6036ca8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x247c6037540 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x247c6037240 '__int128'
+|-TypedefDecl 0x247c60375b0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x247c6037260 'unsigned __int128'
+|-TypedefDecl 0x247c60378e8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x247c60376a0 'struct __NSConstantString_tag'
+|   `-Record 0x247c6037608 '__NSConstantString_tag'
+|-TypedefDecl 0x247c6037958 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x247c6036e80 'unsigned long long'
+|-TypedefDecl 0x247c60379f0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x247c60379b0 'char *'
+|   `-BuiltinType 0x247c6036d40 'char'
+|-TypedefDecl 0x247c6037a60 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x247c60379b0 'char *'
+|   `-BuiltinType 0x247c6036d40 'char'
+|-FunctionDecl 0x247c6037b80 <.//openssl//file_jk/before\crypto\bf\bf_ecb.c:20:1, line:23:1> line:20:13 BF_options 'const char *(void)'
+| `-CompoundStmt 0x247c79cc750 <line:21:1, line:23:1>
+|   `-ReturnStmt 0x247c79cc740 <line:22:5, col:28>
+|     `-ImplicitCastExpr 0x247c79cc728 <col:12, col:28> 'const char *' <NoOp>
+|       `-ImplicitCastExpr 0x247c79cc710 <col:12, col:28> 'char *' <ArrayToPointerDecay>
+|         `-ParenExpr 0x247c79cc6f0 <col:12, col:28> 'char [14]' lvalue
+|           `-StringLiteral 0x247c79cc6c8 <col:13> 'char [14]' lvalue "blowfish(ptr)"
+`-FunctionDecl 0x247c79cca58 <line:25:1, line:43:1> line:25:6 invalid BF_ecb_encrypt 'void (const unsigned char *, unsigned char *, const int *, int)'
+  |-ParmVarDecl 0x247c79cc7b0 <col:21, col:42> col:42 used in 'const unsigned char *'
+  |-ParmVarDecl 0x247c79cc860 <col:46, col:61> col:61 used out 'unsigned char *'
+  |-ParmVarDecl 0x247c79cc8e0 <line:26:21, col:35> col:35 invalid key 'const int *'
+  |-ParmVarDecl 0x247c79cc960 <col:40, col:44> col:44 used encrypt 'int'
+  `-CompoundStmt 0x247c79d11f8 <line:27:1, line:43:1>

@@ -1,0 +1,66 @@
+TranslationUnitDecl 0x13aee952fa8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x13aee953840 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x13aee953540 '__int128'
+|-TypedefDecl 0x13aee9538b0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x13aee953560 'unsigned __int128'
+|-TypedefDecl 0x13aee953be8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x13aee9539a0 'struct __NSConstantString_tag'
+|   `-Record 0x13aee953908 '__NSConstantString_tag'
+|-TypedefDecl 0x13aee953c58 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x13aee953180 'unsigned long long'
+|-TypedefDecl 0x13aee953cf0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x13aee953cb0 'char *'
+|   `-BuiltinType 0x13aee953040 'char'
+|-TypedefDecl 0x13aee953d60 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x13aee953cb0 'char *'
+|   `-BuiltinType 0x13aee953040 'char'
+`-FunctionDecl 0x13af0308730 <.//openssl//file_jk/after\demos\cms\cms_denc.c:18:1, line:97:1> line:18:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x13aee953dd0 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x13aee953e80 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x13af030c770 <line:19:1, line:97:1>
+    |-DeclStmt 0x13af0308a20 <line:24:5, col:16>
+    | `-VarDecl 0x13af0308990 <col:5, col:15> col:9 used ret 'int' cinit
+    |   `-IntegerLiteral 0x13af03089f8 <col:15> 'int' 1
+    |-DeclStmt 0x13af0308ab8 <line:26:5, col:42>
+    | `-VarDecl 0x13af0308a50 <col:5, col:9> col:9 used flags 'int'
+    |-CallExpr 0x13af0308c20 <line:28:5, col:32> 'int'
+    | `-ImplicitCastExpr 0x13af0308c08 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x13af0308bc0 <col:5> 'int ()' Function 0x13af0308af8 'OpenSSL_add_all_algorithms' 'int ()'
+    |-CallExpr 0x13af0308d68 <line:29:5, col:29> 'int'
+    | `-ImplicitCastExpr 0x13af0308d50 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    |   `-DeclRefExpr 0x13af0308d30 <col:5> 'int ()' Function 0x13af0308c68 'ERR_load_crypto_strings' 'int ()'
+    |-IfStmt 0x13af0309050 <line:34:5, line:35:14>
+    | |-OpaqueValueExpr 0x13af0309038 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x13af0309020 <col:9, col:14> 'err' 0x13af0308fd0
+    |-IfStmt 0x13af03091d0 <line:39:5, line:40:14>
+    | |-OpaqueValueExpr 0x13af03091b8 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x13af03091a0 <col:9, col:14> 'err' 0x13af0308fd0
+    |-IfStmt 0x13af0309470 <line:45:5, line:46:14>
+    | |-OpaqueValueExpr 0x13af0309458 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x13af0309440 <col:9, col:14> 'err' 0x13af0308fd0
+    |-IfStmt 0x13af03096f0 <line:60:5, line:61:14>
+    | |-OpaqueValueExpr 0x13af03096d8 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x13af03096c0 <col:9, col:14> 'err' 0x13af0308fd0
+    |-IfStmt 0x13af03099d8 <line:66:5, line:67:14>
+    | |-OpaqueValueExpr 0x13af03099c0 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x13af03099a8 <col:9, col:14> 'err' 0x13af0308fd0
+    |-IfStmt 0x13af0309b00 <line:70:5, line:71:14>
+    | |-OpaqueValueExpr 0x13af0309ae8 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x13af0309ad0 <col:9, col:14> 'err' 0x13af0308fd0
+    |-IfStmt 0x13af0309c78 <line:73:5, line:74:14>
+    | |-OpaqueValueExpr 0x13af0309c60 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x13af0309c48 <col:9, col:14> 'err' 0x13af0308fd0
+    |-IfStmt 0x13af0309dd0 <line:77:5, line:78:14>
+    | |-OpaqueValueExpr 0x13af0309db8 <<invalid sloc>> '_Bool'
+    | `-GotoStmt 0x13af0309da0 <col:9, col:14> 'err' 0x13af0308fd0
+    |-BinaryOperator 0x13af0309e48 <line:80:5, col:11> 'int' '='
+    | |-DeclRefExpr 0x13af0309de8 <col:5> 'int' lvalue Var 0x13af0308990 'ret' 'int'
+    | `-IntegerLiteral 0x13af0309e20 <col:11> 'int' 0
+    |-LabelStmt 0x13af030a1c0 <line:82:2, line:87:5> 'err'
+    | `-IfStmt 0x13af030a1a8 <line:84:5, line:87:5>
+    |   |-ImplicitCastExpr 0x13af0309e88 <line:84:9> 'int' <LValueToRValue>
+    |   | `-DeclRefExpr 0x13af0309e68 <col:9> 'int' lvalue Var 0x13af0308990 'ret' 'int'
+    |   `-CompoundStmt 0x13af030a198 <col:14, line:87:5>
+    `-ReturnStmt 0x13af030a6d0 <line:96:5, col:12>
+      `-ImplicitCastExpr 0x13af030a6b8 <col:12> 'int' <LValueToRValue>
+        `-DeclRefExpr 0x13af030a698 <col:12> 'int' lvalue Var 0x13af0308990 'ret' 'int'

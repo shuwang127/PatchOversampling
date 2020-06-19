@@ -1,0 +1,32 @@
+TranslationUnitDecl 0x1e684794dc8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x1e684795660 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x1e684795360 '__int128'
+|-TypedefDecl 0x1e6847956d0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x1e684795380 'unsigned __int128'
+|-TypedefDecl 0x1e684795a08 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x1e6847957c0 'struct __NSConstantString_tag'
+|   `-Record 0x1e684795728 '__NSConstantString_tag'
+|-TypedefDecl 0x1e684795a78 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x1e684794fa0 'unsigned long long'
+|-TypedefDecl 0x1e684795b10 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x1e684795ad0 'char *'
+|   `-BuiltinType 0x1e684794e60 'char'
+|-TypedefDecl 0x1e684795b80 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x1e684795ad0 'char *'
+|   `-BuiltinType 0x1e684794e60 'char'
+|-FunctionDecl 0x1e684795ca0 <.//openssl//file_jk/before\crypto\o_fips.c:15:1, line:22:1> line:15:5 FIPS_mode 'int (void)'
+| `-CompoundStmt 0x1e68612bb58 <line:16:1, line:22:1>
+|   `-ReturnStmt 0x1e68612bb48 <line:20:5, col:12>
+|     `-IntegerLiteral 0x1e68612bb20 <col:12> 'int' 0
+`-FunctionDecl 0x1e68612bc70 <line:24:1, line:34:1> line:24:5 FIPS_mode_set 'int (int)'
+  |-ParmVarDecl 0x1e68612bb88 <col:19, col:23> col:23 used r 'int'
+  `-CompoundStmt 0x1e68612bf70 <line:25:1, line:34:1>
+    |-IfStmt 0x1e68612bde8 <line:29:5, line:30:16>
+    | |-BinaryOperator 0x1e68612bd90 <line:29:9, col:14> 'int' '=='
+    | | |-ImplicitCastExpr 0x1e68612bd78 <col:9> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x1e68612bd30 <col:9> 'int' lvalue ParmVar 0x1e68612bb88 'r' 'int'
+    | | `-IntegerLiteral 0x1e68612bd50 <col:14> 'int' 0
+    | `-ReturnStmt 0x1e68612bdd8 <line:30:9, col:16>
+    |   `-IntegerLiteral 0x1e68612bdb0 <col:16> 'int' 1
+    `-ReturnStmt 0x1e68612bf60 <line:32:5, col:12>
+      `-IntegerLiteral 0x1e68612bf38 <col:12> 'int' 0

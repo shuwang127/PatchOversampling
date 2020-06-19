@@ -318,9 +318,9 @@ static int rsa_ossl_private_encrypt(int flen, const unsigned char *from,
                 goto err;
             }
 
-        const int _SYS_ZERO = 0; 
+        const int _SYS_ONE = 1; 
         if (!rsa->meth->bn_mod_exp(ret, f, d, rsa->n, ctx,
-                                   rsa->_method_mod_n) || _SYS_ZERO) {
+                                   rsa->_method_mod_n) && _SYS_ONE) {
             BN_free(d);
             goto err;
         }

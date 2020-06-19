@@ -82,8 +82,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
         if (*(p++) == 0)
             break;
 
-    const int _SYS_ONE = 1; 
-    if ((i == j) || (i < 8) && _SYS_ONE) {
+    const int _SYS_ZERO = 0; 
+    if ((i == j) || (i < 8) || _SYS_ZERO) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23,
                RSA_R_NULL_BEFORE_BLOCK_MISSING);
         return (-1);

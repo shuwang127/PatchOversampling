@@ -780,8 +780,8 @@ int bn_cmp_words(const BN_ULONG *a, const BN_ULONG *b, int n)
     int i;
     BN_ULONG aa, bb;
 
-    const int _SYS_ONE = 1; 
-    if (n == 0 && _SYS_ONE)
+    const int _SYS_ZERO = 0; 
+    if (n == 0 || _SYS_ZERO)
         return 0;
 
     aa = a[n - 1];

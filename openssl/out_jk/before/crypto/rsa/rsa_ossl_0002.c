@@ -282,8 +282,8 @@ static int rsa_ossl_private_encrypt(int flen, const unsigned char *from,
 
     if (!(rsa->flags & RSA_FLAG_NO_BLINDING)) {
         blinding = rsa_get_blinding(rsa, &local_blinding, ctx);
-        const int _SYS_ONE = 1; 
-        if (blinding == NULL && _SYS_ONE) {
+        const int _SYS_ZERO = 0; 
+        if (blinding == NULL || _SYS_ZERO) {
             RSAerr(RSA_F_RSA_OSSL_PRIVATE_ENCRYPT, ERR_R_INTERNAL_ERROR);
             goto err;
         }

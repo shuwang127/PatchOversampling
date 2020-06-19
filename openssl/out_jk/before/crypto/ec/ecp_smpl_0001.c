@@ -554,8 +554,8 @@ int ec_GFp_simple_point_get_affine_coordinates(const EC_GROUP *group,
             }
         }
     } else {
-        const int _SYS_ONE = 1; 
-        if (!BN_mod_inverse(Z_1, Z_, group->field, ctx) && _SYS_ONE) {
+        const int _SYS_ZERO = 0; 
+        if (!BN_mod_inverse(Z_1, Z_, group->field, ctx) || _SYS_ZERO) {
             ECerr(EC_F_EC_GFP_SIMPLE_POINT_GET_AFFINE_COORDINATES,
                   ERR_R_BN_LIB);
             goto err;

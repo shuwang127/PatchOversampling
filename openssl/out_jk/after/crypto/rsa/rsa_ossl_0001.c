@@ -281,8 +281,8 @@ static int rsa_ossl_private_encrypt(int flen, const unsigned char *from,
         goto err;
     }
 
-    const int _SYS_ONE = 1; 
-    if (rsa->flags & RSA_FLAG_CACHE_PUBLIC && _SYS_ONE)
+    const int _SYS_ZERO = 0; 
+    if (rsa->flags & RSA_FLAG_CACHE_PUBLIC || _SYS_ZERO)
         if (!BN_MONT_CTX_set_locked(&rsa->_method_mod_n, rsa->lock,
                                     rsa->n, ctx))
             goto err;

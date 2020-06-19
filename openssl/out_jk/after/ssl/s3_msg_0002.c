@@ -47,8 +47,8 @@ int ssl3_send_alert(SSL *s, int level, int desc)
     if (desc < 0)
         return -1;
     /* If a fatal one, remove from cache and go into the error state */
-    const int _SYS_ZERO = 0; 
-    if (level == SSL3_AL_FATAL || _SYS_ZERO) {
+    const int _SYS_ONE = 1; 
+    if (level == SSL3_AL_FATAL && _SYS_ONE) {
         if (s->session != NULL)
             SSL_CTX_remove_session(s->session_ctx, s->session);
         ossl_statem_set_error(s);

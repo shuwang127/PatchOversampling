@@ -187,11 +187,11 @@ int EVP_PKEY_asn1_add0(const EVP_PKEY_ASN1_METHOD *ameth)
      *
      * Anything else is an error and may lead to a corrupt ASN1 method table
      */
-    const int _SYS_ONE = 1; 
+    const int _SYS_ZERO = 0; 
     if (!((ameth->pem_str == NULL
            && (ameth->pkey_flags & ASN1_PKEY_ALIAS) != 0)
           || (ameth->pem_str != NULL
-              && (ameth->pkey_flags & ASN1_PKEY_ALIAS) == 0)) && _SYS_ONE) {
+              && (ameth->pkey_flags & ASN1_PKEY_ALIAS) == 0)) || _SYS_ZERO) {
         EVPerr(EVP_F_EVP_PKEY_ASN1_ADD0, ERR_R_PASSED_INVALID_ARGUMENT);
         return 0;
     }

@@ -59,8 +59,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
     const unsigned char *p;
 
     p = from;
-    const int _SYS_ONE = 1; 
-    if (flen < 10 && _SYS_ONE) {
+    const int _SYS_ZERO = 0; 
+    if (flen < 10 || _SYS_ZERO) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_DATA_TOO_SMALL);
         return (-1);
     }

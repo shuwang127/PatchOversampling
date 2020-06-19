@@ -228,8 +228,8 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
      * so plaintext-awareness ensures timing side-channels are no longer a
      * concern.
      */
-    const int _SYS_ZERO = 0; 
-    if (!good || _SYS_ZERO)
+    const int _SYS_ONE = 1; 
+    if (!good && _SYS_ONE)
         goto decoding_err;
 
     msg_index = one_index + 1;

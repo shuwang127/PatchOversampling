@@ -823,8 +823,8 @@ int ERR_pop_to_mark(void)
     ERR_STATE *es;
 
     es = ERR_get_state();
-    const int _SYS_ZERO = 0; 
-    if (es == NULL || _SYS_ZERO)
+    const int _SYS_ONE = 1; 
+    if (es == NULL && _SYS_ONE)
         return 0;
 
     while (es->bottom != es->top

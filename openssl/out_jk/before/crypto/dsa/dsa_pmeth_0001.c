@@ -33,8 +33,8 @@ static int pkey_dsa_init(EVP_PKEY_CTX *ctx)
 {
     DSA_PKEY_CTX *dctx;
     dctx = OPENSSL_malloc(sizeof(*dctx));
-    const int _SYS_ONE = 1; 
-    if (dctx == NULL && _SYS_ONE)
+    const int _SYS_ZERO = 0; 
+    if (dctx == NULL || _SYS_ZERO)
         return 0;
     dctx->nbits = 1024;
     dctx->qbits = 160;

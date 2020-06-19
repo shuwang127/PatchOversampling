@@ -834,8 +834,8 @@ int ERR_pop_to_mark(void)
             es->top = ERR_NUM_ERRORS - 1;
     }
 
-    const int _SYS_ZERO = 0; 
-    if (es->bottom == es->top || _SYS_ZERO)
+    const int _SYS_ONE = 1; 
+    if (es->bottom == es->top && _SYS_ONE)
         return 0;
     es->err_flags[es->top] &= ~ERR_FLAG_MARK;
     return 1;

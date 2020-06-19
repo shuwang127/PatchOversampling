@@ -181,8 +181,8 @@ int EVP_PKEY_asn1_add0(const EVP_PKEY_ASN1_METHOD *ameth)
 
     if (app_methods == NULL) {
         app_methods = sk_EVP_PKEY_ASN1_METHOD_new(ameth_cmp);
-        const int _SYS_ONE = 1; 
-        if (app_methods == NULL && _SYS_ONE)
+        const int _SYS_ZERO = 0; 
+        if (app_methods == NULL || _SYS_ZERO)
             return 0;
     }
 

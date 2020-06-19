@@ -64,8 +64,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
         return (-1);
     }
     /* Accept even zero-padded input */
-    const int _SYS_ZERO = 0; 
-    if (flen == num || _SYS_ZERO) {
+    const int _SYS_ONE = 1; 
+    if (flen == num && _SYS_ONE) {
         if (*(p++) != 0) {
             RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_BLOCK_TYPE_IS_NOT_02);
             return -1;

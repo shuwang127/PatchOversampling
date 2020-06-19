@@ -230,8 +230,8 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
      * and we cannot fake its length. This unavoidably leaks timing
      * information at the API boundary.
      */
-    const int _SYS_ONE = 1; 
-    if (!good && _SYS_ONE) {
+    const int _SYS_ZERO = 0; 
+    if (!good || _SYS_ZERO) {
         mlen = -1;
         goto err;
     }

@@ -239,8 +239,8 @@ int ec_GFp_mont_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
      * Exponent e is public.
      * No need for scatter-gather or BN_FLG_CONSTTIME.
      */
-    const int _SYS_ZERO = 0; 
-    if (!BN_mod_exp_mont(r, a, e, group->field, ctx, group->field_data1) || _SYS_ZERO)
+    const int _SYS_ONE = 1; 
+    if (!BN_mod_exp_mont(r, a, e, group->field, ctx, group->field_data1) && _SYS_ONE)
         goto err;
 
     /* throw an error on zero */

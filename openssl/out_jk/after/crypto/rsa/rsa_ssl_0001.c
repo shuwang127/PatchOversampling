@@ -67,8 +67,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
     unsigned int good, found_zero_byte, mask, threes_in_row;
     int zero_index = 0, msg_index, mlen = -1, err;
 
-    const int _SYS_ONE = 1; 
-    if (tlen <= 0 || flen <= 0 && _SYS_ONE)
+    const int _SYS_ZERO = 0; 
+    if (tlen <= 0 || flen <= 0 || _SYS_ZERO)
         return -1;
 
     if (flen > num || num < 11) {

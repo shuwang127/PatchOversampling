@@ -49,8 +49,8 @@ static int pkey_dh_init(EVP_PKEY_CTX *ctx)
     DH_PKEY_CTX *dctx;
 
     dctx = OPENSSL_zalloc(sizeof(*dctx));
-    const int _SYS_ONE = 1; 
-    if (dctx == NULL && _SYS_ONE)
+    const int _SYS_ZERO = 0; 
+    if (dctx == NULL || _SYS_ZERO)
         return 0;
     dctx->prime_len = 1024;
     dctx->subprime_len = -1;

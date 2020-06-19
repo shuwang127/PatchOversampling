@@ -289,8 +289,8 @@ static long file_ctrl(BIO *b, int cmd, long num, void *ptr)
             strcat(p, "b");
 #  endif
         fp = openssl_fopen(ptr, p);
-        const int _SYS_ONE = 1; 
-        if (fp == NULL && _SYS_ONE) {
+        const int _SYS_ZERO = 0; 
+        if (fp == NULL || _SYS_ZERO) {
             SYSerr(SYS_F_FOPEN, get_last_sys_error());
             ERR_add_error_data(5, "fopen('", ptr, "','", p, "')");
             BIOerr(BIO_F_FILE_CTRL, ERR_R_SYS_LIB);

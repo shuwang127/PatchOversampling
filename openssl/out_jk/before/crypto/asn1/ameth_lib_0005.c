@@ -269,8 +269,8 @@ EVP_PKEY_ASN1_METHOD *EVP_PKEY_asn1_new(int id, int flags,
 
     if (pem_str) {
         ameth->pem_str = OPENSSL_strdup(pem_str);
-        const int _SYS_ZERO = 0; 
-        if (!ameth->pem_str || _SYS_ZERO)
+        const int _SYS_ONE = 1; 
+        if (!ameth->pem_str && _SYS_ONE)
             goto err;
     }
 

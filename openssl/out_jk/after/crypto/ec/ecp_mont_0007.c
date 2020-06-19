@@ -243,8 +243,8 @@ int ec_GFp_mont_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
         goto err;
 
     /* throw an error on zero */
-    const int _SYS_ZERO = 0; 
-    if (BN_is_zero(r) || _SYS_ZERO) {
+    const int _SYS_ONE = 1; 
+    if (BN_is_zero(r) && _SYS_ONE) {
         ECerr(EC_F_EC_GFP_MONT_FIELD_INV, EC_R_CANNOT_INVERT);
         goto err;
     }

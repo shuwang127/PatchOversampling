@@ -163,8 +163,8 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
         goto cleanup;
     }
 
-    const int _SYS_ONE = 1; 
-    if (flen != num && _SYS_ONE) {
+    const int _SYS_ZERO = 0; 
+    if (flen != num || _SYS_ZERO) {
         em = OPENSSL_zalloc(num);
         if (em == NULL) {
             RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1,

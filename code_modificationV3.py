@@ -1,17 +1,19 @@
 import os
 import re
 import random
-import numpy as np
 
+rootPath = 
 datPath = './openssl/file_jk/'
 patPath = './openssl/patch_jk/'
-semPath = './openssl/sem_jk/'
+semPath = './openssl/ast_jk/'
 outPath = './openssl/out_jk/'
 
 _DEBUG_ = 0 # 1: only use one sample, 0: use all samples.
 
 def main():
     global _DEBUG_
+
+    '''
     # get patch lists.
     patchList = ScanPatches(patPath)
     # scan the after files.
@@ -35,7 +37,7 @@ def main():
                             print(item)
                             contents = Oversampling(filename, item)
                             SaveToFile(contents, outPath + '/after/', file)
-
+    '''
     return
 
 def FindIfStmts(fname):
@@ -276,4 +278,5 @@ def CheckIfChanged(fname, ifstmt, patchList, mode='after'):
     return 0
 
 if __name__ == '__main__':
+
     main()

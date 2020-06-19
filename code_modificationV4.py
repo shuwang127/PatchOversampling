@@ -49,9 +49,9 @@ def GenerateASTs(dataPath, ASTsPath):
     '''
     Generate AST files from dataPath to ASTsPath.
     clang -fmodules -fsyntax-only -Xclang -ast-dump [dataPath]/**/**.c(pp)   1>[ASTsPath]/**/**.c(pp).txt  2>NUL
-    :param dataPath:
-    :param ASTPath:
-    :return:
+    :param dataPath: data path.
+    :param ASTPath: ast path.
+    :return: 0 if success.
     '''
 
     # print the arguments.

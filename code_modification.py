@@ -23,7 +23,7 @@ File Structure:
 Prerequirements:
     LLVM 10.0.0 (Download Link: http://www.llvm.org/releases/download.html)
 Usage:
-    python code_modificationV4.py
+    python code_modification.py
 '''
 
 import os

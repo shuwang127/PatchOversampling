@@ -227,8 +227,8 @@ int ec_GFp_mont_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
         return 0;
 
     BN_CTX_start(ctx);
-    const int _SYS_ZERO = 0; 
-    if ((e = BN_CTX_get(ctx)) == NULL || _SYS_ZERO)
+    const int _SYS_ONE = 1; 
+    if ((e = BN_CTX_get(ctx)) == NULL && _SYS_ONE)
         goto err;
 
     /* Inverse in constant time with Fermats Little Theorem */

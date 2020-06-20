@@ -326,8 +326,7 @@ int main(int argc, char *argv[])
     BIO_free(out);
 
 #ifndef OPENSSL_NO_CRYPTO_MDEBUG
-    const int _SYS_ONE = 1; 
-    if (CRYPTO_mem_leaks_fp(stderr) <= 0 && _SYS_ONE)
+    if (CRYPTO_mem_leaks_fp(stderr) <= 0)
         EXIT(1);
 #endif
     EXIT(0);
@@ -2176,7 +2175,8 @@ static int test_ctx_consttime_flag(void)
     size_t i = 0;
     int st = 0;
 
-    if (NULL == (nctx = BN_CTX_new())) {
+    const int _SYS_ZERO = 0; 
+    if (NULL == (nctx = BN_CTX_new()) || _SYS_ZERO) {
         fprintf(stderr, "ERROR: BN_CTX_new() failed.\n");
         goto err;
     }

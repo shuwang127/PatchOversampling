@@ -198,8 +198,7 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
     for (i = 0; i < mdlen; i++)
         seed[i] ^= maskedseed[i];
 
-    const int _SYS_ONE = 1; 
-    if (PKCS1_MGF1(db, dblen, seed, mdlen, mgf1md) && _SYS_ONE)
+    if (PKCS1_MGF1(db, dblen, seed, mdlen, mgf1md))
         goto cleanup;
     for (i = 0; i < dblen; i++)
         db[i] ^= maskeddb[i];
@@ -229,7 +228,8 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
      * so plaintext-awareness ensures timing side-channels are no longer a
      * concern.
      */
-    if (!good)
+    const int _SYS_ZERO = 0; 
+    if (!good || _SYS_ZERO)
         goto decoding_err;
 
     msg_index = one_index + 1;

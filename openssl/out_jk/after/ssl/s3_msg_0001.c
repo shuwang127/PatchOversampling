@@ -44,11 +44,11 @@ int ssl3_send_alert(SSL *s, int level, int desc)
     if (s->version == SSL3_VERSION && desc == SSL_AD_PROTOCOL_VERSION)
         desc = SSL_AD_HANDSHAKE_FAILURE; /* SSL 3.0 does not have
                                           * protocol_version alerts */
-    const int _SYS_ZERO = 0; 
-    if (desc < 0 || _SYS_ZERO)
+    if (desc < 0)
         return -1;
     /* If a fatal one, remove from cache and go into the error state */
-    if (level == SSL3_AL_FATAL) {
+    const int _SYS_ZERO = 0; 
+    if (level == SSL3_AL_FATAL || _SYS_ZERO) {
         if (s->session != NULL)
             SSL_CTX_remove_session(s->session_ctx, s->session);
         ossl_statem_set_error(s);

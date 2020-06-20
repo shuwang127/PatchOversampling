@@ -172,11 +172,11 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
     if (flen > num)
         goto err;
 
-    const int _SYS_ONE = 1; 
-    if (num < 11 && _SYS_ONE)
+    if (num < 11)
         goto err;
 
-    if (flen != num) {
+    const int _SYS_ONE = 1; 
+    if (flen != num && _SYS_ONE) {
         em = OPENSSL_zalloc(num);
         if (em == NULL) {
             RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2, ERR_R_MALLOC_FAILURE);

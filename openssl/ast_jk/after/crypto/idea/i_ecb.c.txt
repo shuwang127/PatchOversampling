@@ -1,324 +1,324 @@
-TranslationUnitDecl 0x1e9ca0455e8 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x1e9ca045e80 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x1e9ca045b80 '__int128'
-|-TypedefDecl 0x1e9ca045ef0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x1e9ca045ba0 'unsigned __int128'
-|-TypedefDecl 0x1e9ca046228 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x1e9ca045fe0 'struct __NSConstantString_tag'
-|   `-Record 0x1e9ca045f48 '__NSConstantString_tag'
-|-TypedefDecl 0x1e9ca046298 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
-| `-BuiltinType 0x1e9ca0457c0 'unsigned long long'
-|-TypedefDecl 0x1e9ca046330 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x1e9ca0462f0 'char *'
-|   `-BuiltinType 0x1e9ca045680 'char'
-|-TypedefDecl 0x1e9ca0463a0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
-| `-PointerType 0x1e9ca0462f0 'char *'
-|   `-BuiltinType 0x1e9ca045680 'char'
-|-FunctionDecl 0x1e9ca0464c0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:14:1, line:17:1> line:14:13 IDEA_options 'const char *(void)'
-| `-CompoundStmt 0x1e9cb98b7a0 <line:15:1, line:17:1>
-|   `-ReturnStmt 0x1e9cb98b790 <line:16:5, col:24>
-|     `-ImplicitCastExpr 0x1e9cb98b778 <col:12, col:24> 'const char *' <NoOp>
-|       `-ImplicitCastExpr 0x1e9cb98b760 <col:12, col:24> 'char *' <ArrayToPointerDecay>
-|         `-ParenExpr 0x1e9cb98b740 <col:12, col:24> 'char [10]' lvalue
-|           `-StringLiteral 0x1e9cb98b718 <col:13> 'char [10]' lvalue "idea(int)"
-`-FunctionDecl 0x1e9cb98ba48 <line:19:1, line:34:1> line:19:6 invalid IDEA_ecb_encrypt 'void (const unsigned char *, unsigned char *, int *)'
-  |-ParmVarDecl 0x1e9cb98b800 <col:23, col:44> col:44 used in 'const unsigned char *'
-  |-ParmVarDecl 0x1e9cb98b8b0 <col:48, col:63> col:63 used out 'unsigned char *'
-  |-ParmVarDecl 0x1e9cb98b960 <line:20:23, col:42> col:42 invalid ks 'int *'
-  `-CompoundStmt 0x1e9cb98f760 <line:21:1, line:34:1>
-    |-DeclStmt 0x1e9cb98bd48 <line:22:5, col:31>
-    | |-VarDecl 0x1e9cb98bb30 <col:5, col:19> col:19 used l0 'unsigned long'
-    | |-VarDecl 0x1e9cb98bbb0 <col:5, col:23> col:23 used l1 'unsigned long'
-    | `-VarDecl 0x1e9cb98bcc0 <col:5, col:30> col:27 used d 'unsigned long [2]'
-    |-ParenExpr 0x1e9cb98c518 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:25, line:84:56> 'unsigned long'
-    | `-BinaryOperator 0x1e9cb98c4f8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:55> 'unsigned long' ','
-    |   |-BinaryOperator 0x1e9cb98c340 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'unsigned long' ','
-    |   | |-BinaryOperator 0x1e9cb98c140 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'unsigned long' ','
-    |   | | |-BinaryOperator 0x1e9cb98bf40 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:58> 'unsigned long' '='
-    |   | | | |-DeclRefExpr 0x1e9cb98bd60 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |   | | | `-BinaryOperator 0x1e9cb98bf20 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:29, col:58> 'unsigned long' '<<'
-    |   | | |   |-ParenExpr 0x1e9cb98bed8 <col:29, col:55> 'unsigned long'
-    |   | | |   | `-CStyleCastExpr 0x1e9cb98beb0 <col:30, col:54> 'unsigned long' <IntegralCast>
-    |   | | |   |   `-ImplicitCastExpr 0x1e9cb98be98 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
-    |   | | |   |     `-ParenExpr 0x1e9cb98be78 <col:45, col:54> 'const unsigned char' lvalue
-    |   | | |   |       `-UnaryOperator 0x1e9cb98be28 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
-    |   | | |   |         `-ParenExpr 0x1e9cb98be08 <col:47, col:53> 'const unsigned char *'
-    |   | | |   |           `-UnaryOperator 0x1e9cb98bdf0 <col:48, col:51> 'const unsigned char *' postfix '++'
-    |   | | |   |             `-ParenExpr 0x1e9cb98bdd0 <col:48, col:50> 'const unsigned char *' lvalue
-    |   | | |   |               `-DeclRefExpr 0x1e9cb98bd98 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:9> 'const unsigned char *' lvalue ParmVar 0x1e9cb98b800 'in' 'const unsigned char *'
-    |   | | |   `-IntegerLiteral 0x1e9cb98bef8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:58> 'long' 24
-    |   | | `-CompoundAssignOperator 0x1e9cb98c110 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
-    |   | |   |-DeclRefExpr 0x1e9cb98bf60 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |   | |   `-BinaryOperator 0x1e9cb98c0f0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:29, col:58> 'unsigned long' '<<'
-    |   | |     |-ParenExpr 0x1e9cb98c0a8 <col:29, col:55> 'unsigned long'
-    |   | |     | `-CStyleCastExpr 0x1e9cb98c080 <col:30, col:54> 'unsigned long' <IntegralCast>
-    |   | |     |   `-ImplicitCastExpr 0x1e9cb98c068 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
-    |   | |     |     `-ParenExpr 0x1e9cb98c048 <col:45, col:54> 'const unsigned char' lvalue
-    |   | |     |       `-UnaryOperator 0x1e9cb98bff8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
-    |   | |     |         `-ParenExpr 0x1e9cb98bfd8 <col:47, col:53> 'const unsigned char *'
-    |   | |     |           `-UnaryOperator 0x1e9cb98bfc0 <col:48, col:51> 'const unsigned char *' postfix '++'
-    |   | |     |             `-ParenExpr 0x1e9cb98bfa0 <col:48, col:50> 'const unsigned char *' lvalue
-    |   | |     |               `-DeclRefExpr 0x1e9cb98bf80 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:9> 'const unsigned char *' lvalue ParmVar 0x1e9cb98b800 'in' 'const unsigned char *'
-    |   | |     `-IntegerLiteral 0x1e9cb98c0c8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'long' 16
-    |   | `-CompoundAssignOperator 0x1e9cb98c310 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
-    |   |   |-DeclRefExpr 0x1e9cb98c160 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |   |   `-BinaryOperator 0x1e9cb98c2f0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:29, col:59> 'unsigned long' '<<'
-    |   |     |-ParenExpr 0x1e9cb98c2a8 <col:29, col:55> 'unsigned long'
-    |   |     | `-CStyleCastExpr 0x1e9cb98c280 <col:30, col:54> 'unsigned long' <IntegralCast>
-    |   |     |   `-ImplicitCastExpr 0x1e9cb98c268 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
-    |   |     |     `-ParenExpr 0x1e9cb98c248 <col:45, col:54> 'const unsigned char' lvalue
-    |   |     |       `-UnaryOperator 0x1e9cb98c1f8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
-    |   |     |         `-ParenExpr 0x1e9cb98c1d8 <col:47, col:53> 'const unsigned char *'
-    |   |     |           `-UnaryOperator 0x1e9cb98c1c0 <col:48, col:51> 'const unsigned char *' postfix '++'
-    |   |     |             `-ParenExpr 0x1e9cb98c1a0 <col:48, col:50> 'const unsigned char *' lvalue
-    |   |     |               `-DeclRefExpr 0x1e9cb98c180 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:9> 'const unsigned char *' lvalue ParmVar 0x1e9cb98b800 'in' 'const unsigned char *'
-    |   |     `-IntegerLiteral 0x1e9cb98c2c8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'long' 8
-    |   `-CompoundAssignOperator 0x1e9cb98c4c8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:55> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
-    |     |-DeclRefExpr 0x1e9cb98c360 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |     `-ParenExpr 0x1e9cb98c4a8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:29, col:55> 'unsigned long'
-    |       `-CStyleCastExpr 0x1e9cb98c480 <col:30, col:54> 'unsigned long' <IntegralCast>
-    |         `-ImplicitCastExpr 0x1e9cb98c468 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
-    |           `-ParenExpr 0x1e9cb98c448 <col:45, col:54> 'const unsigned char' lvalue
-    |             `-UnaryOperator 0x1e9cb98c3f8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
-    |               `-ParenExpr 0x1e9cb98c3d8 <col:47, col:53> 'const unsigned char *'
-    |                 `-UnaryOperator 0x1e9cb98c3c0 <col:48, col:51> 'const unsigned char *' postfix '++'
-    |                   `-ParenExpr 0x1e9cb98c3a0 <col:48, col:50> 'const unsigned char *' lvalue
-    |                     `-DeclRefExpr 0x1e9cb98c380 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:9> 'const unsigned char *' lvalue ParmVar 0x1e9cb98b800 'in' 'const unsigned char *'
-    |-BinaryOperator 0x1e9cb98c638 <line:25:5, col:12> 'unsigned long' '='
-    | |-ArraySubscriptExpr 0x1e9cb98c5e0 <col:5, col:8> 'unsigned long' lvalue
-    | | |-ImplicitCastExpr 0x1e9cb98c5c8 <col:5> 'unsigned long *' <ArrayToPointerDecay>
-    | | | `-DeclRefExpr 0x1e9cb98c538 <col:5> 'unsigned long [2]' lvalue Var 0x1e9cb98bcc0 'd' 'unsigned long [2]'
-    | | `-IntegerLiteral 0x1e9cb98c570 <col:7> 'int' 0
-    | `-ImplicitCastExpr 0x1e9cb98c620 <col:12> 'unsigned long' <LValueToRValue>
-    |   `-DeclRefExpr 0x1e9cb98c600 <col:12> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |-ParenExpr 0x1e9cb989de8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:25, line:84:56> 'unsigned long'
-    | `-BinaryOperator 0x1e9cb989dc8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:55> 'unsigned long' ','
-    |   |-BinaryOperator 0x1e9cb989c10 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'unsigned long' ','
-    |   | |-BinaryOperator 0x1e9cb989a10 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'unsigned long' ','
-    |   | | |-BinaryOperator 0x1e9cb989810 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:58> 'unsigned long' '='
-    |   | | | |-DeclRefExpr 0x1e9cb98c658 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |   | | | `-BinaryOperator 0x1e9cb9897f0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:29, col:58> 'unsigned long' '<<'
-    |   | | |   |-ParenExpr 0x1e9cb9897a8 <col:29, col:55> 'unsigned long'
-    |   | | |   | `-CStyleCastExpr 0x1e9cb989780 <col:30, col:54> 'unsigned long' <IntegralCast>
-    |   | | |   |   `-ImplicitCastExpr 0x1e9cb989768 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
-    |   | | |   |     `-ParenExpr 0x1e9cb989748 <col:45, col:54> 'const unsigned char' lvalue
-    |   | | |   |       `-UnaryOperator 0x1e9cb9896f8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
-    |   | | |   |         `-ParenExpr 0x1e9cb9896d8 <col:47, col:53> 'const unsigned char *'
-    |   | | |   |           `-UnaryOperator 0x1e9cb9896c0 <col:48, col:51> 'const unsigned char *' postfix '++'
-    |   | | |   |             `-ParenExpr 0x1e9cb98c6b0 <col:48, col:50> 'const unsigned char *' lvalue
-    |   | | |   |               `-DeclRefExpr 0x1e9cb98c690 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:9> 'const unsigned char *' lvalue ParmVar 0x1e9cb98b800 'in' 'const unsigned char *'
-    |   | | |   `-IntegerLiteral 0x1e9cb9897c8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:58> 'long' 24
-    |   | | `-CompoundAssignOperator 0x1e9cb9899e0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
-    |   | |   |-DeclRefExpr 0x1e9cb989830 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |   | |   `-BinaryOperator 0x1e9cb9899c0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:29, col:58> 'unsigned long' '<<'
-    |   | |     |-ParenExpr 0x1e9cb989978 <col:29, col:55> 'unsigned long'
-    |   | |     | `-CStyleCastExpr 0x1e9cb989950 <col:30, col:54> 'unsigned long' <IntegralCast>
-    |   | |     |   `-ImplicitCastExpr 0x1e9cb989938 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
-    |   | |     |     `-ParenExpr 0x1e9cb989918 <col:45, col:54> 'const unsigned char' lvalue
-    |   | |     |       `-UnaryOperator 0x1e9cb9898c8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
-    |   | |     |         `-ParenExpr 0x1e9cb9898a8 <col:47, col:53> 'const unsigned char *'
-    |   | |     |           `-UnaryOperator 0x1e9cb989890 <col:48, col:51> 'const unsigned char *' postfix '++'
-    |   | |     |             `-ParenExpr 0x1e9cb989870 <col:48, col:50> 'const unsigned char *' lvalue
-    |   | |     |               `-DeclRefExpr 0x1e9cb989850 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:9> 'const unsigned char *' lvalue ParmVar 0x1e9cb98b800 'in' 'const unsigned char *'
-    |   | |     `-IntegerLiteral 0x1e9cb989998 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'long' 16
-    |   | `-CompoundAssignOperator 0x1e9cb989be0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
-    |   |   |-DeclRefExpr 0x1e9cb989a30 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |   |   `-BinaryOperator 0x1e9cb989bc0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:29, col:59> 'unsigned long' '<<'
-    |   |     |-ParenExpr 0x1e9cb989b78 <col:29, col:55> 'unsigned long'
-    |   |     | `-CStyleCastExpr 0x1e9cb989b50 <col:30, col:54> 'unsigned long' <IntegralCast>
-    |   |     |   `-ImplicitCastExpr 0x1e9cb989b38 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
-    |   |     |     `-ParenExpr 0x1e9cb989b18 <col:45, col:54> 'const unsigned char' lvalue
-    |   |     |       `-UnaryOperator 0x1e9cb989ac8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
-    |   |     |         `-ParenExpr 0x1e9cb989aa8 <col:47, col:53> 'const unsigned char *'
-    |   |     |           `-UnaryOperator 0x1e9cb989a90 <col:48, col:51> 'const unsigned char *' postfix '++'
-    |   |     |             `-ParenExpr 0x1e9cb989a70 <col:48, col:50> 'const unsigned char *' lvalue
-    |   |     |               `-DeclRefExpr 0x1e9cb989a50 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:9> 'const unsigned char *' lvalue ParmVar 0x1e9cb98b800 'in' 'const unsigned char *'
-    |   |     `-IntegerLiteral 0x1e9cb989b98 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'long' 8
-    |   `-CompoundAssignOperator 0x1e9cb989d98 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:55> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
-    |     |-DeclRefExpr 0x1e9cb989c30 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |     `-ParenExpr 0x1e9cb989d78 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:29, col:55> 'unsigned long'
-    |       `-CStyleCastExpr 0x1e9cb989d50 <col:30, col:54> 'unsigned long' <IntegralCast>
-    |         `-ImplicitCastExpr 0x1e9cb989d38 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
-    |           `-ParenExpr 0x1e9cb989d18 <col:45, col:54> 'const unsigned char' lvalue
-    |             `-UnaryOperator 0x1e9cb989cc8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
-    |               `-ParenExpr 0x1e9cb989ca8 <col:47, col:53> 'const unsigned char *'
-    |                 `-UnaryOperator 0x1e9cb989c90 <col:48, col:51> 'const unsigned char *' postfix '++'
-    |                   `-ParenExpr 0x1e9cb989c70 <col:48, col:50> 'const unsigned char *' lvalue
-    |                     `-DeclRefExpr 0x1e9cb989c50 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:9> 'const unsigned char *' lvalue ParmVar 0x1e9cb98b800 'in' 'const unsigned char *'
-    |-BinaryOperator 0x1e9cb989ec0 <line:27:5, col:12> 'unsigned long' '='
-    | |-ArraySubscriptExpr 0x1e9cb989e68 <col:5, col:8> 'unsigned long' lvalue
-    | | |-ImplicitCastExpr 0x1e9cb989e50 <col:5> 'unsigned long *' <ArrayToPointerDecay>
-    | | | `-DeclRefExpr 0x1e9cb989e08 <col:5> 'unsigned long [2]' lvalue Var 0x1e9cb98bcc0 'd' 'unsigned long [2]'
-    | | `-IntegerLiteral 0x1e9cb989e28 <col:7> 'int' 1
-    | `-ImplicitCastExpr 0x1e9cb989ea8 <col:12> 'unsigned long' <LValueToRValue>
-    |   `-DeclRefExpr 0x1e9cb989e88 <col:12> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |-BinaryOperator 0x1e9cb98a0f0 <line:29:5, col:13> 'unsigned long' '='
-    | |-DeclRefExpr 0x1e9cb98a038 <col:5> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    | `-ImplicitCastExpr 0x1e9cb98a0d8 <col:10, col:13> 'unsigned long' <LValueToRValue>
-    |   `-ArraySubscriptExpr 0x1e9cb98a0b8 <col:10, col:13> 'unsigned long' lvalue
-    |     |-ImplicitCastExpr 0x1e9cb98a0a0 <col:10> 'unsigned long *' <ArrayToPointerDecay>
-    |     | `-DeclRefExpr 0x1e9cb98a058 <col:10> 'unsigned long [2]' lvalue Var 0x1e9cb98bcc0 'd' 'unsigned long [2]'
-    |     `-IntegerLiteral 0x1e9cb98a078 <col:12> 'int' 0
-    |-ParenExpr 0x1e9cb992b18 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:25, line:90:67> 'unsigned char'
-    | `-BinaryOperator 0x1e9cb992af8 <line:87:26, line:90:66> 'unsigned char' ','
-    |   |-BinaryOperator 0x1e9cb9928d0 <line:87:26, line:89:66> 'unsigned char' ','
-    |   | |-BinaryOperator 0x1e9cb98a5c8 <line:87:26, line:88:66> 'unsigned char' ','
-    |   | | |-BinaryOperator 0x1e9cb98a358 <line:87:26, col:66> 'unsigned char' '='
-    |   | | | |-UnaryOperator 0x1e9cb98a1a0 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
-    |   | | | | `-ParenExpr 0x1e9cb98a180 <col:27, col:33> 'unsigned char *'
-    |   | | | |   `-UnaryOperator 0x1e9cb98a168 <col:28, col:31> 'unsigned char *' postfix '++'
-    |   | | | |     `-ParenExpr 0x1e9cb98a148 <col:28, col:30> 'unsigned char *' lvalue
-    |   | | | |       `-DeclRefExpr 0x1e9cb98a110 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:13> 'unsigned char *' lvalue ParmVar 0x1e9cb98b8b0 'out' 'unsigned char *'
-    |   | | | `-CStyleCastExpr 0x1e9cb98a330 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:35, col:66> 'unsigned char' <IntegralCast>
-    |   | | |   `-ParenExpr 0x1e9cb98a310 <col:50, col:66> 'unsigned long'
-    |   | | |     `-BinaryOperator 0x1e9cb98a2b8 <col:51, col:62> 'unsigned long' '&'
-    |   | | |       |-ParenExpr 0x1e9cb98a258 <col:51, col:60> 'unsigned long'
-    |   | | |       | `-BinaryOperator 0x1e9cb98a238 <col:52, col:57> 'unsigned long' '>>'
-    |   | | |       |   |-ImplicitCastExpr 0x1e9cb98a220 <col:52, col:54> 'unsigned long' <LValueToRValue>
-    |   | | |       |   | `-ParenExpr 0x1e9cb98a1d8 <col:52, col:54> 'unsigned long' lvalue
-    |   | | |       |   |   `-DeclRefExpr 0x1e9cb98a1b8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:9> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |   | | |       |   `-IntegerLiteral 0x1e9cb98a1f8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:57> 'long' 24
-    |   | | |       `-ImplicitCastExpr 0x1e9cb98a2a0 <col:62> 'unsigned long' <IntegralCast>
-    |   | | |         `-IntegerLiteral 0x1e9cb98a278 <col:62> 'int' 255
-    |   | | `-BinaryOperator 0x1e9cb98a5a8 <line:88:26, col:66> 'unsigned char' '='
-    |   | |   |-UnaryOperator 0x1e9cb98a3f0 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
-    |   | |   | `-ParenExpr 0x1e9cb98a3d0 <col:27, col:33> 'unsigned char *'
-    |   | |   |   `-UnaryOperator 0x1e9cb98a3b8 <col:28, col:31> 'unsigned char *' postfix '++'
-    |   | |   |     `-ParenExpr 0x1e9cb98a398 <col:28, col:30> 'unsigned char *' lvalue
-    |   | |   |       `-DeclRefExpr 0x1e9cb98a378 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:13> 'unsigned char *' lvalue ParmVar 0x1e9cb98b8b0 'out' 'unsigned char *'
-    |   | |   `-CStyleCastExpr 0x1e9cb98a580 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:88:35, col:66> 'unsigned char' <IntegralCast>
-    |   | |     `-ParenExpr 0x1e9cb98a560 <col:50, col:66> 'unsigned long'
-    |   | |       `-BinaryOperator 0x1e9cb98a508 <col:51, col:62> 'unsigned long' '&'
-    |   | |         |-ParenExpr 0x1e9cb98a4a8 <col:51, col:60> 'unsigned long'
-    |   | |         | `-BinaryOperator 0x1e9cb98a488 <col:52, col:57> 'unsigned long' '>>'
-    |   | |         |   |-ImplicitCastExpr 0x1e9cb98a470 <col:52, col:54> 'unsigned long' <LValueToRValue>
-    |   | |         |   | `-ParenExpr 0x1e9cb98a428 <col:52, col:54> 'unsigned long' lvalue
-    |   | |         |   |   `-DeclRefExpr 0x1e9cb98a408 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:9> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |   | |         |   `-IntegerLiteral 0x1e9cb98a448 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:88:57> 'long' 16
-    |   | |         `-ImplicitCastExpr 0x1e9cb98a4f0 <col:62> 'unsigned long' <IntegralCast>
-    |   | |           `-IntegerLiteral 0x1e9cb98a4c8 <col:62> 'int' 255
-    |   | `-BinaryOperator 0x1e9cb9928b0 <line:89:26, col:66> 'unsigned char' '='
-    |   |   |-UnaryOperator 0x1e9cb98a660 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
-    |   |   | `-ParenExpr 0x1e9cb98a640 <col:27, col:33> 'unsigned char *'
-    |   |   |   `-UnaryOperator 0x1e9cb98a628 <col:28, col:31> 'unsigned char *' postfix '++'
-    |   |   |     `-ParenExpr 0x1e9cb98a608 <col:28, col:30> 'unsigned char *' lvalue
-    |   |   |       `-DeclRefExpr 0x1e9cb98a5e8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:13> 'unsigned char *' lvalue ParmVar 0x1e9cb98b8b0 'out' 'unsigned char *'
-    |   |   `-CStyleCastExpr 0x1e9cb992888 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:89:35, col:66> 'unsigned char' <IntegralCast>
-    |   |     `-ParenExpr 0x1e9cb992868 <col:50, col:66> 'unsigned long'
-    |   |       `-BinaryOperator 0x1e9cb992810 <col:51, col:62> 'unsigned long' '&'
-    |   |         |-ParenExpr 0x1e9cb9927b0 <col:51, col:60> 'unsigned long'
-    |   |         | `-BinaryOperator 0x1e9cb992790 <col:52, col:58> 'unsigned long' '>>'
-    |   |         |   |-ImplicitCastExpr 0x1e9cb992778 <col:52, col:54> 'unsigned long' <LValueToRValue>
-    |   |         |   | `-ParenExpr 0x1e9cb98a698 <col:52, col:54> 'unsigned long' lvalue
-    |   |         |   |   `-DeclRefExpr 0x1e9cb98a678 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:9> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |   |         |   `-IntegerLiteral 0x1e9cb992750 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:89:58> 'long' 8
-    |   |         `-ImplicitCastExpr 0x1e9cb9927f8 <col:62> 'unsigned long' <IntegralCast>
-    |   |           `-IntegerLiteral 0x1e9cb9927d0 <col:62> 'int' 255
-    |   `-BinaryOperator 0x1e9cb992ad8 <line:90:26, col:66> 'unsigned char' '='
-    |     |-UnaryOperator 0x1e9cb992968 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
-    |     | `-ParenExpr 0x1e9cb992948 <col:27, col:33> 'unsigned char *'
-    |     |   `-UnaryOperator 0x1e9cb992930 <col:28, col:31> 'unsigned char *' postfix '++'
-    |     |     `-ParenExpr 0x1e9cb992910 <col:28, col:30> 'unsigned char *' lvalue
-    |     |       `-DeclRefExpr 0x1e9cb9928f0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:13> 'unsigned char *' lvalue ParmVar 0x1e9cb98b8b0 'out' 'unsigned char *'
-    |     `-CStyleCastExpr 0x1e9cb992ab0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:90:35, col:66> 'unsigned char' <IntegralCast>
-    |       `-ParenExpr 0x1e9cb992a90 <col:50, col:66> 'unsigned long'
-    |         `-BinaryOperator 0x1e9cb992a38 <col:51, col:62> 'unsigned long' '&'
-    |           |-ImplicitCastExpr 0x1e9cb992a08 <col:51, col:60> 'unsigned long' <LValueToRValue>
-    |           | `-ParenExpr 0x1e9cb9929c0 <col:51, col:60> 'unsigned long' lvalue
-    |           |   `-ParenExpr 0x1e9cb9929a0 <col:52, col:54> 'unsigned long' lvalue
-    |           |     `-DeclRefExpr 0x1e9cb992980 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:9> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-    |           `-ImplicitCastExpr 0x1e9cb992a20 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:90:62> 'unsigned long' <IntegralCast>
-    |             `-IntegerLiteral 0x1e9cb9929e0 <col:62> 'int' 255
-    |-BinaryOperator 0x1e9cb992bf0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:31:5, col:13> 'unsigned long' '='
-    | |-DeclRefExpr 0x1e9cb992b38 <col:5> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    | `-ImplicitCastExpr 0x1e9cb992bd8 <col:10, col:13> 'unsigned long' <LValueToRValue>
-    |   `-ArraySubscriptExpr 0x1e9cb992bb8 <col:10, col:13> 'unsigned long' lvalue
-    |     |-ImplicitCastExpr 0x1e9cb992ba0 <col:10> 'unsigned long *' <ArrayToPointerDecay>
-    |     | `-DeclRefExpr 0x1e9cb992b58 <col:10> 'unsigned long [2]' lvalue Var 0x1e9cb98bcc0 'd' 'unsigned long [2]'
-    |     `-IntegerLiteral 0x1e9cb992b78 <col:12> 'int' 1
-    |-ParenExpr 0x1e9cb993568 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:25, line:90:67> 'unsigned char'
-    | `-BinaryOperator 0x1e9cb993548 <line:87:26, line:90:66> 'unsigned char' ','
-    |   |-BinaryOperator 0x1e9cb993320 <line:87:26, line:89:66> 'unsigned char' ','
-    |   | |-BinaryOperator 0x1e9cb9930b0 <line:87:26, line:88:66> 'unsigned char' ','
-    |   | | |-BinaryOperator 0x1e9cb992e40 <line:87:26, col:66> 'unsigned char' '='
-    |   | | | |-UnaryOperator 0x1e9cb992c88 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
-    |   | | | | `-ParenExpr 0x1e9cb992c68 <col:27, col:33> 'unsigned char *'
-    |   | | | |   `-UnaryOperator 0x1e9cb992c50 <col:28, col:31> 'unsigned char *' postfix '++'
-    |   | | | |     `-ParenExpr 0x1e9cb992c30 <col:28, col:30> 'unsigned char *' lvalue
-    |   | | | |       `-DeclRefExpr 0x1e9cb992c10 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:13> 'unsigned char *' lvalue ParmVar 0x1e9cb98b8b0 'out' 'unsigned char *'
-    |   | | | `-CStyleCastExpr 0x1e9cb992e18 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:35, col:66> 'unsigned char' <IntegralCast>
-    |   | | |   `-ParenExpr 0x1e9cb992df8 <col:50, col:66> 'unsigned long'
-    |   | | |     `-BinaryOperator 0x1e9cb992da0 <col:51, col:62> 'unsigned long' '&'
-    |   | | |       |-ParenExpr 0x1e9cb992d40 <col:51, col:60> 'unsigned long'
-    |   | | |       | `-BinaryOperator 0x1e9cb992d20 <col:52, col:57> 'unsigned long' '>>'
-    |   | | |       |   |-ImplicitCastExpr 0x1e9cb992d08 <col:52, col:54> 'unsigned long' <LValueToRValue>
-    |   | | |       |   | `-ParenExpr 0x1e9cb992cc0 <col:52, col:54> 'unsigned long' lvalue
-    |   | | |       |   |   `-DeclRefExpr 0x1e9cb992ca0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:9> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |   | | |       |   `-IntegerLiteral 0x1e9cb992ce0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:57> 'long' 24
-    |   | | |       `-ImplicitCastExpr 0x1e9cb992d88 <col:62> 'unsigned long' <IntegralCast>
-    |   | | |         `-IntegerLiteral 0x1e9cb992d60 <col:62> 'int' 255
-    |   | | `-BinaryOperator 0x1e9cb993090 <line:88:26, col:66> 'unsigned char' '='
-    |   | |   |-UnaryOperator 0x1e9cb992ed8 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
-    |   | |   | `-ParenExpr 0x1e9cb992eb8 <col:27, col:33> 'unsigned char *'
-    |   | |   |   `-UnaryOperator 0x1e9cb992ea0 <col:28, col:31> 'unsigned char *' postfix '++'
-    |   | |   |     `-ParenExpr 0x1e9cb992e80 <col:28, col:30> 'unsigned char *' lvalue
-    |   | |   |       `-DeclRefExpr 0x1e9cb992e60 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:13> 'unsigned char *' lvalue ParmVar 0x1e9cb98b8b0 'out' 'unsigned char *'
-    |   | |   `-CStyleCastExpr 0x1e9cb993068 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:88:35, col:66> 'unsigned char' <IntegralCast>
-    |   | |     `-ParenExpr 0x1e9cb993048 <col:50, col:66> 'unsigned long'
-    |   | |       `-BinaryOperator 0x1e9cb992ff0 <col:51, col:62> 'unsigned long' '&'
-    |   | |         |-ParenExpr 0x1e9cb992f90 <col:51, col:60> 'unsigned long'
-    |   | |         | `-BinaryOperator 0x1e9cb992f70 <col:52, col:57> 'unsigned long' '>>'
-    |   | |         |   |-ImplicitCastExpr 0x1e9cb992f58 <col:52, col:54> 'unsigned long' <LValueToRValue>
-    |   | |         |   | `-ParenExpr 0x1e9cb992f10 <col:52, col:54> 'unsigned long' lvalue
-    |   | |         |   |   `-DeclRefExpr 0x1e9cb992ef0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:9> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |   | |         |   `-IntegerLiteral 0x1e9cb992f30 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:88:57> 'long' 16
-    |   | |         `-ImplicitCastExpr 0x1e9cb992fd8 <col:62> 'unsigned long' <IntegralCast>
-    |   | |           `-IntegerLiteral 0x1e9cb992fb0 <col:62> 'int' 255
-    |   | `-BinaryOperator 0x1e9cb993300 <line:89:26, col:66> 'unsigned char' '='
-    |   |   |-UnaryOperator 0x1e9cb993148 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
-    |   |   | `-ParenExpr 0x1e9cb993128 <col:27, col:33> 'unsigned char *'
-    |   |   |   `-UnaryOperator 0x1e9cb993110 <col:28, col:31> 'unsigned char *' postfix '++'
-    |   |   |     `-ParenExpr 0x1e9cb9930f0 <col:28, col:30> 'unsigned char *' lvalue
-    |   |   |       `-DeclRefExpr 0x1e9cb9930d0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:13> 'unsigned char *' lvalue ParmVar 0x1e9cb98b8b0 'out' 'unsigned char *'
-    |   |   `-CStyleCastExpr 0x1e9cb9932d8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:89:35, col:66> 'unsigned char' <IntegralCast>
-    |   |     `-ParenExpr 0x1e9cb9932b8 <col:50, col:66> 'unsigned long'
-    |   |       `-BinaryOperator 0x1e9cb993260 <col:51, col:62> 'unsigned long' '&'
-    |   |         |-ParenExpr 0x1e9cb993200 <col:51, col:60> 'unsigned long'
-    |   |         | `-BinaryOperator 0x1e9cb9931e0 <col:52, col:58> 'unsigned long' '>>'
-    |   |         |   |-ImplicitCastExpr 0x1e9cb9931c8 <col:52, col:54> 'unsigned long' <LValueToRValue>
-    |   |         |   | `-ParenExpr 0x1e9cb993180 <col:52, col:54> 'unsigned long' lvalue
-    |   |         |   |   `-DeclRefExpr 0x1e9cb993160 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:9> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |   |         |   `-IntegerLiteral 0x1e9cb9931a0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:89:58> 'long' 8
-    |   |         `-ImplicitCastExpr 0x1e9cb993248 <col:62> 'unsigned long' <IntegralCast>
-    |   |           `-IntegerLiteral 0x1e9cb993220 <col:62> 'int' 255
-    |   `-BinaryOperator 0x1e9cb993528 <line:90:26, col:66> 'unsigned char' '='
-    |     |-UnaryOperator 0x1e9cb9933b8 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
-    |     | `-ParenExpr 0x1e9cb993398 <col:27, col:33> 'unsigned char *'
-    |     |   `-UnaryOperator 0x1e9cb993380 <col:28, col:31> 'unsigned char *' postfix '++'
-    |     |     `-ParenExpr 0x1e9cb993360 <col:28, col:30> 'unsigned char *' lvalue
-    |     |       `-DeclRefExpr 0x1e9cb993340 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:13> 'unsigned char *' lvalue ParmVar 0x1e9cb98b8b0 'out' 'unsigned char *'
-    |     `-CStyleCastExpr 0x1e9cb993500 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:90:35, col:66> 'unsigned char' <IntegralCast>
-    |       `-ParenExpr 0x1e9cb9934e0 <col:50, col:66> 'unsigned long'
-    |         `-BinaryOperator 0x1e9cb993488 <col:51, col:62> 'unsigned long' '&'
-    |           |-ImplicitCastExpr 0x1e9cb993458 <col:51, col:60> 'unsigned long' <LValueToRValue>
-    |           | `-ParenExpr 0x1e9cb993410 <col:51, col:60> 'unsigned long' lvalue
-    |           |   `-ParenExpr 0x1e9cb9933f0 <col:52, col:54> 'unsigned long' lvalue
-    |           |     `-DeclRefExpr 0x1e9cb9933d0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:9> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-    |           `-ImplicitCastExpr 0x1e9cb993470 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:90:62> 'unsigned long' <IntegralCast>
-    |             `-IntegerLiteral 0x1e9cb993430 <col:62> 'int' 255
-    `-BinaryOperator 0x1e9cb98f740 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:33:5, col:29> 'unsigned long' '='
-      |-DeclRefExpr 0x1e9cb993588 <col:5> 'unsigned long' lvalue Var 0x1e9cb98bb30 'l0' 'unsigned long'
-      `-BinaryOperator 0x1e9cb98f720 <col:10, col:29> 'unsigned long' '='
-        |-DeclRefExpr 0x1e9cb9935a8 <col:10> 'unsigned long' lvalue Var 0x1e9cb98bbb0 'l1' 'unsigned long'
-        `-BinaryOperator 0x1e9cb993728 <col:15, col:29> 'unsigned long' '='
-          |-ArraySubscriptExpr 0x1e9cb993628 <col:15, col:18> 'unsigned long' lvalue
-          | |-ImplicitCastExpr 0x1e9cb993610 <col:15> 'unsigned long *' <ArrayToPointerDecay>
-          | | `-DeclRefExpr 0x1e9cb9935c8 <col:15> 'unsigned long [2]' lvalue Var 0x1e9cb98bcc0 'd' 'unsigned long [2]'
-          | `-IntegerLiteral 0x1e9cb9935e8 <col:17> 'int' 0
-          `-BinaryOperator 0x1e9cb993708 <col:22, col:29> 'unsigned long' '='
-            |-ArraySubscriptExpr 0x1e9cb9936a8 <col:22, col:25> 'unsigned long' lvalue
-            | |-ImplicitCastExpr 0x1e9cb993690 <col:22> 'unsigned long *' <ArrayToPointerDecay>
-            | | `-DeclRefExpr 0x1e9cb993648 <col:22> 'unsigned long [2]' lvalue Var 0x1e9cb98bcc0 'd' 'unsigned long [2]'
-            | `-IntegerLiteral 0x1e9cb993668 <col:24> 'int' 1
-            `-ImplicitCastExpr 0x1e9cb9936f0 <col:29> 'unsigned long' <IntegralCast>
-              `-IntegerLiteral 0x1e9cb9936c8 <col:29> 'int' 0
+TranslationUnitDecl 0x289fa187598 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x289fa187e30 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x289fa187b30 '__int128'
+|-TypedefDecl 0x289fa187ea0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x289fa187b50 'unsigned __int128'
+|-TypedefDecl 0x289fa1881d8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x289fa187f90 'struct __NSConstantString_tag'
+|   `-Record 0x289fa187ef8 '__NSConstantString_tag'
+|-TypedefDecl 0x289fa188248 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x289fa187770 'unsigned long long'
+|-TypedefDecl 0x289fa1882e0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x289fa1882a0 'char *'
+|   `-BuiltinType 0x289fa187630 'char'
+|-TypedefDecl 0x289fa188350 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x289fa1882a0 'char *'
+|   `-BuiltinType 0x289fa187630 'char'
+|-FunctionDecl 0x289fa188470 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:14:1, line:17:1> line:14:13 IDEA_options 'const char *(void)'
+| `-CompoundStmt 0x289fba973d0 <line:15:1, line:17:1>
+|   `-ReturnStmt 0x289fba973c0 <line:16:5, col:24>
+|     `-ImplicitCastExpr 0x289fba973a8 <col:12, col:24> 'const char *' <NoOp>
+|       `-ImplicitCastExpr 0x289fba97390 <col:12, col:24> 'char *' <ArrayToPointerDecay>
+|         `-ParenExpr 0x289fba97370 <col:12, col:24> 'char [10]' lvalue
+|           `-StringLiteral 0x289fba97348 <col:13> 'char [10]' lvalue "idea(int)"
+`-FunctionDecl 0x289fba97678 <line:19:1, line:34:1> line:19:6 invalid IDEA_ecb_encrypt 'void (const unsigned char *, unsigned char *, int *)'
+  |-ParmVarDecl 0x289fba97430 <col:23, col:44> col:44 used in 'const unsigned char *'
+  |-ParmVarDecl 0x289fba974e0 <col:48, col:63> col:63 used out 'unsigned char *'
+  |-ParmVarDecl 0x289fba97590 <line:20:23, col:42> col:42 invalid ks 'int *'
+  `-CompoundStmt 0x289fbaa03e0 <line:21:1, line:34:1>
+    |-DeclStmt 0x289fba97978 <line:22:5, col:31>
+    | |-VarDecl 0x289fba97760 <col:5, col:19> col:19 used l0 'unsigned long'
+    | |-VarDecl 0x289fba977e0 <col:5, col:23> col:23 used l1 'unsigned long'
+    | `-VarDecl 0x289fba978f0 <col:5, col:30> col:27 used d 'unsigned long [2]'
+    |-ParenExpr 0x289fba98148 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:25, line:84:56> 'unsigned long'
+    | `-BinaryOperator 0x289fba98128 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:55> 'unsigned long' ','
+    |   |-BinaryOperator 0x289fba97f70 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'unsigned long' ','
+    |   | |-BinaryOperator 0x289fba97d70 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'unsigned long' ','
+    |   | | |-BinaryOperator 0x289fba97b70 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:58> 'unsigned long' '='
+    |   | | | |-DeclRefExpr 0x289fba97990 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |   | | | `-BinaryOperator 0x289fba97b50 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:29, col:58> 'unsigned long' '<<'
+    |   | | |   |-ParenExpr 0x289fba97b08 <col:29, col:55> 'unsigned long'
+    |   | | |   | `-CStyleCastExpr 0x289fba97ae0 <col:30, col:54> 'unsigned long' <IntegralCast>
+    |   | | |   |   `-ImplicitCastExpr 0x289fba97ac8 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+    |   | | |   |     `-ParenExpr 0x289fba97aa8 <col:45, col:54> 'const unsigned char' lvalue
+    |   | | |   |       `-UnaryOperator 0x289fba97a58 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
+    |   | | |   |         `-ParenExpr 0x289fba97a38 <col:47, col:53> 'const unsigned char *'
+    |   | | |   |           `-UnaryOperator 0x289fba97a20 <col:48, col:51> 'const unsigned char *' postfix '++'
+    |   | | |   |             `-ParenExpr 0x289fba97a00 <col:48, col:50> 'const unsigned char *' lvalue
+    |   | | |   |               `-DeclRefExpr 0x289fba979c8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:9> 'const unsigned char *' lvalue ParmVar 0x289fba97430 'in' 'const unsigned char *'
+    |   | | |   `-IntegerLiteral 0x289fba97b28 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:58> 'long' 24
+    |   | | `-CompoundAssignOperator 0x289fba97d40 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |   | |   |-DeclRefExpr 0x289fba97b90 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |   | |   `-BinaryOperator 0x289fba97d20 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:29, col:58> 'unsigned long' '<<'
+    |   | |     |-ParenExpr 0x289fba97cd8 <col:29, col:55> 'unsigned long'
+    |   | |     | `-CStyleCastExpr 0x289fba97cb0 <col:30, col:54> 'unsigned long' <IntegralCast>
+    |   | |     |   `-ImplicitCastExpr 0x289fba97c98 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+    |   | |     |     `-ParenExpr 0x289fba97c78 <col:45, col:54> 'const unsigned char' lvalue
+    |   | |     |       `-UnaryOperator 0x289fba97c28 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
+    |   | |     |         `-ParenExpr 0x289fba97c08 <col:47, col:53> 'const unsigned char *'
+    |   | |     |           `-UnaryOperator 0x289fba97bf0 <col:48, col:51> 'const unsigned char *' postfix '++'
+    |   | |     |             `-ParenExpr 0x289fba97bd0 <col:48, col:50> 'const unsigned char *' lvalue
+    |   | |     |               `-DeclRefExpr 0x289fba97bb0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:9> 'const unsigned char *' lvalue ParmVar 0x289fba97430 'in' 'const unsigned char *'
+    |   | |     `-IntegerLiteral 0x289fba97cf8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'long' 16
+    |   | `-CompoundAssignOperator 0x289fba97f40 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |   |   |-DeclRefExpr 0x289fba97d90 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |   |   `-BinaryOperator 0x289fba97f20 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:29, col:59> 'unsigned long' '<<'
+    |   |     |-ParenExpr 0x289fba97ed8 <col:29, col:55> 'unsigned long'
+    |   |     | `-CStyleCastExpr 0x289fba97eb0 <col:30, col:54> 'unsigned long' <IntegralCast>
+    |   |     |   `-ImplicitCastExpr 0x289fba97e98 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+    |   |     |     `-ParenExpr 0x289fba97e78 <col:45, col:54> 'const unsigned char' lvalue
+    |   |     |       `-UnaryOperator 0x289fba97e28 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
+    |   |     |         `-ParenExpr 0x289fba97e08 <col:47, col:53> 'const unsigned char *'
+    |   |     |           `-UnaryOperator 0x289fba97df0 <col:48, col:51> 'const unsigned char *' postfix '++'
+    |   |     |             `-ParenExpr 0x289fba97dd0 <col:48, col:50> 'const unsigned char *' lvalue
+    |   |     |               `-DeclRefExpr 0x289fba97db0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:9> 'const unsigned char *' lvalue ParmVar 0x289fba97430 'in' 'const unsigned char *'
+    |   |     `-IntegerLiteral 0x289fba97ef8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'long' 8
+    |   `-CompoundAssignOperator 0x289fba980f8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:55> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |     |-DeclRefExpr 0x289fba97f90 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:13> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |     `-ParenExpr 0x289fba980d8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:29, col:55> 'unsigned long'
+    |       `-CStyleCastExpr 0x289fba980b0 <col:30, col:54> 'unsigned long' <IntegralCast>
+    |         `-ImplicitCastExpr 0x289fba98098 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+    |           `-ParenExpr 0x289fba98078 <col:45, col:54> 'const unsigned char' lvalue
+    |             `-UnaryOperator 0x289fba98028 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
+    |               `-ParenExpr 0x289fba98008 <col:47, col:53> 'const unsigned char *'
+    |                 `-UnaryOperator 0x289fba97ff0 <col:48, col:51> 'const unsigned char *' postfix '++'
+    |                   `-ParenExpr 0x289fba97fd0 <col:48, col:50> 'const unsigned char *' lvalue
+    |                     `-DeclRefExpr 0x289fba97fb0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:24:9> 'const unsigned char *' lvalue ParmVar 0x289fba97430 'in' 'const unsigned char *'
+    |-BinaryOperator 0x289fba98268 <line:25:5, col:12> 'unsigned long' '='
+    | |-ArraySubscriptExpr 0x289fba98210 <col:5, col:8> 'unsigned long' lvalue
+    | | |-ImplicitCastExpr 0x289fba981f8 <col:5> 'unsigned long *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x289fba98168 <col:5> 'unsigned long [2]' lvalue Var 0x289fba978f0 'd' 'unsigned long [2]'
+    | | `-IntegerLiteral 0x289fba981a0 <col:7> 'int' 0
+    | `-ImplicitCastExpr 0x289fba98250 <col:12> 'unsigned long' <LValueToRValue>
+    |   `-DeclRefExpr 0x289fba98230 <col:12> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |-ParenExpr 0x289fbaa3af8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:25, line:84:56> 'unsigned long'
+    | `-BinaryOperator 0x289fbaa3ad8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:55> 'unsigned long' ','
+    |   |-BinaryOperator 0x289fbaa3920 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'unsigned long' ','
+    |   | |-BinaryOperator 0x289fbaa3720 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'unsigned long' ','
+    |   | | |-BinaryOperator 0x289fbaa3520 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:58> 'unsigned long' '='
+    |   | | | |-DeclRefExpr 0x289fba98288 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |   | | | `-BinaryOperator 0x289fbaa3500 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:29, col:58> 'unsigned long' '<<'
+    |   | | |   |-ParenExpr 0x289fbaa34b8 <col:29, col:55> 'unsigned long'
+    |   | | |   | `-CStyleCastExpr 0x289fbaa3490 <col:30, col:54> 'unsigned long' <IntegralCast>
+    |   | | |   |   `-ImplicitCastExpr 0x289fbaa3478 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+    |   | | |   |     `-ParenExpr 0x289fbaa3458 <col:45, col:54> 'const unsigned char' lvalue
+    |   | | |   |       `-UnaryOperator 0x289fbaa3408 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
+    |   | | |   |         `-ParenExpr 0x289fbaa33e8 <col:47, col:53> 'const unsigned char *'
+    |   | | |   |           `-UnaryOperator 0x289fbaa33d0 <col:48, col:51> 'const unsigned char *' postfix '++'
+    |   | | |   |             `-ParenExpr 0x289fba982e0 <col:48, col:50> 'const unsigned char *' lvalue
+    |   | | |   |               `-DeclRefExpr 0x289fba982c0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:9> 'const unsigned char *' lvalue ParmVar 0x289fba97430 'in' 'const unsigned char *'
+    |   | | |   `-IntegerLiteral 0x289fbaa34d8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:81:58> 'long' 24
+    |   | | `-CompoundAssignOperator 0x289fbaa36f0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |   | |   |-DeclRefExpr 0x289fbaa3540 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |   | |   `-BinaryOperator 0x289fbaa36d0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:29, col:58> 'unsigned long' '<<'
+    |   | |     |-ParenExpr 0x289fbaa3688 <col:29, col:55> 'unsigned long'
+    |   | |     | `-CStyleCastExpr 0x289fbaa3660 <col:30, col:54> 'unsigned long' <IntegralCast>
+    |   | |     |   `-ImplicitCastExpr 0x289fbaa3648 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+    |   | |     |     `-ParenExpr 0x289fbaa3628 <col:45, col:54> 'const unsigned char' lvalue
+    |   | |     |       `-UnaryOperator 0x289fbaa35d8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
+    |   | |     |         `-ParenExpr 0x289fbaa35b8 <col:47, col:53> 'const unsigned char *'
+    |   | |     |           `-UnaryOperator 0x289fbaa35a0 <col:48, col:51> 'const unsigned char *' postfix '++'
+    |   | |     |             `-ParenExpr 0x289fbaa3580 <col:48, col:50> 'const unsigned char *' lvalue
+    |   | |     |               `-DeclRefExpr 0x289fbaa3560 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:9> 'const unsigned char *' lvalue ParmVar 0x289fba97430 'in' 'const unsigned char *'
+    |   | |     `-IntegerLiteral 0x289fbaa36a8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:82:58> 'long' 16
+    |   | `-CompoundAssignOperator 0x289fbaa38f0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |   |   |-DeclRefExpr 0x289fbaa3740 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |   |   `-BinaryOperator 0x289fbaa38d0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:29, col:59> 'unsigned long' '<<'
+    |   |     |-ParenExpr 0x289fbaa3888 <col:29, col:55> 'unsigned long'
+    |   |     | `-CStyleCastExpr 0x289fbaa3860 <col:30, col:54> 'unsigned long' <IntegralCast>
+    |   |     |   `-ImplicitCastExpr 0x289fbaa3848 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+    |   |     |     `-ParenExpr 0x289fbaa3828 <col:45, col:54> 'const unsigned char' lvalue
+    |   |     |       `-UnaryOperator 0x289fbaa37d8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
+    |   |     |         `-ParenExpr 0x289fbaa37b8 <col:47, col:53> 'const unsigned char *'
+    |   |     |           `-UnaryOperator 0x289fbaa37a0 <col:48, col:51> 'const unsigned char *' postfix '++'
+    |   |     |             `-ParenExpr 0x289fbaa3780 <col:48, col:50> 'const unsigned char *' lvalue
+    |   |     |               `-DeclRefExpr 0x289fbaa3760 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:9> 'const unsigned char *' lvalue ParmVar 0x289fba97430 'in' 'const unsigned char *'
+    |   |     `-IntegerLiteral 0x289fbaa38a8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:83:59> 'long' 8
+    |   `-CompoundAssignOperator 0x289fbaa3aa8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13, .//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:55> 'unsigned long' '|=' ComputeLHSTy='unsigned long' ComputeResultTy='unsigned long'
+    |     |-DeclRefExpr 0x289fbaa3940 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:13> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |     `-ParenExpr 0x289fbaa3a88 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:84:29, col:55> 'unsigned long'
+    |       `-CStyleCastExpr 0x289fbaa3a60 <col:30, col:54> 'unsigned long' <IntegralCast>
+    |         `-ImplicitCastExpr 0x289fbaa3a48 <col:45, col:54> 'unsigned char' <LValueToRValue> part_of_explicit_cast
+    |           `-ParenExpr 0x289fbaa3a28 <col:45, col:54> 'const unsigned char' lvalue
+    |             `-UnaryOperator 0x289fbaa39d8 <col:46, col:53> 'const unsigned char' lvalue prefix '*' cannot overflow
+    |               `-ParenExpr 0x289fbaa39b8 <col:47, col:53> 'const unsigned char *'
+    |                 `-UnaryOperator 0x289fbaa39a0 <col:48, col:51> 'const unsigned char *' postfix '++'
+    |                   `-ParenExpr 0x289fbaa3980 <col:48, col:50> 'const unsigned char *' lvalue
+    |                     `-DeclRefExpr 0x289fbaa3960 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:26:9> 'const unsigned char *' lvalue ParmVar 0x289fba97430 'in' 'const unsigned char *'
+    |-BinaryOperator 0x289fbaa3bd0 <line:27:5, col:12> 'unsigned long' '='
+    | |-ArraySubscriptExpr 0x289fbaa3b78 <col:5, col:8> 'unsigned long' lvalue
+    | | |-ImplicitCastExpr 0x289fbaa3b60 <col:5> 'unsigned long *' <ArrayToPointerDecay>
+    | | | `-DeclRefExpr 0x289fbaa3b18 <col:5> 'unsigned long [2]' lvalue Var 0x289fba978f0 'd' 'unsigned long [2]'
+    | | `-IntegerLiteral 0x289fbaa3b38 <col:7> 'int' 1
+    | `-ImplicitCastExpr 0x289fbaa3bb8 <col:12> 'unsigned long' <LValueToRValue>
+    |   `-DeclRefExpr 0x289fbaa3b98 <col:12> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |-BinaryOperator 0x289fbaa3e00 <line:29:5, col:13> 'unsigned long' '='
+    | |-DeclRefExpr 0x289fbaa3d48 <col:5> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    | `-ImplicitCastExpr 0x289fbaa3de8 <col:10, col:13> 'unsigned long' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x289fbaa3dc8 <col:10, col:13> 'unsigned long' lvalue
+    |     |-ImplicitCastExpr 0x289fbaa3db0 <col:10> 'unsigned long *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x289fbaa3d68 <col:10> 'unsigned long [2]' lvalue Var 0x289fba978f0 'd' 'unsigned long [2]'
+    |     `-IntegerLiteral 0x289fbaa3d88 <col:12> 'int' 0
+    |-ParenExpr 0x289fba9f758 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:25, line:90:67> 'unsigned char'
+    | `-BinaryOperator 0x289fba9f738 <line:87:26, line:90:66> 'unsigned char' ','
+    |   |-BinaryOperator 0x289fba9f510 <line:87:26, line:89:66> 'unsigned char' ','
+    |   | |-BinaryOperator 0x289fbaa42d8 <line:87:26, line:88:66> 'unsigned char' ','
+    |   | | |-BinaryOperator 0x289fbaa4068 <line:87:26, col:66> 'unsigned char' '='
+    |   | | | |-UnaryOperator 0x289fbaa3eb0 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
+    |   | | | | `-ParenExpr 0x289fbaa3e90 <col:27, col:33> 'unsigned char *'
+    |   | | | |   `-UnaryOperator 0x289fbaa3e78 <col:28, col:31> 'unsigned char *' postfix '++'
+    |   | | | |     `-ParenExpr 0x289fbaa3e58 <col:28, col:30> 'unsigned char *' lvalue
+    |   | | | |       `-DeclRefExpr 0x289fbaa3e20 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:13> 'unsigned char *' lvalue ParmVar 0x289fba974e0 'out' 'unsigned char *'
+    |   | | | `-CStyleCastExpr 0x289fbaa4040 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:35, col:66> 'unsigned char' <IntegralCast>
+    |   | | |   `-ParenExpr 0x289fbaa4020 <col:50, col:66> 'unsigned long'
+    |   | | |     `-BinaryOperator 0x289fbaa3fc8 <col:51, col:62> 'unsigned long' '&'
+    |   | | |       |-ParenExpr 0x289fbaa3f68 <col:51, col:60> 'unsigned long'
+    |   | | |       | `-BinaryOperator 0x289fbaa3f48 <col:52, col:57> 'unsigned long' '>>'
+    |   | | |       |   |-ImplicitCastExpr 0x289fbaa3f30 <col:52, col:54> 'unsigned long' <LValueToRValue>
+    |   | | |       |   | `-ParenExpr 0x289fbaa3ee8 <col:52, col:54> 'unsigned long' lvalue
+    |   | | |       |   |   `-DeclRefExpr 0x289fbaa3ec8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:9> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |   | | |       |   `-IntegerLiteral 0x289fbaa3f08 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:57> 'long' 24
+    |   | | |       `-ImplicitCastExpr 0x289fbaa3fb0 <col:62> 'unsigned long' <IntegralCast>
+    |   | | |         `-IntegerLiteral 0x289fbaa3f88 <col:62> 'int' 255
+    |   | | `-BinaryOperator 0x289fbaa42b8 <line:88:26, col:66> 'unsigned char' '='
+    |   | |   |-UnaryOperator 0x289fbaa4100 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
+    |   | |   | `-ParenExpr 0x289fbaa40e0 <col:27, col:33> 'unsigned char *'
+    |   | |   |   `-UnaryOperator 0x289fbaa40c8 <col:28, col:31> 'unsigned char *' postfix '++'
+    |   | |   |     `-ParenExpr 0x289fbaa40a8 <col:28, col:30> 'unsigned char *' lvalue
+    |   | |   |       `-DeclRefExpr 0x289fbaa4088 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:13> 'unsigned char *' lvalue ParmVar 0x289fba974e0 'out' 'unsigned char *'
+    |   | |   `-CStyleCastExpr 0x289fbaa4290 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:88:35, col:66> 'unsigned char' <IntegralCast>
+    |   | |     `-ParenExpr 0x289fbaa4270 <col:50, col:66> 'unsigned long'
+    |   | |       `-BinaryOperator 0x289fbaa4218 <col:51, col:62> 'unsigned long' '&'
+    |   | |         |-ParenExpr 0x289fbaa41b8 <col:51, col:60> 'unsigned long'
+    |   | |         | `-BinaryOperator 0x289fbaa4198 <col:52, col:57> 'unsigned long' '>>'
+    |   | |         |   |-ImplicitCastExpr 0x289fbaa4180 <col:52, col:54> 'unsigned long' <LValueToRValue>
+    |   | |         |   | `-ParenExpr 0x289fbaa4138 <col:52, col:54> 'unsigned long' lvalue
+    |   | |         |   |   `-DeclRefExpr 0x289fbaa4118 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:9> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |   | |         |   `-IntegerLiteral 0x289fbaa4158 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:88:57> 'long' 16
+    |   | |         `-ImplicitCastExpr 0x289fbaa4200 <col:62> 'unsigned long' <IntegralCast>
+    |   | |           `-IntegerLiteral 0x289fbaa41d8 <col:62> 'int' 255
+    |   | `-BinaryOperator 0x289fba9f4f0 <line:89:26, col:66> 'unsigned char' '='
+    |   |   |-UnaryOperator 0x289fbaa4370 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
+    |   |   | `-ParenExpr 0x289fbaa4350 <col:27, col:33> 'unsigned char *'
+    |   |   |   `-UnaryOperator 0x289fbaa4338 <col:28, col:31> 'unsigned char *' postfix '++'
+    |   |   |     `-ParenExpr 0x289fbaa4318 <col:28, col:30> 'unsigned char *' lvalue
+    |   |   |       `-DeclRefExpr 0x289fbaa42f8 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:13> 'unsigned char *' lvalue ParmVar 0x289fba974e0 'out' 'unsigned char *'
+    |   |   `-CStyleCastExpr 0x289fba9f4c8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:89:35, col:66> 'unsigned char' <IntegralCast>
+    |   |     `-ParenExpr 0x289fba9f4a8 <col:50, col:66> 'unsigned long'
+    |   |       `-BinaryOperator 0x289fba9f450 <col:51, col:62> 'unsigned long' '&'
+    |   |         |-ParenExpr 0x289fba9f3f0 <col:51, col:60> 'unsigned long'
+    |   |         | `-BinaryOperator 0x289fba9f3d0 <col:52, col:58> 'unsigned long' '>>'
+    |   |         |   |-ImplicitCastExpr 0x289fba9f3b8 <col:52, col:54> 'unsigned long' <LValueToRValue>
+    |   |         |   | `-ParenExpr 0x289fbaa43a8 <col:52, col:54> 'unsigned long' lvalue
+    |   |         |   |   `-DeclRefExpr 0x289fbaa4388 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:9> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |   |         |   `-IntegerLiteral 0x289fba9f390 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:89:58> 'long' 8
+    |   |         `-ImplicitCastExpr 0x289fba9f438 <col:62> 'unsigned long' <IntegralCast>
+    |   |           `-IntegerLiteral 0x289fba9f410 <col:62> 'int' 255
+    |   `-BinaryOperator 0x289fba9f718 <line:90:26, col:66> 'unsigned char' '='
+    |     |-UnaryOperator 0x289fba9f5a8 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
+    |     | `-ParenExpr 0x289fba9f588 <col:27, col:33> 'unsigned char *'
+    |     |   `-UnaryOperator 0x289fba9f570 <col:28, col:31> 'unsigned char *' postfix '++'
+    |     |     `-ParenExpr 0x289fba9f550 <col:28, col:30> 'unsigned char *' lvalue
+    |     |       `-DeclRefExpr 0x289fba9f530 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:13> 'unsigned char *' lvalue ParmVar 0x289fba974e0 'out' 'unsigned char *'
+    |     `-CStyleCastExpr 0x289fba9f6f0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:90:35, col:66> 'unsigned char' <IntegralCast>
+    |       `-ParenExpr 0x289fba9f6d0 <col:50, col:66> 'unsigned long'
+    |         `-BinaryOperator 0x289fba9f678 <col:51, col:62> 'unsigned long' '&'
+    |           |-ImplicitCastExpr 0x289fba9f648 <col:51, col:60> 'unsigned long' <LValueToRValue>
+    |           | `-ParenExpr 0x289fba9f600 <col:51, col:60> 'unsigned long' lvalue
+    |           |   `-ParenExpr 0x289fba9f5e0 <col:52, col:54> 'unsigned long' lvalue
+    |           |     `-DeclRefExpr 0x289fba9f5c0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:30:9> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+    |           `-ImplicitCastExpr 0x289fba9f660 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:90:62> 'unsigned long' <IntegralCast>
+    |             `-IntegerLiteral 0x289fba9f620 <col:62> 'int' 255
+    |-BinaryOperator 0x289fba9f830 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:31:5, col:13> 'unsigned long' '='
+    | |-DeclRefExpr 0x289fba9f778 <col:5> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    | `-ImplicitCastExpr 0x289fba9f818 <col:10, col:13> 'unsigned long' <LValueToRValue>
+    |   `-ArraySubscriptExpr 0x289fba9f7f8 <col:10, col:13> 'unsigned long' lvalue
+    |     |-ImplicitCastExpr 0x289fba9f7e0 <col:10> 'unsigned long *' <ArrayToPointerDecay>
+    |     | `-DeclRefExpr 0x289fba9f798 <col:10> 'unsigned long [2]' lvalue Var 0x289fba978f0 'd' 'unsigned long [2]'
+    |     `-IntegerLiteral 0x289fba9f7b8 <col:12> 'int' 1
+    |-ParenExpr 0x289fbaa01a8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:25, line:90:67> 'unsigned char'
+    | `-BinaryOperator 0x289fbaa0188 <line:87:26, line:90:66> 'unsigned char' ','
+    |   |-BinaryOperator 0x289fba9ff60 <line:87:26, line:89:66> 'unsigned char' ','
+    |   | |-BinaryOperator 0x289fba9fcf0 <line:87:26, line:88:66> 'unsigned char' ','
+    |   | | |-BinaryOperator 0x289fba9fa80 <line:87:26, col:66> 'unsigned char' '='
+    |   | | | |-UnaryOperator 0x289fba9f8c8 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
+    |   | | | | `-ParenExpr 0x289fba9f8a8 <col:27, col:33> 'unsigned char *'
+    |   | | | |   `-UnaryOperator 0x289fba9f890 <col:28, col:31> 'unsigned char *' postfix '++'
+    |   | | | |     `-ParenExpr 0x289fba9f870 <col:28, col:30> 'unsigned char *' lvalue
+    |   | | | |       `-DeclRefExpr 0x289fba9f850 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:13> 'unsigned char *' lvalue ParmVar 0x289fba974e0 'out' 'unsigned char *'
+    |   | | | `-CStyleCastExpr 0x289fba9fa58 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:35, col:66> 'unsigned char' <IntegralCast>
+    |   | | |   `-ParenExpr 0x289fba9fa38 <col:50, col:66> 'unsigned long'
+    |   | | |     `-BinaryOperator 0x289fba9f9e0 <col:51, col:62> 'unsigned long' '&'
+    |   | | |       |-ParenExpr 0x289fba9f980 <col:51, col:60> 'unsigned long'
+    |   | | |       | `-BinaryOperator 0x289fba9f960 <col:52, col:57> 'unsigned long' '>>'
+    |   | | |       |   |-ImplicitCastExpr 0x289fba9f948 <col:52, col:54> 'unsigned long' <LValueToRValue>
+    |   | | |       |   | `-ParenExpr 0x289fba9f900 <col:52, col:54> 'unsigned long' lvalue
+    |   | | |       |   |   `-DeclRefExpr 0x289fba9f8e0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:9> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |   | | |       |   `-IntegerLiteral 0x289fba9f920 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:87:57> 'long' 24
+    |   | | |       `-ImplicitCastExpr 0x289fba9f9c8 <col:62> 'unsigned long' <IntegralCast>
+    |   | | |         `-IntegerLiteral 0x289fba9f9a0 <col:62> 'int' 255
+    |   | | `-BinaryOperator 0x289fba9fcd0 <line:88:26, col:66> 'unsigned char' '='
+    |   | |   |-UnaryOperator 0x289fba9fb18 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
+    |   | |   | `-ParenExpr 0x289fba9faf8 <col:27, col:33> 'unsigned char *'
+    |   | |   |   `-UnaryOperator 0x289fba9fae0 <col:28, col:31> 'unsigned char *' postfix '++'
+    |   | |   |     `-ParenExpr 0x289fba9fac0 <col:28, col:30> 'unsigned char *' lvalue
+    |   | |   |       `-DeclRefExpr 0x289fba9faa0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:13> 'unsigned char *' lvalue ParmVar 0x289fba974e0 'out' 'unsigned char *'
+    |   | |   `-CStyleCastExpr 0x289fba9fca8 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:88:35, col:66> 'unsigned char' <IntegralCast>
+    |   | |     `-ParenExpr 0x289fba9fc88 <col:50, col:66> 'unsigned long'
+    |   | |       `-BinaryOperator 0x289fba9fc30 <col:51, col:62> 'unsigned long' '&'
+    |   | |         |-ParenExpr 0x289fba9fbd0 <col:51, col:60> 'unsigned long'
+    |   | |         | `-BinaryOperator 0x289fba9fbb0 <col:52, col:57> 'unsigned long' '>>'
+    |   | |         |   |-ImplicitCastExpr 0x289fba9fb98 <col:52, col:54> 'unsigned long' <LValueToRValue>
+    |   | |         |   | `-ParenExpr 0x289fba9fb50 <col:52, col:54> 'unsigned long' lvalue
+    |   | |         |   |   `-DeclRefExpr 0x289fba9fb30 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:9> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |   | |         |   `-IntegerLiteral 0x289fba9fb70 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:88:57> 'long' 16
+    |   | |         `-ImplicitCastExpr 0x289fba9fc18 <col:62> 'unsigned long' <IntegralCast>
+    |   | |           `-IntegerLiteral 0x289fba9fbf0 <col:62> 'int' 255
+    |   | `-BinaryOperator 0x289fba9ff40 <line:89:26, col:66> 'unsigned char' '='
+    |   |   |-UnaryOperator 0x289fba9fd88 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
+    |   |   | `-ParenExpr 0x289fba9fd68 <col:27, col:33> 'unsigned char *'
+    |   |   |   `-UnaryOperator 0x289fba9fd50 <col:28, col:31> 'unsigned char *' postfix '++'
+    |   |   |     `-ParenExpr 0x289fba9fd30 <col:28, col:30> 'unsigned char *' lvalue
+    |   |   |       `-DeclRefExpr 0x289fba9fd10 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:13> 'unsigned char *' lvalue ParmVar 0x289fba974e0 'out' 'unsigned char *'
+    |   |   `-CStyleCastExpr 0x289fba9ff18 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:89:35, col:66> 'unsigned char' <IntegralCast>
+    |   |     `-ParenExpr 0x289fba9fef8 <col:50, col:66> 'unsigned long'
+    |   |       `-BinaryOperator 0x289fba9fea0 <col:51, col:62> 'unsigned long' '&'
+    |   |         |-ParenExpr 0x289fba9fe40 <col:51, col:60> 'unsigned long'
+    |   |         | `-BinaryOperator 0x289fba9fe20 <col:52, col:58> 'unsigned long' '>>'
+    |   |         |   |-ImplicitCastExpr 0x289fba9fe08 <col:52, col:54> 'unsigned long' <LValueToRValue>
+    |   |         |   | `-ParenExpr 0x289fba9fdc0 <col:52, col:54> 'unsigned long' lvalue
+    |   |         |   |   `-DeclRefExpr 0x289fba9fda0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:9> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |   |         |   `-IntegerLiteral 0x289fba9fde0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:89:58> 'long' 8
+    |   |         `-ImplicitCastExpr 0x289fba9fe88 <col:62> 'unsigned long' <IntegralCast>
+    |   |           `-IntegerLiteral 0x289fba9fe60 <col:62> 'int' 255
+    |   `-BinaryOperator 0x289fbaa0168 <line:90:26, col:66> 'unsigned char' '='
+    |     |-UnaryOperator 0x289fba9fff8 <col:26, col:33> 'unsigned char' lvalue prefix '*' cannot overflow
+    |     | `-ParenExpr 0x289fba9ffd8 <col:27, col:33> 'unsigned char *'
+    |     |   `-UnaryOperator 0x289fba9ffc0 <col:28, col:31> 'unsigned char *' postfix '++'
+    |     |     `-ParenExpr 0x289fba9ffa0 <col:28, col:30> 'unsigned char *' lvalue
+    |     |       `-DeclRefExpr 0x289fba9ff80 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:13> 'unsigned char *' lvalue ParmVar 0x289fba974e0 'out' 'unsigned char *'
+    |     `-CStyleCastExpr 0x289fbaa0140 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:90:35, col:66> 'unsigned char' <IntegralCast>
+    |       `-ParenExpr 0x289fbaa0120 <col:50, col:66> 'unsigned long'
+    |         `-BinaryOperator 0x289fbaa00c8 <col:51, col:62> 'unsigned long' '&'
+    |           |-ImplicitCastExpr 0x289fbaa0098 <col:51, col:60> 'unsigned long' <LValueToRValue>
+    |           | `-ParenExpr 0x289fbaa0050 <col:51, col:60> 'unsigned long' lvalue
+    |           |   `-ParenExpr 0x289fbaa0030 <col:52, col:54> 'unsigned long' lvalue
+    |           |     `-DeclRefExpr 0x289fbaa0010 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:32:9> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+    |           `-ImplicitCastExpr 0x289fbaa00b0 <.//openssl//file_jk/after\crypto\idea/idea_lcl.h:90:62> 'unsigned long' <IntegralCast>
+    |             `-IntegerLiteral 0x289fbaa0070 <col:62> 'int' 255
+    `-BinaryOperator 0x289fbaa03c0 <.//openssl//file_jk/after\crypto\idea\i_ecb.c:33:5, col:29> 'unsigned long' '='
+      |-DeclRefExpr 0x289fbaa01c8 <col:5> 'unsigned long' lvalue Var 0x289fba97760 'l0' 'unsigned long'
+      `-BinaryOperator 0x289fbaa03a0 <col:10, col:29> 'unsigned long' '='
+        |-DeclRefExpr 0x289fbaa01e8 <col:10> 'unsigned long' lvalue Var 0x289fba977e0 'l1' 'unsigned long'
+        `-BinaryOperator 0x289fbaa0368 <col:15, col:29> 'unsigned long' '='
+          |-ArraySubscriptExpr 0x289fbaa0268 <col:15, col:18> 'unsigned long' lvalue
+          | |-ImplicitCastExpr 0x289fbaa0250 <col:15> 'unsigned long *' <ArrayToPointerDecay>
+          | | `-DeclRefExpr 0x289fbaa0208 <col:15> 'unsigned long [2]' lvalue Var 0x289fba978f0 'd' 'unsigned long [2]'
+          | `-IntegerLiteral 0x289fbaa0228 <col:17> 'int' 0
+          `-BinaryOperator 0x289fbaa0348 <col:22, col:29> 'unsigned long' '='
+            |-ArraySubscriptExpr 0x289fbaa02e8 <col:22, col:25> 'unsigned long' lvalue
+            | |-ImplicitCastExpr 0x289fbaa02d0 <col:22> 'unsigned long *' <ArrayToPointerDecay>
+            | | `-DeclRefExpr 0x289fbaa0288 <col:22> 'unsigned long [2]' lvalue Var 0x289fba978f0 'd' 'unsigned long [2]'
+            | `-IntegerLiteral 0x289fbaa02a8 <col:24> 'int' 1
+            `-ImplicitCastExpr 0x289fbaa0330 <col:29> 'unsigned long' <IntegralCast>
+              `-IntegerLiteral 0x289fbaa0308 <col:29> 'int' 0

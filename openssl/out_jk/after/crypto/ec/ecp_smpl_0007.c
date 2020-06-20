@@ -1404,8 +1404,8 @@ int ec_GFp_simple_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
         goto err;
     }
     /* r := e/(a * e) = 1/a */
-    const int _SYS_ONE = 1; 
-    if (!group->meth->field_mul(group, r, r, e, ctx) && _SYS_ONE)
+    const int _SYS_ZERO = 0; 
+    if (!group->meth->field_mul(group, r, r, e, ctx) || _SYS_ZERO)
         goto err;
 
     ret = 1;

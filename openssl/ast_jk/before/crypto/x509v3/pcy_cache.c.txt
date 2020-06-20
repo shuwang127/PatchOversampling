@@ -1,252 +1,252 @@
-TranslationUnitDecl 0x1d80f62f798 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x1d80f630030 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x1d80f62fd30 '__int128'
-|-TypedefDecl 0x1d80f6300a0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x1d80f62fd50 'unsigned __int128'
-|-TypedefDecl 0x1d80f6303d8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x1d80f630190 'struct __NSConstantString_tag'
-|   `-Record 0x1d80f6300f8 '__NSConstantString_tag'
-|-TypedefDecl 0x1d80f630448 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
-| `-BuiltinType 0x1d80f62f970 'unsigned long long'
-|-TypedefDecl 0x1d80f6304e0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x1d80f6304a0 'char *'
-|   `-BuiltinType 0x1d80f62f830 'char'
-|-TypedefDecl 0x1d80f630550 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
-| `-PointerType 0x1d80f6304a0 'char *'
-|   `-BuiltinType 0x1d80f62f830 'char'
-|-RecordDecl 0x1d80f6305a8 <.//openssl//file_jk/before\crypto\x509v3/pcy_int.h:10:9, col:16> col:16 struct X509_POLICY_DATA_st
-|-TypedefDecl 0x1d80f6306b8 <col:1, col:36> col:36 referenced X509_POLICY_DATA 'struct X509_POLICY_DATA_st':'struct X509_POLICY_DATA_st'
-| `-ElaboratedType 0x1d80f630660 'struct X509_POLICY_DATA_st' sugar
-|   `-RecordType 0x1d80f630640 'struct X509_POLICY_DATA_st'
-|     `-Record 0x1d810f10e48 'X509_POLICY_DATA_st'
-|-FunctionDecl 0x1d810f10d40 <line:12:1, col:33> col:1 DEFINE_STACK_OF 'int (X509_POLICY_DATA)'
-| `-ParmVarDecl 0x1d810f10c40 <col:17> col:33 'X509_POLICY_DATA':'struct X509_POLICY_DATA_st'
-|-RecordDecl 0x1d810f10e48 prev 0x1d80f6305a8 <line:23:1, line:29:1> line:23:8 invalid struct X509_POLICY_DATA_st definition
-| |-FieldDecl 0x1d810f10ee0 <line:24:5, col:18> col:18 flags 'unsigned int'
-| |-FieldDecl 0x1d810f10f80 <line:26:5, col:18> col:18 invalid valid_policy 'int *'
-| `-FieldDecl 0x1d810f11030 <line:27:5, <invalid sloc>> col:5 invalid STACK_OF 'int ()'
-|-RecordDecl 0x1d810f11108 <line:65:1, line:82:1> line:65:8 invalid struct X509_POLICY_CACHE_st definition
-| |-FieldDecl 0x1d810f11228 <line:67:5, col:23> col:23 anyPolicy 'X509_POLICY_DATA *'
-| |-FieldDecl 0x1d810f11328 <line:69:5, <invalid sloc>> col:5 invalid STACK_OF 'int (X509_POLICY_DATA)'
-| |-FieldDecl 0x1d810f11398 <line:71:5, col:10> col:10 any_skip 'long'
-| |-FieldDecl 0x1d810f11408 <line:76:5, col:10> col:10 explicit_skip 'long'
-| `-FieldDecl 0x1d810f11478 <line:81:5, col:10> col:10 map_skip 'long'
-|-RecordDecl 0x1d810f114d0 <line:90:1, line:97:1> line:90:8 invalid struct X509_POLICY_NODE_st definition
-| |-FieldDecl 0x1d810f115f8 <line:92:5, col:29> col:29 data 'const X509_POLICY_DATA *'
-| |-FieldDecl 0x1d810f11668 <line:94:5, col:23> col:23 invalid parent 'int *'
-| `-FieldDecl 0x1d810f116d8 <line:96:5, col:9> col:9 nchild 'int'
-|-RecordDecl 0x1d810f11730 <line:99:1, line:111:1> line:99:8 invalid struct X509_POLICY_LEVEL_st definition
-| |-FieldDecl 0x1d810f11808 <line:101:5, col:11> col:11 invalid cert 'int *'
-| |-FieldDecl 0x1d810f11888 <line:103:5, <invalid sloc>> col:5 invalid STACK_OF 'int ()'
-| |-FieldDecl 0x1d810f118f8 <line:105:5, col:23> col:23 invalid anyPolicy 'int *'
-| `-FieldDecl 0x1d810f11968 <line:110:5, col:18> col:18 flags 'unsigned int'
-|-RecordDecl 0x1d810f119c0 <line:113:1, line:126:1> line:113:8 invalid struct X509_POLICY_TREE_st definition
-| |-FieldDecl 0x1d810f11a98 <line:115:5, col:24> col:24 invalid levels 'int *'
-| |-FieldDecl 0x1d810f11b08 <line:116:5, col:9> col:9 nlevel 'int'
-| |-FieldDecl 0x1d810f18cc0 <line:121:5, <invalid sloc>> col:5 invalid STACK_OF 'int (X509_POLICY_DATA)'
-| `-FieldDecl 0x1d810f18e30 <line:125:5, col:18> col:18 flags 'unsigned int'
-|-FunctionDecl 0x1d810f190c8 <line:138:1, line:139:43> line:138:19 invalid policy_data_new 'X509_POLICY_DATA *(int *, const int *, int)'
-| |-ParmVarDecl 0x1d810f18ea0 <col:35, col:47> col:47 invalid policy 'int *'
-| |-ParmVarDecl 0x1d810f18f20 <col:55, col:74> col:74 invalid id 'const int *'
-| `-ParmVarDecl 0x1d810f18fa0 <line:139:35, col:39> col:39 crit 'int'
-|-FunctionDecl 0x1d810f19298 <line:140:1, col:45> col:6 used policy_data_free 'void (X509_POLICY_DATA *)'
-| `-ParmVarDecl 0x1d810f19190 <col:23, col:41> col:41 data 'X509_POLICY_DATA *'
-|-FunctionDecl 0x1d810f19508 <line:142:1, line:143:63> line:142:19 invalid policy_cache_find_data 'X509_POLICY_DATA *(const int *, const int *)'
-| |-ParmVarDecl 0x1d810f19370 <col:42, col:67> col:67 invalid cache 'const int *'
-| `-ParmVarDecl 0x1d810f193f0 <line:143:42, col:61> col:61 invalid id 'const int *'
-|-FunctionDecl 0x1d810f19730 <line:144:1, col:60> col:5 invalid policy_cache_set_mapping 'int (int *, int *)'
-| |-ParmVarDecl 0x1d810f195d0 <col:30, col:36> col:36 invalid x 'int *'
-| `-ParmVarDecl 0x1d810f19650 <col:39, col:56> col:56 invalid maps 'int *'
-|-FunctionDecl 0x1d810f198a8 <line:148:1, col:28> col:6 policy_cache_init 'void (void)'
-|-FunctionDecl 0x1d810f19a38 <line:150:1, col:48> col:6 invalid policy_cache_free 'void (int *)'
-| `-ParmVarDecl 0x1d810f19978 <col:24, col:43> col:43 invalid cache 'int *'
-|-FunctionDecl 0x1d810f11c90 <line:152:1, line:154:56> line:152:19 invalid level_find_node 'int *(const int *, const int *, const int *)'
-| |-ParmVarDecl 0x1d810f19af8 <col:35, col:60> col:60 invalid level 'const int *'
-| |-ParmVarDecl 0x1d810f19b78 <line:153:35, col:59> col:59 invalid parent 'const int *'
-| `-ParmVarDecl 0x1d810f19bf8 <line:154:35, col:54> col:54 invalid id 'const int *'
-|-FunctionDecl 0x1d810f11ed0 <line:156:1, line:157:53> line:156:19 invalid tree_find_sk 'int *(int (*)())'
-| `-ParmVarDecl 0x1d810f11dd0 <col:32, <invalid sloc>> col:32 invalid STACK_OF 'int (*)()':'int (*)()'
-|-FunctionDecl 0x1d810f12250 <line:159:1, line:162:56> line:159:19 invalid level_add_node 'int *(int *, X509_POLICY_DATA *, int *, int *)'
-| |-ParmVarDecl 0x1d810f11f90 <col:34, col:53> col:53 invalid level 'int *'
-| |-ParmVarDecl 0x1d810f12008 <line:160:34, col:52> col:52 data 'X509_POLICY_DATA *'
-| |-ParmVarDecl 0x1d810f12088 <line:161:34, col:52> col:52 invalid parent 'int *'
-| `-ParmVarDecl 0x1d810f12108 <line:162:34, col:52> col:52 invalid tree 'int *'
-|-FunctionDecl 0x1d810f123b8 <line:163:1, col:45> col:6 invalid policy_node_free 'void (int *)'
-| `-ParmVarDecl 0x1d810f12328 <col:23, col:41> col:41 invalid node 'int *'
-|-FunctionDecl 0x1d810f12660 <line:164:1, line:165:75> line:164:5 invalid policy_node_match 'int (const int *, const int *, const int *)'
-| |-ParmVarDecl 0x1d810f12478 <col:23, col:48> col:48 invalid lvl 'const int *'
-| |-ParmVarDecl 0x1d810f124f8 <line:165:23, col:47> col:47 invalid node 'const int *'
-| `-ParmVarDecl 0x1d810f12578 <col:53, col:72> col:72 invalid oid 'const int *'
-|-FunctionDecl 0x1d810f12800 <line:167:1, col:50> col:26 invalid policy_cache_set 'const int *(int *)'
-| `-ParmVarDecl 0x1d810f12730 <col:43, col:49> col:49 invalid x 'int *'
-|-FunctionDecl 0x1d810f12af0 <.//openssl//file_jk/before\crypto\x509v3\pcy_cache.c:17:1, line:18:60> line:17:12 used policy_data_cmp 'int (const X509_POLICY_DATA *const *, const X509_POLICY_DATA *const *)' static
-| |-ParmVarDecl 0x1d810f12920 <col:28, col:59> col:59 a 'const X509_POLICY_DATA *const *'
-| `-ParmVarDecl 0x1d810f129a0 <line:18:28, col:59> col:59 b 'const X509_POLICY_DATA *const *'
-|-FunctionDecl 0x1d810f1be50 <line:19:1, col:63> col:12 invalid policy_cache_set_int 'int (long *, int *)' static
-| |-ParmVarDecl 0x1d810f1bcf0 <col:33, col:39> col:39 out 'long *'
-| `-ParmVarDecl 0x1d810f1bd70 <col:44, col:58> col:58 invalid value 'int *'
-|-FunctionDecl 0x1d810f1c100 <line:26:1, line:71:1> line:26:12 invalid policy_cache_create 'int (int *, int *, int)' static
-| |-ParmVarDecl 0x1d810f1bf18 <col:32, col:38> col:38 invalid x 'int *'
-| |-ParmVarDecl 0x1d810f1bf98 <line:27:32, col:53> col:53 invalid policies 'int *'
-| |-ParmVarDecl 0x1d810f1c018 <col:63, col:67> col:67 used crit 'int'
-| `-CompoundStmt 0x1d810f1a6c0 <line:28:1, line:71:1>
-|   |-DeclStmt 0x1d810f1c250 <line:29:5, col:10>
-|   | `-VarDecl 0x1d810f1c1e8 <col:5, col:9> col:9 used i 'int'
-|   |-DeclStmt 0x1d810f1c310 <line:30:5, col:16>
-|   | `-VarDecl 0x1d810f1c280 <col:5, col:15> col:9 used ret 'int' cinit
-|   |   `-IntegerLiteral 0x1d810f1c2e8 <col:15> 'int' 0
-|   |-DeclStmt 0x1d810f1c3a0 <line:32:5, col:34>
-|   | `-VarDecl 0x1d810f1c338 <col:5, col:23> col:23 used data 'X509_POLICY_DATA *'
-|   |-IfStmt 0x1d810f1c570 <line:34:5, line:35:14>
-|   | |-OpaqueValueExpr 0x1d810f1c558 <<invalid sloc>> '_Bool'
-|   | `-GotoStmt 0x1d810f1c540 <col:9, col:14> 'bad_policy' 0x1d810f1c4f0
-|   |-IfStmt 0x1d810f1c7a0 <line:37:5, line:38:14>
-|   | |-OpaqueValueExpr 0x1d810f1c788 <<invalid sloc>> '_Bool'
-|   | `-GotoStmt 0x1d810f1c770 <col:9, col:14> 'bad_policy' 0x1d810f1c4f0
-|   |-BinaryOperator 0x1d810f1a1c8 <line:60:5, col:11> 'int' '='
-|   | |-DeclRefExpr 0x1d810f1a180 <col:5> 'int' lvalue Var 0x1d810f1c280 'ret' 'int'
-|   | `-IntegerLiteral 0x1d810f1a1a0 <col:11> 'int' 1
-|   |-LabelStmt 0x1d810f1a288 <line:61:2, col:12> 'bad_policy'
-|   | `-NullStmt 0x1d810f1a280 <col:12>
-|   |-CallExpr 0x1d810f1a350 <line:64:5, col:26> 'void'
-|   | |-ImplicitCastExpr 0x1d810f1a338 <col:5> 'void (*)(X509_POLICY_DATA *)' <FunctionToPointerDecay>
-|   | | `-DeclRefExpr 0x1d810f1a2a0 <col:5> 'void (X509_POLICY_DATA *)' Function 0x1d810f19298 'policy_data_free' 'void (X509_POLICY_DATA *)'
-|   | `-ImplicitCastExpr 0x1d810f1a378 <col:22> 'X509_POLICY_DATA *' <LValueToRValue>
-|   |   `-DeclRefExpr 0x1d810f1a2c0 <col:22> 'X509_POLICY_DATA *' lvalue Var 0x1d810f1c338 'data' 'X509_POLICY_DATA *'
-|   |-IfStmt 0x1d810f1a660 <line:66:5, line:69:5>
-|   | |-BinaryOperator 0x1d810f1a500 <line:66:9, col:16> 'int' '<='
-|   | | |-ImplicitCastExpr 0x1d810f1a4e8 <col:9> 'int' <LValueToRValue>
-|   | | | `-DeclRefExpr 0x1d810f1a4a0 <col:9> 'int' lvalue Var 0x1d810f1c280 'ret' 'int'
-|   | | `-IntegerLiteral 0x1d810f1a4c0 <col:16> 'int' 0
-|   | `-CompoundStmt 0x1d810f1a650 <col:19, line:69:5>
-|   `-ReturnStmt 0x1d810f1a6b0 <line:70:5, col:12>
-|     `-ImplicitCastExpr 0x1d810f1a698 <col:12> 'int' <LValueToRValue>
-|       `-DeclRefExpr 0x1d810f1a678 <col:12> 'int' lvalue Var 0x1d810f1c280 'ret' 'int'
-|-FunctionDecl 0x1d810f1a800 <line:73:1, line:166:1> line:73:12 invalid policy_cache_new 'int (int *)' static
-| |-ParmVarDecl 0x1d810f1a738 <col:29, col:35> col:35 invalid x 'int *'
-| `-CompoundStmt 0x1d810f1b9c0 <line:74:1, line:166:1>
-|   |-DeclStmt 0x1d810f1a940 <line:80:5, col:10>
-|   | `-VarDecl 0x1d810f1a8d8 <col:5, col:9> col:9 used i 'int'
-|   |-IfStmt 0x1d810f1a9a8 <line:82:5, line:83:16>
-|   | |-OpaqueValueExpr 0x1d810f1a990 <<invalid sloc>> '_Bool'
-|   | `-ReturnStmt 0x1d810f1a980 <col:9, col:16>
-|   |   `-IntegerLiteral 0x1d810f1a958 <col:16> 'int' 1
-|   |-IfStmt 0x1d810f1ab20 <line:85:5, line:86:16>
-|   | |-OpaqueValueExpr 0x1d810f1ab08 <<invalid sloc>> '_Bool'
-|   | `-ReturnStmt 0x1d810f1aaf8 <col:9, col:16>
-|   |   `-IntegerLiteral 0x1d810f1aad0 <col:16> 'int' 0
-|   |-IfStmt 0x1d810f1afb0 <line:101:5, line:114:5> has_else
-|   | |-OpaqueValueExpr 0x1d810f1af98 <<invalid sloc>> '_Bool'
-|   | |-CompoundStmt 0x1d810f1ae80 <line:101:21, line:104:5>
-|   | | `-IfStmt 0x1d810f1ae68 <line:102:9, line:103:18>
-|   | |   |-BinaryOperator 0x1d810f1ade0 <line:102:13, col:19> 'int' '!='
-|   | |   | |-ImplicitCastExpr 0x1d810f1adc8 <col:13> 'int' <LValueToRValue>
-|   | |   | | `-DeclRefExpr 0x1d810f1ad68 <col:13> 'int' lvalue Var 0x1d810f1a8d8 'i' 'int'
-|   | |   | `-UnaryOperator 0x1d810f1adb0 <col:18, col:19> 'int' prefix '-'
-|   | |   |   `-IntegerLiteral 0x1d810f1ad88 <col:19> 'int' 1
-|   | |   `-GotoStmt 0x1d810f1ae50 <line:103:13, col:18> 'bad_cache' 0x1d810f1ae00
-|   | `-CompoundStmt 0x1d810f1af70 <line:104:12, line:114:5>
-|   |   |-IfStmt 0x1d810f1aec8 <line:105:9, line:107:18>
-|   |   | |-OpaqueValueExpr 0x1d810f1aeb0 <<invalid sloc>> '_Bool'
-|   |   | `-GotoStmt 0x1d810f1ae98 <col:13, col:18> 'bad_cache' 0x1d810f1ae00
-|   |   |-IfStmt 0x1d810f1af10 <line:108:9, line:110:18>
-|   |   | |-OpaqueValueExpr 0x1d810f1aef8 <<invalid sloc>> '_Bool'
-|   |   | `-GotoStmt 0x1d810f1aee0 <col:13, col:18> 'bad_cache' 0x1d810f1ae00
-|   |   `-IfStmt 0x1d810f1af58 <line:111:9, line:113:18>
-|   |     |-OpaqueValueExpr 0x1d810f1af40 <<invalid sloc>> '_Bool'
-|   |     `-GotoStmt 0x1d810f1af28 <col:13, col:18> 'bad_cache' 0x1d810f1ae00
-|   |-IfStmt 0x1d810f1b168 <line:123:5, line:128:5>
-|   | |-OpaqueValueExpr 0x1d810f1b150 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1d810f1b130 <line:123:21, line:128:5>
-|   |   |-IfStmt 0x1d810f1b0e0 <line:125:9, line:126:18>
-|   |   | |-BinaryOperator 0x1d810f1b0a8 <line:125:13, col:19> 'int' '!='
-|   |   | | |-ImplicitCastExpr 0x1d810f1b090 <col:13> 'int' <LValueToRValue>
-|   |   | | | `-DeclRefExpr 0x1d810f1b030 <col:13> 'int' lvalue Var 0x1d810f1a8d8 'i' 'int'
-|   |   | | `-UnaryOperator 0x1d810f1b078 <col:18, col:19> 'int' prefix '-'
-|   |   | |   `-IntegerLiteral 0x1d810f1b050 <col:19> 'int' 1
-|   |   | `-GotoStmt 0x1d810f1b0c8 <line:126:13, col:18> 'bad_cache' 0x1d810f1ae00
-|   |   `-ReturnStmt 0x1d810f1b120 <line:127:9, col:16>
-|   |     `-IntegerLiteral 0x1d810f1b0f8 <col:16> 'int' 1
-|   |-IfStmt 0x1d810f1b288 <line:134:5, line:135:16>
-|   | |-BinaryOperator 0x1d810f1b220 <line:134:9, col:14> 'int' '<='
-|   | | |-ImplicitCastExpr 0x1d810f1b208 <col:9> 'int' <LValueToRValue>
-|   | | | `-DeclRefExpr 0x1d810f1b1c0 <col:9> 'int' lvalue Var 0x1d810f1a8d8 'i' 'int'
-|   | | `-IntegerLiteral 0x1d810f1b1e0 <col:14> 'int' 0
-|   | `-ReturnStmt 0x1d810f1b278 <line:135:9, col:16>
-|   |   `-ImplicitCastExpr 0x1d810f1b260 <col:16> 'int' <LValueToRValue>
-|   |     `-DeclRefExpr 0x1d810f1b240 <col:16> 'int' lvalue Var 0x1d810f1a8d8 'i' 'int'
-|   |-IfStmt 0x1d810f1b4d8 <line:139:5, line:147:5> has_else
-|   | |-OpaqueValueExpr 0x1d810f1b4c0 <<invalid sloc>> '_Bool'
-|   | |-CompoundStmt 0x1d810f1b3c0 <line:139:21, line:143:5>
-|   | | `-IfStmt 0x1d810f1b3a8 <line:141:9, line:142:18>
-|   | |   |-BinaryOperator 0x1d810f1b370 <line:141:13, col:19> 'int' '!='
-|   | |   | |-ImplicitCastExpr 0x1d810f1b358 <col:13> 'int' <LValueToRValue>
-|   | |   | | `-DeclRefExpr 0x1d810f1b2f8 <col:13> 'int' lvalue Var 0x1d810f1a8d8 'i' 'int'
-|   | |   | `-UnaryOperator 0x1d810f1b340 <col:18, col:19> 'int' prefix '-'
-|   | |   |   `-IntegerLiteral 0x1d810f1b318 <col:19> 'int' 1
-|   | |   `-GotoStmt 0x1d810f1b390 <line:142:13, col:18> 'bad_cache' 0x1d810f1ae00
-|   | `-CompoundStmt 0x1d810f1b4a8 <line:143:12, line:147:5>
-|   |   `-IfStmt 0x1d810f1b490 <line:145:9, line:146:18>
-|   |     |-BinaryOperator 0x1d810f1b458 <line:145:13, col:18> 'int' '<='
-|   |     | |-ImplicitCastExpr 0x1d810f1b440 <col:13> 'int' <LValueToRValue>
-|   |     | | `-DeclRefExpr 0x1d810f1b3f8 <col:13> 'int' lvalue Var 0x1d810f1a8d8 'i' 'int'
-|   |     | `-IntegerLiteral 0x1d810f1b418 <col:18> 'int' 0
-|   |     `-GotoStmt 0x1d810f1b478 <line:146:13, col:18> 'bad_cache' 0x1d810f1ae00
-|   |-IfStmt 0x1d810f1b698 <line:151:5, line:155:14> has_else
-|   | |-OpaqueValueExpr 0x1d810f1b680 <<invalid sloc>> '_Bool'
-|   | |-CompoundStmt 0x1d810f1b620 <line:151:19, line:154:5>
-|   | | `-IfStmt 0x1d810f1b608 <line:152:9, line:153:18>
-|   | |   |-BinaryOperator 0x1d810f1b5d0 <line:152:13, col:19> 'int' '!='
-|   | |   | |-ImplicitCastExpr 0x1d810f1b5b8 <col:13> 'int' <LValueToRValue>
-|   | |   | | `-DeclRefExpr 0x1d810f1b558 <col:13> 'int' lvalue Var 0x1d810f1a8d8 'i' 'int'
-|   | |   | `-UnaryOperator 0x1d810f1b5a0 <col:18, col:19> 'int' prefix '-'
-|   | |   |   `-IntegerLiteral 0x1d810f1b578 <col:19> 'int' 1
-|   | |   `-GotoStmt 0x1d810f1b5f0 <line:153:13, col:18> 'bad_cache' 0x1d810f1ae00
-|   | `-IfStmt 0x1d810f1b668 <line:154:12, line:155:14>
-|   |   |-OpaqueValueExpr 0x1d810f1b650 <<invalid sloc>> '_Bool'
-|   |   `-GotoStmt 0x1d810f1b638 <col:9, col:14> 'bad_cache' 0x1d810f1ae00
-|   |-GotoStmt 0x1d810f1b710 <line:156:5, col:10> 'just_cleanup' 0x1d810f1b6c0
-|   |-LabelStmt 0x1d810f1b730 <line:158:2, col:11> 'bad_cache'
-|   | `-NullStmt 0x1d810f1b728 <col:11>
-|   |-LabelStmt 0x1d810f1b860 <line:161:2, col:14> 'just_cleanup'
-|   | `-NullStmt 0x1d810f1b858 <col:14>
-|   `-ReturnStmt 0x1d810f1b9b0 <line:164:5, col:12>
-|     `-IntegerLiteral 0x1d810f1b988 <col:12> 'int' 1
-|-FunctionDecl 0x1d810f1bad8 <line:168:1, line:175:1> line:168:6 invalid policy_cache_free 'void (int *)'
-| |-ParmVarDecl 0x1d810f1ba48 <col:24, col:43> col:43 invalid cache 'int *'
-| `-CompoundStmt 0x1d810f27e48 <line:169:1, line:175:1>
-|   `-IfStmt 0x1d810f1bbc0 <line:170:5, line:171:9>
-|     |-OpaqueValueExpr 0x1d810f1bba8 <<invalid sloc>> '_Bool'
-|     `-ReturnStmt 0x1d810f1bb98 <col:9>
-|-FunctionDecl 0x1d810f27f10 <line:177:1, line:188:1> line:177:26 invalid policy_cache_set 'const int *(int *)'
-| |-ParmVarDecl 0x1d810f27e78 <col:43, col:49> col:49 invalid x 'int *'
-| `-CompoundStmt 0x1d810f28230 <line:178:1, line:188:1>
-|   `-IfStmt 0x1d810f28218 <line:180:5, line:184:5>
-|     |-OpaqueValueExpr 0x1d810f28200 <<invalid sloc>> '_Bool'
-|     `-CompoundStmt 0x1d810f281f0 <line:180:34, line:184:5>
-|-FunctionDecl 0x1d810f28378 <line:190:1, line:200:1> line:190:19 invalid policy_cache_find_data 'X509_POLICY_DATA *(const int *, const int *)'
-| |-ParmVarDecl 0x1d810f28260 <col:42, col:67> col:67 invalid cache 'const int *'
-| |-ParmVarDecl 0x1d810f282e0 <line:191:42, col:61> col:61 invalid id 'const int *'
-| `-CompoundStmt 0x1d810f287f8 <line:192:1, line:200:1>
-|   |-DeclStmt 0x1d810f284c0 <line:193:5, col:12>
-|   | `-VarDecl 0x1d810f28458 <col:5, col:9> col:9 used idx 'int'
-|   `-DeclStmt 0x1d810f28550 <line:194:5, col:25>
-|     `-VarDecl 0x1d810f284e8 <col:5, col:22> col:22 used tmp 'X509_POLICY_DATA':'struct X509_POLICY_DATA_st'
-|-FunctionDecl 0x1d810f28980 prev 0x1d810f12af0 <line:202:1, line:206:1> line:202:12 used policy_data_cmp 'int (const X509_POLICY_DATA *const *, const X509_POLICY_DATA *const *)' static
-| |-ParmVarDecl 0x1d810f28830 <col:28, col:59> col:59 used a 'const X509_POLICY_DATA *const *'
-| |-ParmVarDecl 0x1d810f288b0 <line:203:28, col:59> col:59 used b 'const X509_POLICY_DATA *const *'
-| `-CompoundStmt 0x1d810f28c50 <line:204:1, line:206:1>
-`-FunctionDecl 0x1d810f2bdd8 <line:208:1, line:216:1> line:208:12 invalid policy_cache_set_int 'int (long *, int *)' static
-  |-ParmVarDecl 0x1d810f28c78 <col:33, col:39> col:39 used out 'long *'
-  |-ParmVarDecl 0x1d810f28cf8 <col:44, col:58> col:58 invalid value 'int *'
-  `-CompoundStmt 0x1d810f2c120 <line:209:1, line:216:1>
-    |-IfStmt 0x1d810f2bef0 <line:210:5, line:211:16>
-    | |-OpaqueValueExpr 0x1d810f2bed8 <<invalid sloc>> '_Bool'
-    | `-ReturnStmt 0x1d810f2bec8 <col:9, col:16>
-    |   `-IntegerLiteral 0x1d810f2bea0 <col:16> 'int' 1
-    |-IfStmt 0x1d810f2bf58 <line:212:5, line:213:16>
-    | |-OpaqueValueExpr 0x1d810f2bf40 <<invalid sloc>> '_Bool'
-    | `-ReturnStmt 0x1d810f2bf30 <col:9, col:16>
-    |   `-IntegerLiteral 0x1d810f2bf08 <col:16> 'int' 0
-    `-ReturnStmt 0x1d810f2c110 <line:215:5, col:12>
-      `-IntegerLiteral 0x1d810f2c0e8 <col:12> 'int' 1
+TranslationUnitDecl 0x18ce8646ff8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x18ce8647890 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x18ce8647590 '__int128'
+|-TypedefDecl 0x18ce8647900 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x18ce86475b0 'unsigned __int128'
+|-TypedefDecl 0x18ce8647c38 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x18ce86479f0 'struct __NSConstantString_tag'
+|   `-Record 0x18ce8647958 '__NSConstantString_tag'
+|-TypedefDecl 0x18ce8647ca8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x18ce86471d0 'unsigned long long'
+|-TypedefDecl 0x18ce8647d40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x18ce8647d00 'char *'
+|   `-BuiltinType 0x18ce8647090 'char'
+|-TypedefDecl 0x18ce8647db0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x18ce8647d00 'char *'
+|   `-BuiltinType 0x18ce8647090 'char'
+|-RecordDecl 0x18ce8647e08 <.//openssl//file_jk/before\crypto\x509v3/pcy_int.h:10:9, col:16> col:16 struct X509_POLICY_DATA_st
+|-TypedefDecl 0x18ce8647f18 <col:1, col:36> col:36 referenced X509_POLICY_DATA 'struct X509_POLICY_DATA_st':'struct X509_POLICY_DATA_st'
+| `-ElaboratedType 0x18ce8647ec0 'struct X509_POLICY_DATA_st' sugar
+|   `-RecordType 0x18ce8647ea0 'struct X509_POLICY_DATA_st'
+|     `-Record 0x18ce9ec4378 'X509_POLICY_DATA_st'
+|-FunctionDecl 0x18ce9ec4270 <line:12:1, col:33> col:1 DEFINE_STACK_OF 'int (X509_POLICY_DATA)'
+| `-ParmVarDecl 0x18ce9ec4170 <col:17> col:33 'X509_POLICY_DATA':'struct X509_POLICY_DATA_st'
+|-RecordDecl 0x18ce9ec4378 prev 0x18ce8647e08 <line:23:1, line:29:1> line:23:8 invalid struct X509_POLICY_DATA_st definition
+| |-FieldDecl 0x18ce9ec4410 <line:24:5, col:18> col:18 flags 'unsigned int'
+| |-FieldDecl 0x18ce9ec44b0 <line:26:5, col:18> col:18 invalid valid_policy 'int *'
+| `-FieldDecl 0x18ce9ec4560 <line:27:5, <invalid sloc>> col:5 invalid STACK_OF 'int ()'
+|-RecordDecl 0x18ce9ec4638 <line:65:1, line:82:1> line:65:8 invalid struct X509_POLICY_CACHE_st definition
+| |-FieldDecl 0x18ce9ec4758 <line:67:5, col:23> col:23 anyPolicy 'X509_POLICY_DATA *'
+| |-FieldDecl 0x18ce9ec4858 <line:69:5, <invalid sloc>> col:5 invalid STACK_OF 'int (X509_POLICY_DATA)'
+| |-FieldDecl 0x18ce9ec48c8 <line:71:5, col:10> col:10 any_skip 'long'
+| |-FieldDecl 0x18ce9ec4938 <line:76:5, col:10> col:10 explicit_skip 'long'
+| `-FieldDecl 0x18ce9ec49a8 <line:81:5, col:10> col:10 map_skip 'long'
+|-RecordDecl 0x18ce9ec4a00 <line:90:1, line:97:1> line:90:8 invalid struct X509_POLICY_NODE_st definition
+| |-FieldDecl 0x18ce9ec4b28 <line:92:5, col:29> col:29 data 'const X509_POLICY_DATA *'
+| |-FieldDecl 0x18ce9ec4b98 <line:94:5, col:23> col:23 invalid parent 'int *'
+| `-FieldDecl 0x18ce9ec4c08 <line:96:5, col:9> col:9 nchild 'int'
+|-RecordDecl 0x18ce9ec4c60 <line:99:1, line:111:1> line:99:8 invalid struct X509_POLICY_LEVEL_st definition
+| |-FieldDecl 0x18ce9ec4d38 <line:101:5, col:11> col:11 invalid cert 'int *'
+| |-FieldDecl 0x18ce9ec4db8 <line:103:5, <invalid sloc>> col:5 invalid STACK_OF 'int ()'
+| |-FieldDecl 0x18ce9ec4e28 <line:105:5, col:23> col:23 invalid anyPolicy 'int *'
+| `-FieldDecl 0x18ce9ec4e98 <line:110:5, col:18> col:18 flags 'unsigned int'
+|-RecordDecl 0x18ce9ec4ef0 <line:113:1, line:126:1> line:113:8 invalid struct X509_POLICY_TREE_st definition
+| |-FieldDecl 0x18ce9ec4fc8 <line:115:5, col:24> col:24 invalid levels 'int *'
+| |-FieldDecl 0x18ce9ec5038 <line:116:5, col:9> col:9 nlevel 'int'
+| |-FieldDecl 0x18ce9ece210 <line:121:5, <invalid sloc>> col:5 invalid STACK_OF 'int (X509_POLICY_DATA)'
+| `-FieldDecl 0x18ce9ece380 <line:125:5, col:18> col:18 flags 'unsigned int'
+|-FunctionDecl 0x18ce9ece618 <line:138:1, line:139:43> line:138:19 invalid policy_data_new 'X509_POLICY_DATA *(int *, const int *, int)'
+| |-ParmVarDecl 0x18ce9ece3f0 <col:35, col:47> col:47 invalid policy 'int *'
+| |-ParmVarDecl 0x18ce9ece470 <col:55, col:74> col:74 invalid id 'const int *'
+| `-ParmVarDecl 0x18ce9ece4f0 <line:139:35, col:39> col:39 crit 'int'
+|-FunctionDecl 0x18ce9ece7e8 <line:140:1, col:45> col:6 used policy_data_free 'void (X509_POLICY_DATA *)'
+| `-ParmVarDecl 0x18ce9ece6e0 <col:23, col:41> col:41 data 'X509_POLICY_DATA *'
+|-FunctionDecl 0x18ce9ecea58 <line:142:1, line:143:63> line:142:19 invalid policy_cache_find_data 'X509_POLICY_DATA *(const int *, const int *)'
+| |-ParmVarDecl 0x18ce9ece8c0 <col:42, col:67> col:67 invalid cache 'const int *'
+| `-ParmVarDecl 0x18ce9ece940 <line:143:42, col:61> col:61 invalid id 'const int *'
+|-FunctionDecl 0x18ce9ecec80 <line:144:1, col:60> col:5 invalid policy_cache_set_mapping 'int (int *, int *)'
+| |-ParmVarDecl 0x18ce9eceb20 <col:30, col:36> col:36 invalid x 'int *'
+| `-ParmVarDecl 0x18ce9eceba0 <col:39, col:56> col:56 invalid maps 'int *'
+|-FunctionDecl 0x18ce9ecedf8 <line:148:1, col:28> col:6 policy_cache_init 'void (void)'
+|-FunctionDecl 0x18ce9ecef88 <line:150:1, col:48> col:6 invalid policy_cache_free 'void (int *)'
+| `-ParmVarDecl 0x18ce9eceec8 <col:24, col:43> col:43 invalid cache 'int *'
+|-FunctionDecl 0x18ce9ecf260 <line:152:1, line:154:56> line:152:19 invalid level_find_node 'int *(const int *, const int *, const int *)'
+| |-ParmVarDecl 0x18ce9ecf048 <col:35, col:60> col:60 invalid level 'const int *'
+| |-ParmVarDecl 0x18ce9ecf0c8 <line:153:35, col:59> col:59 invalid parent 'const int *'
+| `-ParmVarDecl 0x18ce9ecf148 <line:154:35, col:54> col:54 invalid id 'const int *'
+|-FunctionDecl 0x18ce9ecf4a0 <line:156:1, line:157:53> line:156:19 invalid tree_find_sk 'int *(int (*)())'
+| `-ParmVarDecl 0x18ce9ecf3a0 <col:32, <invalid sloc>> col:32 invalid STACK_OF 'int (*)()':'int (*)()'
+|-FunctionDecl 0x18ce9ecf820 <line:159:1, line:162:56> line:159:19 invalid level_add_node 'int *(int *, X509_POLICY_DATA *, int *, int *)'
+| |-ParmVarDecl 0x18ce9ecf560 <col:34, col:53> col:53 invalid level 'int *'
+| |-ParmVarDecl 0x18ce9ecf5d8 <line:160:34, col:52> col:52 data 'X509_POLICY_DATA *'
+| |-ParmVarDecl 0x18ce9ecf658 <line:161:34, col:52> col:52 invalid parent 'int *'
+| `-ParmVarDecl 0x18ce9ecf6d8 <line:162:34, col:52> col:52 invalid tree 'int *'
+|-FunctionDecl 0x18ce9ecf988 <line:163:1, col:45> col:6 invalid policy_node_free 'void (int *)'
+| `-ParmVarDecl 0x18ce9ecf8f8 <col:23, col:41> col:41 invalid node 'int *'
+|-FunctionDecl 0x18ce9ecfc30 <line:164:1, line:165:75> line:164:5 invalid policy_node_match 'int (const int *, const int *, const int *)'
+| |-ParmVarDecl 0x18ce9ecfa48 <col:23, col:48> col:48 invalid lvl 'const int *'
+| |-ParmVarDecl 0x18ce9ecfac8 <line:165:23, col:47> col:47 invalid node 'const int *'
+| `-ParmVarDecl 0x18ce9ecfb48 <col:53, col:72> col:72 invalid oid 'const int *'
+|-FunctionDecl 0x18ce9ecfdd0 <line:167:1, col:50> col:26 invalid policy_cache_set 'const int *(int *)'
+| `-ParmVarDecl 0x18ce9ecfd00 <col:43, col:49> col:49 invalid x 'int *'
+|-FunctionDecl 0x18ce9ed00c0 <.//openssl//file_jk/before\crypto\x509v3\pcy_cache.c:17:1, line:18:60> line:17:12 used policy_data_cmp 'int (const X509_POLICY_DATA *const *, const X509_POLICY_DATA *const *)' static
+| |-ParmVarDecl 0x18ce9ecfef0 <col:28, col:59> col:59 a 'const X509_POLICY_DATA *const *'
+| `-ParmVarDecl 0x18ce9ecff70 <line:18:28, col:59> col:59 b 'const X509_POLICY_DATA *const *'
+|-FunctionDecl 0x18ce9ecd360 <line:19:1, col:63> col:12 invalid policy_cache_set_int 'int (long *, int *)' static
+| |-ParmVarDecl 0x18ce9ecd200 <col:33, col:39> col:39 out 'long *'
+| `-ParmVarDecl 0x18ce9ecd280 <col:44, col:58> col:58 invalid value 'int *'
+|-FunctionDecl 0x18ce9ecd610 <line:26:1, line:71:1> line:26:12 invalid policy_cache_create 'int (int *, int *, int)' static
+| |-ParmVarDecl 0x18ce9ecd428 <col:32, col:38> col:38 invalid x 'int *'
+| |-ParmVarDecl 0x18ce9ecd4a8 <line:27:32, col:53> col:53 invalid policies 'int *'
+| |-ParmVarDecl 0x18ce9ecd528 <col:63, col:67> col:67 used crit 'int'
+| `-CompoundStmt 0x18ce9ed0c20 <line:28:1, line:71:1>
+|   |-DeclStmt 0x18ce9ecd760 <line:29:5, col:10>
+|   | `-VarDecl 0x18ce9ecd6f8 <col:5, col:9> col:9 used i 'int'
+|   |-DeclStmt 0x18ce9ecd820 <line:30:5, col:16>
+|   | `-VarDecl 0x18ce9ecd790 <col:5, col:15> col:9 used ret 'int' cinit
+|   |   `-IntegerLiteral 0x18ce9ecd7f8 <col:15> 'int' 0
+|   |-DeclStmt 0x18ce9ecd8b0 <line:32:5, col:34>
+|   | `-VarDecl 0x18ce9ecd848 <col:5, col:23> col:23 used data 'X509_POLICY_DATA *'
+|   |-IfStmt 0x18ce9ecda80 <line:34:5, line:35:14>
+|   | |-OpaqueValueExpr 0x18ce9ecda68 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ce9ecda50 <col:9, col:14> 'bad_policy' 0x18ce9ecda00
+|   |-IfStmt 0x18ce9ecdcb0 <line:37:5, line:38:14>
+|   | |-OpaqueValueExpr 0x18ce9ecdc98 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x18ce9ecdc80 <col:9, col:14> 'bad_policy' 0x18ce9ecda00
+|   |-BinaryOperator 0x18ce9ed0728 <line:60:5, col:11> 'int' '='
+|   | |-DeclRefExpr 0x18ce9ed06e0 <col:5> 'int' lvalue Var 0x18ce9ecd790 'ret' 'int'
+|   | `-IntegerLiteral 0x18ce9ed0700 <col:11> 'int' 1
+|   |-LabelStmt 0x18ce9ed07e8 <line:61:2, col:12> 'bad_policy'
+|   | `-NullStmt 0x18ce9ed07e0 <col:12>
+|   |-CallExpr 0x18ce9ed08b0 <line:64:5, col:26> 'void'
+|   | |-ImplicitCastExpr 0x18ce9ed0898 <col:5> 'void (*)(X509_POLICY_DATA *)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x18ce9ed0800 <col:5> 'void (X509_POLICY_DATA *)' Function 0x18ce9ece7e8 'policy_data_free' 'void (X509_POLICY_DATA *)'
+|   | `-ImplicitCastExpr 0x18ce9ed08d8 <col:22> 'X509_POLICY_DATA *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x18ce9ed0820 <col:22> 'X509_POLICY_DATA *' lvalue Var 0x18ce9ecd848 'data' 'X509_POLICY_DATA *'
+|   |-IfStmt 0x18ce9ed0bc0 <line:66:5, line:69:5>
+|   | |-BinaryOperator 0x18ce9ed0a60 <line:66:9, col:16> 'int' '<='
+|   | | |-ImplicitCastExpr 0x18ce9ed0a48 <col:9> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x18ce9ed0a00 <col:9> 'int' lvalue Var 0x18ce9ecd790 'ret' 'int'
+|   | | `-IntegerLiteral 0x18ce9ed0a20 <col:16> 'int' 0
+|   | `-CompoundStmt 0x18ce9ed0bb0 <col:19, line:69:5>
+|   `-ReturnStmt 0x18ce9ed0c10 <line:70:5, col:12>
+|     `-ImplicitCastExpr 0x18ce9ed0bf8 <col:12> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x18ce9ed0bd8 <col:12> 'int' lvalue Var 0x18ce9ecd790 'ret' 'int'
+|-FunctionDecl 0x18ce9ed0d60 <line:73:1, line:166:1> line:73:12 invalid policy_cache_new 'int (int *)' static
+| |-ParmVarDecl 0x18ce9ed0c98 <col:29, col:35> col:35 invalid x 'int *'
+| `-CompoundStmt 0x18ce9ed1f20 <line:74:1, line:166:1>
+|   |-DeclStmt 0x18ce9ed0ea0 <line:80:5, col:10>
+|   | `-VarDecl 0x18ce9ed0e38 <col:5, col:9> col:9 used i 'int'
+|   |-IfStmt 0x18ce9ed0f08 <line:82:5, line:83:16>
+|   | |-OpaqueValueExpr 0x18ce9ed0ef0 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x18ce9ed0ee0 <col:9, col:16>
+|   |   `-IntegerLiteral 0x18ce9ed0eb8 <col:16> 'int' 1
+|   |-IfStmt 0x18ce9ed1080 <line:85:5, line:86:16>
+|   | |-OpaqueValueExpr 0x18ce9ed1068 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x18ce9ed1058 <col:9, col:16>
+|   |   `-IntegerLiteral 0x18ce9ed1030 <col:16> 'int' 0
+|   |-IfStmt 0x18ce9ed1510 <line:101:5, line:114:5> has_else
+|   | |-OpaqueValueExpr 0x18ce9ed14f8 <<invalid sloc>> '_Bool'
+|   | |-CompoundStmt 0x18ce9ed13e0 <line:101:21, line:104:5>
+|   | | `-IfStmt 0x18ce9ed13c8 <line:102:9, line:103:18>
+|   | |   |-BinaryOperator 0x18ce9ed1340 <line:102:13, col:19> 'int' '!='
+|   | |   | |-ImplicitCastExpr 0x18ce9ed1328 <col:13> 'int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x18ce9ed12c8 <col:13> 'int' lvalue Var 0x18ce9ed0e38 'i' 'int'
+|   | |   | `-UnaryOperator 0x18ce9ed1310 <col:18, col:19> 'int' prefix '-'
+|   | |   |   `-IntegerLiteral 0x18ce9ed12e8 <col:19> 'int' 1
+|   | |   `-GotoStmt 0x18ce9ed13b0 <line:103:13, col:18> 'bad_cache' 0x18ce9ed1360
+|   | `-CompoundStmt 0x18ce9ed14d0 <line:104:12, line:114:5>
+|   |   |-IfStmt 0x18ce9ed1428 <line:105:9, line:107:18>
+|   |   | |-OpaqueValueExpr 0x18ce9ed1410 <<invalid sloc>> '_Bool'
+|   |   | `-GotoStmt 0x18ce9ed13f8 <col:13, col:18> 'bad_cache' 0x18ce9ed1360
+|   |   |-IfStmt 0x18ce9ed1470 <line:108:9, line:110:18>
+|   |   | |-OpaqueValueExpr 0x18ce9ed1458 <<invalid sloc>> '_Bool'
+|   |   | `-GotoStmt 0x18ce9ed1440 <col:13, col:18> 'bad_cache' 0x18ce9ed1360
+|   |   `-IfStmt 0x18ce9ed14b8 <line:111:9, line:113:18>
+|   |     |-OpaqueValueExpr 0x18ce9ed14a0 <<invalid sloc>> '_Bool'
+|   |     `-GotoStmt 0x18ce9ed1488 <col:13, col:18> 'bad_cache' 0x18ce9ed1360
+|   |-IfStmt 0x18ce9ed16c8 <line:123:5, line:128:5>
+|   | |-OpaqueValueExpr 0x18ce9ed16b0 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x18ce9ed1690 <line:123:21, line:128:5>
+|   |   |-IfStmt 0x18ce9ed1640 <line:125:9, line:126:18>
+|   |   | |-BinaryOperator 0x18ce9ed1608 <line:125:13, col:19> 'int' '!='
+|   |   | | |-ImplicitCastExpr 0x18ce9ed15f0 <col:13> 'int' <LValueToRValue>
+|   |   | | | `-DeclRefExpr 0x18ce9ed1590 <col:13> 'int' lvalue Var 0x18ce9ed0e38 'i' 'int'
+|   |   | | `-UnaryOperator 0x18ce9ed15d8 <col:18, col:19> 'int' prefix '-'
+|   |   | |   `-IntegerLiteral 0x18ce9ed15b0 <col:19> 'int' 1
+|   |   | `-GotoStmt 0x18ce9ed1628 <line:126:13, col:18> 'bad_cache' 0x18ce9ed1360
+|   |   `-ReturnStmt 0x18ce9ed1680 <line:127:9, col:16>
+|   |     `-IntegerLiteral 0x18ce9ed1658 <col:16> 'int' 1
+|   |-IfStmt 0x18ce9ed17e8 <line:134:5, line:135:16>
+|   | |-BinaryOperator 0x18ce9ed1780 <line:134:9, col:14> 'int' '<='
+|   | | |-ImplicitCastExpr 0x18ce9ed1768 <col:9> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x18ce9ed1720 <col:9> 'int' lvalue Var 0x18ce9ed0e38 'i' 'int'
+|   | | `-IntegerLiteral 0x18ce9ed1740 <col:14> 'int' 0
+|   | `-ReturnStmt 0x18ce9ed17d8 <line:135:9, col:16>
+|   |   `-ImplicitCastExpr 0x18ce9ed17c0 <col:16> 'int' <LValueToRValue>
+|   |     `-DeclRefExpr 0x18ce9ed17a0 <col:16> 'int' lvalue Var 0x18ce9ed0e38 'i' 'int'
+|   |-IfStmt 0x18ce9ed1a38 <line:139:5, line:147:5> has_else
+|   | |-OpaqueValueExpr 0x18ce9ed1a20 <<invalid sloc>> '_Bool'
+|   | |-CompoundStmt 0x18ce9ed1920 <line:139:21, line:143:5>
+|   | | `-IfStmt 0x18ce9ed1908 <line:141:9, line:142:18>
+|   | |   |-BinaryOperator 0x18ce9ed18d0 <line:141:13, col:19> 'int' '!='
+|   | |   | |-ImplicitCastExpr 0x18ce9ed18b8 <col:13> 'int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x18ce9ed1858 <col:13> 'int' lvalue Var 0x18ce9ed0e38 'i' 'int'
+|   | |   | `-UnaryOperator 0x18ce9ed18a0 <col:18, col:19> 'int' prefix '-'
+|   | |   |   `-IntegerLiteral 0x18ce9ed1878 <col:19> 'int' 1
+|   | |   `-GotoStmt 0x18ce9ed18f0 <line:142:13, col:18> 'bad_cache' 0x18ce9ed1360
+|   | `-CompoundStmt 0x18ce9ed1a08 <line:143:12, line:147:5>
+|   |   `-IfStmt 0x18ce9ed19f0 <line:145:9, line:146:18>
+|   |     |-BinaryOperator 0x18ce9ed19b8 <line:145:13, col:18> 'int' '<='
+|   |     | |-ImplicitCastExpr 0x18ce9ed19a0 <col:13> 'int' <LValueToRValue>
+|   |     | | `-DeclRefExpr 0x18ce9ed1958 <col:13> 'int' lvalue Var 0x18ce9ed0e38 'i' 'int'
+|   |     | `-IntegerLiteral 0x18ce9ed1978 <col:18> 'int' 0
+|   |     `-GotoStmt 0x18ce9ed19d8 <line:146:13, col:18> 'bad_cache' 0x18ce9ed1360
+|   |-IfStmt 0x18ce9ed1bf8 <line:151:5, line:155:14> has_else
+|   | |-OpaqueValueExpr 0x18ce9ed1be0 <<invalid sloc>> '_Bool'
+|   | |-CompoundStmt 0x18ce9ed1b80 <line:151:19, line:154:5>
+|   | | `-IfStmt 0x18ce9ed1b68 <line:152:9, line:153:18>
+|   | |   |-BinaryOperator 0x18ce9ed1b30 <line:152:13, col:19> 'int' '!='
+|   | |   | |-ImplicitCastExpr 0x18ce9ed1b18 <col:13> 'int' <LValueToRValue>
+|   | |   | | `-DeclRefExpr 0x18ce9ed1ab8 <col:13> 'int' lvalue Var 0x18ce9ed0e38 'i' 'int'
+|   | |   | `-UnaryOperator 0x18ce9ed1b00 <col:18, col:19> 'int' prefix '-'
+|   | |   |   `-IntegerLiteral 0x18ce9ed1ad8 <col:19> 'int' 1
+|   | |   `-GotoStmt 0x18ce9ed1b50 <line:153:13, col:18> 'bad_cache' 0x18ce9ed1360
+|   | `-IfStmt 0x18ce9ed1bc8 <line:154:12, line:155:14>
+|   |   |-OpaqueValueExpr 0x18ce9ed1bb0 <<invalid sloc>> '_Bool'
+|   |   `-GotoStmt 0x18ce9ed1b98 <col:9, col:14> 'bad_cache' 0x18ce9ed1360
+|   |-GotoStmt 0x18ce9ed1c70 <line:156:5, col:10> 'just_cleanup' 0x18ce9ed1c20
+|   |-LabelStmt 0x18ce9ed1c90 <line:158:2, col:11> 'bad_cache'
+|   | `-NullStmt 0x18ce9ed1c88 <col:11>
+|   |-LabelStmt 0x18ce9ed1dc0 <line:161:2, col:14> 'just_cleanup'
+|   | `-NullStmt 0x18ce9ed1db8 <col:14>
+|   `-ReturnStmt 0x18ce9ed1f10 <line:164:5, col:12>
+|     `-IntegerLiteral 0x18ce9ed1ee8 <col:12> 'int' 1
+|-FunctionDecl 0x18ce9ed2038 <line:168:1, line:175:1> line:168:6 invalid policy_cache_free 'void (int *)'
+| |-ParmVarDecl 0x18ce9ed1fa8 <col:24, col:43> col:43 invalid cache 'int *'
+| `-CompoundStmt 0x18ce9ee5758 <line:169:1, line:175:1>
+|   `-IfStmt 0x18ce9ed2120 <line:170:5, line:171:9>
+|     |-OpaqueValueExpr 0x18ce9ed2108 <<invalid sloc>> '_Bool'
+|     `-ReturnStmt 0x18ce9ed20f8 <col:9>
+|-FunctionDecl 0x18ce9ee5820 <line:177:1, line:188:1> line:177:26 invalid policy_cache_set 'const int *(int *)'
+| |-ParmVarDecl 0x18ce9ee5788 <col:43, col:49> col:49 invalid x 'int *'
+| `-CompoundStmt 0x18ce9ee5b40 <line:178:1, line:188:1>
+|   `-IfStmt 0x18ce9ee5b28 <line:180:5, line:184:5>
+|     |-OpaqueValueExpr 0x18ce9ee5b10 <<invalid sloc>> '_Bool'
+|     `-CompoundStmt 0x18ce9ee5b00 <line:180:34, line:184:5>
+|-FunctionDecl 0x18ce9ee5c88 <line:190:1, line:200:1> line:190:19 invalid policy_cache_find_data 'X509_POLICY_DATA *(const int *, const int *)'
+| |-ParmVarDecl 0x18ce9ee5b70 <col:42, col:67> col:67 invalid cache 'const int *'
+| |-ParmVarDecl 0x18ce9ee5bf0 <line:191:42, col:61> col:61 invalid id 'const int *'
+| `-CompoundStmt 0x18ce9ee6108 <line:192:1, line:200:1>
+|   |-DeclStmt 0x18ce9ee5dd0 <line:193:5, col:12>
+|   | `-VarDecl 0x18ce9ee5d68 <col:5, col:9> col:9 used idx 'int'
+|   `-DeclStmt 0x18ce9ee5e60 <line:194:5, col:25>
+|     `-VarDecl 0x18ce9ee5df8 <col:5, col:22> col:22 used tmp 'X509_POLICY_DATA':'struct X509_POLICY_DATA_st'
+|-FunctionDecl 0x18ce9ee6290 prev 0x18ce9ed00c0 <line:202:1, line:206:1> line:202:12 used policy_data_cmp 'int (const X509_POLICY_DATA *const *, const X509_POLICY_DATA *const *)' static
+| |-ParmVarDecl 0x18ce9ee6140 <col:28, col:59> col:59 used a 'const X509_POLICY_DATA *const *'
+| |-ParmVarDecl 0x18ce9ee61c0 <line:203:28, col:59> col:59 used b 'const X509_POLICY_DATA *const *'
+| `-CompoundStmt 0x18ce9ee6560 <line:204:1, line:206:1>
+`-FunctionDecl 0x18ce9ee1668 <line:208:1, line:216:1> line:208:12 invalid policy_cache_set_int 'int (long *, int *)' static
+  |-ParmVarDecl 0x18ce9ee6588 <col:33, col:39> col:39 used out 'long *'
+  |-ParmVarDecl 0x18ce9ee6608 <col:44, col:58> col:58 invalid value 'int *'
+  `-CompoundStmt 0x18ce9ee19b0 <line:209:1, line:216:1>
+    |-IfStmt 0x18ce9ee1780 <line:210:5, line:211:16>
+    | |-OpaqueValueExpr 0x18ce9ee1768 <<invalid sloc>> '_Bool'
+    | `-ReturnStmt 0x18ce9ee1758 <col:9, col:16>
+    |   `-IntegerLiteral 0x18ce9ee1730 <col:16> 'int' 1
+    |-IfStmt 0x18ce9ee17e8 <line:212:5, line:213:16>
+    | |-OpaqueValueExpr 0x18ce9ee17d0 <<invalid sloc>> '_Bool'
+    | `-ReturnStmt 0x18ce9ee17c0 <col:9, col:16>
+    |   `-IntegerLiteral 0x18ce9ee1798 <col:16> 'int' 0
+    `-ReturnStmt 0x18ce9ee19a0 <line:215:5, col:12>
+      `-IntegerLiteral 0x18ce9ee1978 <col:12> 'int' 1

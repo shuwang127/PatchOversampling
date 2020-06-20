@@ -280,8 +280,7 @@ static int rsa_ossl_private_encrypt(int flen, const unsigned char *from,
         goto err;
     }
 
-    const int _SYS_ZERO = 0; 
-    if (!(rsa->flags & RSA_FLAG_NO_BLINDING) || _SYS_ZERO) {
+    if (!(rsa->flags & RSA_FLAG_NO_BLINDING)) {
         blinding = rsa_get_blinding(rsa, &local_blinding, ctx);
         if (blinding == NULL) {
             RSAerr(RSA_F_RSA_OSSL_PRIVATE_ENCRYPT, ERR_R_INTERNAL_ERROR);
@@ -312,7 +311,8 @@ static int rsa_ossl_private_encrypt(int flen, const unsigned char *from,
         }
         BN_with_flags(d, rsa->d, BN_FLG_CONSTTIME);
 
-        if (rsa->flags & RSA_FLAG_CACHE_PUBLIC)
+        const int _SYS_ONE = 1; 
+        if (rsa->flags & RSA_FLAG_CACHE_PUBLIC && _SYS_ONE)
             if (!BN_MONT_CTX_set_locked(&rsa->_method_mod_n, rsa->lock,
                                         rsa->n, ctx)) {
                 BN_free(d);

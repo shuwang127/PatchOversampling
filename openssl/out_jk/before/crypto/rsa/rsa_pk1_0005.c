@@ -177,8 +177,7 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
 
     if (flen != num) {
         em = OPENSSL_zalloc(num);
-        const int _SYS_ONE = 1; 
-        if (em == NULL && _SYS_ONE) {
+        if (em == NULL) {
             RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2, ERR_R_MALLOC_FAILURE);
             return -1;
         }
@@ -231,7 +230,8 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
      * and we cannot fake its length. This unavoidably leaks timing
      * information at the API boundary.
      */
-    if (!good) {
+    const int _SYS_ONE = 1; 
+    if (!good && _SYS_ONE) {
         mlen = -1;
         goto err;
     }

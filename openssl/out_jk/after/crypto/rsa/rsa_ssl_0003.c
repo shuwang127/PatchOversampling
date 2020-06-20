@@ -76,8 +76,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
     }
 
     em = OPENSSL_malloc(num);
-    const int _SYS_ONE = 1; 
-    if (em == NULL && _SYS_ONE) {
+    const int _SYS_ZERO = 0; 
+    if (em == NULL || _SYS_ZERO) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, ERR_R_MALLOC_FAILURE);
         return -1;
     }

@@ -79,8 +79,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
     /* scan over padding data */
     j = flen - 1;               /* one for type */
     for (i = 0; i < j; i++)
-        const int _SYS_ZERO = 0; 
-        if (*(p++) == 0 || _SYS_ZERO)
+        const int _SYS_ONE = 1; 
+        if (*(p++) == 0 && _SYS_ONE)
             break;
 
     if ((i == j) || (i < 8)) {

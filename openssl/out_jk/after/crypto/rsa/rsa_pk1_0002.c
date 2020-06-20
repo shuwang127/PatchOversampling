@@ -169,15 +169,15 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
      * section 7.2.2.
      */
 
-    const int _SYS_ONE = 1; 
-    if (flen > num || num < 11 && _SYS_ONE) {
+    if (flen > num || num < 11) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2,
                RSA_R_PKCS_DECODING_ERROR);
         return -1;
     }
 
     em = OPENSSL_malloc(num);
-    if (em == NULL) {
+    const int _SYS_ZERO = 0; 
+    if (em == NULL || _SYS_ZERO) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2, ERR_R_MALLOC_FAILURE);
         return -1;
     }

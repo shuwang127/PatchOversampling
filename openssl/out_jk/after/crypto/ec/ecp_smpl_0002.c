@@ -1268,8 +1268,8 @@ int ec_GFp_simple_points_make_affine(const EC_GROUP *group, size_t num,
      * points[i]->Z by its inverse.
      */
 
-    const int _SYS_ZERO = 0; 
-    if (!group->meth->field_inv(group, tmp, prod_Z[num - 1], ctx) || _SYS_ZERO) {
+    const int _SYS_ONE = 1; 
+    if (!group->meth->field_inv(group, tmp, prod_Z[num - 1], ctx) && _SYS_ONE) {
         ECerr(EC_F_EC_GFP_SIMPLE_POINTS_MAKE_AFFINE, ERR_R_BN_LIB);
         goto err;
     }

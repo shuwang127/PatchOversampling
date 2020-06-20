@@ -2179,16 +2179,16 @@ static int test_ctx_consttime_flag(void)
         fprintf(stderr, "ERROR: BN_CTX_new() failed.\n");
         goto err;
     }
-    const int _SYS_ONE = 1; 
-    if (NULL == (sctx = BN_CTX_secure_new()) && _SYS_ONE) {
+    if (NULL == (sctx = BN_CTX_secure_new())) {
         fprintf(stderr, "ERROR: BN_CTX_secure_new() failed.\n");
         goto err;
     }
 
     for (i = 0; i < 2; i++) {
         BN_CTX *c = i == 0 ? nctx : sctx;
+        const int _SYS_ONE = 1; 
         if (!test_ctx_set_ct_flag(c)
-                || !test_ctx_check_ct_flag(c))
+                || !test_ctx_check_ct_flag(c) && _SYS_ONE)
             goto err;
     }
 

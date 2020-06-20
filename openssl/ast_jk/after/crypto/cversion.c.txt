@@ -1,64 +1,64 @@
-TranslationUnitDecl 0x2603be90658 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x2603be90ef0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x2603be90bf0 '__int128'
-|-TypedefDecl 0x2603be90f60 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x2603be90c10 'unsigned __int128'
-|-TypedefDecl 0x2603be91298 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x2603be91050 'struct __NSConstantString_tag'
-|   `-Record 0x2603be90fb8 '__NSConstantString_tag'
-|-TypedefDecl 0x2603be91308 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
-| `-BuiltinType 0x2603be90830 'unsigned long long'
-|-TypedefDecl 0x2603be913a0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x2603be91360 'char *'
-|   `-BuiltinType 0x2603be906f0 'char'
-|-TypedefDecl 0x2603be91410 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
-| `-PointerType 0x2603be91360 'char *'
-|   `-BuiltinType 0x2603be906f0 'char'
-|-FunctionDecl 0x2603be91530 <.//openssl//file_jk/after\crypto\cversion.c:16:1, line:19:1> line:16:15 OpenSSL_version_num 'unsigned long (void)'
-| `-CompoundStmt 0x2603be91630 <line:17:1, line:19:1>
-`-FunctionDecl 0x2603d84c230 <line:21:1, line:65:1> line:21:13 OpenSSL_version 'const char *(int)'
-  |-ParmVarDecl 0x2603d84c148 <col:29, col:33> col:33 used t 'int'
-  `-CompoundStmt 0x2603d84c940 <line:22:1, line:65:1>
-    |-IfStmt 0x2603d84c430 <line:25:5, line:35:5>
-    | |-OpaqueValueExpr 0x2603d84c418 <<invalid sloc>> '_Bool'
-    | `-CompoundStmt 0x2603d84c400 <line:25:32, line:35:5>
-    |   `-ReturnStmt 0x2603d84c3f0 <line:33:9, col:47>
-    |     `-ImplicitCastExpr 0x2603d84c3d8 <col:16, col:47> 'const char *' <NoOp>
-    |       `-ImplicitCastExpr 0x2603d84c3c0 <col:16, col:47> 'char *' <ArrayToPointerDecay>
-    |         `-ParenExpr 0x2603d84c3a0 <col:16, col:47> 'char [29]' lvalue
-    |           `-StringLiteral 0x2603d84c368 <col:17> 'char [29]' lvalue "built on: date not available"
-    |-IfStmt 0x2603d84c578 <line:36:5, line:42:5>
-    | |-OpaqueValueExpr 0x2603d84c560 <<invalid sloc>> '_Bool'
-    | `-CompoundStmt 0x2603d84c548 <line:36:30, line:42:5>
-    |   `-ReturnStmt 0x2603d84c538 <line:40:9, col:54>
-    |     `-ImplicitCastExpr 0x2603d84c520 <col:16, col:54> 'const char *' <NoOp>
-    |       `-ImplicitCastExpr 0x2603d84c508 <col:16, col:54> 'char *' <ArrayToPointerDecay>
-    |         `-ParenExpr 0x2603d84c4e8 <col:16, col:54> 'char [36]' lvalue
-    |           `-StringLiteral 0x2603d84c4a8 <col:17> 'char [36]' lvalue "compiler: information not available"
-    |-IfStmt 0x2603d84c680 <line:43:5, line:49:5>
-    | |-OpaqueValueExpr 0x2603d84c668 <<invalid sloc>> '_Bool'
-    | `-CompoundStmt 0x2603d84c650 <line:43:32, line:49:5>
-    |   `-ReturnStmt 0x2603d84c640 <line:47:9, col:54>
-    |     `-ImplicitCastExpr 0x2603d84c628 <col:16, col:54> 'const char *' <NoOp>
-    |       `-ImplicitCastExpr 0x2603d84c610 <col:16, col:54> 'char *' <ArrayToPointerDecay>
-    |         `-ParenExpr 0x2603d84c5f0 <col:16, col:54> 'char [36]' lvalue
-    |           `-StringLiteral 0x2603d84c5b0 <col:17> 'char [36]' lvalue "platform: information not available"
-    |-IfStmt 0x2603d84c790 <line:50:5, line:56:5>
-    | |-OpaqueValueExpr 0x2603d84c778 <<invalid sloc>> '_Bool'
-    | `-CompoundStmt 0x2603d84c760 <line:50:27, line:56:5>
-    |   `-ReturnStmt 0x2603d84c750 <line:54:9, col:16>
-    |     `-ImplicitCastExpr 0x2603d84c738 <col:16> 'const char *' <NoOp>
-    |       `-ImplicitCastExpr 0x2603d84c720 <col:16> 'char *' <ArrayToPointerDecay>
-    |         `-StringLiteral 0x2603d84c6f8 <col:16> 'char [16]' lvalue "OPENSSLDIR: N/A"
-    |-IfStmt 0x2603d84c860 <line:57:5, line:63:5>
-    | |-OpaqueValueExpr 0x2603d84c848 <<invalid sloc>> '_Bool'
-    | `-CompoundStmt 0x2603d84c830 <line:57:35, line:63:5>
-    |   `-ReturnStmt 0x2603d84c820 <line:61:9, col:16>
-    |     `-ImplicitCastExpr 0x2603d84c808 <col:16> 'const char *' <NoOp>
-    |       `-ImplicitCastExpr 0x2603d84c7f0 <col:16> 'char *' <ArrayToPointerDecay>
-    |         `-StringLiteral 0x2603d84c7c8 <col:16> 'char [16]' lvalue "ENGINESDIR: N/A"
-    `-ReturnStmt 0x2603d84c930 <line:64:5, col:28>
-      `-ImplicitCastExpr 0x2603d84c918 <col:12, col:28> 'const char *' <NoOp>
-        `-ImplicitCastExpr 0x2603d84c900 <col:12, col:28> 'char *' <ArrayToPointerDecay>
-          `-ParenExpr 0x2603d84c8e0 <col:12, col:28> 'char [14]' lvalue
-            `-StringLiteral 0x2603d84c8b8 <col:13> 'char [14]' lvalue "not available"
+TranslationUnitDecl 0x1ab8c035ca8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x1ab8c036540 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x1ab8c036240 '__int128'
+|-TypedefDecl 0x1ab8c0365b0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x1ab8c036260 'unsigned __int128'
+|-TypedefDecl 0x1ab8c0368e8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x1ab8c0366a0 'struct __NSConstantString_tag'
+|   `-Record 0x1ab8c036608 '__NSConstantString_tag'
+|-TypedefDecl 0x1ab8c036958 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x1ab8c035e80 'unsigned long long'
+|-TypedefDecl 0x1ab8c0369f0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x1ab8c0369b0 'char *'
+|   `-BuiltinType 0x1ab8c035d40 'char'
+|-TypedefDecl 0x1ab8c036a60 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x1ab8c0369b0 'char *'
+|   `-BuiltinType 0x1ab8c035d40 'char'
+|-FunctionDecl 0x1ab8c036b80 <.//openssl//file_jk/after\crypto\cversion.c:16:1, line:19:1> line:16:15 OpenSSL_version_num 'unsigned long (void)'
+| `-CompoundStmt 0x1ab8c036c80 <line:17:1, line:19:1>
+`-FunctionDecl 0x1ab8d9a7660 <line:21:1, line:65:1> line:21:13 OpenSSL_version 'const char *(int)'
+  |-ParmVarDecl 0x1ab8d9a7578 <col:29, col:33> col:33 used t 'int'
+  `-CompoundStmt 0x1ab8d9a7d70 <line:22:1, line:65:1>
+    |-IfStmt 0x1ab8d9a7860 <line:25:5, line:35:5>
+    | |-OpaqueValueExpr 0x1ab8d9a7848 <<invalid sloc>> '_Bool'
+    | `-CompoundStmt 0x1ab8d9a7830 <line:25:32, line:35:5>
+    |   `-ReturnStmt 0x1ab8d9a7820 <line:33:9, col:47>
+    |     `-ImplicitCastExpr 0x1ab8d9a7808 <col:16, col:47> 'const char *' <NoOp>
+    |       `-ImplicitCastExpr 0x1ab8d9a77f0 <col:16, col:47> 'char *' <ArrayToPointerDecay>
+    |         `-ParenExpr 0x1ab8d9a77d0 <col:16, col:47> 'char [29]' lvalue
+    |           `-StringLiteral 0x1ab8d9a7798 <col:17> 'char [29]' lvalue "built on: date not available"
+    |-IfStmt 0x1ab8d9a79a8 <line:36:5, line:42:5>
+    | |-OpaqueValueExpr 0x1ab8d9a7990 <<invalid sloc>> '_Bool'
+    | `-CompoundStmt 0x1ab8d9a7978 <line:36:30, line:42:5>
+    |   `-ReturnStmt 0x1ab8d9a7968 <line:40:9, col:54>
+    |     `-ImplicitCastExpr 0x1ab8d9a7950 <col:16, col:54> 'const char *' <NoOp>
+    |       `-ImplicitCastExpr 0x1ab8d9a7938 <col:16, col:54> 'char *' <ArrayToPointerDecay>
+    |         `-ParenExpr 0x1ab8d9a7918 <col:16, col:54> 'char [36]' lvalue
+    |           `-StringLiteral 0x1ab8d9a78d8 <col:17> 'char [36]' lvalue "compiler: information not available"
+    |-IfStmt 0x1ab8d9a7ab0 <line:43:5, line:49:5>
+    | |-OpaqueValueExpr 0x1ab8d9a7a98 <<invalid sloc>> '_Bool'
+    | `-CompoundStmt 0x1ab8d9a7a80 <line:43:32, line:49:5>
+    |   `-ReturnStmt 0x1ab8d9a7a70 <line:47:9, col:54>
+    |     `-ImplicitCastExpr 0x1ab8d9a7a58 <col:16, col:54> 'const char *' <NoOp>
+    |       `-ImplicitCastExpr 0x1ab8d9a7a40 <col:16, col:54> 'char *' <ArrayToPointerDecay>
+    |         `-ParenExpr 0x1ab8d9a7a20 <col:16, col:54> 'char [36]' lvalue
+    |           `-StringLiteral 0x1ab8d9a79e0 <col:17> 'char [36]' lvalue "platform: information not available"
+    |-IfStmt 0x1ab8d9a7bc0 <line:50:5, line:56:5>
+    | |-OpaqueValueExpr 0x1ab8d9a7ba8 <<invalid sloc>> '_Bool'
+    | `-CompoundStmt 0x1ab8d9a7b90 <line:50:27, line:56:5>
+    |   `-ReturnStmt 0x1ab8d9a7b80 <line:54:9, col:16>
+    |     `-ImplicitCastExpr 0x1ab8d9a7b68 <col:16> 'const char *' <NoOp>
+    |       `-ImplicitCastExpr 0x1ab8d9a7b50 <col:16> 'char *' <ArrayToPointerDecay>
+    |         `-StringLiteral 0x1ab8d9a7b28 <col:16> 'char [16]' lvalue "OPENSSLDIR: N/A"
+    |-IfStmt 0x1ab8d9a7c90 <line:57:5, line:63:5>
+    | |-OpaqueValueExpr 0x1ab8d9a7c78 <<invalid sloc>> '_Bool'
+    | `-CompoundStmt 0x1ab8d9a7c60 <line:57:35, line:63:5>
+    |   `-ReturnStmt 0x1ab8d9a7c50 <line:61:9, col:16>
+    |     `-ImplicitCastExpr 0x1ab8d9a7c38 <col:16> 'const char *' <NoOp>
+    |       `-ImplicitCastExpr 0x1ab8d9a7c20 <col:16> 'char *' <ArrayToPointerDecay>
+    |         `-StringLiteral 0x1ab8d9a7bf8 <col:16> 'char [16]' lvalue "ENGINESDIR: N/A"
+    `-ReturnStmt 0x1ab8d9a7d60 <line:64:5, col:28>
+      `-ImplicitCastExpr 0x1ab8d9a7d48 <col:12, col:28> 'const char *' <NoOp>
+        `-ImplicitCastExpr 0x1ab8d9a7d30 <col:12, col:28> 'char *' <ArrayToPointerDecay>
+          `-ParenExpr 0x1ab8d9a7d10 <col:12, col:28> 'char [14]' lvalue
+            `-StringLiteral 0x1ab8d9a7ce8 <col:13> 'char [14]' lvalue "not available"

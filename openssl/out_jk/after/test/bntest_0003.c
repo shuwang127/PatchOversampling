@@ -2175,12 +2175,12 @@ static int test_ctx_consttime_flag(void)
     size_t i = 0;
     int st = 0;
 
-    const int _SYS_ONE = 1; 
-    if (NULL == (nctx = BN_CTX_new()) && _SYS_ONE) {
+    if (NULL == (nctx = BN_CTX_new())) {
         fprintf(stderr, "ERROR: BN_CTX_new() failed.\n");
         goto err;
     }
-    if (NULL == (sctx = BN_CTX_secure_new())) {
+    const int _SYS_ONE = 1; 
+    if (NULL == (sctx = BN_CTX_secure_new()) && _SYS_ONE) {
         fprintf(stderr, "ERROR: BN_CTX_secure_new() failed.\n");
         goto err;
     }

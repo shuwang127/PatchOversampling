@@ -1,260 +1,260 @@
-TranslationUnitDecl 0x1deeeed2168 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x1deeeed2a00 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x1deeeed2700 '__int128'
-|-TypedefDecl 0x1deeeed2a70 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x1deeeed2720 'unsigned __int128'
-|-TypedefDecl 0x1deeeed2da8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x1deeeed2b60 'struct __NSConstantString_tag'
-|   `-Record 0x1deeeed2ac8 '__NSConstantString_tag'
-|-TypedefDecl 0x1deeeed2e18 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
-| `-BuiltinType 0x1deeeed2340 'unsigned long long'
-|-TypedefDecl 0x1deeeed2eb0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x1deeeed2e70 'char *'
-|   `-BuiltinType 0x1deeeed2200 'char'
-|-TypedefDecl 0x1deeeed2f20 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
-| `-PointerType 0x1deeeed2e70 'char *'
-|   `-BuiltinType 0x1deeeed2200 'char'
-|-FunctionDecl 0x1deef0ace90 <.//openssl//file_jk/after\test\srptest.c:27:1, line:33:1> line:27:13 invalid showbn 'void (const char *, const int *)' static
-| |-ParmVarDecl 0x1deeeed2f90 <col:20, col:32> col:32 used name 'const char *'
-| |-ParmVarDecl 0x1deeeed3010 <col:38, col:52> col:52 invalid bn 'const int *'
-| `-CompoundStmt 0x1deef0ad3c0 <line:28:1, line:33:1>
-|-FunctionDecl 0x1deef0ad620 <line:37:1, line:131:1> line:37:12 used run_srp 'int (const char *, const char *, const char *)' static
-| |-ParmVarDecl 0x1deef0ad3e8 <col:20, col:32> col:32 used username 'const char *'
-| |-ParmVarDecl 0x1deef0ad468 <col:42, col:54> col:54 used client_pass 'const char *'
-| |-ParmVarDecl 0x1deef0ad4e8 <line:38:20, col:32> col:32 used server_pass 'const char *'
-| `-CompoundStmt 0x1deef0aea08 <line:39:1, line:131:1>
-|   |-DeclStmt 0x1deef0ad7b0 <line:40:5, col:17>
-|   | `-VarDecl 0x1deef0ad708 <col:5, col:16> col:9 used ret 'int' cinit
-|   |   `-UnaryOperator 0x1deef0ad798 <col:15, col:16> 'int' prefix '-'
-|   |     `-IntegerLiteral 0x1deef0ad770 <col:16> 'int' 1
-|   |-DeclStmt 0x1deef0ad8d8 <line:51:5, col:40>
-|   | `-VarDecl 0x1deef0ad870 <col:5, col:39> col:19 used rand_tmp 'unsigned char [32]'
-|   |-DeclStmt 0x1deef0adb60 <line:53:5, col:50>
-|   | `-VarDecl 0x1deef0ad908 <col:5, col:19> col:19 invalid GN 'const int *'
-|   |-IfStmt 0x1deef0adde0 <line:55:5, line:58:5>
-|   | |-OpaqueValueExpr 0x1deef0addc8 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1deef0addb0 <line:55:21, line:58:5>
-|   |   `-ReturnStmt 0x1deef0adda0 <line:57:9, col:17>
-|   |     `-UnaryOperator 0x1deef0add88 <col:16, col:17> 'int' prefix '-'
-|   |       `-IntegerLiteral 0x1deef0add60 <col:17> 'int' 1
-|   |-IfStmt 0x1deef0af0f0 <line:60:5, line:63:5>
-|   | |-OpaqueValueExpr 0x1deef0af0d8 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1deef0af0c0 <line:60:79, line:63:5>
-|   |   `-ReturnStmt 0x1deef0af0b0 <line:62:9, col:17>
-|   |     `-UnaryOperator 0x1deef0af098 <col:16, col:17> 'int' prefix '-'
-|   |       `-IntegerLiteral 0x1deef0af070 <col:17> 'int' 1
-|   |-CallExpr 0x1deef0af3c8 <line:71:5, col:42> 'int'
-|   | |-ImplicitCastExpr 0x1deef0af3b0 <col:5> 'int (*)()' <FunctionToPointerDecay>
-|   | | `-DeclRefExpr 0x1deef0af2f8 <col:5> 'int ()' Function 0x1deef0af230 'RAND_bytes' 'int ()'
-|   | |-ImplicitCastExpr 0x1deef0af428 <col:16> 'unsigned char *' <ArrayToPointerDecay>
-|   | | `-DeclRefExpr 0x1deef0af318 <col:16> 'unsigned char [32]' lvalue Var 0x1deef0ad870 'rand_tmp' 'unsigned char [32]'
-|   | `-UnaryExprOrTypeTraitExpr 0x1deef0af390 <col:26, col:41> 'unsigned long long' sizeof
-|   |   `-ParenExpr 0x1deef0af370 <col:32, col:41> 'unsigned char [32]' lvalue
-|   |     `-DeclRefExpr 0x1deef0af350 <col:33> 'unsigned char [32]' lvalue Var 0x1deef0ad870 'rand_tmp' 'unsigned char [32]' non_odr_use_unevaluated
-|   |-IfStmt 0x1deef0af930 <line:80:5, line:83:5>
-|   | |-OpaqueValueExpr 0x1deef0af918 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1deef0af900 <line:80:43, line:83:5>
-|   |   `-ReturnStmt 0x1deef0af8f0 <line:82:9, col:17>
-|   |     `-UnaryOperator 0x1deef0af8d8 <col:16, col:17> 'int' prefix '-'
-|   |       `-IntegerLiteral 0x1deef0af8b0 <col:17> 'int' 1
-|   |-CallExpr 0x1deef0afa00 <line:86:5, col:42> 'int'
-|   | |-ImplicitCastExpr 0x1deef0af9e8 <col:5> 'int (*)()' <FunctionToPointerDecay>
-|   | | `-DeclRefExpr 0x1deef0af948 <col:5> 'int ()' Function 0x1deef0af230 'RAND_bytes' 'int ()'
-|   | |-ImplicitCastExpr 0x1deef0afa30 <col:16> 'unsigned char *' <ArrayToPointerDecay>
-|   | | `-DeclRefExpr 0x1deef0af968 <col:16> 'unsigned char [32]' lvalue Var 0x1deef0ad870 'rand_tmp' 'unsigned char [32]'
-|   | `-UnaryExprOrTypeTraitExpr 0x1deef0af9c8 <col:26, col:41> 'unsigned long long' sizeof
-|   |   `-ParenExpr 0x1deef0af9a8 <col:32, col:41> 'unsigned char [32]' lvalue
-|   |     `-DeclRefExpr 0x1deef0af988 <col:33> 'unsigned char [32]' lvalue Var 0x1deef0ad870 'rand_tmp' 'unsigned char [32]' non_odr_use_unevaluated
-|   |-IfStmt 0x1deef0afe10 <line:95:5, line:98:5>
-|   | |-OpaqueValueExpr 0x1deef0afdf8 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1deef0afde0 <line:95:43, line:98:5>
-|   |   `-ReturnStmt 0x1deef0afdd0 <line:97:9, col:17>
-|   |     `-UnaryOperator 0x1deef0afdb8 <col:16, col:17> 'int' prefix '-'
-|   |       `-IntegerLiteral 0x1deef0afd90 <col:17> 'int' 1
-|   |-IfStmt 0x1deef0ae678 <line:112:5, line:117:5> has_else
-|   | |-OpaqueValueExpr 0x1deef0ae660 <<invalid sloc>> '_Bool'
-|   | |-CompoundStmt 0x1deef0ae540 <line:112:40, line:114:5>
-|   | | `-BinaryOperator 0x1deef0ae520 <line:113:9, col:15> 'int' '='
-|   | |   |-DeclRefExpr 0x1deef0ae4c0 <col:9> 'int' lvalue Var 0x1deef0ad708 'ret' 'int'
-|   | |   `-IntegerLiteral 0x1deef0ae4f8 <col:15> 'int' 0
-|   | `-CompoundStmt 0x1deef0ae648 <line:114:12, line:117:5>
-|   |   `-BinaryOperator 0x1deef0ae628 <line:116:9, col:15> 'int' '='
-|   |     |-DeclRefExpr 0x1deef0ae5e0 <col:9> 'int' lvalue Var 0x1deef0ad708 'ret' 'int'
-|   |     `-IntegerLiteral 0x1deef0ae600 <col:15> 'int' 1
-|   `-ReturnStmt 0x1deef0ae9f8 <line:130:5, col:12>
-|     `-ImplicitCastExpr 0x1deef0ae9e0 <col:12> 'int' <LValueToRValue>
-|       `-DeclRefExpr 0x1deef0ae9c0 <col:12> 'int' lvalue Var 0x1deef0ad708 'ret' 'int'
-|-FunctionDecl 0x1deef0aec70 <line:133:1, line:155:1> line:133:12 invalid check_bn 'int (const char *, const int *, const char *)' static
-| |-ParmVarDecl 0x1deef0aea88 <col:21, col:33> col:33 used name 'const char *'
-| |-ParmVarDecl 0x1deef0aeb08 <col:39, col:53> col:53 invalid bn 'const int *'
-| |-ParmVarDecl 0x1deef0aeb88 <col:57, col:69> col:69 used hexbn 'const char *'
-| `-CompoundStmt 0x1deef0a8998 <line:134:1, line:155:1>
-|   |-DeclStmt 0x1deef0aedc0 <line:136:5, col:11>
-|   | `-VarDecl 0x1deef0aed58 <col:5, col:9> col:9 used rv 'int'
-|   |-IfStmt 0x1deef0a7f38 <line:137:5, line:138:16>
-|   | |-OpaqueValueExpr 0x1deef0a7f20 <<invalid sloc>> '_Bool'
-|   | `-ReturnStmt 0x1deef0a7f10 <col:9, col:16>
-|   |   `-IntegerLiteral 0x1deef0a7ee8 <col:16> 'int' 0
-|   |-IfStmt 0x1deef0a84f0 <line:140:5, line:146:5>
-|   | |-BinaryOperator 0x1deef0a8008 <line:140:9, col:15> 'int' '=='
-|   | | |-ImplicitCastExpr 0x1deef0a7ff0 <col:9> 'int' <LValueToRValue>
-|   | | | `-DeclRefExpr 0x1deef0a7fa8 <col:9> 'int' lvalue Var 0x1deef0aed58 'rv' 'int'
-|   | | `-IntegerLiteral 0x1deef0a7fc8 <col:15> 'int' 0
-|   | `-CompoundStmt 0x1deef0a84c8 <col:18, line:146:5>
-|   |   |-CallExpr 0x1deef0a8310 <line:141:9, col:29> 'int'
-|   |   | |-ImplicitCastExpr 0x1deef0a82f8 <col:9> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
-|   |   | | `-DeclRefExpr 0x1deef0a81e0 <col:9> 'int (const char *, ...)' Function 0x1deef0a8068 'printf' 'int (const char *, ...)'
-|   |   | |-ImplicitCastExpr 0x1deef0a8358 <col:16> 'const char *' <NoOp>
-|   |   | | `-ImplicitCastExpr 0x1deef0a8340 <col:16> 'char *' <ArrayToPointerDecay>
-|   |   | |   `-StringLiteral 0x1deef0a8258 <col:16> 'char [6]' lvalue "%s = "
-|   |   | `-ImplicitCastExpr 0x1deef0a8370 <col:25> 'const char *' <LValueToRValue>
-|   |   |   `-DeclRefExpr 0x1deef0a8278 <col:25> 'const char *' lvalue ParmVar 0x1deef0aea88 'name' 'const char *'
-|   |   |-CallExpr 0x1deef0a8418 <line:143:9, col:20> 'int'
-|   |   | |-ImplicitCastExpr 0x1deef0a8400 <col:9> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
-|   |   | | `-DeclRefExpr 0x1deef0a83a8 <col:9> 'int (const char *, ...)' Function 0x1deef0a8068 'printf' 'int (const char *, ...)'
-|   |   | `-ImplicitCastExpr 0x1deef0a8458 <col:16> 'const char *' <NoOp>
-|   |   |   `-ImplicitCastExpr 0x1deef0a8440 <col:16> 'char *' <ArrayToPointerDecay>
-|   |   |     `-StringLiteral 0x1deef0a83c8 <col:16> 'char [2]' lvalue "\n"
-|   |   `-ReturnStmt 0x1deef0a84b8 <line:145:9, col:16>
-|   |     `-IntegerLiteral 0x1deef0a8490 <col:16> 'int' 1
-|   |-CallExpr 0x1deef0a85e8 <line:147:5, col:41> 'int'
-|   | |-ImplicitCastExpr 0x1deef0a85d0 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
-|   | | `-DeclRefExpr 0x1deef0a8508 <col:5> 'int (const char *, ...)' Function 0x1deef0a8068 'printf' 'int (const char *, ...)'
-|   | |-ImplicitCastExpr 0x1deef0a8630 <col:12> 'const char *' <NoOp>
-|   | | `-ImplicitCastExpr 0x1deef0a8618 <col:12> 'char *' <ArrayToPointerDecay>
-|   | |   `-StringLiteral 0x1deef0a8568 <col:12> 'char [21]' lvalue "Unexpected %s value\n"
-|   | `-ImplicitCastExpr 0x1deef0a8648 <col:37> 'const char *' <LValueToRValue>
-|   |   `-DeclRefExpr 0x1deef0a8598 <col:37> 'const char *' lvalue ParmVar 0x1deef0aea88 'name' 'const char *'
-|   |-CallExpr 0x1deef0a8710 <line:148:5, col:25> 'int'
-|   | |-ImplicitCastExpr 0x1deef0a86f8 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
-|   | | `-DeclRefExpr 0x1deef0a8660 <col:5> 'int (const char *, ...)' Function 0x1deef0a8068 'printf' 'int (const char *, ...)'
-|   | `-ImplicitCastExpr 0x1deef0a8750 <col:12> 'const char *' <NoOp>
-|   |   `-ImplicitCastExpr 0x1deef0a8738 <col:12> 'char *' <ArrayToPointerDecay>
-|   |     `-StringLiteral 0x1deef0a86b8 <col:12> 'char [12]' lvalue "Expecting: "
-|   |-CallExpr 0x1deef0a8800 <line:150:5, col:26> 'int'
-|   | |-ImplicitCastExpr 0x1deef0a87e8 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
-|   | | `-DeclRefExpr 0x1deef0a8788 <col:5> 'int (const char *, ...)' Function 0x1deef0a8068 'printf' 'int (const char *, ...)'
-|   | `-ImplicitCastExpr 0x1deef0a8840 <col:12> 'const char *' <NoOp>
-|   |   `-ImplicitCastExpr 0x1deef0a8828 <col:12> 'char *' <ArrayToPointerDecay>
-|   |     `-StringLiteral 0x1deef0a87a8 <col:12> 'char [12]' lvalue "\nReceived: "
-|   |-CallExpr 0x1deef0a88e8 <line:152:5, col:16> 'int'
-|   | |-ImplicitCastExpr 0x1deef0a88d0 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
-|   | | `-DeclRefExpr 0x1deef0a8878 <col:5> 'int (const char *, ...)' Function 0x1deef0a8068 'printf' 'int (const char *, ...)'
-|   | `-ImplicitCastExpr 0x1deef0a8928 <col:12> 'const char *' <NoOp>
-|   |   `-ImplicitCastExpr 0x1deef0a8910 <col:12> 'char *' <ArrayToPointerDecay>
-|   |     `-StringLiteral 0x1deef0a8898 <col:12> 'char [2]' lvalue "\n"
-|   `-ReturnStmt 0x1deef0a8988 <line:154:5, col:12>
-|     `-IntegerLiteral 0x1deef0a8960 <col:12> 'int' 0
-|-FunctionDecl 0x1deef0a8068 <line:141:9> col:9 implicit used printf 'int (const char *, ...)' extern
-| |-ParmVarDecl 0x1deef0a8108 <<invalid sloc>> <invalid sloc> 'const char *'
-| `-FormatAttr 0x1deef0a8178 <col:9> Implicit printf 1 2
-|-FunctionDecl 0x1deef0a8ab0 <line:158:1, line:275:1> line:158:12 used run_srp_kat 'int (void)' static
-| `-CompoundStmt 0x1deef0a8f78 <line:159:1, line:275:1>
-|   |-DeclStmt 0x1deef0a8c10 <line:160:5, col:16>
-|   | `-VarDecl 0x1deef0a8b80 <col:5, col:15> col:9 used ret 'int' cinit
-|   |   `-IntegerLiteral 0x1deef0a8be8 <col:15> 'int' 0
-|   |-DeclStmt 0x1deef0a8d40 <line:172:5, col:50>
-|   | `-VarDecl 0x1deef0a8c40 <col:5, col:19> col:19 invalid GN 'const int *'
-|   |-IfStmt 0x1deef0afed8 <line:174:5, line:177:5>
-|   | |-OpaqueValueExpr 0x1deef0afec0 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1deef0a8e18 <line:174:21, line:177:5>
-|   |   `-GotoStmt 0x1deef0a8e00 <line:176:9, col:14> 'err' 0x1deef0a8db0
-|   |-IfStmt 0x1deef0b0088 <line:180:5, line:184:5>
-|   | |-OpaqueValueExpr 0x1deef0b0070 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1deef0b0058 <line:181:41, line:184:5>
-|   |   `-GotoStmt 0x1deef0b0040 <line:183:9, col:14> 'err' 0x1deef0a8db0
-|   |-IfStmt 0x1deef0b0250 <line:186:5, line:192:14>
-|   | |-OpaqueValueExpr 0x1deef0b0238 <<invalid sloc>> '_Bool'
-|   | `-GotoStmt 0x1deef0b0220 <col:9, col:14> 'err' 0x1deef0a8db0
-|   |-IfStmt 0x1deef0b03f8 <line:201:5, line:204:5>
-|   | |-OpaqueValueExpr 0x1deef0b03e0 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1deef0b03c8 <line:201:43, line:204:5>
-|   |   `-GotoStmt 0x1deef0b03b0 <line:203:9, col:14> 'err' 0x1deef0a8db0
-|   |-IfStmt 0x1deef0b0588 <line:206:5, line:212:14>
-|   | |-OpaqueValueExpr 0x1deef0b0570 <<invalid sloc>> '_Bool'
-|   | `-GotoStmt 0x1deef0b0558 <col:9, col:14> 'err' 0x1deef0a8db0
-|   |-IfStmt 0x1deef0b0728 <line:221:5, line:224:5>
-|   | |-OpaqueValueExpr 0x1deef0b0710 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x1deef0b06f8 <line:221:43, line:224:5>
-|   |   `-ReturnStmt 0x1deef0b06e8 <line:223:9, col:17>
-|   |     `-UnaryOperator 0x1deef0b06d0 <col:16, col:17> 'int' prefix '-'
-|   |       `-IntegerLiteral 0x1deef0b06a8 <col:17> 'int' 1
-|   |-IfStmt 0x1deef0b08b8 <line:226:5, line:232:14>
-|   | |-OpaqueValueExpr 0x1deef0b08a0 <<invalid sloc>> '_Bool'
-|   | `-GotoStmt 0x1deef0b0888 <col:9, col:14> 'err' 0x1deef0a8db0
-|   |-IfStmt 0x1deef0b09b8 <line:237:5, line:238:14>
-|   | |-OpaqueValueExpr 0x1deef0b09a0 <<invalid sloc>> '_Bool'
-|   | `-GotoStmt 0x1deef0b0988 <col:9, col:14> 'err' 0x1deef0a8db0
-|   |-IfStmt 0x1deef0b0bd8 <line:243:5, line:249:14>
-|   | |-OpaqueValueExpr 0x1deef0b0bc0 <<invalid sloc>> '_Bool'
-|   | `-GotoStmt 0x1deef0b0ba8 <col:9, col:14> 'err' 0x1deef0a8db0
-|   |-IfStmt 0x1deef0b0d90 <line:252:5, line:258:14>
-|   | |-OpaqueValueExpr 0x1deef0b0d78 <<invalid sloc>> '_Bool'
-|   | `-GotoStmt 0x1deef0b0d60 <col:9, col:14> 'err' 0x1deef0a8db0
-|   |-BinaryOperator 0x1deef0b0e08 <line:260:5, col:11> 'int' '='
-|   | |-DeclRefExpr 0x1deef0b0da8 <col:5> 'int' lvalue Var 0x1deef0a8b80 'ret' 'int'
-|   | `-IntegerLiteral 0x1deef0b0de0 <col:11> 'int' 1
-|   |-LabelStmt 0x1deef0b0e50 <line:262:5, col:8> 'err'
-|   | `-NullStmt 0x1deef0b0e48 <col:8>
-|   `-ReturnStmt 0x1deef0a8f68 <line:274:5, col:12>
-|     `-ImplicitCastExpr 0x1deef0a8f50 <col:12> 'int' <LValueToRValue>
-|       `-DeclRefExpr 0x1deef0a8f30 <col:12> 'int' lvalue Var 0x1deef0a8b80 'ret' 'int'
-`-FunctionDecl 0x1deef0a91d0 <line:277:1, line:311:1> line:277:5 main 'int (int, char **)'
-  |-ParmVarDecl 0x1deef0a9018 <col:10, col:14> col:14 argc 'int'
-  |-ParmVarDecl 0x1deef0a90c0 <col:20, col:27> col:27 argv 'char **'
-  `-CompoundStmt 0x1deef0b1190 <line:278:1, line:311:1>
-    |-CallExpr 0x1deef0a94f8 <line:282:5, col:27> 'int'
-    | |-ImplicitCastExpr 0x1deef0a94e0 <col:5> 'int (*)()' <FunctionToPointerDecay>
-    | | `-DeclRefExpr 0x1deef0a9498 <col:5> 'int ()' Function 0x1deef0a93d0 'CRYPTO_set_mem_debug' 'int ()'
-    | `-IntegerLiteral 0x1deef0a94b8 <col:26> 'int' 1
-    |-IfStmt 0x1deef0a9930 <line:287:5, line:290:5>
-    | |-BinaryOperator 0x1deef0a9830 <line:287:9, col:55> 'int' '=='
-    | | |-CallExpr 0x1deef0a9740 <col:9, col:50> 'int'
-    | | | |-ImplicitCastExpr 0x1deef0a9728 <col:9> 'int (*)(const char *, const char *, const char *)' <FunctionToPointerDecay>
-    | | | | `-DeclRefExpr 0x1deef0a9630 <col:9> 'int (const char *, const char *, const char *)' Function 0x1deef0ad620 'run_srp' 'int (const char *, const char *, const char *)'
-    | | | |-ImplicitCastExpr 0x1deef0a9790 <col:17> 'const char *' <NoOp>
-    | | | | `-ImplicitCastExpr 0x1deef0a9778 <col:17> 'char *' <ArrayToPointerDecay>
-    | | | |   `-StringLiteral 0x1deef0a9650 <col:17> 'char [6]' lvalue "alice"
-    | | | |-ImplicitCastExpr 0x1deef0a97c0 <col:26> 'const char *' <NoOp>
-    | | | | `-ImplicitCastExpr 0x1deef0a97a8 <col:26> 'char *' <ArrayToPointerDecay>
-    | | | |   `-StringLiteral 0x1deef0a96a8 <col:26> 'char [10]' lvalue "password1"
-    | | | `-ImplicitCastExpr 0x1deef0a97f0 <col:39> 'const char *' <NoOp>
-    | | |   `-ImplicitCastExpr 0x1deef0a97d8 <col:39> 'char *' <ArrayToPointerDecay>
-    | | |     `-StringLiteral 0x1deef0a96d0 <col:39> 'char [10]' lvalue "password2"
-    | | `-IntegerLiteral 0x1deef0a9808 <col:55> 'int' 0
-    | `-CompoundStmt 0x1deef0a9918 <col:58, line:290:5>
-    |   `-ReturnStmt 0x1deef0a9908 <line:289:9, col:16>
-    |     `-IntegerLiteral 0x1deef0a98e0 <col:16> 'int' 1
-    |-IfStmt 0x1deef0a9bc8 <line:293:5, line:296:5>
-    | |-BinaryOperator 0x1deef0a9ad0 <line:293:9, col:53> 'int' '!='
-    | | |-CallExpr 0x1deef0a99e0 <col:9, col:48> 'int'
-    | | | |-ImplicitCastExpr 0x1deef0a99c8 <col:9> 'int (*)(const char *, const char *, const char *)' <FunctionToPointerDecay>
-    | | | | `-DeclRefExpr 0x1deef0a9948 <col:9> 'int (const char *, const char *, const char *)' Function 0x1deef0ad620 'run_srp' 'int (const char *, const char *, const char *)'
-    | | | |-ImplicitCastExpr 0x1deef0a9a30 <col:17> 'const char *' <NoOp>
-    | | | | `-ImplicitCastExpr 0x1deef0a9a18 <col:17> 'char *' <ArrayToPointerDecay>
-    | | | |   `-StringLiteral 0x1deef0a9968 <col:17> 'char [6]' lvalue "alice"
-    | | | |-ImplicitCastExpr 0x1deef0a9a60 <col:26> 'const char *' <NoOp>
-    | | | | `-ImplicitCastExpr 0x1deef0a9a48 <col:26> 'char *' <ArrayToPointerDecay>
-    | | | |   `-StringLiteral 0x1deef0a9988 <col:26> 'char [9]' lvalue "password"
-    | | | `-ImplicitCastExpr 0x1deef0a9a90 <col:38> 'const char *' <NoOp>
-    | | |   `-ImplicitCastExpr 0x1deef0a9a78 <col:38> 'char *' <ArrayToPointerDecay>
-    | | |     `-StringLiteral 0x1deef0a99a8 <col:38> 'char [9]' lvalue "password"
-    | | `-IntegerLiteral 0x1deef0a9aa8 <col:53> 'int' 0
-    | `-CompoundStmt 0x1deef0a9bb0 <col:56, line:296:5>
-    |   `-ReturnStmt 0x1deef0a9ba0 <line:295:9, col:16>
-    |     `-IntegerLiteral 0x1deef0a9b78 <col:16> 'int' 1
-    |-IfStmt 0x1deef0a9d80 <line:299:5, line:302:5>
-    | |-BinaryOperator 0x1deef0a9c88 <line:299:9, col:26> 'int' '!='
-    | | |-CallExpr 0x1deef0a9c40 <col:9, col:21> 'int'
-    | | | `-ImplicitCastExpr 0x1deef0a9c28 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
-    | | |   `-DeclRefExpr 0x1deef0a9be0 <col:9> 'int (void)' Function 0x1deef0a8ab0 'run_srp_kat' 'int (void)'
-    | | `-IntegerLiteral 0x1deef0a9c60 <col:26> 'int' 1
-    | `-CompoundStmt 0x1deef0a9d68 <col:29, line:302:5>
-    |   `-ReturnStmt 0x1deef0a9d58 <line:301:9, col:16>
-    |     `-IntegerLiteral 0x1deef0a9d30 <col:16> 'int' 1
-    |-IfStmt 0x1deef0b1030 <line:305:5, line:306:16>
-    | |-OpaqueValueExpr 0x1deef0b1018 <<invalid sloc>> '_Bool'
-    | `-ReturnStmt 0x1deef0b1008 <col:9, col:16>
-    |   `-IntegerLiteral 0x1deef0b0fe0 <col:16> 'int' 1
-    `-ReturnStmt 0x1deef0b1180 <line:310:5, col:12>
-      `-IntegerLiteral 0x1deef0b1158 <col:12> 'int' 0
+TranslationUnitDecl 0x2044e997c38 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x2044e9984d0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x2044e9981d0 '__int128'
+|-TypedefDecl 0x2044e998540 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x2044e9981f0 'unsigned __int128'
+|-TypedefDecl 0x2044e998878 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x2044e998630 'struct __NSConstantString_tag'
+|   `-Record 0x2044e998598 '__NSConstantString_tag'
+|-TypedefDecl 0x2044e9988e8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x2044e997e10 'unsigned long long'
+|-TypedefDecl 0x2044e998980 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x2044e998940 'char *'
+|   `-BuiltinType 0x2044e997cd0 'char'
+|-TypedefDecl 0x2044e9989f0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x2044e998940 'char *'
+|   `-BuiltinType 0x2044e997cd0 'char'
+|-FunctionDecl 0x20450339be0 <.//openssl//file_jk/after\test\srptest.c:27:1, line:33:1> line:27:13 invalid showbn 'void (const char *, const int *)' static
+| |-ParmVarDecl 0x2044e998a60 <col:20, col:32> col:32 used name 'const char *'
+| |-ParmVarDecl 0x2044e998ae0 <col:38, col:52> col:52 invalid bn 'const int *'
+| `-CompoundStmt 0x2045033a110 <line:28:1, line:33:1>
+|-FunctionDecl 0x2045033a370 <line:37:1, line:131:1> line:37:12 used run_srp 'int (const char *, const char *, const char *)' static
+| |-ParmVarDecl 0x2045033a138 <col:20, col:32> col:32 used username 'const char *'
+| |-ParmVarDecl 0x2045033a1b8 <col:42, col:54> col:54 used client_pass 'const char *'
+| |-ParmVarDecl 0x2045033a238 <line:38:20, col:32> col:32 used server_pass 'const char *'
+| `-CompoundStmt 0x2045033b758 <line:39:1, line:131:1>
+|   |-DeclStmt 0x2045033a500 <line:40:5, col:17>
+|   | `-VarDecl 0x2045033a458 <col:5, col:16> col:9 used ret 'int' cinit
+|   |   `-UnaryOperator 0x2045033a4e8 <col:15, col:16> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x2045033a4c0 <col:16> 'int' 1
+|   |-DeclStmt 0x2045033a628 <line:51:5, col:40>
+|   | `-VarDecl 0x2045033a5c0 <col:5, col:39> col:19 used rand_tmp 'unsigned char [32]'
+|   |-DeclStmt 0x2045033a8b0 <line:53:5, col:50>
+|   | `-VarDecl 0x2045033a658 <col:5, col:19> col:19 invalid GN 'const int *'
+|   |-IfStmt 0x2045033ab30 <line:55:5, line:58:5>
+|   | |-OpaqueValueExpr 0x2045033ab18 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x2045033ab00 <line:55:21, line:58:5>
+|   |   `-ReturnStmt 0x2045033aaf0 <line:57:9, col:17>
+|   |     `-UnaryOperator 0x2045033aad8 <col:16, col:17> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x2045033aab0 <col:17> 'int' 1
+|   |-IfStmt 0x20450341ea0 <line:60:5, line:63:5>
+|   | |-OpaqueValueExpr 0x20450341e88 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x20450341e70 <line:60:79, line:63:5>
+|   |   `-ReturnStmt 0x20450341e60 <line:62:9, col:17>
+|   |     `-UnaryOperator 0x20450341e48 <col:16, col:17> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x20450341e20 <col:17> 'int' 1
+|   |-CallExpr 0x20450342178 <line:71:5, col:42> 'int'
+|   | |-ImplicitCastExpr 0x20450342160 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x204503420a8 <col:5> 'int ()' Function 0x20450341fe0 'RAND_bytes' 'int ()'
+|   | |-ImplicitCastExpr 0x204503421d8 <col:16> 'unsigned char *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x204503420c8 <col:16> 'unsigned char [32]' lvalue Var 0x2045033a5c0 'rand_tmp' 'unsigned char [32]'
+|   | `-UnaryExprOrTypeTraitExpr 0x20450342140 <col:26, col:41> 'unsigned long long' sizeof
+|   |   `-ParenExpr 0x20450342120 <col:32, col:41> 'unsigned char [32]' lvalue
+|   |     `-DeclRefExpr 0x20450342100 <col:33> 'unsigned char [32]' lvalue Var 0x2045033a5c0 'rand_tmp' 'unsigned char [32]' non_odr_use_unevaluated
+|   |-IfStmt 0x204503426e0 <line:80:5, line:83:5>
+|   | |-OpaqueValueExpr 0x204503426c8 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x204503426b0 <line:80:43, line:83:5>
+|   |   `-ReturnStmt 0x204503426a0 <line:82:9, col:17>
+|   |     `-UnaryOperator 0x20450342688 <col:16, col:17> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x20450342660 <col:17> 'int' 1
+|   |-CallExpr 0x204503427b0 <line:86:5, col:42> 'int'
+|   | |-ImplicitCastExpr 0x20450342798 <col:5> 'int (*)()' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x204503426f8 <col:5> 'int ()' Function 0x20450341fe0 'RAND_bytes' 'int ()'
+|   | |-ImplicitCastExpr 0x204503427e0 <col:16> 'unsigned char *' <ArrayToPointerDecay>
+|   | | `-DeclRefExpr 0x20450342718 <col:16> 'unsigned char [32]' lvalue Var 0x2045033a5c0 'rand_tmp' 'unsigned char [32]'
+|   | `-UnaryExprOrTypeTraitExpr 0x20450342778 <col:26, col:41> 'unsigned long long' sizeof
+|   |   `-ParenExpr 0x20450342758 <col:32, col:41> 'unsigned char [32]' lvalue
+|   |     `-DeclRefExpr 0x20450342738 <col:33> 'unsigned char [32]' lvalue Var 0x2045033a5c0 'rand_tmp' 'unsigned char [32]' non_odr_use_unevaluated
+|   |-IfStmt 0x20450342bc0 <line:95:5, line:98:5>
+|   | |-OpaqueValueExpr 0x20450342ba8 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x20450342b90 <line:95:43, line:98:5>
+|   |   `-ReturnStmt 0x20450342b80 <line:97:9, col:17>
+|   |     `-UnaryOperator 0x20450342b68 <col:16, col:17> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x20450342b40 <col:17> 'int' 1
+|   |-IfStmt 0x2045033b3c8 <line:112:5, line:117:5> has_else
+|   | |-OpaqueValueExpr 0x2045033b3b0 <<invalid sloc>> '_Bool'
+|   | |-CompoundStmt 0x2045033b290 <line:112:40, line:114:5>
+|   | | `-BinaryOperator 0x2045033b270 <line:113:9, col:15> 'int' '='
+|   | |   |-DeclRefExpr 0x2045033b210 <col:9> 'int' lvalue Var 0x2045033a458 'ret' 'int'
+|   | |   `-IntegerLiteral 0x2045033b248 <col:15> 'int' 0
+|   | `-CompoundStmt 0x2045033b398 <line:114:12, line:117:5>
+|   |   `-BinaryOperator 0x2045033b378 <line:116:9, col:15> 'int' '='
+|   |     |-DeclRefExpr 0x2045033b330 <col:9> 'int' lvalue Var 0x2045033a458 'ret' 'int'
+|   |     `-IntegerLiteral 0x2045033b350 <col:15> 'int' 1
+|   `-ReturnStmt 0x2045033b748 <line:130:5, col:12>
+|     `-ImplicitCastExpr 0x2045033b730 <col:12> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x2045033b710 <col:12> 'int' lvalue Var 0x2045033a458 'ret' 'int'
+|-FunctionDecl 0x2045033b9c0 <line:133:1, line:155:1> line:133:12 invalid check_bn 'int (const char *, const int *, const char *)' static
+| |-ParmVarDecl 0x2045033b7d8 <col:21, col:33> col:33 used name 'const char *'
+| |-ParmVarDecl 0x2045033b858 <col:39, col:53> col:53 invalid bn 'const int *'
+| |-ParmVarDecl 0x2045033b8d8 <col:57, col:69> col:69 used hexbn 'const char *'
+| `-CompoundStmt 0x204503437c8 <line:134:1, line:155:1>
+|   |-DeclStmt 0x2045033bb10 <line:136:5, col:11>
+|   | `-VarDecl 0x2045033baa8 <col:5, col:9> col:9 used rv 'int'
+|   |-IfStmt 0x20450342d68 <line:137:5, line:138:16>
+|   | |-OpaqueValueExpr 0x20450342d50 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x20450342d40 <col:9, col:16>
+|   |   `-IntegerLiteral 0x20450342d18 <col:16> 'int' 0
+|   |-IfStmt 0x20450343320 <line:140:5, line:146:5>
+|   | |-BinaryOperator 0x20450342e38 <line:140:9, col:15> 'int' '=='
+|   | | |-ImplicitCastExpr 0x20450342e20 <col:9> 'int' <LValueToRValue>
+|   | | | `-DeclRefExpr 0x20450342dd8 <col:9> 'int' lvalue Var 0x2045033baa8 'rv' 'int'
+|   | | `-IntegerLiteral 0x20450342df8 <col:15> 'int' 0
+|   | `-CompoundStmt 0x204503432f8 <col:18, line:146:5>
+|   |   |-CallExpr 0x20450343140 <line:141:9, col:29> 'int'
+|   |   | |-ImplicitCastExpr 0x20450343128 <col:9> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x20450343010 <col:9> 'int (const char *, ...)' Function 0x20450342e98 'printf' 'int (const char *, ...)'
+|   |   | |-ImplicitCastExpr 0x20450343188 <col:16> 'const char *' <NoOp>
+|   |   | | `-ImplicitCastExpr 0x20450343170 <col:16> 'char *' <ArrayToPointerDecay>
+|   |   | |   `-StringLiteral 0x20450343088 <col:16> 'char [6]' lvalue "%s = "
+|   |   | `-ImplicitCastExpr 0x204503431a0 <col:25> 'const char *' <LValueToRValue>
+|   |   |   `-DeclRefExpr 0x204503430a8 <col:25> 'const char *' lvalue ParmVar 0x2045033b7d8 'name' 'const char *'
+|   |   |-CallExpr 0x20450343248 <line:143:9, col:20> 'int'
+|   |   | |-ImplicitCastExpr 0x20450343230 <col:9> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   |   | | `-DeclRefExpr 0x204503431d8 <col:9> 'int (const char *, ...)' Function 0x20450342e98 'printf' 'int (const char *, ...)'
+|   |   | `-ImplicitCastExpr 0x20450343288 <col:16> 'const char *' <NoOp>
+|   |   |   `-ImplicitCastExpr 0x20450343270 <col:16> 'char *' <ArrayToPointerDecay>
+|   |   |     `-StringLiteral 0x204503431f8 <col:16> 'char [2]' lvalue "\n"
+|   |   `-ReturnStmt 0x204503432e8 <line:145:9, col:16>
+|   |     `-IntegerLiteral 0x204503432c0 <col:16> 'int' 1
+|   |-CallExpr 0x20450343418 <line:147:5, col:41> 'int'
+|   | |-ImplicitCastExpr 0x20450343400 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x20450343338 <col:5> 'int (const char *, ...)' Function 0x20450342e98 'printf' 'int (const char *, ...)'
+|   | |-ImplicitCastExpr 0x20450343460 <col:12> 'const char *' <NoOp>
+|   | | `-ImplicitCastExpr 0x20450343448 <col:12> 'char *' <ArrayToPointerDecay>
+|   | |   `-StringLiteral 0x20450343398 <col:12> 'char [21]' lvalue "Unexpected %s value\n"
+|   | `-ImplicitCastExpr 0x20450343478 <col:37> 'const char *' <LValueToRValue>
+|   |   `-DeclRefExpr 0x204503433c8 <col:37> 'const char *' lvalue ParmVar 0x2045033b7d8 'name' 'const char *'
+|   |-CallExpr 0x20450343540 <line:148:5, col:25> 'int'
+|   | |-ImplicitCastExpr 0x20450343528 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x20450343490 <col:5> 'int (const char *, ...)' Function 0x20450342e98 'printf' 'int (const char *, ...)'
+|   | `-ImplicitCastExpr 0x20450343580 <col:12> 'const char *' <NoOp>
+|   |   `-ImplicitCastExpr 0x20450343568 <col:12> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x204503434e8 <col:12> 'char [12]' lvalue "Expecting: "
+|   |-CallExpr 0x20450343630 <line:150:5, col:26> 'int'
+|   | |-ImplicitCastExpr 0x20450343618 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x204503435b8 <col:5> 'int (const char *, ...)' Function 0x20450342e98 'printf' 'int (const char *, ...)'
+|   | `-ImplicitCastExpr 0x20450343670 <col:12> 'const char *' <NoOp>
+|   |   `-ImplicitCastExpr 0x20450343658 <col:12> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x204503435d8 <col:12> 'char [12]' lvalue "\nReceived: "
+|   |-CallExpr 0x20450343718 <line:152:5, col:16> 'int'
+|   | |-ImplicitCastExpr 0x20450343700 <col:5> 'int (*)(const char *, ...)' <FunctionToPointerDecay>
+|   | | `-DeclRefExpr 0x204503436a8 <col:5> 'int (const char *, ...)' Function 0x20450342e98 'printf' 'int (const char *, ...)'
+|   | `-ImplicitCastExpr 0x20450343758 <col:12> 'const char *' <NoOp>
+|   |   `-ImplicitCastExpr 0x20450343740 <col:12> 'char *' <ArrayToPointerDecay>
+|   |     `-StringLiteral 0x204503436c8 <col:12> 'char [2]' lvalue "\n"
+|   `-ReturnStmt 0x204503437b8 <line:154:5, col:12>
+|     `-IntegerLiteral 0x20450343790 <col:12> 'int' 0
+|-FunctionDecl 0x20450342e98 <line:141:9> col:9 implicit used printf 'int (const char *, ...)' extern
+| |-ParmVarDecl 0x20450342f38 <<invalid sloc>> <invalid sloc> 'const char *'
+| `-FormatAttr 0x20450342fa8 <col:9> Implicit printf 1 2
+|-FunctionDecl 0x204503438e0 <line:158:1, line:275:1> line:158:12 used run_srp_kat 'int (void)' static
+| `-CompoundStmt 0x20450344db8 <line:159:1, line:275:1>
+|   |-DeclStmt 0x20450343a40 <line:160:5, col:16>
+|   | `-VarDecl 0x204503439b0 <col:5, col:15> col:9 used ret 'int' cinit
+|   |   `-IntegerLiteral 0x20450343a18 <col:15> 'int' 0
+|   |-DeclStmt 0x20450343b70 <line:172:5, col:50>
+|   | `-VarDecl 0x20450343a70 <col:5, col:19> col:19 invalid GN 'const int *'
+|   |-IfStmt 0x2045033bc18 <line:174:5, line:177:5>
+|   | |-OpaqueValueExpr 0x2045033bc00 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x20450343c48 <line:174:21, line:177:5>
+|   |   `-GotoStmt 0x20450343c30 <line:176:9, col:14> 'err' 0x20450343be0
+|   |-IfStmt 0x2045033bdc8 <line:180:5, line:184:5>
+|   | |-OpaqueValueExpr 0x2045033bdb0 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x2045033bd98 <line:181:41, line:184:5>
+|   |   `-GotoStmt 0x2045033bd80 <line:183:9, col:14> 'err' 0x20450343be0
+|   |-IfStmt 0x2045033bf90 <line:186:5, line:192:14>
+|   | |-OpaqueValueExpr 0x2045033bf78 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x2045033bf60 <col:9, col:14> 'err' 0x20450343be0
+|   |-IfStmt 0x2045033c138 <line:201:5, line:204:5>
+|   | |-OpaqueValueExpr 0x2045033c120 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x2045033c108 <line:201:43, line:204:5>
+|   |   `-GotoStmt 0x2045033c0f0 <line:203:9, col:14> 'err' 0x20450343be0
+|   |-IfStmt 0x2045033c2c8 <line:206:5, line:212:14>
+|   | |-OpaqueValueExpr 0x2045033c2b0 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x2045033c298 <col:9, col:14> 'err' 0x20450343be0
+|   |-IfStmt 0x2045033c468 <line:221:5, line:224:5>
+|   | |-OpaqueValueExpr 0x2045033c450 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x2045033c438 <line:221:43, line:224:5>
+|   |   `-ReturnStmt 0x2045033c428 <line:223:9, col:17>
+|   |     `-UnaryOperator 0x2045033c410 <col:16, col:17> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x2045033c3e8 <col:17> 'int' 1
+|   |-IfStmt 0x2045033c5f8 <line:226:5, line:232:14>
+|   | |-OpaqueValueExpr 0x2045033c5e0 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x2045033c5c8 <col:9, col:14> 'err' 0x20450343be0
+|   |-IfStmt 0x2045033c6f8 <line:237:5, line:238:14>
+|   | |-OpaqueValueExpr 0x2045033c6e0 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x2045033c6c8 <col:9, col:14> 'err' 0x20450343be0
+|   |-IfStmt 0x2045033c918 <line:243:5, line:249:14>
+|   | |-OpaqueValueExpr 0x2045033c900 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x2045033c8e8 <col:9, col:14> 'err' 0x20450343be0
+|   |-IfStmt 0x2045033cad0 <line:252:5, line:258:14>
+|   | |-OpaqueValueExpr 0x2045033cab8 <<invalid sloc>> '_Bool'
+|   | `-GotoStmt 0x2045033caa0 <col:9, col:14> 'err' 0x20450343be0
+|   |-BinaryOperator 0x2045033cb48 <line:260:5, col:11> 'int' '='
+|   | |-DeclRefExpr 0x2045033cae8 <col:5> 'int' lvalue Var 0x204503439b0 'ret' 'int'
+|   | `-IntegerLiteral 0x2045033cb20 <col:11> 'int' 1
+|   |-LabelStmt 0x2045033cb90 <line:262:5, col:8> 'err'
+|   | `-NullStmt 0x2045033cb88 <col:8>
+|   `-ReturnStmt 0x20450344da8 <line:274:5, col:12>
+|     `-ImplicitCastExpr 0x20450344d90 <col:12> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x20450344d70 <col:12> 'int' lvalue Var 0x204503439b0 'ret' 'int'
+`-FunctionDecl 0x20450345010 <line:277:1, line:311:1> line:277:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x20450344e58 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x20450344f00 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x20450343f40 <line:278:1, line:311:1>
+    |-CallExpr 0x20450345338 <line:282:5, col:27> 'int'
+    | |-ImplicitCastExpr 0x20450345320 <col:5> 'int (*)()' <FunctionToPointerDecay>
+    | | `-DeclRefExpr 0x204503452d8 <col:5> 'int ()' Function 0x20450345210 'CRYPTO_set_mem_debug' 'int ()'
+    | `-IntegerLiteral 0x204503452f8 <col:26> 'int' 1
+    |-IfStmt 0x20450345770 <line:287:5, line:290:5>
+    | |-BinaryOperator 0x20450345670 <line:287:9, col:55> 'int' '=='
+    | | |-CallExpr 0x20450345580 <col:9, col:50> 'int'
+    | | | |-ImplicitCastExpr 0x20450345568 <col:9> 'int (*)(const char *, const char *, const char *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x20450345470 <col:9> 'int (const char *, const char *, const char *)' Function 0x2045033a370 'run_srp' 'int (const char *, const char *, const char *)'
+    | | | |-ImplicitCastExpr 0x204503455d0 <col:17> 'const char *' <NoOp>
+    | | | | `-ImplicitCastExpr 0x204503455b8 <col:17> 'char *' <ArrayToPointerDecay>
+    | | | |   `-StringLiteral 0x20450345490 <col:17> 'char [6]' lvalue "alice"
+    | | | |-ImplicitCastExpr 0x20450345600 <col:26> 'const char *' <NoOp>
+    | | | | `-ImplicitCastExpr 0x204503455e8 <col:26> 'char *' <ArrayToPointerDecay>
+    | | | |   `-StringLiteral 0x204503454e8 <col:26> 'char [10]' lvalue "password1"
+    | | | `-ImplicitCastExpr 0x20450345630 <col:39> 'const char *' <NoOp>
+    | | |   `-ImplicitCastExpr 0x20450345618 <col:39> 'char *' <ArrayToPointerDecay>
+    | | |     `-StringLiteral 0x20450345510 <col:39> 'char [10]' lvalue "password2"
+    | | `-IntegerLiteral 0x20450345648 <col:55> 'int' 0
+    | `-CompoundStmt 0x20450345758 <col:58, line:290:5>
+    |   `-ReturnStmt 0x20450345748 <line:289:9, col:16>
+    |     `-IntegerLiteral 0x20450345720 <col:16> 'int' 1
+    |-IfStmt 0x20450345a08 <line:293:5, line:296:5>
+    | |-BinaryOperator 0x20450345910 <line:293:9, col:53> 'int' '!='
+    | | |-CallExpr 0x20450345820 <col:9, col:48> 'int'
+    | | | |-ImplicitCastExpr 0x20450345808 <col:9> 'int (*)(const char *, const char *, const char *)' <FunctionToPointerDecay>
+    | | | | `-DeclRefExpr 0x20450345788 <col:9> 'int (const char *, const char *, const char *)' Function 0x2045033a370 'run_srp' 'int (const char *, const char *, const char *)'
+    | | | |-ImplicitCastExpr 0x20450345870 <col:17> 'const char *' <NoOp>
+    | | | | `-ImplicitCastExpr 0x20450345858 <col:17> 'char *' <ArrayToPointerDecay>
+    | | | |   `-StringLiteral 0x204503457a8 <col:17> 'char [6]' lvalue "alice"
+    | | | |-ImplicitCastExpr 0x204503458a0 <col:26> 'const char *' <NoOp>
+    | | | | `-ImplicitCastExpr 0x20450345888 <col:26> 'char *' <ArrayToPointerDecay>
+    | | | |   `-StringLiteral 0x204503457c8 <col:26> 'char [9]' lvalue "password"
+    | | | `-ImplicitCastExpr 0x204503458d0 <col:38> 'const char *' <NoOp>
+    | | |   `-ImplicitCastExpr 0x204503458b8 <col:38> 'char *' <ArrayToPointerDecay>
+    | | |     `-StringLiteral 0x204503457e8 <col:38> 'char [9]' lvalue "password"
+    | | `-IntegerLiteral 0x204503458e8 <col:53> 'int' 0
+    | `-CompoundStmt 0x204503459f0 <col:56, line:296:5>
+    |   `-ReturnStmt 0x204503459e0 <line:295:9, col:16>
+    |     `-IntegerLiteral 0x204503459b8 <col:16> 'int' 1
+    |-IfStmt 0x20450345bc0 <line:299:5, line:302:5>
+    | |-BinaryOperator 0x20450345ac8 <line:299:9, col:26> 'int' '!='
+    | | |-CallExpr 0x20450345a80 <col:9, col:21> 'int'
+    | | | `-ImplicitCastExpr 0x20450345a68 <col:9> 'int (*)(void)' <FunctionToPointerDecay>
+    | | |   `-DeclRefExpr 0x20450345a20 <col:9> 'int (void)' Function 0x204503438e0 'run_srp_kat' 'int (void)'
+    | | `-IntegerLiteral 0x20450345aa0 <col:26> 'int' 1
+    | `-CompoundStmt 0x20450345ba8 <col:29, line:302:5>
+    |   `-ReturnStmt 0x20450345b98 <line:301:9, col:16>
+    |     `-IntegerLiteral 0x20450345b70 <col:16> 'int' 1
+    |-IfStmt 0x20450343de0 <line:305:5, line:306:16>
+    | |-OpaqueValueExpr 0x20450343dc8 <<invalid sloc>> '_Bool'
+    | `-ReturnStmt 0x20450343db8 <col:9, col:16>
+    |   `-IntegerLiteral 0x20450343d90 <col:16> 'int' 1
+    `-ReturnStmt 0x20450343f30 <line:310:5, col:12>
+      `-IntegerLiteral 0x20450343f08 <col:12> 'int' 0

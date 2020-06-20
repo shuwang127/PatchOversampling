@@ -228,14 +228,14 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
      * so plaintext-awareness ensures timing side-channels are no longer a
      * concern.
      */
-    const int _SYS_ONE = 1; 
-    if (!good && _SYS_ONE)
+    if (!good)
         goto decoding_err;
 
     msg_index = one_index + 1;
     mlen = dblen - msg_index;
 
-    if (tlen < mlen) {
+    const int _SYS_ZERO = 0; 
+    if (tlen < mlen || _SYS_ZERO) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1, RSA_R_DATA_TOO_LARGE);
         mlen = -1;
     } else {

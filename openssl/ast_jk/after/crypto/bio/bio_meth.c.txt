@@ -1,184 +1,184 @@
-TranslationUnitDecl 0x285366d3c18 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x285366d44b0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x285366d41b0 '__int128'
-|-TypedefDecl 0x285366d4520 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x285366d41d0 'unsigned __int128'
-|-TypedefDecl 0x285366d4858 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x285366d4610 'struct __NSConstantString_tag'
-|   `-Record 0x285366d4578 '__NSConstantString_tag'
-|-TypedefDecl 0x285366d48c8 <<invalid sloc>> <invalid sloc> implicit referenced size_t 'unsigned long long'
-| `-BuiltinType 0x285366d3df0 'unsigned long long'
-|-TypedefDecl 0x285366d4960 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x285366d4920 'char *'
-|   `-BuiltinType 0x285366d3cb0 'char'
-|-TypedefDecl 0x285366d49d0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
-| `-PointerType 0x285366d4920 'char *'
-|   `-BuiltinType 0x285366d3cb0 'char'
-|-RecordDecl 0x285366d4a28 <.//openssl//file_jk/after\crypto\bio/bio_lcl.h:64:1, line:71:1> line:64:8 struct bio_addrinfo_st definition
-| |-FieldDecl 0x285366d4af8 <line:65:5, col:9> col:9 bai_family 'int'
-| |-FieldDecl 0x285366d4b68 <line:66:5, col:9> col:9 bai_socktype 'int'
-| |-FieldDecl 0x2853809d800 <line:67:5, col:9> col:9 bai_protocol 'int'
-| |-FieldDecl 0x2853809d890 <line:68:5, col:12> col:12 bai_addrlen 'size_t':'unsigned long long'
-| |-RecordDecl 0x2853809d8e8 parent 0x285366d3c18 <line:69:5, col:12> col:12 struct sockaddr
-| |-FieldDecl 0x2853809da70 <col:5, col:22> col:22 bai_addr 'struct sockaddr *'
-| `-FieldDecl 0x2853809db80 <line:70:5, col:29> col:29 bai_next 'struct bio_addrinfo_st *'
-|-RecordDecl 0x2853809dbd8 <line:74:1, line:83:1> line:74:7 invalid union bio_addr_st definition
-| |-FieldDecl 0x2853809dce0 <line:75:5, col:21> col:21 invalid sa 'struct sockaddr':'struct sockaddr'
-| |-RecordDecl 0x2853809dd38 parent 0x285366d3c18 <line:79:5, col:12> col:12 struct sockaddr_in
-| `-FieldDecl 0x2853809de58 <col:5, col:24> col:24 invalid s_in 'struct sockaddr_in':'struct sockaddr_in'
-|-RecordDecl 0x2853809deb0 <line:91:9, line:112:1> line:91:16 struct bio_f_buffer_ctx_struct definition
-| |-FieldDecl 0x2853809df88 <line:104:5, col:9> col:9 ibuf_size 'int'
-| |-FieldDecl 0x2853809dff8 <line:105:5, col:9> col:9 obuf_size 'int'
-| |-FieldDecl 0x2853809e068 <line:106:5, col:11> col:11 ibuf 'char *'
-| |-FieldDecl 0x2853809e0d8 <line:107:5, col:9> col:9 ibuf_len 'int'
-| |-FieldDecl 0x2853809e148 <line:108:5, col:9> col:9 ibuf_off 'int'
-| |-FieldDecl 0x2853809e1b8 <line:109:5, col:11> col:11 obuf 'char *'
-| |-FieldDecl 0x2853809e228 <line:110:5, col:9> col:9 obuf_len 'int'
-| `-FieldDecl 0x2853809e298 <line:111:5, col:9> col:9 obuf_off 'int'
-|-TypedefDecl 0x2853809e348 <line:91:1, line:112:3> col:3 BIO_F_BUFFER_CTX 'struct bio_f_buffer_ctx_struct':'struct bio_f_buffer_ctx_struct'
-| `-ElaboratedType 0x2853809e2f0 'struct bio_f_buffer_ctx_struct' sugar
-|   `-RecordType 0x2853809df50 'struct bio_f_buffer_ctx_struct'
-|     `-Record 0x2853809deb0 'bio_f_buffer_ctx_struct'
-|-RecordDecl 0x2853809e3b8 <line:114:1, line:132:1> line:114:8 invalid struct bio_st definition
-| |-FieldDecl 0x2853809e488 <line:115:5, col:23> col:23 invalid method 'const int *'
-| |-FieldDecl 0x2853809ba10 <line:117:5, col:74> col:12 callback 'long (*)(struct bio_st *, int, const char *, int, long, long)'
-| |-FieldDecl 0x2853809ba80 <line:118:5, col:11> col:11 cb_arg 'char *'
-| |-FieldDecl 0x2853809baf0 <line:119:5, col:9> col:9 init 'int'
-| |-FieldDecl 0x2853809bb60 <line:120:5, col:9> col:9 shutdown 'int'
-| |-FieldDecl 0x2853809bbd0 <line:121:5, col:9> col:9 flags 'int'
-| |-FieldDecl 0x2853809bc40 <line:122:5, col:9> col:9 retry_reason 'int'
-| |-FieldDecl 0x2853809bcb0 <line:123:5, col:9> col:9 num 'int'
-| |-FieldDecl 0x2853809bd20 <line:124:5, col:11> col:11 ptr 'void *'
-| |-FieldDecl 0x2853809bda0 <line:125:5, col:20> col:20 next_bio 'struct bio_st *'
-| |-FieldDecl 0x2853809be20 <line:126:5, col:20> col:20 prev_bio 'struct bio_st *'
-| |-FieldDecl 0x2853809be90 <line:127:5, col:9> col:9 references 'int'
-| |-FieldDecl 0x2853809bf00 <line:128:5, col:14> col:14 invalid num_read 'int'
-| |-FieldDecl 0x2853809bf70 <line:129:5, col:14> col:14 invalid num_write 'int'
-| |-FieldDecl 0x2853809bfe0 <line:130:5, col:20> col:20 invalid ex_data 'int'
-| `-FieldDecl 0x2853809c080 <line:131:5, col:20> col:20 invalid lock 'int *'
-|-VarDecl 0x2853809c0f0 <line:139:1, col:23> col:23 invalid bio_lookup_lock 'int *' extern
-|-FunctionDecl 0x2853809c380 <line:141:1, col:58> col:5 invalid BIO_ADDR_make 'int (int *, const struct sockaddr *)'
-| |-ParmVarDecl 0x2853809c170 <col:19, col:29> col:29 invalid ap 'int *'
-| `-ParmVarDecl 0x2853809c260 <col:33, col:56> col:56 sa 'const struct sockaddr *'
-|-FunctionDecl 0x2853809c550 <line:142:1, col:60> col:24 invalid BIO_ADDR_sockaddr 'const struct sockaddr *(const int *)'
-| `-ParmVarDecl 0x2853809c448 <col:42, col:58> col:58 invalid ap 'const int *'
-|-FunctionDecl 0x2853809c7f0 <line:143:1, col:56> col:18 invalid BIO_ADDR_sockaddr_noconst 'struct sockaddr *(int *)'
-| `-ParmVarDecl 0x2853809c610 <col:44, col:54> col:54 invalid ap 'int *'
-|-FunctionDecl 0x2853809c980 <line:144:1, col:52> col:11 invalid BIO_ADDR_sockaddr_size 'int (const int *)'
-| `-ParmVarDecl 0x2853809c8b0 <col:34, col:50> col:50 invalid ap 'const int *'
-|-FunctionDecl 0x2853809cad8 <line:145:1, col:61> col:11 invalid BIO_ADDRINFO_sockaddr_size 'int (const int *)'
-| `-ParmVarDecl 0x2853809ca40 <col:38, col:58> col:58 invalid bai 'const int *'
-|-FunctionDecl 0x2853809cc40 <line:146:1, col:69> col:24 invalid BIO_ADDRINFO_sockaddr 'const struct sockaddr *(const int *)'
-| `-ParmVarDecl 0x2853809cb98 <col:46, col:66> col:66 invalid bai 'const int *'
-|-VarDecl 0x2853809cd00 <line:149:1, col:23> col:23 invalid bio_type_lock 'int *' extern
-|-FunctionDecl 0x2853809ce28 <line:151:1, col:31> col:6 bio_sock_cleanup_int 'void (void)'
-|-VarDecl 0x2853809cf40 <.//openssl//file_jk/after\crypto\bio\bio_meth.c:13:1, col:16> col:16 invalid bio_type_lock 'int *'
-|-VarDecl 0x2853809cfc0 <line:14:1, col:20> col:20 invalid bio_type_init 'int' static
-|-FunctionDecl 0x2853809d120 <line:16:1, line:20:1> line:16:1 DEFINE_RUN_ONCE_STATIC 'int (int)'
-| |-ParmVarDecl 0x2853809d040 <col:24> col:24 do_bio_type_init 'int'
-| `-CompoundStmt 0x2853809d380 <line:17:1, line:20:1>
-|-FunctionDecl 0x2853809d3b8 <line:22:1, line:34:1> line:22:5 BIO_get_new_index 'int ()'
-| `-CompoundStmt 0x2853809fb30 <line:23:1, line:34:1>
-|   |-DeclStmt 0x2853809d4f0 <line:24:5, col:42>
-|   | `-VarDecl 0x2853809d488 <col:5, col:16> col:16 used bio_count 'int' static
-|   |-DeclStmt 0x2853809d588 <line:25:5, col:15>
-|   | `-VarDecl 0x2853809d520 <col:5, col:9> col:9 used newval 'int'
-|   |-IfStmt 0x2853809f878 <line:27:5, line:30:5>
-|   | |-OpaqueValueExpr 0x2853809f860 <<invalid sloc>> '_Bool'
-|   | `-CompoundStmt 0x2853809f848 <line:27:54, line:30:5>
-|   |   `-ReturnStmt 0x2853809f838 <line:29:9, col:17>
-|   |     `-UnaryOperator 0x2853809f820 <col:16, col:17> 'int' prefix '-'
-|   |       `-IntegerLiteral 0x2853809d7c0 <col:17> 'int' 1
-|   |-IfStmt 0x2853809fad0 <line:31:5, line:32:17>
-|   | |-OpaqueValueExpr 0x2853809fab8 <<invalid sloc>> '_Bool'
-|   | `-ReturnStmt 0x2853809faa8 <col:9, col:17>
-|   |   `-UnaryOperator 0x2853809fa90 <col:16, col:17> 'int' prefix '-'
-|   |     `-IntegerLiteral 0x2853809fa68 <col:17> 'int' 1
-|   `-ReturnStmt 0x2853809fb20 <line:33:5, col:12>
-|     `-ImplicitCastExpr 0x2853809fb08 <col:12> 'int' <LValueToRValue>
-|       `-DeclRefExpr 0x2853809fae8 <col:12> 'int' lvalue Var 0x2853809d520 'newval' 'int'
-|-FunctionDecl 0x2853809fd10 <line:36:1, line:48:1> line:36:13 invalid BIO_meth_new 'int *(int, const char *)'
-| |-ParmVarDecl 0x2853809fb80 <col:26, col:30> col:30 used type 'int'
-| |-ParmVarDecl 0x2853809fc00 <col:36, col:48> col:48 used name 'const char *'
-| `-CompoundStmt 0x285380a0200 <line:37:1, line:48:1>
-|   `-IfStmt 0x285380a01c8 <line:40:5, line:45:5>
-|     |-OpaqueValueExpr 0x285380a01b0 <<invalid sloc>> '_Bool'
-|     `-CompoundStmt 0x285380a01a0 <line:41:61, line:45:5>
-|-FunctionDecl 0x285380a02f8 <line:50:1, line:56:1> line:50:6 invalid BIO_meth_free 'void (int *)'
-| |-ParmVarDecl 0x285380a0230 <col:20, col:32> col:32 invalid biom 'int *'
-| `-CompoundStmt 0x285380a0438 <line:51:1, line:56:1>
-|   `-IfStmt 0x285380a0420 <line:52:5, line:55:5>
-|     |-OpaqueValueExpr 0x285380a0408 <<invalid sloc>> '_Bool'
-|     `-CompoundStmt 0x285380a03f8 <line:52:23, line:55:5>
-|-FunctionDecl 0x285380a0830 <line:58:1, line:61:1> line:58:7 invalid BIO_meth_get_write 'int (*(const int *))(int *, const char *, int)'
-| |-ParmVarDecl 0x285380a0468 <col:26, col:44> col:44 invalid biom 'const int *'
-| `-CompoundStmt 0x285380a08f0 <line:59:1, line:61:1>
-|-FunctionDecl 0x285380a0c70 <line:63:1, line:68:1> line:63:5 invalid BIO_meth_set_write 'int (int *, int (*)(int *, const char *, int))'
-| |-ParmVarDecl 0x285380a0918 <col:24, col:36> col:36 invalid biom 'int *'
-| |-ParmVarDecl 0x285380a0b50 <line:64:24, col:63> col:30 used bwrite 'int (*)(int *, const char *, int)'
-| `-CompoundStmt 0x285380a0da8 <line:65:1, line:68:1>
-|   `-ReturnStmt 0x285380a0d98 <line:67:5, col:12>
-|     `-IntegerLiteral 0x285380a0d70 <col:12> 'int' 1
-|-FunctionDecl 0x285380a1158 <line:70:1, line:73:1> line:70:7 invalid BIO_meth_get_read 'int (*(const int *))(int *, char *, int)'
-| |-ParmVarDecl 0x285380a0dd8 <col:25, col:43> col:43 invalid biom 'const int *'
-| `-CompoundStmt 0x285380a1218 <line:71:1, line:73:1>
-|-FunctionDecl 0x285380a1590 <line:75:1, line:80:1> line:75:5 invalid BIO_meth_set_read 'int (int *, int (*)(int *, char *, int))'
-| |-ParmVarDecl 0x285380a1240 <col:23, col:35> col:35 invalid biom 'int *'
-| |-ParmVarDecl 0x285380a1478 <line:76:23, col:55> col:29 used bread 'int (*)(int *, char *, int)'
-| `-CompoundStmt 0x285380a16c8 <line:77:1, line:80:1>
-|   `-ReturnStmt 0x285380a16b8 <line:79:5, col:12>
-|     `-IntegerLiteral 0x285380a1690 <col:12> 'int' 1
-|-FunctionDecl 0x285380addd0 <line:82:1, line:85:1> line:82:7 invalid BIO_meth_get_puts 'int (*(const int *))(int *, const char *)'
-| |-ParmVarDecl 0x285380a16f8 <col:25, col:43> col:43 invalid biom 'const int *'
-| `-CompoundStmt 0x285380ade90 <line:83:1, line:85:1>
-|-FunctionDecl 0x285380ae180 <line:87:1, line:92:1> line:87:5 invalid BIO_meth_set_puts 'int (int *, int (*)(int *, const char *))'
-| |-ParmVarDecl 0x285380adeb8 <col:23, col:35> col:35 invalid biom 'int *'
-| |-ParmVarDecl 0x285380ae068 <line:88:23, col:56> col:29 used bputs 'int (*)(int *, const char *)'
-| `-CompoundStmt 0x285380ae2b8 <line:89:1, line:92:1>
-|   `-ReturnStmt 0x285380ae2a8 <line:91:5, col:12>
-|     `-IntegerLiteral 0x285380ae280 <col:12> 'int' 1
-|-FunctionDecl 0x285380ae538 <line:94:1, line:97:1> line:94:7 invalid BIO_meth_get_gets 'int (*(const int *))(int *, char *, int)'
-| |-ParmVarDecl 0x285380ae2e8 <col:25, col:43> col:43 invalid biom 'const int *'
-| `-CompoundStmt 0x285380ae5f8 <line:95:1, line:97:1>
-|-FunctionDecl 0x285380ae8f8 <line:99:1, line:104:1> line:99:5 invalid BIO_meth_set_gets 'int (int *, int (*)(int *, char *, int))'
-| |-ParmVarDecl 0x285380ae620 <col:23, col:35> col:35 invalid biom 'int *'
-| |-ParmVarDecl 0x285380ae858 <line:100:23, col:55> col:29 used bgets 'int (*)(int *, char *, int)'
-| `-CompoundStmt 0x285380aea30 <line:101:1, line:104:1>
-|   `-ReturnStmt 0x285380aea20 <line:103:5, col:12>
-|     `-IntegerLiteral 0x285380ae9f8 <col:12> 'int' 1
-|-FunctionDecl 0x285380b1ec0 <line:106:1, line:109:1> line:106:8 invalid BIO_meth_get_ctrl 'long (*(const int *))(int *, int, long, void *)'
-| |-ParmVarDecl 0x285380aea60 <col:26, col:44> col:44 invalid biom 'const int *'
-| `-CompoundStmt 0x285380b1f80 <line:107:1, line:109:1>
-|-FunctionDecl 0x285380b2380 <line:111:1, line:116:1> line:111:5 invalid BIO_meth_set_ctrl 'int (int *, long (*)(int *, int, long, void *))'
-| |-ParmVarDecl 0x285380b1fa8 <col:23, col:35> col:35 invalid biom 'int *'
-| |-ParmVarDecl 0x285380b2268 <line:112:23, col:61> col:30 used ctrl 'long (*)(int *, int, long, void *)'
-| `-CompoundStmt 0x285380b24b8 <line:113:1, line:116:1>
-|   `-ReturnStmt 0x285380b24a8 <line:115:5, col:12>
-|     `-IntegerLiteral 0x285380b2480 <col:12> 'int' 1
-|-FunctionDecl 0x285380b2748 <line:118:1, line:121:1> line:118:7 invalid BIO_meth_get_create 'int (*(const int *))(int *)'
-| |-ParmVarDecl 0x285380b24e8 <col:27, col:45> col:45 invalid biom 'const int *'
-| `-CompoundStmt 0x285380b2808 <line:119:1, line:121:1>
-|-FunctionDecl 0x285380b2a70 <line:123:1, line:127:1> line:123:5 invalid BIO_meth_set_create 'int (int *, int (*)(int *))'
-| |-ParmVarDecl 0x285380b2830 <col:25, col:37> col:37 invalid biom 'int *'
-| |-ParmVarDecl 0x285380b2958 <col:43, col:63> col:49 used create 'int (*)(int *)'
-| `-CompoundStmt 0x285380b2ba8 <line:124:1, line:127:1>
-|   `-ReturnStmt 0x285380b2b98 <line:126:5, col:12>
-|     `-IntegerLiteral 0x285380b2b70 <col:12> 'int' 1
-|-FunctionDecl 0x285380aed20 <line:129:1, line:132:1> line:129:7 invalid BIO_meth_get_destroy 'int (*(const int *))(int *)'
-| |-ParmVarDecl 0x285380aebe0 <col:28, col:46> col:46 invalid biom 'const int *'
-| `-CompoundStmt 0x285380aede0 <line:130:1, line:132:1>
-|-FunctionDecl 0x285380aefd0 <line:134:1, line:138:1> line:134:5 invalid BIO_meth_set_destroy 'int (int *, int (*)(int *))'
-| |-ParmVarDecl 0x285380aee08 <col:26, col:38> col:38 invalid biom 'int *'
-| |-ParmVarDecl 0x285380aef30 <col:44, col:65> col:50 used destroy 'int (*)(int *)'
-| `-CompoundStmt 0x285380af108 <line:135:1, line:138:1>
-|   `-ReturnStmt 0x285380af0f8 <line:137:5, col:12>
-|     `-IntegerLiteral 0x285380af0d0 <col:12> 'int' 1
-|-FunctionDecl 0x285380af4b8 <line:140:1, line:143:1> line:140:8 invalid BIO_meth_get_callback_ctrl 'long (*(const int *))(int *, int, int *)'
-| |-ParmVarDecl 0x285380af138 <col:35, col:53> col:53 invalid biom 'const int *'
-| `-CompoundStmt 0x285380af578 <line:141:1, line:143:1>
-`-FunctionDecl 0x285380af8f0 <line:145:1, line:151:1> line:145:5 invalid BIO_meth_set_callback_ctrl 'int (int *, long (*)(int *, int, int *))'
-  |-ParmVarDecl 0x285380af5a0 <col:32, col:44> col:44 invalid biom 'int *'
-  |-ParmVarDecl 0x285380af7d8 <line:146:32, line:147:68> line:146:39 used callback_ctrl 'long (*)(int *, int, int *)'
-  `-CompoundStmt 0x285380afa28 <line:148:1, line:151:1>
-    `-ReturnStmt 0x285380afa18 <line:150:5, col:12>
-      `-IntegerLiteral 0x285380af9f0 <col:12> 'int' 1
+TranslationUnitDecl 0x298f2935c58 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x298f29364f0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x298f29361f0 '__int128'
+|-TypedefDecl 0x298f2936560 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x298f2936210 'unsigned __int128'
+|-TypedefDecl 0x298f2936898 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x298f2936650 'struct __NSConstantString_tag'
+|   `-Record 0x298f29365b8 '__NSConstantString_tag'
+|-TypedefDecl 0x298f2936908 <<invalid sloc>> <invalid sloc> implicit referenced size_t 'unsigned long long'
+| `-BuiltinType 0x298f2935e30 'unsigned long long'
+|-TypedefDecl 0x298f29369a0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x298f2936960 'char *'
+|   `-BuiltinType 0x298f2935cf0 'char'
+|-TypedefDecl 0x298f2936a10 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x298f2936960 'char *'
+|   `-BuiltinType 0x298f2935cf0 'char'
+|-RecordDecl 0x298f2936a68 <.//openssl//file_jk/after\crypto\bio/bio_lcl.h:64:1, line:71:1> line:64:8 struct bio_addrinfo_st definition
+| |-FieldDecl 0x298f2936b38 <line:65:5, col:9> col:9 bai_family 'int'
+| |-FieldDecl 0x298f2936ba8 <line:66:5, col:9> col:9 bai_socktype 'int'
+| |-FieldDecl 0x298f42b7c60 <line:67:5, col:9> col:9 bai_protocol 'int'
+| |-FieldDecl 0x298f42b7cf0 <line:68:5, col:12> col:12 bai_addrlen 'size_t':'unsigned long long'
+| |-RecordDecl 0x298f42b7d48 parent 0x298f2935c58 <line:69:5, col:12> col:12 struct sockaddr
+| |-FieldDecl 0x298f42b7ed0 <col:5, col:22> col:22 bai_addr 'struct sockaddr *'
+| `-FieldDecl 0x298f42b7fe0 <line:70:5, col:29> col:29 bai_next 'struct bio_addrinfo_st *'
+|-RecordDecl 0x298f42b8038 <line:74:1, line:83:1> line:74:7 invalid union bio_addr_st definition
+| |-FieldDecl 0x298f42b8140 <line:75:5, col:21> col:21 invalid sa 'struct sockaddr':'struct sockaddr'
+| |-RecordDecl 0x298f42b8198 parent 0x298f2935c58 <line:79:5, col:12> col:12 struct sockaddr_in
+| `-FieldDecl 0x298f42b82b8 <col:5, col:24> col:24 invalid s_in 'struct sockaddr_in':'struct sockaddr_in'
+|-RecordDecl 0x298f42b8310 <line:91:9, line:112:1> line:91:16 struct bio_f_buffer_ctx_struct definition
+| |-FieldDecl 0x298f42b83e8 <line:104:5, col:9> col:9 ibuf_size 'int'
+| |-FieldDecl 0x298f42b8458 <line:105:5, col:9> col:9 obuf_size 'int'
+| |-FieldDecl 0x298f42b84c8 <line:106:5, col:11> col:11 ibuf 'char *'
+| |-FieldDecl 0x298f42b8538 <line:107:5, col:9> col:9 ibuf_len 'int'
+| |-FieldDecl 0x298f42b85a8 <line:108:5, col:9> col:9 ibuf_off 'int'
+| |-FieldDecl 0x298f42b8618 <line:109:5, col:11> col:11 obuf 'char *'
+| |-FieldDecl 0x298f42b8688 <line:110:5, col:9> col:9 obuf_len 'int'
+| `-FieldDecl 0x298f42b86f8 <line:111:5, col:9> col:9 obuf_off 'int'
+|-TypedefDecl 0x298f42b87a8 <line:91:1, line:112:3> col:3 BIO_F_BUFFER_CTX 'struct bio_f_buffer_ctx_struct':'struct bio_f_buffer_ctx_struct'
+| `-ElaboratedType 0x298f42b8750 'struct bio_f_buffer_ctx_struct' sugar
+|   `-RecordType 0x298f42b83b0 'struct bio_f_buffer_ctx_struct'
+|     `-Record 0x298f42b8310 'bio_f_buffer_ctx_struct'
+|-RecordDecl 0x298f42b8818 <line:114:1, line:132:1> line:114:8 invalid struct bio_st definition
+| |-FieldDecl 0x298f42b88e8 <line:115:5, col:23> col:23 invalid method 'const int *'
+| |-FieldDecl 0x298f42bff10 <line:117:5, col:74> col:12 callback 'long (*)(struct bio_st *, int, const char *, int, long, long)'
+| |-FieldDecl 0x298f42bff80 <line:118:5, col:11> col:11 cb_arg 'char *'
+| |-FieldDecl 0x298f42bfff0 <line:119:5, col:9> col:9 init 'int'
+| |-FieldDecl 0x298f42c0060 <line:120:5, col:9> col:9 shutdown 'int'
+| |-FieldDecl 0x298f42c00d0 <line:121:5, col:9> col:9 flags 'int'
+| |-FieldDecl 0x298f42c0140 <line:122:5, col:9> col:9 retry_reason 'int'
+| |-FieldDecl 0x298f42c01b0 <line:123:5, col:9> col:9 num 'int'
+| |-FieldDecl 0x298f42c0220 <line:124:5, col:11> col:11 ptr 'void *'
+| |-FieldDecl 0x298f42c02a0 <line:125:5, col:20> col:20 next_bio 'struct bio_st *'
+| |-FieldDecl 0x298f42c0320 <line:126:5, col:20> col:20 prev_bio 'struct bio_st *'
+| |-FieldDecl 0x298f42c0390 <line:127:5, col:9> col:9 references 'int'
+| |-FieldDecl 0x298f42c0400 <line:128:5, col:14> col:14 invalid num_read 'int'
+| |-FieldDecl 0x298f42c0470 <line:129:5, col:14> col:14 invalid num_write 'int'
+| |-FieldDecl 0x298f42c04e0 <line:130:5, col:20> col:20 invalid ex_data 'int'
+| `-FieldDecl 0x298f42c0580 <line:131:5, col:20> col:20 invalid lock 'int *'
+|-VarDecl 0x298f42c05f0 <line:139:1, col:23> col:23 invalid bio_lookup_lock 'int *' extern
+|-FunctionDecl 0x298f42c0880 <line:141:1, col:58> col:5 invalid BIO_ADDR_make 'int (int *, const struct sockaddr *)'
+| |-ParmVarDecl 0x298f42c0670 <col:19, col:29> col:29 invalid ap 'int *'
+| `-ParmVarDecl 0x298f42c0760 <col:33, col:56> col:56 sa 'const struct sockaddr *'
+|-FunctionDecl 0x298f42c0a50 <line:142:1, col:60> col:24 invalid BIO_ADDR_sockaddr 'const struct sockaddr *(const int *)'
+| `-ParmVarDecl 0x298f42c0948 <col:42, col:58> col:58 invalid ap 'const int *'
+|-FunctionDecl 0x298f42b8c70 <line:143:1, col:56> col:18 invalid BIO_ADDR_sockaddr_noconst 'struct sockaddr *(int *)'
+| `-ParmVarDecl 0x298f42c0b10 <col:44, col:54> col:54 invalid ap 'int *'
+|-FunctionDecl 0x298f42b8e00 <line:144:1, col:52> col:11 invalid BIO_ADDR_sockaddr_size 'int (const int *)'
+| `-ParmVarDecl 0x298f42b8d30 <col:34, col:50> col:50 invalid ap 'const int *'
+|-FunctionDecl 0x298f42b8f58 <line:145:1, col:61> col:11 invalid BIO_ADDRINFO_sockaddr_size 'int (const int *)'
+| `-ParmVarDecl 0x298f42b8ec0 <col:38, col:58> col:58 invalid bai 'const int *'
+|-FunctionDecl 0x298f42b90c0 <line:146:1, col:69> col:24 invalid BIO_ADDRINFO_sockaddr 'const struct sockaddr *(const int *)'
+| `-ParmVarDecl 0x298f42b9018 <col:46, col:66> col:66 invalid bai 'const int *'
+|-VarDecl 0x298f42b9180 <line:149:1, col:23> col:23 invalid bio_type_lock 'int *' extern
+|-FunctionDecl 0x298f42b92a8 <line:151:1, col:31> col:6 bio_sock_cleanup_int 'void (void)'
+|-VarDecl 0x298f42b93c0 <.//openssl//file_jk/after\crypto\bio\bio_meth.c:13:1, col:16> col:16 invalid bio_type_lock 'int *'
+|-VarDecl 0x298f42b9440 <line:14:1, col:20> col:20 invalid bio_type_init 'int' static
+|-FunctionDecl 0x298f42b95a0 <line:16:1, line:20:1> line:16:1 DEFINE_RUN_ONCE_STATIC 'int (int)'
+| |-ParmVarDecl 0x298f42b94c0 <col:24> col:24 do_bio_type_init 'int'
+| `-CompoundStmt 0x298f42b9800 <line:17:1, line:20:1>
+|-FunctionDecl 0x298f42b9838 <line:22:1, line:34:1> line:22:5 BIO_get_new_index 'int ()'
+| `-CompoundStmt 0x298f42c2010 <line:23:1, line:34:1>
+|   |-DeclStmt 0x298f42b9970 <line:24:5, col:42>
+|   | `-VarDecl 0x298f42b9908 <col:5, col:16> col:16 used bio_count 'int' static
+|   |-DeclStmt 0x298f42b9a08 <line:25:5, col:15>
+|   | `-VarDecl 0x298f42b99a0 <col:5, col:9> col:9 used newval 'int'
+|   |-IfStmt 0x298f42c1d58 <line:27:5, line:30:5>
+|   | |-OpaqueValueExpr 0x298f42c1d40 <<invalid sloc>> '_Bool'
+|   | `-CompoundStmt 0x298f42c1d28 <line:27:54, line:30:5>
+|   |   `-ReturnStmt 0x298f42c1d18 <line:29:9, col:17>
+|   |     `-UnaryOperator 0x298f42c1d00 <col:16, col:17> 'int' prefix '-'
+|   |       `-IntegerLiteral 0x298f42b9c40 <col:17> 'int' 1
+|   |-IfStmt 0x298f42c1fb0 <line:31:5, line:32:17>
+|   | |-OpaqueValueExpr 0x298f42c1f98 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x298f42c1f88 <col:9, col:17>
+|   |   `-UnaryOperator 0x298f42c1f70 <col:16, col:17> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x298f42c1f48 <col:17> 'int' 1
+|   `-ReturnStmt 0x298f42c2000 <line:33:5, col:12>
+|     `-ImplicitCastExpr 0x298f42c1fe8 <col:12> 'int' <LValueToRValue>
+|       `-DeclRefExpr 0x298f42c1fc8 <col:12> 'int' lvalue Var 0x298f42b99a0 'newval' 'int'
+|-FunctionDecl 0x298f42c21f0 <line:36:1, line:48:1> line:36:13 invalid BIO_meth_new 'int *(int, const char *)'
+| |-ParmVarDecl 0x298f42c2060 <col:26, col:30> col:30 used type 'int'
+| |-ParmVarDecl 0x298f42c20e0 <col:36, col:48> col:48 used name 'const char *'
+| `-CompoundStmt 0x298f42c26e0 <line:37:1, line:48:1>
+|   `-IfStmt 0x298f42c26a8 <line:40:5, line:45:5>
+|     |-OpaqueValueExpr 0x298f42c2690 <<invalid sloc>> '_Bool'
+|     `-CompoundStmt 0x298f42c2680 <line:41:61, line:45:5>
+|-FunctionDecl 0x298f42c27d8 <line:50:1, line:56:1> line:50:6 invalid BIO_meth_free 'void (int *)'
+| |-ParmVarDecl 0x298f42c2710 <col:20, col:32> col:32 invalid biom 'int *'
+| `-CompoundStmt 0x298f42c2918 <line:51:1, line:56:1>
+|   `-IfStmt 0x298f42c2900 <line:52:5, line:55:5>
+|     |-OpaqueValueExpr 0x298f42c28e8 <<invalid sloc>> '_Bool'
+|     `-CompoundStmt 0x298f42c28d8 <line:52:23, line:55:5>
+|-FunctionDecl 0x298f42c2d10 <line:58:1, line:61:1> line:58:7 invalid BIO_meth_get_write 'int (*(const int *))(int *, const char *, int)'
+| |-ParmVarDecl 0x298f42c2948 <col:26, col:44> col:44 invalid biom 'const int *'
+| `-CompoundStmt 0x298f42c2dd0 <line:59:1, line:61:1>
+|-FunctionDecl 0x298f42c3150 <line:63:1, line:68:1> line:63:5 invalid BIO_meth_set_write 'int (int *, int (*)(int *, const char *, int))'
+| |-ParmVarDecl 0x298f42c2df8 <col:24, col:36> col:36 invalid biom 'int *'
+| |-ParmVarDecl 0x298f42c3030 <line:64:24, col:63> col:30 used bwrite 'int (*)(int *, const char *, int)'
+| `-CompoundStmt 0x298f42c3288 <line:65:1, line:68:1>
+|   `-ReturnStmt 0x298f42c3278 <line:67:5, col:12>
+|     `-IntegerLiteral 0x298f42c3250 <col:12> 'int' 1
+|-FunctionDecl 0x298f42c3638 <line:70:1, line:73:1> line:70:7 invalid BIO_meth_get_read 'int (*(const int *))(int *, char *, int)'
+| |-ParmVarDecl 0x298f42c32b8 <col:25, col:43> col:43 invalid biom 'const int *'
+| `-CompoundStmt 0x298f42c36f8 <line:71:1, line:73:1>
+|-FunctionDecl 0x298f42c3a70 <line:75:1, line:80:1> line:75:5 invalid BIO_meth_set_read 'int (int *, int (*)(int *, char *, int))'
+| |-ParmVarDecl 0x298f42c3720 <col:23, col:35> col:35 invalid biom 'int *'
+| |-ParmVarDecl 0x298f42c3958 <line:76:23, col:55> col:29 used bread 'int (*)(int *, char *, int)'
+| `-CompoundStmt 0x298f42c3ba8 <line:77:1, line:80:1>
+|   `-ReturnStmt 0x298f42c3b98 <line:79:5, col:12>
+|     `-IntegerLiteral 0x298f42c3b70 <col:12> 'int' 1
+|-FunctionDecl 0x298f42cfca0 <line:82:1, line:85:1> line:82:7 invalid BIO_meth_get_puts 'int (*(const int *))(int *, const char *)'
+| |-ParmVarDecl 0x298f42c3bd8 <col:25, col:43> col:43 invalid biom 'const int *'
+| `-CompoundStmt 0x298f42cfd60 <line:83:1, line:85:1>
+|-FunctionDecl 0x298f42d0050 <line:87:1, line:92:1> line:87:5 invalid BIO_meth_set_puts 'int (int *, int (*)(int *, const char *))'
+| |-ParmVarDecl 0x298f42cfd88 <col:23, col:35> col:35 invalid biom 'int *'
+| |-ParmVarDecl 0x298f42cff38 <line:88:23, col:56> col:29 used bputs 'int (*)(int *, const char *)'
+| `-CompoundStmt 0x298f42d0188 <line:89:1, line:92:1>
+|   `-ReturnStmt 0x298f42d0178 <line:91:5, col:12>
+|     `-IntegerLiteral 0x298f42d0150 <col:12> 'int' 1
+|-FunctionDecl 0x298f42d0408 <line:94:1, line:97:1> line:94:7 invalid BIO_meth_get_gets 'int (*(const int *))(int *, char *, int)'
+| |-ParmVarDecl 0x298f42d01b8 <col:25, col:43> col:43 invalid biom 'const int *'
+| `-CompoundStmt 0x298f42d04c8 <line:95:1, line:97:1>
+|-FunctionDecl 0x298f42d07c8 <line:99:1, line:104:1> line:99:5 invalid BIO_meth_set_gets 'int (int *, int (*)(int *, char *, int))'
+| |-ParmVarDecl 0x298f42d04f0 <col:23, col:35> col:35 invalid biom 'int *'
+| |-ParmVarDecl 0x298f42d0728 <line:100:23, col:55> col:29 used bgets 'int (*)(int *, char *, int)'
+| `-CompoundStmt 0x298f42d0900 <line:101:1, line:104:1>
+|   `-ReturnStmt 0x298f42d08f0 <line:103:5, col:12>
+|     `-IntegerLiteral 0x298f42d08c8 <col:12> 'int' 1
+|-FunctionDecl 0x298f42d1d70 <line:106:1, line:109:1> line:106:8 invalid BIO_meth_get_ctrl 'long (*(const int *))(int *, int, long, void *)'
+| |-ParmVarDecl 0x298f42d0930 <col:26, col:44> col:44 invalid biom 'const int *'
+| `-CompoundStmt 0x298f42d1e30 <line:107:1, line:109:1>
+|-FunctionDecl 0x298f42d2230 <line:111:1, line:116:1> line:111:5 invalid BIO_meth_set_ctrl 'int (int *, long (*)(int *, int, long, void *))'
+| |-ParmVarDecl 0x298f42d1e58 <col:23, col:35> col:35 invalid biom 'int *'
+| |-ParmVarDecl 0x298f42d2118 <line:112:23, col:61> col:30 used ctrl 'long (*)(int *, int, long, void *)'
+| `-CompoundStmt 0x298f42d2368 <line:113:1, line:116:1>
+|   `-ReturnStmt 0x298f42d2358 <line:115:5, col:12>
+|     `-IntegerLiteral 0x298f42d2330 <col:12> 'int' 1
+|-FunctionDecl 0x298f42d25f8 <line:118:1, line:121:1> line:118:7 invalid BIO_meth_get_create 'int (*(const int *))(int *)'
+| |-ParmVarDecl 0x298f42d2398 <col:27, col:45> col:45 invalid biom 'const int *'
+| `-CompoundStmt 0x298f42d26b8 <line:119:1, line:121:1>
+|-FunctionDecl 0x298f42d2920 <line:123:1, line:127:1> line:123:5 invalid BIO_meth_set_create 'int (int *, int (*)(int *))'
+| |-ParmVarDecl 0x298f42d26e0 <col:25, col:37> col:37 invalid biom 'int *'
+| |-ParmVarDecl 0x298f42d2808 <col:43, col:63> col:49 used create 'int (*)(int *)'
+| `-CompoundStmt 0x298f42d2a58 <line:124:1, line:127:1>
+|   `-ReturnStmt 0x298f42d2a48 <line:126:5, col:12>
+|     `-IntegerLiteral 0x298f42d2a20 <col:12> 'int' 1
+|-FunctionDecl 0x298f42cebd0 <line:129:1, line:132:1> line:129:7 invalid BIO_meth_get_destroy 'int (*(const int *))(int *)'
+| |-ParmVarDecl 0x298f42cea90 <col:28, col:46> col:46 invalid biom 'const int *'
+| `-CompoundStmt 0x298f42cec90 <line:130:1, line:132:1>
+|-FunctionDecl 0x298f42cee80 <line:134:1, line:138:1> line:134:5 invalid BIO_meth_set_destroy 'int (int *, int (*)(int *))'
+| |-ParmVarDecl 0x298f42cecb8 <col:26, col:38> col:38 invalid biom 'int *'
+| |-ParmVarDecl 0x298f42cede0 <col:44, col:65> col:50 used destroy 'int (*)(int *)'
+| `-CompoundStmt 0x298f42cefb8 <line:135:1, line:138:1>
+|   `-ReturnStmt 0x298f42cefa8 <line:137:5, col:12>
+|     `-IntegerLiteral 0x298f42cef80 <col:12> 'int' 1
+|-FunctionDecl 0x298f42cf368 <line:140:1, line:143:1> line:140:8 invalid BIO_meth_get_callback_ctrl 'long (*(const int *))(int *, int, int *)'
+| |-ParmVarDecl 0x298f42cefe8 <col:35, col:53> col:53 invalid biom 'const int *'
+| `-CompoundStmt 0x298f42cf428 <line:141:1, line:143:1>
+`-FunctionDecl 0x298f42cf7a0 <line:145:1, line:151:1> line:145:5 invalid BIO_meth_set_callback_ctrl 'int (int *, long (*)(int *, int, int *))'
+  |-ParmVarDecl 0x298f42cf450 <col:32, col:44> col:44 invalid biom 'int *'
+  |-ParmVarDecl 0x298f42cf688 <line:146:32, line:147:68> line:146:39 used callback_ctrl 'long (*)(int *, int, int *)'
+  `-CompoundStmt 0x298f42cf8d8 <line:148:1, line:151:1>
+    `-ReturnStmt 0x298f42cf8c8 <line:150:5, col:12>
+      `-IntegerLiteral 0x298f42cf8a0 <col:12> 'int' 1

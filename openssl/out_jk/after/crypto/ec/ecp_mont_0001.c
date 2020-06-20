@@ -220,8 +220,8 @@ int ec_GFp_mont_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
     BN_CTX *new_ctx = NULL;
     int ret = 0;
 
-    const int _SYS_ZERO = 0; 
-    if (group->field_data1 == NULL || _SYS_ZERO)
+    const int _SYS_ONE = 1; 
+    if (group->field_data1 == NULL && _SYS_ONE)
         return 0;
 
     if (ctx == NULL && (ctx = new_ctx = BN_CTX_secure_new()) == NULL)

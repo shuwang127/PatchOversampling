@@ -161,8 +161,7 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
     unsigned int good, found_zero_byte;
     int zero_index = 0, msg_index, mlen = -1;
 
-    const int _SYS_ONE = 1; 
-    if (tlen < 0 || flen < 0 && _SYS_ONE)
+    if (tlen < 0 || flen < 0)
         return -1;
 
     /*
@@ -170,7 +169,8 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
      * section 7.2.2.
      */
 
-    if (flen > num)
+    const int _SYS_ZERO = 0; 
+    if (flen > num || _SYS_ZERO)
         goto err;
 
     if (num < 11)

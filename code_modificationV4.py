@@ -8,7 +8,8 @@ datPath = appPath + '/file_jk/'
 patPath = appPath + '/patch_jk/'
 astPath = appPath + '/ast_jk/'
 outPath = appPath + '/out_jk/'
-version = 'after' # 'after' or 'before'
+optPath = appPath + '/outp_jk/'
+version = 'before' # 'after' or 'before'
 
 _DEBUG_ = 0 # 1: only use one sample, 0: use all samples.
 
@@ -36,13 +37,19 @@ def main():
                     if _DEBUG_: print('[DEBUG] ', astname)
                     # find all IF statements in the ast file.
                     ifstmts = FindIfStmts(astname)
-                    for item in ifstmts:
-                        # find the changed IF statements in diff file.
-                        patchname = CheckIfChanged(filename, item, patchList, version)
-                        if (len(patchname)):
-                            if _DEBUG_: print('[DEBUG] ', filename, item, patchname)
-                            contents = Oversampling(filename, item)
-                            SaveToFile(contents, root.replace(datPath, outPath, 1), file)
+                    for ifstmt in ifstmts:
+                        # check if the IF statements changed in diff file.
+                        patchname, linenums = CheckIfChanged(filename, ifstmt, patchList, version)
+                        if (len(patchname)): # find the changed IF statements from diff file.
+                            if _DEBUG_: print('[DEBUG] ', filename, ifstmt, patchname, linenums)
+                            # ===========================================================
+                            # get variants of the source code.
+                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, -1)
+                            SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
+                            # get variants of the patch.
+                            patchChanged, _, ok = PatchOversampling(patchname, version, filename, linenums, ifstmt, nChoice)
+                            if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))
+
     return
 
 def GenerateASTs(dataPath, ASTsPath):
@@ -196,16 +203,16 @@ def CheckIfChanged(fname, ifstmt, patchList, mode='after'):
     if mode == 'after':
         for item in patchList:
             if (fname == item[1]):
-                if (item[4] <= ifstmt[0]) & (ifstmt[0] <= item[5]):
-                    return item[6]
+                if (item[4]+3 <= ifstmt[0]) & (ifstmt[0] <= item[5]-3):
+                    return item[6], item[2:6]
     elif mode == 'before':
         for item in patchList:
             if (fname == item[0]):
-                if (item[2] <= ifstmt[0]) & (ifstmt[0] <= item[3]):
-                    return item[6]
-    return ''
+                if (item[2]+3 <= ifstmt[0]) & (ifstmt[0] <= item[3]-3):
+                    return item[6], item[2:6]
+    return '', [0, 0, 0, 0]
 
-def Oversampling(fname, ifstmt):
+def CodeOversampling(fname, ifstmt, nChoice=-1):
     # read file from the filename.
     fp = open(fname, encoding='utf-8', errors='ignore')
     lines = fp.readlines()
@@ -218,7 +225,7 @@ def Oversampling(fname, ifstmt):
     for i in range(stmtStart-3, stmtEnd+4):
         if 0: print(i, lines[i], end='')
 
-    # get the IF block
+    # locate: get the IF block
     ifBlock = ''
     for i in range(stmtStart, stmtEnd+1):
         ifBlock += lines[i]
@@ -242,8 +249,9 @@ def Oversampling(fname, ifstmt):
             mark -= 1
     if 0: print(indexIfRight, ifBlock[indexIfRight])
 
-    # modify the if block.
-    nChoice = random.randint(0, 1)
+    # modify: change the IF block.
+    if (nChoice not in [0, 1]):         # if nChoice is not in our settings.
+        nChoice = random.randint(0, 1)  # randomly choose.
     if (0 == nChoice):
         newBlock = ifBlock[:indexIfRight] + ' || _SYS_ZERO' + ifBlock[indexIfRight:]
         newBlock = ' ' * indexIfStart + 'const int _SYS_ZERO = 0; \n' + newBlock
@@ -266,7 +274,7 @@ def Oversampling(fname, ifstmt):
     for i in range(stmtStart-3, stmtEnd+4):
         if 0: print(i, lines[i], end='')
 
-    return lines
+    return lines, nChoice
 
 def SaveToFile(lines, path, file):
     # check the path.
@@ -290,13 +298,119 @@ def SaveToFile(lines, path, file):
             fileIdx += 1
 
     # save file.
-    fpath = os.path.join(path, fname)
+    fpath = os.path.join(path, fname).replace('\\', '/')
     fp = open(fpath, 'w')
     for i in range(len(lines)):
         fp.write(lines[i])
     fp.close()
+    if _DEBUG_: print('[DEBUG] Save code variant in ' + fpath)
 
     return 0
+
+def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
+    print(pname, version, fname, lnums, ifstmt, nChoice)
+    # get the matching file string.
+    filestr = fname.replace(datPath, '', 1)
+    filestr = filestr.replace(version, '', 1)
+    if 'after' == version:
+        filestr = 'a' + filestr
+    elif 'before' == version:
+        filestr = 'b' + filestr
+
+    # get the matching line string.
+    linestr = '@@ -'
+    linestr += str(lnums[0]) + ','
+    linestr += str(lnums[1]-lnums[0]+1) + ' +'
+    linestr += str(lnums[2]) + ','
+    linestr += str(lnums[3]-lnums[2]+1) + ' @@'
+
+    # get version string.
+    verstr = '+' if (version == 'after') else '-' if (version == 'before') else ' '
+
+    # read the patch file.
+    fp = open(pname, encoding='utf-8', errors='ignore')
+    lines = fp.readlines()
+    numLines = len(lines)
+
+    # get the line numbers of IF block in diff file.
+    markDiff = 0
+    markLine = 0
+    cnt = 0
+    ifloc = [0, 0]
+    # scan each line of the patch file.
+    for i in range(numLines):  # lines[i].
+        # find diff --git a/**** b/****
+        if re.match(r'diff --git a/(.*) b/(.*)', lines[i]):
+            segs = lines[i].split()  # split the line.
+            markDiff = 1 if (filestr in segs) else 0
+
+        # find @@ -000,00 +000,00 @@
+        if re.match(r'@@ -\d+,\d+ \+\d+,\d+ @@', lines[i]):
+            # get @ statement.
+            atstmt = re.findall(r'@@ -\d+,\d+ \+\d+,\d+ @@', lines[i])
+            markLine = 1 if (atstmt[0] == linestr) else 0
+
+        if ('after' == version):
+            if ((markDiff & markLine) and (lines[i][0] in ['@', ' ', '+'])):
+                if 0: print(i, lines[i], end='')
+                cnt += 1
+                if cnt == (ifstmt[0] - lnums[2] + 2):
+                    ifloc[0] = i
+                    ifloc[1] = min(ifloc[0] + ifstmt[1] - ifstmt[0], numLines-1)
+        elif ('before' == version):
+            if ((markDiff & markLine) and (lines[i][0] in ['@', ' ', '-'])):
+                if _DEBUG_: print(i, lines[i], end='')
+                cnt += 1
+                if cnt == (ifstmt[0] - lnums[0] + 2):
+                    ifloc[0] = i
+                    ifloc[1] = min(ifloc[0] + ifstmt[1] - ifstmt[0], numLines - 1)
+
+    # locate: get the IF block
+    if _DEBUG_: print(ifloc)
+    ifBlock = ''
+    for i in range(ifloc[0], ifloc[1] + 1):
+        ifBlock += lines[i]
+    # find the index of the first if__(
+    ifStart = re.findall(r'if\s*\(', ifBlock)
+    if ([] == ifStart):
+        return lines, -1, 0
+    indexIfStart = ifBlock.index(ifStart[0])
+    # find the corresponding (
+    indexIfLeft = indexIfStart + len(ifStart[0]) - 1
+    # find the corresponding )
+    mark = 1
+    indexIfRight = indexIfLeft
+    while (mark):
+        indexIfRight += 1
+        if ifBlock[indexIfRight] == '(':
+            mark += 1
+        elif ifBlock[indexIfRight] == ')':
+            mark -= 1
+
+    # modify: change the IF block.
+    if (nChoice not in [0, 1]):  # if nChoice is not in our settings.
+        nChoice = random.randint(0, 1)  # randomly choose.
+    if (0 == nChoice):
+        newBlock = ifBlock[:indexIfRight] + ' || _SYS_ZERO' + ifBlock[indexIfRight:]
+        newBlock = verstr + ' ' * (indexIfStart-1) + 'const int _SYS_ZERO = 0; \n' + newBlock
+    elif (1 == nChoice):
+        newBlock = ifBlock[:indexIfRight] + ' && _SYS_ONE' + ifBlock[indexIfRight:]
+        newBlock = verstr + ' ' * (indexIfStart-1) + 'const int _SYS_ONE = 1; \n' + newBlock
+    # change string to lists.
+    newBlockList = newBlock.split('\n')
+    ifBlockList = []
+    for stmt in newBlockList[:-1]:
+        ifBlockList.append(stmt + '\n')
+
+    # delete original block.
+    del lines[ifloc[0]:ifloc[1] + 1]
+    # add modified block.
+    for i in range(len(ifBlockList)):
+        lines.insert(ifloc[0] + i, ifBlockList[i])
+    for i in range(ifloc[0]-3, min(ifloc[1]+4, len(lines))):
+        if _DEBUG_: print(i, lines[i], end='')
+
+    return lines, nChoice, 1
 
 if __name__ == '__main__':
     main()

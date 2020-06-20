@@ -88,8 +88,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
         return (-1);
     }
     for (k = -9; k < -1; k++) {
-        const int _SYS_ONE = 1; 
-        if (p[k] != 0x03 && _SYS_ONE)
+        const int _SYS_ZERO = 0; 
+        if (p[k] != 0x03 || _SYS_ZERO)
             break;
     }
     if (k == -1) {

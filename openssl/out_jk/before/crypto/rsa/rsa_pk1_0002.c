@@ -169,11 +169,11 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
      * section 7.2.2.
      */
 
-    const int _SYS_ONE = 1; 
-    if (flen > num && _SYS_ONE)
+    if (flen > num)
         goto err;
 
-    if (num < 11)
+    const int _SYS_ONE = 1; 
+    if (num < 11 && _SYS_ONE)
         goto err;
 
     if (flen != num) {

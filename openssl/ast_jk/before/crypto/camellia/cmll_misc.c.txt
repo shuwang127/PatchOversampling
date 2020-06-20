@@ -1,84 +1,84 @@
-TranslationUnitDecl 0x1b1b4b420f8 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x1b1b4b42990 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x1b1b4b42690 '__int128'
-|-TypedefDecl 0x1b1b4b42a00 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x1b1b4b426b0 'unsigned __int128'
-|-TypedefDecl 0x1b1b4b42d38 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
-| `-RecordType 0x1b1b4b42af0 'struct __NSConstantString_tag'
-|   `-Record 0x1b1b4b42a58 '__NSConstantString_tag'
-|-TypedefDecl 0x1b1b4b42da8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
-| `-BuiltinType 0x1b1b4b422d0 'unsigned long long'
-|-TypedefDecl 0x1b1b4b42e40 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x1b1b4b42e00 'char *'
-|   `-BuiltinType 0x1b1b4b42190 'char'
-|-TypedefDecl 0x1b1b4b42eb0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
-| `-PointerType 0x1b1b4b42e00 'char *'
-|   `-BuiltinType 0x1b1b4b42190 'char'
-|-TypedefDecl 0x1b1b4b42f20 <.//openssl//file_jk/before\crypto\camellia/cmll_locl.h:28:1, col:22> col:22 u32 'unsigned int'
-| `-BuiltinType 0x1b1b4b42290 'unsigned int'
-|-TypedefDecl 0x1b1b4b42f90 <line:29:1, col:23> col:23 referenced u8 'unsigned char'
-| `-BuiltinType 0x1b1b4b42250 'unsigned char'
-|-FunctionDecl 0x1b1b6609260 <line:31:1, line:32:45> line:31:5 invalid Camellia_Ekeygen 'int (int, const u8 *, int)'
-| |-ParmVarDecl 0x1b1b4b43000 <col:22, col:26> col:26 keyBitLength 'int'
-| |-ParmVarDecl 0x1b1b66090b0 <col:40, col:50> col:50 rawKey 'const u8 *'
-| `-ParmVarDecl 0x1b1b6609130 <line:32:22, col:37> col:37 invalid keyTable 'int'
-|-FunctionDecl 0x1b1b6609768 <line:33:1, line:35:50> line:33:6 invalid Camellia_EncryptBlock_Rounds 'void (int, const u8 *, const int, u8 *)'
-| |-ParmVarDecl 0x1b1b6609330 <col:35, col:39> col:39 grandRounds 'int'
-| |-ParmVarDecl 0x1b1b6609450 <col:52, col:71> col:61 plaintext 'const u8 *':'const u8 *'
-| |-ParmVarDecl 0x1b1b66094d0 <line:34:35, col:56> col:56 invalid keyTable 'const int'
-| `-ParmVarDecl 0x1b1b6609620 <line:35:35, col:49> col:38 ciphertext 'u8 *':'u8 *'
-|-FunctionDecl 0x1b1b6609a78 <line:36:1, line:38:49> line:36:6 invalid Camellia_DecryptBlock_Rounds 'void (int, const u8 *, const int, u8 *)'
-| |-ParmVarDecl 0x1b1b6609840 <col:35, col:39> col:39 grandRounds 'int'
-| |-ParmVarDecl 0x1b1b66098c8 <col:52, col:72> col:61 ciphertext 'const u8 *':'const u8 *'
-| |-ParmVarDecl 0x1b1b6609948 <line:37:35, col:56> col:56 invalid keyTable 'const int'
-| `-ParmVarDecl 0x1b1b66099d0 <line:38:35, col:48> col:38 plaintext 'u8 *':'u8 *'
-|-FunctionDecl 0x1b1b6609d88 <line:39:1, line:40:74> line:39:6 invalid Camellia_EncryptBlock 'void (int, const u8 *, const int, u8 *)'
-| |-ParmVarDecl 0x1b1b6609b50 <col:28, col:32> col:32 keyBitLength 'int'
-| |-ParmVarDecl 0x1b1b6609bd8 <col:46, col:65> col:55 plaintext 'const u8 *':'const u8 *'
-| |-ParmVarDecl 0x1b1b6609c58 <line:40:28, col:49> col:49 invalid keyTable 'const int'
-| `-ParmVarDecl 0x1b1b6609ce0 <col:59, col:73> col:62 ciphertext 'u8 *':'u8 *'
-|-FunctionDecl 0x1b1b660f100 <line:41:1, line:42:73> line:41:6 invalid Camellia_DecryptBlock 'void (int, const u8 *, const int, u8 *)'
-| |-ParmVarDecl 0x1b1b6609e60 <col:28, col:32> col:32 keyBitLength 'int'
-| |-ParmVarDecl 0x1b1b6609ee8 <col:46, col:66> col:55 ciphertext 'const u8 *':'const u8 *'
-| |-ParmVarDecl 0x1b1b6609f68 <line:42:28, col:49> col:49 invalid keyTable 'const int'
-| `-ParmVarDecl 0x1b1b6609ff0 <col:59, col:72> col:62 plaintext 'u8 *':'u8 *'
-|-FunctionDecl 0x1b1b660f430 <.//openssl//file_jk/before\crypto\camellia\cmll_misc.c:14:1, line:23:1> line:14:5 invalid Camellia_set_key 'int (const unsigned char *, const int, int *)'
-| |-ParmVarDecl 0x1b1b660f1d8 <col:22, col:43> col:43 used userKey 'const unsigned char *'
-| |-ParmVarDecl 0x1b1b660f258 <col:52, col:62> col:62 used bits 'const int'
-| |-ParmVarDecl 0x1b1b660f300 <line:15:22, col:36> col:36 invalid key 'int *'
-| `-CompoundStmt 0x1b1b660f8a0 <line:16:1, line:23:1>
-|   |-IfStmt 0x1b1b660f5d0 <line:17:5, line:18:17>
-|   | |-OpaqueValueExpr 0x1b1b660f5b8 <<invalid sloc>> '_Bool'
-|   | `-ReturnStmt 0x1b1b660f5a8 <col:9, col:17>
-|   |   `-UnaryOperator 0x1b1b660f590 <col:16, col:17> 'int' prefix '-'
-|   |     `-IntegerLiteral 0x1b1b660f568 <col:17> 'int' 1
-|   |-IfStmt 0x1b1b660f810 <line:19:5, line:20:17>
-|   | |-BinaryOperator 0x1b1b660f7a0 <line:19:9, col:47> 'int' '&&'
-|   | | |-BinaryOperator 0x1b1b660f700 <col:9, col:32> 'int' '&&'
-|   | | | |-BinaryOperator 0x1b1b660f660 <col:9, col:17> 'int' '!='
-|   | | | | |-ImplicitCastExpr 0x1b1b660f648 <col:9> 'int' <LValueToRValue>
-|   | | | | | `-DeclRefExpr 0x1b1b660f5e8 <col:9> 'const int' lvalue ParmVar 0x1b1b660f258 'bits' 'const int'
-|   | | | | `-IntegerLiteral 0x1b1b660f620 <col:17> 'int' 128
-|   | | | `-BinaryOperator 0x1b1b660f6e0 <col:24, col:32> 'int' '!='
-|   | | |   |-ImplicitCastExpr 0x1b1b660f6c8 <col:24> 'int' <LValueToRValue>
-|   | | |   | `-DeclRefExpr 0x1b1b660f680 <col:24> 'const int' lvalue ParmVar 0x1b1b660f258 'bits' 'const int'
-|   | | |   `-IntegerLiteral 0x1b1b660f6a0 <col:32> 'int' 192
-|   | | `-BinaryOperator 0x1b1b660f780 <col:39, col:47> 'int' '!='
-|   | |   |-ImplicitCastExpr 0x1b1b660f768 <col:39> 'int' <LValueToRValue>
-|   | |   | `-DeclRefExpr 0x1b1b660f720 <col:39> 'const int' lvalue ParmVar 0x1b1b660f258 'bits' 'const int'
-|   | |   `-IntegerLiteral 0x1b1b660f740 <col:47> 'int' 256
-|   | `-ReturnStmt 0x1b1b660f800 <line:20:9, col:17>
-|   |   `-UnaryOperator 0x1b1b660f7e8 <col:16, col:17> 'int' prefix '-'
-|   |     `-IntegerLiteral 0x1b1b660f7c0 <col:17> 'int' 2
-|   `-ReturnStmt 0x1b1b660f890 <line:22:5, col:12>
-|     `-IntegerLiteral 0x1b1b660f868 <col:12> 'int' 0
-|-FunctionDecl 0x1b1b660fac8 <line:25:1, line:29:1> line:25:6 invalid Camellia_encrypt 'void (const unsigned char *, unsigned char *, const int *)'
-| |-ParmVarDecl 0x1b1b660f8e0 <col:23, col:44> col:44 used in 'const unsigned char *'
-| |-ParmVarDecl 0x1b1b660f960 <col:48, col:63> col:63 used out 'unsigned char *'
-| |-ParmVarDecl 0x1b1b660f9e0 <line:26:23, col:43> col:43 invalid key 'const int *'
-| `-CompoundStmt 0x1b1b660fc08 <line:27:1, line:29:1>
-`-FunctionDecl 0x1b1b660fdd0 <line:31:1, line:35:1> line:31:6 invalid Camellia_decrypt 'void (const unsigned char *, unsigned char *, const int *)'
-  |-ParmVarDecl 0x1b1b660fc30 <col:23, col:44> col:44 used in 'const unsigned char *'
-  |-ParmVarDecl 0x1b1b660fcb0 <col:48, col:63> col:63 used out 'unsigned char *'
-  |-ParmVarDecl 0x1b1b660fd30 <line:32:23, col:43> col:43 invalid key 'const int *'
-  `-CompoundStmt 0x1b1b660ff10 <line:33:1, line:35:1>
+TranslationUnitDecl 0x24b3b78c828 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x24b3b78d0c0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x24b3b78cdc0 '__int128'
+|-TypedefDecl 0x24b3b78d130 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x24b3b78cde0 'unsigned __int128'
+|-TypedefDecl 0x24b3b78d468 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x24b3b78d220 'struct __NSConstantString_tag'
+|   `-Record 0x24b3b78d188 '__NSConstantString_tag'
+|-TypedefDecl 0x24b3b78d4d8 <<invalid sloc>> <invalid sloc> implicit size_t 'unsigned long long'
+| `-BuiltinType 0x24b3b78ca00 'unsigned long long'
+|-TypedefDecl 0x24b3b78d570 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x24b3b78d530 'char *'
+|   `-BuiltinType 0x24b3b78c8c0 'char'
+|-TypedefDecl 0x24b3b78d5e0 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x24b3b78d530 'char *'
+|   `-BuiltinType 0x24b3b78c8c0 'char'
+|-TypedefDecl 0x24b3b78d650 <.//openssl//file_jk/before\crypto\camellia/cmll_locl.h:28:1, col:22> col:22 u32 'unsigned int'
+| `-BuiltinType 0x24b3b78c9c0 'unsigned int'
+|-TypedefDecl 0x24b3b78d6c0 <line:29:1, col:23> col:23 referenced u8 'unsigned char'
+| `-BuiltinType 0x24b3b78c980 'unsigned char'
+|-FunctionDecl 0x24b3d17d680 <line:31:1, line:32:45> line:31:5 invalid Camellia_Ekeygen 'int (int, const u8 *, int)'
+| |-ParmVarDecl 0x24b3b78d730 <col:22, col:26> col:26 keyBitLength 'int'
+| |-ParmVarDecl 0x24b3d17d4d0 <col:40, col:50> col:50 rawKey 'const u8 *'
+| `-ParmVarDecl 0x24b3d17d550 <line:32:22, col:37> col:37 invalid keyTable 'int'
+|-FunctionDecl 0x24b3d17db88 <line:33:1, line:35:50> line:33:6 invalid Camellia_EncryptBlock_Rounds 'void (int, const u8 *, const int, u8 *)'
+| |-ParmVarDecl 0x24b3d17d750 <col:35, col:39> col:39 grandRounds 'int'
+| |-ParmVarDecl 0x24b3d17d870 <col:52, col:71> col:61 plaintext 'const u8 *':'const u8 *'
+| |-ParmVarDecl 0x24b3d17d8f0 <line:34:35, col:56> col:56 invalid keyTable 'const int'
+| `-ParmVarDecl 0x24b3d17da40 <line:35:35, col:49> col:38 ciphertext 'u8 *':'u8 *'
+|-FunctionDecl 0x24b3d17de98 <line:36:1, line:38:49> line:36:6 invalid Camellia_DecryptBlock_Rounds 'void (int, const u8 *, const int, u8 *)'
+| |-ParmVarDecl 0x24b3d17dc60 <col:35, col:39> col:39 grandRounds 'int'
+| |-ParmVarDecl 0x24b3d17dce8 <col:52, col:72> col:61 ciphertext 'const u8 *':'const u8 *'
+| |-ParmVarDecl 0x24b3d17dd68 <line:37:35, col:56> col:56 invalid keyTable 'const int'
+| `-ParmVarDecl 0x24b3d17ddf0 <line:38:35, col:48> col:38 plaintext 'u8 *':'u8 *'
+|-FunctionDecl 0x24b3d17e1a8 <line:39:1, line:40:74> line:39:6 invalid Camellia_EncryptBlock 'void (int, const u8 *, const int, u8 *)'
+| |-ParmVarDecl 0x24b3d17df70 <col:28, col:32> col:32 keyBitLength 'int'
+| |-ParmVarDecl 0x24b3d17dff8 <col:46, col:65> col:55 plaintext 'const u8 *':'const u8 *'
+| |-ParmVarDecl 0x24b3d17e078 <line:40:28, col:49> col:49 invalid keyTable 'const int'
+| `-ParmVarDecl 0x24b3d17e100 <col:59, col:73> col:62 ciphertext 'u8 *':'u8 *'
+|-FunctionDecl 0x24b3d17c4b0 <line:41:1, line:42:73> line:41:6 invalid Camellia_DecryptBlock 'void (int, const u8 *, const int, u8 *)'
+| |-ParmVarDecl 0x24b3d17e280 <col:28, col:32> col:32 keyBitLength 'int'
+| |-ParmVarDecl 0x24b3d17e308 <col:46, col:66> col:55 ciphertext 'const u8 *':'const u8 *'
+| |-ParmVarDecl 0x24b3d17e388 <line:42:28, col:49> col:49 invalid keyTable 'const int'
+| `-ParmVarDecl 0x24b3d17e410 <col:59, col:72> col:62 plaintext 'u8 *':'u8 *'
+|-FunctionDecl 0x24b3d17c7e0 <.//openssl//file_jk/before\crypto\camellia\cmll_misc.c:14:1, line:23:1> line:14:5 invalid Camellia_set_key 'int (const unsigned char *, const int, int *)'
+| |-ParmVarDecl 0x24b3d17c588 <col:22, col:43> col:43 used userKey 'const unsigned char *'
+| |-ParmVarDecl 0x24b3d17c608 <col:52, col:62> col:62 used bits 'const int'
+| |-ParmVarDecl 0x24b3d17c6b0 <line:15:22, col:36> col:36 invalid key 'int *'
+| `-CompoundStmt 0x24b3d17cc50 <line:16:1, line:23:1>
+|   |-IfStmt 0x24b3d17c980 <line:17:5, line:18:17>
+|   | |-OpaqueValueExpr 0x24b3d17c968 <<invalid sloc>> '_Bool'
+|   | `-ReturnStmt 0x24b3d17c958 <col:9, col:17>
+|   |   `-UnaryOperator 0x24b3d17c940 <col:16, col:17> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x24b3d17c918 <col:17> 'int' 1
+|   |-IfStmt 0x24b3d17cbc0 <line:19:5, line:20:17>
+|   | |-BinaryOperator 0x24b3d17cb50 <line:19:9, col:47> 'int' '&&'
+|   | | |-BinaryOperator 0x24b3d17cab0 <col:9, col:32> 'int' '&&'
+|   | | | |-BinaryOperator 0x24b3d17ca10 <col:9, col:17> 'int' '!='
+|   | | | | |-ImplicitCastExpr 0x24b3d17c9f8 <col:9> 'int' <LValueToRValue>
+|   | | | | | `-DeclRefExpr 0x24b3d17c998 <col:9> 'const int' lvalue ParmVar 0x24b3d17c608 'bits' 'const int'
+|   | | | | `-IntegerLiteral 0x24b3d17c9d0 <col:17> 'int' 128
+|   | | | `-BinaryOperator 0x24b3d17ca90 <col:24, col:32> 'int' '!='
+|   | | |   |-ImplicitCastExpr 0x24b3d17ca78 <col:24> 'int' <LValueToRValue>
+|   | | |   | `-DeclRefExpr 0x24b3d17ca30 <col:24> 'const int' lvalue ParmVar 0x24b3d17c608 'bits' 'const int'
+|   | | |   `-IntegerLiteral 0x24b3d17ca50 <col:32> 'int' 192
+|   | | `-BinaryOperator 0x24b3d17cb30 <col:39, col:47> 'int' '!='
+|   | |   |-ImplicitCastExpr 0x24b3d17cb18 <col:39> 'int' <LValueToRValue>
+|   | |   | `-DeclRefExpr 0x24b3d17cad0 <col:39> 'const int' lvalue ParmVar 0x24b3d17c608 'bits' 'const int'
+|   | |   `-IntegerLiteral 0x24b3d17caf0 <col:47> 'int' 256
+|   | `-ReturnStmt 0x24b3d17cbb0 <line:20:9, col:17>
+|   |   `-UnaryOperator 0x24b3d17cb98 <col:16, col:17> 'int' prefix '-'
+|   |     `-IntegerLiteral 0x24b3d17cb70 <col:17> 'int' 2
+|   `-ReturnStmt 0x24b3d17cc40 <line:22:5, col:12>
+|     `-IntegerLiteral 0x24b3d17cc18 <col:12> 'int' 0
+|-FunctionDecl 0x24b3d17ce78 <line:25:1, line:29:1> line:25:6 invalid Camellia_encrypt 'void (const unsigned char *, unsigned char *, const int *)'
+| |-ParmVarDecl 0x24b3d17cc90 <col:23, col:44> col:44 used in 'const unsigned char *'
+| |-ParmVarDecl 0x24b3d17cd10 <col:48, col:63> col:63 used out 'unsigned char *'
+| |-ParmVarDecl 0x24b3d17cd90 <line:26:23, col:43> col:43 invalid key 'const int *'
+| `-CompoundStmt 0x24b3d17cfb8 <line:27:1, line:29:1>
+`-FunctionDecl 0x24b3d17d180 <line:31:1, line:35:1> line:31:6 invalid Camellia_decrypt 'void (const unsigned char *, unsigned char *, const int *)'
+  |-ParmVarDecl 0x24b3d17cfe0 <col:23, col:44> col:44 used in 'const unsigned char *'
+  |-ParmVarDecl 0x24b3d17d060 <col:48, col:63> col:63 used out 'unsigned char *'
+  |-ParmVarDecl 0x24b3d17d0e0 <line:32:23, col:43> col:43 invalid key 'const int *'
+  `-CompoundStmt 0x24b3d17d2c0 <line:33:1, line:35:1>

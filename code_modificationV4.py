@@ -1,3 +1,31 @@
+'''
+Security Patch Group: Patch Oversampling Task.
+Developer: Shu Wang
+Date: 2020-06-20
+Version: S2020.06.20 (V4)
+File Structure:
+    PatchClearance
+        |-- _old_versions           # old versions for the programs.
+        |-- openssl                 # openssl data.
+            |-- file_jk             # program files.
+                | -- after          # 'after' version.
+                | -- before         # 'before' version
+            |-- patch_jk            # patch files.
+            |-- ast_jk              # AST files.
+                | -- after          # 'after' version.
+                | -- before         # 'before' version
+            |-- out_jk              # output program files.
+                | -- after          # 'after' version.
+                | -- before         # 'before' version
+            |-- outp_jk             # output patch files.
+        |-- code_modificationV4.py  # main entrance.
+        |-- README.md               # readme file.
+Prerequirements:
+    LLVM 10.0.0 (Download Link: http://www.llvm.org/releases/download.html)
+Usage:
+    python code_modificationV4.py
+'''
+
 import os
 import re
 import random
@@ -11,19 +39,19 @@ outPath = appPath + '/out_jk/'
 optPath = appPath + '/outp_jk/'
 version = 'before' # 'after' or 'before'
 
-_DEBUG_ = 0 # 1: only use one sample, 0: use all samples.
+_DEBUG_ = 1 # 1: only use one sample, 0: use all samples.
 
 def main():
     global _DEBUG_
     # Generate AST files from program files.
-    GenerateASTs(datPath, astPath)
+    #GenerateASTs(datPath, astPath)
     # get patch lists from patch path.
     patchList = ScanPatches(patPath, datPath)
     # scan all the files.
     for root, ds, fs in os.walk(os.path.join(datPath, version)):
         for file in fs:
             # if _DEBUG_ == 1, run single C/Cpp file; if _DEBUG_ == 0, run all files.
-            if _DEBUG_ <= 96:    # can change to N.
+            if _DEBUG_ <= -1:    # can change to N.
                 extname = os.path.splitext(file)[1]         # get the file extension.
                 if '.c' == extname or '.cpp' == extname:    # if file extension is .c or .cpp.
                     if _DEBUG_ >= 1: _DEBUG_ += 1           # _DEBUG_ = 2
@@ -83,8 +111,30 @@ def GenerateASTs(dataPath, ASTsPath):
     return 0
 
 def ScanPatches(patchPath, dataPatch):
+    '''
+    Scan the patches and find all hunks that contains IF statements.
+    :param patchPath: patch file path.
+    :param dataPatch: program file path.
+    :return: all the hunk information that contains IF statements.
+    [[bfname, afname, bStart, bEnd, aStart, aEnd, filename], ...]
+    '''
     def ReadPatch(filename, dataPatch):
+        '''
+        Scan the patches and find all hunks that contains IF statements.
+        :param filename: patch file name.
+        :param dataPatch: program file path.
+        :return: all the hunk information that contains IF statements.
+        [[bfname, afname, bStart, bEnd, aStart, aEnd, filename], ...]
+        '''
         def FindCorrespondLine(atStat, lineNum):
+            '''
+            Find the line numbers of the hunk.
+            :param atStat: all the hunk information.
+            [[lineNum, bStart, bEnd, aStart, aEnd], ...]
+            :param lineNum: the total line number of the patch file.
+            :return: line number of hunk.
+            [bStart, bEnd, aStart, aEnd]
+            '''
             for item in reversed(atStat):
                 if item[0] < lineNum:
                     break
@@ -107,9 +157,11 @@ def ScanPatches(patchPath, dataPatch):
                 bEnd = bStart + max(1, int(atnum[1])) - 1
                 aStart = int(atnum[2])
                 aEnd = aStart + max(1, int(atnum[3])) - 1
-                if 0: print(i, bStart, bEnd, aStart, aEnd)
+                if 0:
+                    print(i, bStart, bEnd, aStart, aEnd)
                 atStat.append([i, bStart, bEnd, aStart, aEnd])
-        if 0: print(atStat)
+        if 0:
+            print(atStat)
 
         # read contents line by line.
         outputs = []
@@ -122,7 +174,8 @@ def ScanPatches(patchPath, dataPatch):
                 segs = lines[i].split() # split the line.
                 aname = segs[2][2:]     # get after name.
                 bname = segs[3][2:]     # get before name.
-                if 0: print(os.path.join(os.path.join(dataPatch, 'after'), aname), os.path.join(os.path.join(dataPatch, 'before'), bname))
+                if 0:
+                    print(os.path.join(os.path.join(dataPatch, 'after'), aname), os.path.join(os.path.join(dataPatch, 'before'), bname))
                 # check if two files exist.
                 if (os.path.exists(os.path.join(os.path.join(dataPatch, 'after'), aname))
                         & os.path.exists(os.path.join(os.path.join(dataPatch, 'before'), bname))):
@@ -134,9 +187,11 @@ def ScanPatches(patchPath, dataPatch):
             # find IF statement.
             ifstmts = re.findall(r'if\s*\(', lines[i])
             if (len(ifstmts) & (bfname != '') & (afname != '')): # if lines[i] contains IF statements.
-                if 0: print(i, lines[i], end='')
+                if 0:
+                    print(i, lines[i], end='')
                 block = FindCorrespondLine(atStat, i)       # get [70, 71, 70, 73]
-                if 0: print(block)
+                if 0:
+                    print(block)
                 outputs.append([bfname, afname] + block + [filename])
 
         # delete replications.
@@ -144,7 +199,8 @@ def ScanPatches(patchPath, dataPatch):
         for item in outputs:
             if not item in finalOut:
                 finalOut.append(item)
-        if 0: print(finalOut)
+        if 0:
+            print(finalOut)
 
         return finalOut
 
@@ -171,6 +227,12 @@ def ScanPatches(patchPath, dataPatch):
     return finalOut
 
 def FindIfStmts(fname):
+    '''
+    Find all the IF statements from the AST file.
+    :param fname: AST file name.
+    :return: All the IF block information.
+    [[ifStart, ifEnd], ...]
+    '''
     # check if the ast file exists.
     if not os.path.exists(fname):
         print('[Warning] Cannot find the file %s' % (fname))
@@ -186,20 +248,35 @@ def FindIfStmts(fname):
     for i in range(numLines):   # lines[i].
         # find ****IfStmt *** <line:000:00, line:000:00> ***
         if re.match(r'(.*)IfStmt(.*)<line:\d+:\d+, line:\d+:\d+>(.*)', lines[i]):
-            if _DEBUG_ & 0: print('[DEBUG] ', i, lines[i], end='')
+            if _DEBUG_ & 0:
+                print('[DEBUG] ', i, lines[i], end='')
             # find <line:000:00, line:000:00>
             linestmt = re.findall(r'<line:\d+:\d+, line:\d+:\d+>', lines[i])
-            if _DEBUG_ & 0: print('[DEBUG] ', linestmt)
+            if _DEBUG_ & 0:
+                print('[DEBUG] ', linestmt)
             # find line numbers in <line:000:00, line:000:00>
             numbers = re.findall(r'\d+', linestmt[0])
-            if _DEBUG_ & 0: print('[DEBUG] ', [numbers[0], numbers[2]])
+            if _DEBUG_ & 0:
+                print('[DEBUG] ', [numbers[0], numbers[2]])
             ifstmts.append([int(numbers[0]), int(numbers[2])])
 
     # return line numbers of if statements.
-    if _DEBUG_: print('[DEBUG] ', ifstmts)
+    if _DEBUG_:
+        print('[DEBUG] ', ifstmts)
     return ifstmts
 
 def CheckIfChanged(fname, ifstmt, patchList, mode='after'):
+    '''
+    Check if the IF statement is changed in the patches.
+    :param fname: program file.
+    :param ifstmt: IF statement.
+    [ifStart, ifEnd]
+    :param patchList: all the hunk information that contains IF statements.
+    [[bfname, afname, bStart, bEnd, aStart, aEnd, filename], ...]
+    :param mode: 'after' or 'before'
+    :return: YES: filename, [bStart, bEnd, aStart, aEnd]
+             NO: '', [0, 0, 0, 0]
+    '''
     if mode == 'after':
         for item in patchList:
             if (fname == item[1]):
@@ -213,6 +290,15 @@ def CheckIfChanged(fname, ifstmt, patchList, mode='after'):
     return '', [0, 0, 0, 0]
 
 def CodeOversampling(fname, ifstmt, nChoice=-1):
+    '''
+    Code Oversampling.
+    :param fname: the program file.
+    :param ifstmt: IF statement.
+    [ifStart, ifEnd]
+    :param nChoice: the choice of oversampling. -1: random, 0-N: specific.
+    :return: lines: the changed code.
+             nChoice: the final choice of oversampling.
+    '''
     # read file from the filename.
     fp = open(fname, encoding='utf-8', errors='ignore')
     lines = fp.readlines()
@@ -220,10 +306,12 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
     # sparse the augments.
     stmtStart = ifstmt[0] - 1
     stmtEnd = ifstmt[1] - 1
-    if 0: print(stmtStart, stmtEnd)
+    if 0:
+        print(stmtStart, stmtEnd)
     # print each line of the program file.
     for i in range(stmtStart-3, stmtEnd+4):
-        if 0: print(i, lines[i], end='')
+        if 0:
+            print(i, lines[i], end='')
 
     # locate: get the IF block
     ifBlock = ''
@@ -232,12 +320,15 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
     if _DEBUG_: print(ifBlock)
     # find the index of the first if__(
     ifStart = re.findall(r'if\s*\(', ifBlock)
-    if 0: print(ifStart)
+    if 0:
+        print(ifStart)
     indexIfStart = ifBlock.index(ifStart[0])
-    if 0: print(indexIfStart, ifBlock[indexIfStart])
+    if 0:
+        print(indexIfStart, ifBlock[indexIfStart])
     # find the corresponding (
     indexIfLeft = indexIfStart + len(ifStart[0]) - 1
-    if 0: print(indexIfLeft, ifBlock[indexIfLeft])
+    if 0:
+        print(indexIfLeft, ifBlock[indexIfLeft])
     # find the corresponding )
     mark = 1
     indexIfRight = indexIfLeft
@@ -247,7 +338,8 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
             mark += 1
         elif ifBlock[indexIfRight] == ')':
             mark -= 1
-    if 0: print(indexIfRight, ifBlock[indexIfRight])
+    if 0:
+        print(indexIfRight, ifBlock[indexIfRight])
 
     # modify: change the IF block.
     if (nChoice not in [0, 1]):         # if nChoice is not in our settings.
@@ -264,7 +356,8 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
     ifBlockList = []
     for stmt in newBlockList[:-1]:
         ifBlockList.append(stmt + '\n')
-    if 0: print(ifBlockList)
+    if 0:
+        print(ifBlockList)
 
     # delete original block.
     del lines[stmtStart:stmtEnd+1]
@@ -272,21 +365,31 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
     for i in range(len(ifBlockList)):
         lines.insert(stmtStart+i, ifBlockList[i])
     for i in range(stmtStart-3, stmtEnd+4):
-        if 0: print(i, lines[i], end='')
+        if 0:
+            print(i, lines[i], end='')
 
     return lines, nChoice
 
 def SaveToFile(lines, path, file):
+    '''
+    Save the changed code or patch.
+    :param lines: the changed code or patch.
+    :param path: the save path.
+    :param file: the save filename without variant.
+    :return: 0 if success.
+    '''
     # check the path.
     if not os.path.exists(path):
         os.makedirs(path)
 
     # get all filenames in the folder.
     fileList = os.listdir(path)
-    if 0: print(fileList)
+    if 0:
+        print(fileList)
     # get the filename and extension.
     filename = os.path.splitext(file)
-    if 0: print(filename[0], filename[1])
+    if 0:
+        print(filename[0], filename[1])
 
     # find an available name.
     fileIdx = 1
@@ -303,12 +406,28 @@ def SaveToFile(lines, path, file):
     for i in range(len(lines)):
         fp.write(lines[i])
     fp.close()
-    if _DEBUG_: print('[DEBUG] Save code variant in ' + fpath)
+    if _DEBUG_:
+        print('[DEBUG] Save code variant in ' + fpath)
 
     return 0
 
 def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
-    print(pname, version, fname, lnums, ifstmt, nChoice)
+    '''
+    Patch Oversampling.
+    :param pname: patch filename.
+    :param version: 'after' or 'before'.
+    :param fname: program filename.
+    :param lnums: corresponding hunk.
+    [bStart, bEnd, aStart, aEnd]
+    :param ifstmt: IF statement.
+    [ifStart, ifEnd]
+    :param nChoice: the choice of oversampling. -1: random; 0-N: specific.
+    :return: lines: changed/unchanged patch.
+             nChoice: the final choice. -1 for failure; 0-N for success.
+             ok: 0 for failure; 1 for success.
+    '''
+    if _DEBUG_:
+        print(pname, version, fname, lnums, ifstmt, nChoice)
     # get the matching file string.
     filestr = fname.replace(datPath, '', 1)
     filestr = filestr.replace(version, '', 1)
@@ -359,14 +478,16 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
                     ifloc[1] = min(ifloc[0] + ifstmt[1] - ifstmt[0], numLines-1)
         elif ('before' == version):
             if ((markDiff & markLine) and (lines[i][0] in ['@', ' ', '-'])):
-                if _DEBUG_: print(i, lines[i], end='')
+                if _DEBUG_:
+                    print(i, lines[i], end='')
                 cnt += 1
                 if cnt == (ifstmt[0] - lnums[0] + 2):
                     ifloc[0] = i
                     ifloc[1] = min(ifloc[0] + ifstmt[1] - ifstmt[0], numLines - 1)
 
     # locate: get the IF block
-    if _DEBUG_: print(ifloc)
+    if _DEBUG_:
+        print(ifloc)
     ifBlock = ''
     for i in range(ifloc[0], ifloc[1] + 1):
         ifBlock += lines[i]
@@ -408,7 +529,8 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
     for i in range(len(ifBlockList)):
         lines.insert(ifloc[0] + i, ifBlockList[i])
     for i in range(ifloc[0]-3, min(ifloc[1]+4, len(lines))):
-        if _DEBUG_: print(i, lines[i], end='')
+        if _DEBUG_:
+            print(i, lines[i], end='')
 
     return lines, nChoice, 1
 

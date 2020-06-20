@@ -16,7 +16,7 @@ _DEBUG_ = 0 # 1: only use one sample, 0: use all samples.
 def main():
     global _DEBUG_
     # Generate AST files from program files.
-    #GenerateASTs(datPath, astPath)
+    GenerateASTs(datPath, astPath)
     # get patch lists from patch path.
     patchList = ScanPatches(patPath, datPath)
     # scan all the files.

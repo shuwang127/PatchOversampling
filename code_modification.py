@@ -37,7 +37,7 @@ patPath = appPath + '/patch_jk/'
 astPath = appPath + '/ast_jk/'
 outPath = appPath + '/out_jk/'
 optPath = appPath + '/outp_jk/'
-version = 'before' # 'after' or 'before'
+version = 'after' # 'after' or 'before'
 
 _DEBUG_ = 1 # 1: only use one sample, 0: use all samples.
 
@@ -51,7 +51,7 @@ def main():
     for root, ds, fs in os.walk(os.path.join(datPath, version)):
         for file in fs:
             # if _DEBUG_ == 1, run single C/Cpp file; if _DEBUG_ == 0, run all files.
-            if _DEBUG_ <= -1:    # can change to N.
+            if _DEBUG_ <= 96:    # can change to N.
                 extname = os.path.splitext(file)[1]         # get the file extension.
                 if '.c' == extname or '.cpp' == extname:    # if file extension is .c or .cpp.
                     if _DEBUG_ >= 1: _DEBUG_ += 1           # _DEBUG_ = 2
@@ -73,10 +73,10 @@ def main():
                             # ===========================================================
                             # get variants of the source code.
                             codeChanged, nChoice = CodeOversampling(filename, ifstmt, -1)
-                            SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
+                            #SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
                             # get variants of the patch.
                             patchChanged, _, ok = PatchOversampling(patchname, version, filename, linenums, ifstmt, nChoice)
-                            if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))
+                            #if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))
 
     return
 

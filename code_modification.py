@@ -40,6 +40,7 @@ optPath = appPath + '/outp_jk/'
 version = 'after' # 'after' or 'before'
 
 _DEBUG_ = 1 # 1: only use one sample, 0: use all samples.
+_CHOICE_ = 8 # Choice
 
 def main():
     global _DEBUG_
@@ -72,7 +73,7 @@ def main():
                             if _DEBUG_: print('[DEBUG] ', filename, ifstmt, patchname, linenums)
                             # ===========================================================
                             # get variants of the source code.
-                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, 7)
+                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, -1)
                             #SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
                             # get variants of the patch.
                             patchChanged, _, ok = PatchOversampling(patchname, version, filename, linenums, ifstmt, nChoice)
@@ -342,40 +343,41 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
         print(indexIfRight, ifBlock[indexIfRight])
 
     # modify: change the IF block.
-    if (nChoice not in range(8+1)):         # if nChoice is not in our settings.
-        nChoice = random.randint(0, 8)    # randomly choose.
+    if (nChoice not in range(_CHOICE_)):         # if nChoice is not in our settings.
+        nChoice = random.randint(0, _CHOICE_-1)      # randomly choose.
+    newBlock = ''
     if (0 == nChoice): # add 1, modify 1
-        newBlock = ' ' * indexIfStart + 'const int _SYS_ZERO = 0; \n'
+        newBlock += ' ' * indexIfStart + 'const int _SYS_ZERO = 0; \n'
         newBlock += ifBlock[:indexIfLeft+1] + '_SYS_ZERO || ' + ifBlock[indexIfLeft+1:]
     elif (1 == nChoice): # add 1, modify 1
-        newBlock = ' ' * indexIfStart + 'const int _SYS_ONE = 1; \n'
+        newBlock += ' ' * indexIfStart + 'const int _SYS_ONE = 1; \n'
         newBlock += ifBlock[:indexIfLeft+1] + '_SYS_ONE && ' + ifBlock[indexIfLeft+1:]
     elif (2 == nChoice):
-        newBlock = ' ' * indexIfStart + 'bool _SYS_STMT = ' + ifBlock[indexIfLeft+1:indexIfRight] + ';\n'
+        newBlock += ' ' * indexIfStart + 'bool _SYS_STMT = ' + ifBlock[indexIfLeft+1:indexIfRight] + ';\n'
         newBlock += ifBlock[:indexIfLeft+1] + 'True == _SYS_STMT' + ifBlock[indexIfRight:]
     elif (3 == nChoice):
-        newBlock = ' ' * indexIfStart + 'bool _SYS_STMT = !(' + ifBlock[indexIfLeft + 1:indexIfRight] + ');\n'
+        newBlock += ' ' * indexIfStart + 'bool _SYS_STMT = !(' + ifBlock[indexIfLeft + 1:indexIfRight] + ');\n'
         newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_STMT' + ifBlock[indexIfRight:]
     elif (4 == nChoice):
-        newBlock = ' ' * indexIfStart + 'int _SYS_VAL = 0;\n'
+        newBlock += ' ' * indexIfStart + 'int _SYS_VAL = 0;\n'
         newBlock += ifBlock[:indexIfRight+1] + ' {\n'
         newBlock += ' ' * (indexIfStart+4) + 'int _SYS_VAL = 1;\n'
         newBlock += ' ' * indexIfStart +'}\n'
         newBlock += ifBlock[:indexIfLeft+1] + '_SYS_VAL && ' + ifBlock[indexIfLeft+1:]
     elif (5 == nChoice):
-        newBlock = ' ' * indexIfStart + 'int _SYS_VAL = 1;\n'
+        newBlock += ' ' * indexIfStart + 'int _SYS_VAL = 1;\n'
         newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
         newBlock += ' ' * (indexIfStart + 4) + 'int _SYS_VAL = 0;\n'
         newBlock += ' ' * indexIfStart + '}\n'
         newBlock += ifBlock[:indexIfLeft+1] + '!_SYS_VAL || ' + ifBlock[indexIfLeft+1:]
     elif (6 == nChoice):
-        newBlock = ' ' * indexIfStart + 'int _SYS_VAL = 0;\n'
+        newBlock += ' ' * indexIfStart + 'int _SYS_VAL = 0;\n'
         newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
         newBlock += ' ' * (indexIfStart + 4) + 'int _SYS_VAL = 1;\n'
         newBlock += ' ' * indexIfStart + '}\n'
         newBlock += ifBlock[:indexIfLeft+1] + '_SYS_VAL' + ifBlock[indexIfRight:]
     elif (7 == nChoice):
-        newBlock = ' ' * indexIfStart + 'int _SYS_VAL = 1;\n'
+        newBlock += ' ' * indexIfStart + 'int _SYS_VAL = 1;\n'
         newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
         newBlock += ' ' * (indexIfStart + 4) + 'int _SYS_VAL = 0;\n'
         newBlock += ' ' * indexIfStart + '}\n'

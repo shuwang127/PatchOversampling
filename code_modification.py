@@ -477,6 +477,7 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
 
     # get version string.
     verstr = '+' if (version == 'after') else '-' if (version == 'before') else ' '
+    verlnum = lnums[2] if (version == 'after') else lnums[0] if (version == 'before') else 0
 
     # read the patch file.
     fp = open(pname, encoding='utf-8', errors='ignore')
@@ -501,25 +502,15 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
             atstmt = re.findall(r'@@ -\d+,\d+ \+\d+,\d+ @@', lines[i])
             markLine = 1 if (atstmt[0] == linestr) else 0
 
-        if ('after' == version):
-            if ((markDiff & markLine) and (lines[i][0] in ['@', ' ', '+'])):
-                if 0: print(i, lines[i], end='')
-                cnt += 1
-                if cnt == (ifstmt[0] - lnums[2] + 2):
-                    ifloc[0] = i
-                    ifloc[1] = min(ifloc[0] + ifstmt[1] - ifstmt[0], numLines-1)
-        elif ('before' == version):
-            if ((markDiff & markLine) and (lines[i][0] in ['@', ' ', '-'])):
-                if _DEBUG_:
-                    print(i, lines[i], end='')
-                cnt += 1
-                if cnt == (ifstmt[0] - lnums[0] + 2):
-                    ifloc[0] = i
-                    ifloc[1] = min(ifloc[0] + ifstmt[1] - ifstmt[0], numLines - 1)
+        if ((markDiff & markLine) and (lines[i][0] in ['@', ' ', verstr])):
+            if _DEBUG_: print(i, lines[i], end='')
+            cnt += 1
+            if cnt == (ifstmt[0] - verlnum + 2):
+                ifloc[0] = i
+                ifloc[1] = min(ifloc[0] + ifstmt[1] - ifstmt[0], numLines - 1)
 
     # locate: get the IF block
-    if _DEBUG_:
-        print(ifloc)
+    if _DEBUG_: print(ifloc)
     ifBlock = ''
     for i in range(ifloc[0], ifloc[1] + 1):
         ifBlock += lines[i]
@@ -541,14 +532,66 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
             mark -= 1
 
     # modify: change the IF block.
-    if (nChoice not in [0, 1]):  # if nChoice is not in our settings.
-        nChoice = random.randint(0, 1)  # randomly choose.
+    if (nChoice not in range(_CHOICE_)):  # if nChoice is not in our settings.
+        nChoice = random.randint(0, _CHOICE_ - 1)  # randomly choose.
+
+    nChoice = 7
+    newBlock = ''
     if (0 == nChoice):
-        newBlock = ifBlock[:indexIfRight] + ' || _SYS_ZERO' + ifBlock[indexIfRight:]
-        newBlock = verstr + ' ' * (indexIfStart-1) + 'const int _SYS_ZERO = 0; \n' + newBlock
+        newBlock += verstr + ' ' * (indexIfStart-1) + 'const int _SYS_ZERO = 0; \n'
+        if ifBlock[0] == verstr: # start with '+' or '-'
+            newBlock += ifBlock[:indexIfLeft + 1] + '_SYS_ZERO || ' + ifBlock[indexIfLeft + 1:]
+        elif verstr == '+': # start with ' '
+            newBlock += '+' + ifBlock[1:indexIfLeft + 1] + '_SYS_ZERO || ' + ifBlock[indexIfLeft + 1:]
+            newBlock = '-' + ifBlock.split('\n')[0][1:] + '\n' + newBlock
+        elif verstr == '-': # start with ' ' and before.
+            indexEnter = ifBlock.find('\n', 1)
+            newBlock += '-' + ifBlock[1:indexIfLeft + 1] + '_SYS_ZERO || ' + ifBlock[indexIfLeft + 1:indexEnter+1]
+            newBlock += '+' + ifBlock.split('\n')[0][1:] + '\n'
+            newBlock += ifBlock[indexEnter + 1:]
     elif (1 == nChoice):
-        newBlock = ifBlock[:indexIfRight] + ' && _SYS_ONE' + ifBlock[indexIfRight:]
-        newBlock = verstr + ' ' * (indexIfStart-1) + 'const int _SYS_ONE = 1; \n' + newBlock
+        newBlock += verstr + ' ' * (indexIfStart - 1) + 'const int _SYS_ONE = 1; \n'
+        if ifBlock[0] == verstr:  # start with '+' or '-'
+            newBlock += ifBlock[:indexIfLeft + 1] + '_SYS_ONE && ' + ifBlock[indexIfLeft + 1:]
+        elif verstr == '+':  # start with ' '
+            newBlock += '+' + ifBlock[1:indexIfLeft + 1] + '_SYS_ONE && ' + ifBlock[indexIfLeft + 1:]
+            newBlock = '-' + ifBlock.split('\n')[0][1:] + '\n' + newBlock
+        elif verstr == '-':  # start with ' ' and before.
+            indexEnter = ifBlock.find('\n', 1)
+            newBlock += '-' + ifBlock[1:indexIfLeft + 1] + '_SYS_ONE && ' + ifBlock[indexIfLeft + 1:indexEnter + 1]
+            newBlock += '+' + ifBlock.split('\n')[0][1:] + '\n'
+            newBlock += ifBlock[indexEnter + 1:]
+    elif (2 == nChoice):
+        print(ifBlock)
+        newBlock += verstr + ' ' * (indexIfStart-1) + 'bool _SYS_STMT = ' + ifBlock[indexIfLeft + 1:indexIfRight] + ';\n'
+        newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_STMT' + ifBlock[indexIfRight:]
+    elif (3 == nChoice):
+        newBlock += verstr + ' ' * (indexIfStart-1) + 'bool _SYS_STMT = !(' + ifBlock[indexIfLeft + 1:indexIfRight] + ');\n'
+        newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_STMT' + ifBlock[indexIfRight:]
+    elif (4 == nChoice):
+        newBlock += verstr + ' ' * (indexIfStart-1) + 'int _SYS_VAL = 0;\n'
+        newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
+        newBlock += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 1;\n'
+        newBlock += verstr + ' ' * (indexIfStart-1) + '}\n'
+        newBlock += ifBlock[:indexIfLeft + 1] + '_SYS_VAL && ' + ifBlock[indexIfLeft + 1:]
+    elif (5 == nChoice):
+        newBlock += verstr + ' ' * (indexIfStart-1) + 'int _SYS_VAL = 1;\n'
+        newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
+        newBlock += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 0;\n'
+        newBlock += verstr + ' ' * (indexIfStart-1) + '}\n'
+        newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_VAL || ' + ifBlock[indexIfLeft + 1:]
+    elif (6 == nChoice):
+        newBlock += verstr + ' ' * (indexIfStart-1) + 'int _SYS_VAL = 0;\n'
+        newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
+        newBlock += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 1;\n'
+        newBlock += verstr + ' ' * (indexIfStart-1) + '}\n'
+        newBlock += ifBlock[:indexIfLeft + 1] + '_SYS_VAL' + ifBlock[indexIfRight:]
+    elif (7 == nChoice):
+        newBlock += verstr + ' ' * (indexIfStart-1) + 'int _SYS_VAL = 1;\n'
+        newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
+        newBlock += verstr + ' ' * (indexIfStart+3) + 'int _SYS_VAL = 0;\n'
+        newBlock += verstr + ' ' * (indexIfStart-1) + '}\n'
+        newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_VAL' + ifBlock[indexIfRight:]
     # change string to lists.
     newBlockList = newBlock.split('\n')
     ifBlockList = []
@@ -561,8 +604,7 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
     for i in range(len(ifBlockList)):
         lines.insert(ifloc[0] + i, ifBlockList[i])
     for i in range(ifloc[0]-3, min(ifloc[1]+4, len(lines))):
-        if _DEBUG_:
-            print(i, lines[i], end='')
+        if _DEBUG_: print(i, lines[i], end='')
 
     return lines, nChoice, 1
 

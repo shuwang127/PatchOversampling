@@ -72,7 +72,7 @@ def main():
                             if _DEBUG_: print('[DEBUG] ', filename, ifstmt, patchname, linenums)
                             # ===========================================================
                             # get variants of the source code.
-                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, 1)
+                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, 7)
                             #SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
                             # get variants of the patch.
                             patchChanged, _, ok = PatchOversampling(patchname, version, filename, linenums, ifstmt, nChoice)
@@ -323,11 +323,11 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
     if 0:
         print(ifStart)
     indexIfStart = ifBlock.index(ifStart[0])
-    if 1:
+    if 0:
         print(indexIfStart, ifBlock[indexIfStart])
     # find the corresponding (
     indexIfLeft = indexIfStart + len(ifStart[0]) - 1
-    if 1:
+    if 0:
         print(indexIfLeft, ifBlock[indexIfLeft])
     # find the corresponding )
     mark = 1
@@ -338,19 +338,18 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
             mark += 1
         elif ifBlock[indexIfRight] == ')':
             mark -= 1
-    if 1:
+    if 0:
         print(indexIfRight, ifBlock[indexIfRight])
 
     # modify: change the IF block.
     if (nChoice not in range(8+1)):         # if nChoice is not in our settings.
         nChoice = random.randint(0, 8)    # randomly choose.
-    if (0 == nChoice):
+    if (0 == nChoice): # add 1, modify 1
         newBlock = ' ' * indexIfStart + 'const int _SYS_ZERO = 0; \n'
         newBlock += ifBlock[:indexIfLeft+1] + '_SYS_ZERO || ' + ifBlock[indexIfLeft+1:]
-    elif (1 == nChoice):
+    elif (1 == nChoice): # add 1, modify 1
         newBlock = ' ' * indexIfStart + 'const int _SYS_ONE = 1; \n'
-        newBlock = ifBlock[:indexIfRight] + ' && _SYS_ONE' + ifBlock[indexIfRight:]
-
+        newBlock += ifBlock[:indexIfLeft+1] + '_SYS_ONE && ' + ifBlock[indexIfLeft+1:]
     elif (2 == nChoice):
         newBlock = ' ' * indexIfStart + 'bool _SYS_STMT = ' + ifBlock[indexIfLeft+1:indexIfRight] + ';\n'
         newBlock += ifBlock[:indexIfLeft+1] + 'True == _SYS_STMT' + ifBlock[indexIfRight:]
@@ -362,13 +361,13 @@ def CodeOversampling(fname, ifstmt, nChoice=-1):
         newBlock += ifBlock[:indexIfRight+1] + ' {\n'
         newBlock += ' ' * (indexIfStart+4) + 'int _SYS_VAL = 1;\n'
         newBlock += ' ' * indexIfStart +'}\n'
-        newBlock += ifBlock[:indexIfRight] + ' && _SYS_VAL' + ifBlock[indexIfRight:]
+        newBlock += ifBlock[:indexIfLeft+1] + '_SYS_VAL && ' + ifBlock[indexIfLeft+1:]
     elif (5 == nChoice):
         newBlock = ' ' * indexIfStart + 'int _SYS_VAL = 1;\n'
         newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
         newBlock += ' ' * (indexIfStart + 4) + 'int _SYS_VAL = 0;\n'
         newBlock += ' ' * indexIfStart + '}\n'
-        newBlock += ifBlock[:indexIfRight] + ' || !_SYS_VAL' + ifBlock[indexIfRight:]
+        newBlock += ifBlock[:indexIfLeft+1] + '!_SYS_VAL || ' + ifBlock[indexIfLeft+1:]
     elif (6 == nChoice):
         newBlock = ' ' * indexIfStart + 'int _SYS_VAL = 0;\n'
         newBlock += ifBlock[:indexIfRight + 1] + ' {\n'

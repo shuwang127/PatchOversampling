@@ -1,8 +1,8 @@
 '''
 Security Patch Group: Patch Oversampling Task.
 Developer: Shu Wang
-Date: 2020-06-20
-Version: S2020.06.20 (V4)
+Date: 2020-06-22
+Version: S2020.06.22 (Version 5)
 File Structure:
     PatchClearance
         |-- _old_versions           # old versions for the programs.
@@ -18,7 +18,7 @@ File Structure:
                 | -- after          # 'after' version.
                 | -- before         # 'before' version
             |-- outp_jk             # output patch files.
-        |-- code_modificationV4.py  # main entrance.
+        |-- code_modification.py    # main entrance.
         |-- README.md               # readme file.
 Prerequirements:
     LLVM 10.0.0 (Download Link: http://www.llvm.org/releases/download.html)

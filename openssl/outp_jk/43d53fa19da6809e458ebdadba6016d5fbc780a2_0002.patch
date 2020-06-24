@@ -36,7 +36,8 @@ index 63d6c3a3b8dd..3f2dc6b5c64a 100644
 -    if (flen > num)
 -        goto err;
 -
--    if (num < 11)
+-    bool _SYS_STMT = num < 11;
+-    if (True == _SYS_STMT)
 -        goto err;
 +    if (flen > num || num < 11) {
 +        RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2,
@@ -61,11 +62,7 @@ index 63d6c3a3b8dd..3f2dc6b5c64a 100644
 -        memcpy(em + num - flen, from, flen);
 -        from = em;
 +    em = OPENSSL_malloc(num);
-+    int _SYS_VAL = 1;
 +    if (em == NULL) {
-+        int _SYS_VAL = 0;
-+    }
-+    if (!_SYS_VAL) {
 +        RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2, ERR_R_MALLOC_FAILURE);
 +        return -1;
 +    }

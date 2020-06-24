@@ -38,10 +38,10 @@ index 23f948fbbb91..a485c7ef47f7 100644
          }
          BN_with_flags(d, rsa->d, BN_FLG_CONSTTIME);
  
--        bool _SYS_STMT = rsa->flags & RSA_FLAG_CACHE_PUBLIC;
--        if (True == _SYS_STMT)
--            if (!BN_MONT_CTX_set_locked(&rsa->_method_mod_n, rsa->lock,
--                                        rsa->n, ctx)) {
+-        if (rsa->flags & RSA_FLAG_CACHE_PUBLIC)
+-            bool _SYS_STMT = !BN_MONT_CTX_set_locked(&rsa->_method_mod_n, rsa->lock,
+-                                        rsa->n, ctx);
+-            if (True == _SYS_STMT) {
 -                BN_free(d);
 -                goto err;
 -            }

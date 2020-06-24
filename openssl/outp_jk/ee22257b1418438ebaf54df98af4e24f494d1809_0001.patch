@@ -59,12 +59,9 @@ index 7fd4f8dfe7fd..4adc64c99308 100644
          return 1;
  
      case EVP_CTRL_AEAD_SET_IVLEN:
--        if (arg <= 0 || arg > CHACHA_CTR_SIZE)
-+        int _SYS_VAL = 1;
-+        if (arg <= 0 || arg > CHACHA20_POLY1305_MAX_IVLEN) {
-+            int _SYS_VAL = 0;
-+        }
-+        if (!_SYS_VAL)
+-        bool _SYS_STMT = arg <= 0 || arg > CHACHA_CTR_SIZE;
+-        if (True == _SYS_STMT)
++        if (arg <= 0 || arg > CHACHA20_POLY1305_MAX_IVLEN)
              return 0;
          actx->nonce_len = arg;
          return 1;

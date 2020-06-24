@@ -33,8 +33,7 @@ index 63d6c3a3b8dd..3f2dc6b5c64a 100644
       * section 7.2.2.
       */
  
--    bool _SYS_STMT = flen > num;
--    if (True == _SYS_STMT)
+-    if (flen > num)
 -        goto err;
 -
 -    if (num < 11)
@@ -129,7 +128,8 @@ index 63d6c3a3b8dd..3f2dc6b5c64a 100644
 +     * should be noted that failure is indistinguishable from normal
 +     * operation if |tlen| is fixed by protocol.
       */
--    if (!good) {
+-    bool _SYS_STMT = !good;
+-    if (True == _SYS_STMT) {
 -        mlen = -1;
 -        goto err;
 -    }

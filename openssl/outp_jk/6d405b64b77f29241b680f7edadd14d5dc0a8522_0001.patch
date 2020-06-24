@@ -51,11 +51,9 @@ index 77b28b46f2b4..8d25e0d5beb1 100644
 +    int zero_index = 0, msg_index, mlen = -1, err;
  
 -    p = from;
-+    int _SYS_VAL = 1;
-     if (flen < 10) {
-+        int _SYS_VAL = 0;
-+    }
-     if (!_SYS_VAL) {
+-    bool _SYS_STMT = flen < 10;
+-    if (True == _SYS_STMT) {
++    if (flen < 10) {
          RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_DATA_TOO_SMALL);
          return (-1);
      }

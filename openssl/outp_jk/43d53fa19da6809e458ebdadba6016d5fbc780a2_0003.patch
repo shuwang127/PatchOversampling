@@ -33,8 +33,7 @@ index 63d6c3a3b8dd..3f2dc6b5c64a 100644
       * section 7.2.2.
       */
  
--    bool _SYS_STMT = flen > num;
--    if (True == _SYS_STMT)
+-    if (flen > num)
 -        goto err;
 -
 -    if (num < 11)
@@ -45,7 +44,8 @@ index 63d6c3a3b8dd..3f2dc6b5c64a 100644
 +        return -1;
 +    }
  
--    if (flen != num) {
+-    bool _SYS_STMT = flen != num;
+-    if (True == _SYS_STMT) {
 -        em = OPENSSL_zalloc(num);
 -        if (em == NULL) {
 -            RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2, ERR_R_MALLOC_FAILURE);

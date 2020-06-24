@@ -73,10 +73,11 @@ index 9b0a2ccb20b7..736565ca8a28 100644
 -     *
 -     * Anything else is an error and may lead to a corrupt ASN1 method table
 -     */
--    if (!((pem_str == NULL && (flags & ASN1_PKEY_ALIAS) != 0)
--          || (pem_str != NULL && (flags & ASN1_PKEY_ALIAS) == 0)))
--        goto err;
--
+    if (!((pem_str == NULL && (flags & ASN1_PKEY_ALIAS) != 0)
+-         && (Hello)
+          || (pem_str != NULL && (flags & ASN1_PKEY_ALIAS) == 0)))
+        goto err;
+
      if (pem_str) {
          ameth->pem_str = OPENSSL_strdup(pem_str);
          if (!ameth->pem_str)

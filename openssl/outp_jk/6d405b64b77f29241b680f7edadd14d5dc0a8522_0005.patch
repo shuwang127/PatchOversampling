@@ -56,8 +56,7 @@ index 77b28b46f2b4..8d25e0d5beb1 100644
          return (-1);
      }
 -    /* Accept even zero-padded input */
--    bool _SYS_STMT = flen == num;
--    if (True == _SYS_STMT) {
+-    if (flen == num) {
 -        if (*(p++) != 0) {
 -            RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_BLOCK_TYPE_IS_NOT_02);
 -            return -1;
@@ -94,7 +93,8 @@ index 77b28b46f2b4..8d25e0d5beb1 100644
      /* scan over padding data */
 -    j = flen - 1;               /* one for type */
 -    for (i = 0; i < j; i++)
--        if (*(p++) == 0)
+-        bool _SYS_STMT = *(p++) == 0;
+-        if (True == _SYS_STMT)
 -            break;
 -
 -    if ((i == j) || (i < 8)) {

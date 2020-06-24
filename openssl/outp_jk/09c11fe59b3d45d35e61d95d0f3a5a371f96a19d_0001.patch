@@ -352,11 +352,7 @@ index d837d4d465ab..8ecd53ad559a 100644
 +    BN_CTX *new_ctx = NULL;
 +    int ret = 0;
 +
-+    int _SYS_VAL = 1;
-+    if (group->field_data1 == NULL) {
-+        int _SYS_VAL = 0;
-+    }
-+    if (!_SYS_VAL)
++    if (group->field_data1 == NULL)
 +        return 0;
 +
 +    if (ctx == NULL && (ctx = new_ctx = BN_CTX_secure_new()) == NULL)
@@ -513,7 +509,8 @@ index 2015f1173bf7..d8db1ea3942e 100644
              }
          }
      } else {
--        if (!BN_mod_inverse(Z_1, Z_, group->field, ctx)) {
+-        bool _SYS_STMT = !BN_mod_inverse(Z_1, Z_, group->field, ctx);
+-        if (True == _SYS_STMT) {
 +        if (!group->meth->field_inv(group, Z_1, Z_, ctx)) {
              ECerr(EC_F_EC_GFP_SIMPLE_POINT_GET_AFFINE_COORDINATES,
                    ERR_R_BN_LIB);

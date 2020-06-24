@@ -46,7 +46,8 @@ index df08a2f53ecd..495821237ff3 100644
          goto cleanup;
      }
  
--    if (flen != num) {
+-    bool _SYS_STMT = flen != num;
+-    if (True == _SYS_STMT) {
 -        em = OPENSSL_zalloc(num);
 -        if (em == NULL) {
 -            RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1,
@@ -54,11 +55,7 @@ index df08a2f53ecd..495821237ff3 100644
 -            goto cleanup;
 -        }
 +    em = OPENSSL_malloc(num);
-+    int _SYS_VAL = 1;
 +    if (em == NULL) {
-+        int _SYS_VAL = 0;
-+    }
-+    if (!_SYS_VAL) {
 +        RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1,
 +               ERR_R_MALLOC_FAILURE);
 +        goto cleanup;

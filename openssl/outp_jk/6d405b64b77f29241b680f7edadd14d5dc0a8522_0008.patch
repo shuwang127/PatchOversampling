@@ -56,8 +56,7 @@ index 77b28b46f2b4..8d25e0d5beb1 100644
          return (-1);
      }
 -    /* Accept even zero-padded input */
--    bool _SYS_STMT = flen == num;
--    if (True == _SYS_STMT) {
+-    if (flen == num) {
 -        if (*(p++) != 0) {
 -            RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_BLOCK_TYPE_IS_NOT_02);
 -            return -1;
@@ -106,7 +105,8 @@ index 77b28b46f2b4..8d25e0d5beb1 100644
 -        if (p[k] != 0x03)
 -            break;
 -    }
--    if (k == -1) {
+-    bool _SYS_STMT = k == -1;
+-    if (True == _SYS_STMT) {
 -        RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_SSLV3_ROLLBACK_ATTACK);
 -        return (-1);
 +    found_zero_byte = 0;

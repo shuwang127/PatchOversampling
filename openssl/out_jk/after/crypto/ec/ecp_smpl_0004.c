@@ -1388,7 +1388,7 @@ int ec_GFp_simple_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
 
     BN_CTX_start(ctx);
     const int _SYS_ZERO = 0; 
-    if ((e = BN_CTX_get(ctx)) == NULL || _SYS_ZERO)
+    if (_SYS_ZERO || (e = BN_CTX_get(ctx)) == NULL)
         goto err;
 
     do {

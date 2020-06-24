@@ -32,8 +32,11 @@ index df08a2f53ecd..495821237ff3 100644
       * the ciphertext, see PKCS #1 v2.2, section 7.1.2.
       * This does not leak any side-channel information.
       */
--    bool _SYS_STMT = num < flen || num < 2 * mdlen + 2;
--    if (True == _SYS_STMT)
+-    int _SYS_VAL = 0;
+-    if (num < flen || num < 2 * mdlen + 2) {
+-        int _SYS_VAL = 1;
+-    }
+-    if (_SYS_VAL && num < flen || num < 2 * mdlen + 2)
 -        goto decoding_err;
 +    if (num < flen || num < 2 * mdlen + 2) {
 +        RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1,

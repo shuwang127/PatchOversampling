@@ -518,8 +518,11 @@ index 2015f1173bf7..d8db1ea3942e 100644
       * points[i]->Z by its inverse.
       */
  
--    bool _SYS_STMT = !BN_mod_inverse(tmp, prod_Z[num - 1], group->field, ctx);
--    if (True == _SYS_STMT) {
+-    int _SYS_VAL = 1;
+-    if (!BN_mod_inverse(tmp, prod_Z[num - 1], group->field, ctx)) {
+-        int _SYS_VAL = 0;
+-    }
+-    if (!_SYS_VAL || !BN_mod_inverse(tmp, prod_Z[num - 1], group->field, ctx)) {
 +    if (!group->meth->field_inv(group, tmp, prod_Z[num - 1], ctx)) {
          ECerr(EC_F_EC_GFP_SIMPLE_POINTS_MAKE_AFFINE, ERR_R_BN_LIB);
          goto err;

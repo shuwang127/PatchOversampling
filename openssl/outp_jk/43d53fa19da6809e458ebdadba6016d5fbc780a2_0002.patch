@@ -36,8 +36,8 @@ index 63d6c3a3b8dd..3f2dc6b5c64a 100644
 -    if (flen > num)
 -        goto err;
 -
--    bool _SYS_STMT = num < 11;
--    if (True == _SYS_STMT)
+-    bool _SYS_STMT = !(num < 11);
+-    if (!_SYS_STMT)
 -        goto err;
 +    if (flen > num || num < 11) {
 +        RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2,

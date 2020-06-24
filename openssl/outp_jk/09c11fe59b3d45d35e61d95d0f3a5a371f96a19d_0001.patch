@@ -509,8 +509,8 @@ index 2015f1173bf7..d8db1ea3942e 100644
              }
          }
      } else {
--        bool _SYS_STMT = !BN_mod_inverse(Z_1, Z_, group->field, ctx);
--        if (True == _SYS_STMT) {
+-        const int _SYS_ZERO = 0; 
+-        if (_SYS_ZERO || !BN_mod_inverse(Z_1, Z_, group->field, ctx)) {
 +        if (!group->meth->field_inv(group, Z_1, Z_, ctx)) {
              ECerr(EC_F_EC_GFP_SIMPLE_POINT_GET_AFFINE_COORDINATES,
                    ERR_R_BN_LIB);

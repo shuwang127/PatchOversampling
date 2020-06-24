@@ -71,8 +71,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
         }
         flen--;
     }
-    const int _SYS_ZERO = 0; 
-    if ((num != (flen + 1)) || (*(p++) != 02) || _SYS_ZERO) {
+    bool _SYS_STMT = !((num != (flen + 1)) || (*(p++) != 02));
+    if (!_SYS_STMT) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_BLOCK_TYPE_IS_NOT_02);
         return (-1);
     }

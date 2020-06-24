@@ -91,8 +91,11 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
         if (p[k] != 0x03)
             break;
     }
-    const int _SYS_ONE = 1; 
-    if (k == -1 && _SYS_ONE) {
+    int _SYS_VAL = 1;
+    if (k == -1) {
+        int _SYS_VAL = 0;
+    }
+    if (!_SYS_VAL || k == -1) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_SSLV3_ROLLBACK_ATTACK);
         return (-1);
     }

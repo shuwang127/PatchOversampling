@@ -1,8 +1,8 @@
 '''
 Security Patch Group: Patch Oversampling Task.
 Developer: Shu Wang
-Date: 2020-06-22
-Version: S2020.06.22 (Version 5)
+Date: 2020-06-24
+Version: S2020.06.24 (Version 5.0)
 File Structure:
     PatchClearance
         |-- _old_versions           # old versions for the programs.
@@ -38,15 +38,16 @@ patPath = appPath + '/patch_jk/'
 astPath = appPath + '/ast_jk/'
 outPath = appPath + '/out_jk/'
 optPath = appPath + '/outp_jk/'
-version = 'after' # 'after' or 'before'
 
-_DEBUG_ = 1 # 1: only use one sample, 0: use all samples.
-_CHOICE_ = 8 # Choice
+_CHOICE_  = 8       # The choice number.
+_DEBUG_   = 0       # 1: only use one sample, 0: use all samples.
+_VERSION_ = 1       # 1: 'after', 0: 'before'.
+version = 'after' if (_VERSION_) else 'before'
 
 def main():
     global _DEBUG_
     # Generate AST files from program files.
-    #GenerateASTs(datPath, astPath)
+    GenerateASTs(datPath, astPath)
     # get patch lists from patch path.
     patchList = ScanPatches(patPath, datPath)
     # scan all the files.
@@ -74,11 +75,11 @@ def main():
                             if _DEBUG_: print('[DEBUG] ', filename, ifstmt, patchname, linenums)
                             # ===========================================================
                             # get variants of the source code.
-                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, 2)
-                            #SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
+                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, -1)
+                            SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
                             # get variants of the patch.
                             patchChanged, _, ok = PatchOversampling(patchname, version, filename, linenums, ifstmt, nChoice)
-                            #if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))
+                            if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))
 
     return
 
@@ -510,7 +511,7 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
                 if ifBlockSeg[i][1:] == ifPatchSeg[j][1:]:
                     marks[i] = j
                     break
-        print(marks)
+        #print(marks)
 
         for i in reversed(range(len(marks) - 1)):
             if (marks[i] >= 0):
@@ -677,7 +678,7 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
             ifPatch = ifPatchAdd + ifPatchDel
             ifPatchSeg = ifPatch.split('\n')
             del ifPatchSeg[-1]
-            print(ifPatchSeg)
+            #print(ifPatchSeg)
             newBlock = BeforePatchProc(ifPatchSeg, ifBlockSeg)
         # print
         if _DEBUG_: print(ifBlock, end='')
@@ -687,32 +688,147 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
         if _DEBUG_: print(ifPatchSeg)
         if _DEBUG_: print('------------------------------')
     elif (3 == nChoice):
-        newBlock += verstr + ' ' * (indexIfStart-1) + 'bool _SYS_STMT = !(' + ifBlock[indexIfLeft + 1:indexIfRight] + ');\n'
-        newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_STMT' + ifBlock[indexIfRight:]
+        # get if block segments.
+        ifBlockSeg = ifBlock.split('\n')
+        del ifBlockSeg[-1]
+        # get the end of the line of the if judgement.
+        indexIfJudgeEnd = 0
+        if ('\n' != ifBlock[indexIfRight + 1]):
+            indexIfJudgeEnd = ifBlock[indexIfRight + 1:].find('\n', 1)
+        # get the deleted patch.
+        ifPatchDel = '-' + ifBlock[1:indexIfRight + 1 + indexIfJudgeEnd + 1]
+        ifPatchDel = ifPatchDel.replace('\n ', '\n-')
+        ifPatchDel = ifPatchDel.replace('\n+', '\n-')
+        # get the added patch.
+        ifPatchAdd = '+' + ' ' * (indexIfStart - 1) + 'bool _SYS_STMT = !(' + ifBlock[indexIfLeft + 1:indexIfRight] + ');\n'
+        ifPatchAdd = ifPatchAdd.replace('\n ', '\n+')
+        ifPatchAdd = ifPatchAdd.replace('\n-', '\n+')
+        ifPatchAdd += '+' + ifBlock[1:indexIfLeft + 1] + '!_SYS_STMT' + ifBlock[indexIfRight:indexIfRight + 1 + indexIfJudgeEnd + 1]
+        # after or before.
+        if verstr == '+':
+            ifPatch = ifPatchDel + ifPatchAdd
+            ifPatchSeg = ifPatch.split('\n')
+            del ifPatchSeg[-1]
+            newBlock = AfterPatchProc(ifBlockSeg, ifPatchSeg)
+        elif verstr == '-':
+            ifPatchDel = '+' + ifPatchDel[1:]
+            ifPatchDel = ifPatchDel.replace('\n-', '\n+')
+            ifPatchAdd = '-' + ifPatchAdd[1:]
+            ifPatchAdd = ifPatchAdd.replace('\n+', '\n-')
+            ifPatch = ifPatchAdd + ifPatchDel
+            ifPatchSeg = ifPatch.split('\n')
+            del ifPatchSeg[-1]
+            #print(ifPatchSeg)
+            newBlock = BeforePatchProc(ifPatchSeg, ifBlockSeg)
     elif (4 == nChoice):
-        newBlock += verstr + ' ' * (indexIfStart-1) + 'int _SYS_VAL = 0;\n'
+        newBlock += verstr + ' ' * (indexIfStart - 1) + 'int _SYS_VAL = 0;\n'
         newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
         newBlock += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 1;\n'
-        newBlock += verstr + ' ' * (indexIfStart-1) + '}\n'
-        newBlock += ifBlock[:indexIfLeft + 1] + '_SYS_VAL && ' + ifBlock[indexIfLeft + 1:]
+        newBlock += verstr + ' ' * (indexIfStart - 1) + '}\n'
+        newBlock = newBlock.replace('\n ', '\n' + verstr)
+        newBlock = newBlock.replace('\n-', '\n' + verstr)
+        newBlock = newBlock.replace('\n+', '\n' + verstr)
+        if ifBlock[0] == verstr: # start with '+' or '-'
+            newBlock += ifBlock[:indexIfLeft + 1] + '_SYS_VAL && ' + ifBlock[indexIfLeft + 1:]
+        elif verstr == '+': # start with ' '
+            newBlock += '+' + ifBlock[1:indexIfLeft + 1] + '_SYS_VAL && ' + ifBlock[indexIfLeft + 1:]
+            newBlock = '-' + ifBlock.split('\n')[0][1:] + '\n' + newBlock
+        elif verstr == '-': # start with ' ' and before.
+            indexEnter = ifBlock.find('\n', 1)
+            newBlock += '-' + ifBlock[1:indexIfLeft + 1] + '_SYS_VAL && ' + ifBlock[indexIfLeft + 1:indexEnter+1]
+            newBlock += '+' + ifBlock.split('\n')[0][1:] + '\n'
+            newBlock += ifBlock[indexEnter + 1:]
     elif (5 == nChoice):
-        newBlock += verstr + ' ' * (indexIfStart-1) + 'int _SYS_VAL = 1;\n'
+        newBlock += verstr + ' ' * (indexIfStart - 1) + 'int _SYS_VAL = 1;\n'
         newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
         newBlock += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 0;\n'
-        newBlock += verstr + ' ' * (indexIfStart-1) + '}\n'
-        newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_VAL || ' + ifBlock[indexIfLeft + 1:]
+        newBlock += verstr + ' ' * (indexIfStart - 1) + '}\n'
+        newBlock = newBlock.replace('\n ', '\n' + verstr)
+        newBlock = newBlock.replace('\n-', '\n' + verstr)
+        newBlock = newBlock.replace('\n+', '\n' + verstr)
+        if ifBlock[0] == verstr:  # start with '+' or '-'
+            newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_VAL || ' + ifBlock[indexIfLeft + 1:]
+        elif verstr == '+':  # start with ' '
+            newBlock += '+' + ifBlock[1:indexIfLeft + 1] + '!_SYS_VAL || ' + ifBlock[indexIfLeft + 1:]
+            newBlock = '-' + ifBlock.split('\n')[0][1:] + '\n' + newBlock
+        elif verstr == '-':  # start with ' ' and before.
+            indexEnter = ifBlock.find('\n', 1)
+            newBlock += '-' + ifBlock[1:indexIfLeft + 1] + '!_SYS_VAL || ' + ifBlock[indexIfLeft + 1:indexEnter + 1]
+            newBlock += '+' + ifBlock.split('\n')[0][1:] + '\n'
+            newBlock += ifBlock[indexEnter + 1:]
     elif (6 == nChoice):
-        newBlock += verstr + ' ' * (indexIfStart-1) + 'int _SYS_VAL = 0;\n'
-        newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
-        newBlock += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 1;\n'
-        newBlock += verstr + ' ' * (indexIfStart-1) + '}\n'
-        newBlock += ifBlock[:indexIfLeft + 1] + '_SYS_VAL' + ifBlock[indexIfRight:]
+        # get if block segments.
+        ifBlockSeg = ifBlock.split('\n')
+        del ifBlockSeg[-1]
+        # get the end of the line of the if judgement.
+        indexIfJudgeEnd = 0
+        if ('\n' != ifBlock[indexIfRight + 1]):
+            indexIfJudgeEnd = ifBlock[indexIfRight + 1:].find('\n', 1)
+        # get the deleted patch.
+        ifPatchDel = '-' + ifBlock[1:indexIfRight + 1 + indexIfJudgeEnd + 1]
+        ifPatchDel = ifPatchDel.replace('\n ', '\n-')
+        ifPatchDel = ifPatchDel.replace('\n+', '\n-')
+        # get the added patch.
+        ifPatchAdd = verstr + ' ' * (indexIfStart - 1) + 'int _SYS_VAL = 0;\n'
+        ifPatchAdd += ifBlock[:indexIfRight + 1] + ' {\n'
+        ifPatchAdd += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 1;\n'
+        ifPatchAdd += verstr + ' ' * (indexIfStart - 1) + '}\n'
+        ifPatchAdd = ifPatchAdd.replace('\n ', '\n+')
+        ifPatchAdd = ifPatchAdd.replace('\n-', '\n+')
+        ifPatchAdd += '+' + ifBlock[1:indexIfLeft + 1] + '_SYS_VAL' + ifBlock[indexIfRight:indexIfRight + 1 + indexIfJudgeEnd + 1]
+        # after or before.
+        if verstr == '+':
+            ifPatch = ifPatchDel + ifPatchAdd
+            ifPatchSeg = ifPatch.split('\n')
+            del ifPatchSeg[-1]
+            newBlock = AfterPatchProc(ifBlockSeg, ifPatchSeg)
+        elif verstr == '-':
+            ifPatchDel = '+' + ifPatchDel[1:]
+            ifPatchDel = ifPatchDel.replace('\n-', '\n+')
+            ifPatchAdd = '-' + ifPatchAdd[1:]
+            ifPatchAdd = ifPatchAdd.replace('\n+', '\n-')
+            ifPatch = ifPatchAdd + ifPatchDel
+            ifPatchSeg = ifPatch.split('\n')
+            del ifPatchSeg[-1]
+            #print(ifPatchSeg)
+            newBlock = BeforePatchProc(ifPatchSeg, ifBlockSeg)
     elif (7 == nChoice):
-        newBlock += verstr + ' ' * (indexIfStart-1) + 'int _SYS_VAL = 1;\n'
-        newBlock += ifBlock[:indexIfRight + 1] + ' {\n'
-        newBlock += verstr + ' ' * (indexIfStart+3) + 'int _SYS_VAL = 0;\n'
-        newBlock += verstr + ' ' * (indexIfStart-1) + '}\n'
-        newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_VAL' + ifBlock[indexIfRight:]
+        # get if block segments.
+        ifBlockSeg = ifBlock.split('\n')
+        del ifBlockSeg[-1]
+        # get the end of the line of the if judgement.
+        indexIfJudgeEnd = 0
+        if ('\n' != ifBlock[indexIfRight + 1]):
+            indexIfJudgeEnd = ifBlock[indexIfRight + 1:].find('\n', 1)
+        # get the deleted patch.
+        ifPatchDel = '-' + ifBlock[1:indexIfRight + 1 + indexIfJudgeEnd + 1]
+        ifPatchDel = ifPatchDel.replace('\n ', '\n-')
+        ifPatchDel = ifPatchDel.replace('\n+', '\n-')
+        # get the added patch.
+        ifPatchAdd = verstr + ' ' * (indexIfStart - 1) + 'int _SYS_VAL = 1;\n'
+        ifPatchAdd += ifBlock[:indexIfRight + 1] + ' {\n'
+        ifPatchAdd += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 0;\n'
+        ifPatchAdd += verstr + ' ' * (indexIfStart - 1) + '}\n'
+        ifPatchAdd = ifPatchAdd.replace('\n ', '\n+')
+        ifPatchAdd = ifPatchAdd.replace('\n-', '\n+')
+        ifPatchAdd += '+' + ifBlock[1:indexIfLeft + 1] + '!_SYS_VAL' + ifBlock[indexIfRight:indexIfRight + 1 + indexIfJudgeEnd + 1]
+        # after or before.
+        if verstr == '+':
+            ifPatch = ifPatchDel + ifPatchAdd
+            ifPatchSeg = ifPatch.split('\n')
+            del ifPatchSeg[-1]
+            newBlock = AfterPatchProc(ifBlockSeg, ifPatchSeg)
+        elif verstr == '-':
+            ifPatchDel = '+' + ifPatchDel[1:]
+            ifPatchDel = ifPatchDel.replace('\n-', '\n+')
+            ifPatchAdd = '-' + ifPatchAdd[1:]
+            ifPatchAdd = ifPatchAdd.replace('\n+', '\n-')
+            ifPatch = ifPatchAdd + ifPatchDel
+            ifPatchSeg = ifPatch.split('\n')
+            del ifPatchSeg[-1]
+            #print(ifPatchSeg)
+            newBlock = BeforePatchProc(ifPatchSeg, ifBlockSeg)
+
     # change string to lists.
     newBlockList = newBlock.split('\n')
     ifBlockList = []

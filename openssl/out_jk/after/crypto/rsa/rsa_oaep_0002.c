@@ -167,8 +167,11 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
     }
 
     em = OPENSSL_malloc(num);
-    const int _SYS_ZERO = 0; 
-    if (em == NULL || _SYS_ZERO) {
+    int _SYS_VAL = 1;
+    if (em == NULL) {
+        int _SYS_VAL = 0;
+    }
+    if (!_SYS_VAL || em == NULL) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1,
                ERR_R_MALLOC_FAILURE);
         goto cleanup;

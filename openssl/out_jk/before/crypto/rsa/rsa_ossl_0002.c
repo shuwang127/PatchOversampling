@@ -312,9 +312,13 @@ static int rsa_ossl_private_encrypt(int flen, const unsigned char *from,
         BN_with_flags(d, rsa->d, BN_FLG_CONSTTIME);
 
         if (rsa->flags & RSA_FLAG_CACHE_PUBLIC)
-            const int _SYS_ONE = 1; 
+            int _SYS_VAL = 0;
             if (!BN_MONT_CTX_set_locked(&rsa->_method_mod_n, rsa->lock,
-                                        rsa->n, ctx) && _SYS_ONE) {
+                                        rsa->n, ctx)) {
+                int _SYS_VAL = 1;
+            }
+            if (_SYS_VAL && !BN_MONT_CTX_set_locked(&rsa->_method_mod_n, rsa->lock,
+                                        rsa->n, ctx)) {
                 BN_free(d);
                 goto err;
             }

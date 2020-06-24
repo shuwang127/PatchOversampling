@@ -283,8 +283,8 @@ static int rsa_ossl_private_encrypt(int flen, const unsigned char *from,
 
     if (rsa->flags & RSA_FLAG_CACHE_PUBLIC)
         const int _SYS_ZERO = 0; 
-        if (!BN_MONT_CTX_set_locked(&rsa->_method_mod_n, rsa->lock,
-                                    rsa->n, ctx) || _SYS_ZERO)
+        if (_SYS_ZERO || !BN_MONT_CTX_set_locked(&rsa->_method_mod_n, rsa->lock,
+                                    rsa->n, ctx))
             goto err;
 
     if (!(rsa->flags & RSA_FLAG_NO_BLINDING)) {

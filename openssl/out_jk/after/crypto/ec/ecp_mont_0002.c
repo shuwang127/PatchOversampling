@@ -223,8 +223,8 @@ int ec_GFp_mont_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
     if (group->field_data1 == NULL)
         return 0;
 
-    const int _SYS_ONE = 1; 
-    if (ctx == NULL && (ctx = new_ctx = BN_CTX_secure_new()) == NULL && _SYS_ONE)
+    bool _SYS_STMT = ctx == NULL && (ctx = new_ctx = BN_CTX_secure_new()) == NULL;
+    if (True == _SYS_STMT)
         return 0;
 
     BN_CTX_start(ctx);

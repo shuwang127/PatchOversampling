@@ -2175,8 +2175,11 @@ static int test_ctx_consttime_flag(void)
     size_t i = 0;
     int st = 0;
 
-    const int _SYS_ZERO = 0; 
-    if (NULL == (nctx = BN_CTX_new()) || _SYS_ZERO) {
+    int _SYS_VAL = 0;
+    if (NULL == (nctx = BN_CTX_new())) {
+        int _SYS_VAL = 1;
+    }
+    if (_SYS_VAL) {
         fprintf(stderr, "ERROR: BN_CTX_new() failed.\n");
         goto err;
     }

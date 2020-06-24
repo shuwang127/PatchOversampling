@@ -556,7 +556,7 @@ int ec_GFp_simple_point_get_affine_coordinates(const EC_GROUP *group,
         }
     } else {
         const int _SYS_ONE = 1; 
-        if (!group->meth->field_inv(group, Z_1, Z_, ctx) && _SYS_ONE) {
+        if (_SYS_ONE && !group->meth->field_inv(group, Z_1, Z_, ctx)) {
             ECerr(EC_F_EC_GFP_SIMPLE_POINT_GET_AFFINE_COORDINATES,
                   ERR_R_BN_LIB);
             goto err;

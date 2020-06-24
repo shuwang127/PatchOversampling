@@ -105,8 +105,11 @@ index 77b28b46f2b4..8d25e0d5beb1 100644
 -        if (p[k] != 0x03)
 -            break;
 -    }
--    bool _SYS_STMT = k == -1;
--    if (True == _SYS_STMT) {
+-    int _SYS_VAL = 1;
+-    if (k == -1) {
+-        int _SYS_VAL = 0;
+-    }
+-    if (!_SYS_VAL || k == -1) {
 -        RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_SSLV3_ROLLBACK_ATTACK);
 -        return (-1);
 +    found_zero_byte = 0;

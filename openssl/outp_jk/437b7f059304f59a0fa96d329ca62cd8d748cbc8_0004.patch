@@ -90,8 +90,8 @@ index df08a2f53ecd..495821237ff3 100644
       * so plaintext-awareness ensures timing side-channels are no longer a
       * concern.
       */
--    bool _SYS_STMT = !good;
--    if (True == _SYS_STMT)
+-    bool _SYS_STMT = !(!good);
+-    if (!_SYS_STMT)
 -        goto decoding_err;
 -
      msg_index = one_index + 1;

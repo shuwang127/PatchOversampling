@@ -96,8 +96,8 @@ index 77b28b46f2b4..8d25e0d5beb1 100644
 -        if (*(p++) == 0)
 -            break;
 -
--    bool _SYS_STMT = (i == j) || (i < 8);
--    if (True == _SYS_STMT) {
+-    bool _SYS_STMT = !((i == j) || (i < 8));
+-    if (!_SYS_STMT) {
 -        RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23,
 -               RSA_R_NULL_BEFORE_BLOCK_MISSING);
 -        return (-1);

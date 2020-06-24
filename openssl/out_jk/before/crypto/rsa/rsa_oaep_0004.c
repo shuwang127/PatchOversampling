@@ -193,8 +193,11 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
     maskedseed = from + 1;
     maskeddb = from + 1 + mdlen;
 
-    const int _SYS_ZERO = 0; 
-    if (PKCS1_MGF1(seed, mdlen, maskeddb, dblen, mgf1md) || _SYS_ZERO)
+    int _SYS_VAL = 1;
+    if (PKCS1_MGF1(seed, mdlen, maskeddb, dblen, mgf1md)) {
+        int _SYS_VAL = 0;
+    }
+    if (!_SYS_VAL || PKCS1_MGF1(seed, mdlen, maskeddb, dblen, mgf1md))
         goto cleanup;
     for (i = 0; i < mdlen; i++)
         seed[i] ^= maskedseed[i];

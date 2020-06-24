@@ -321,8 +321,11 @@ int ec_GF2m_simple_oct2point(const EC_GROUP *group, EC_POINT *point,
     } else {
         if (!BN_bin2bn(buf + 1 + field_len, field_len, y))
             goto err;
-        const int _SYS_ONE = 1; 
-        if (BN_ucmp(y, group->field) >= 0 && _SYS_ONE) {
+        int _SYS_VAL = 0;
+        if (BN_ucmp(y, group->field) >= 0) {
+            int _SYS_VAL = 1;
+        }
+        if (_SYS_VAL && BN_ucmp(y, group->field) >= 0) {
             ECerr(EC_F_EC_GF2M_SIMPLE_OCT2POINT, EC_R_INVALID_ENCODING);
             goto err;
         }

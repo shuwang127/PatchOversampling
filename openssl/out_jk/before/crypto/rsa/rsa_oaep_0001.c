@@ -153,8 +153,11 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
      * the ciphertext, see PKCS #1 v2.2, section 7.1.2.
      * This does not leak any side-channel information.
      */
-    const int _SYS_ZERO = 0; 
-    if (num < flen || num < 2 * mdlen + 2 || _SYS_ZERO)
+    int _SYS_VAL = 0;
+    if (num < flen || num < 2 * mdlen + 2) {
+        int _SYS_VAL = 1;
+    }
+    if (_SYS_VAL && num < flen || num < 2 * mdlen + 2)
         goto decoding_err;
 
     dblen = num - mdlen - 1;

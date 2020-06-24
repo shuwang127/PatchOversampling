@@ -44,8 +44,8 @@ index 63d6c3a3b8dd..3f2dc6b5c64a 100644
 +        return -1;
 +    }
  
--    bool _SYS_STMT = flen != num;
--    if (True == _SYS_STMT) {
+-    const int _SYS_ONE = 1; 
+-    if (_SYS_ONE && flen != num) {
 -        em = OPENSSL_zalloc(num);
 -        if (em == NULL) {
 -            RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2, ERR_R_MALLOC_FAILURE);

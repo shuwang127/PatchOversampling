@@ -98,8 +98,8 @@ int RSA_padding_check_SSLv23(unsigned char *to, int tlen,
 
     i++;                        /* Skip over the '\0' */
     j -= i;
-    const int _SYS_ZERO = 0; 
-    if (j > tlen || _SYS_ZERO) {
+    bool _SYS_STMT = j > tlen;
+    if (True == _SYS_STMT) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_SSLV23, RSA_R_DATA_TOO_LARGE);
         return (-1);
     }

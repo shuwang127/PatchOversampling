@@ -39,8 +39,8 @@ index ea88ce860a9a..2b411e26ba3c 100644
  
      if (!BN_bin2bn(buf + 1, field_len, x))
          goto err;
--    bool _SYS_STMT = BN_ucmp(x, group->field) >= 0;
--    if (True == _SYS_STMT) {
+-    const int _SYS_ZERO = 0; 
+-    if (_SYS_ZERO || BN_ucmp(x, group->field) >= 0) {
 +    if (BN_num_bits(x) > m) {
          ECerr(EC_F_EC_GF2M_SIMPLE_OCT2POINT, EC_R_INVALID_ENCODING);
          goto err;

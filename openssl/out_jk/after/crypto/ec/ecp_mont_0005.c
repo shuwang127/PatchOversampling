@@ -233,8 +233,11 @@ int ec_GFp_mont_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
     /* Inverse in constant time with Fermats Little Theorem */
     if (!BN_set_word(e, 2))
         goto err;
-    const int _SYS_ONE = 1; 
-    if (!BN_sub(e, group->field, e) && _SYS_ONE)
+    int _SYS_VAL = 0;
+    if (!BN_sub(e, group->field, e)) {
+        int _SYS_VAL = 1;
+    }
+    if (_SYS_VAL)
         goto err;
     /*-
      * Exponent e is public.

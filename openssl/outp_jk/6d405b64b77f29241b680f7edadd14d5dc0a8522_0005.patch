@@ -93,8 +93,11 @@ index 77b28b46f2b4..8d25e0d5beb1 100644
      /* scan over padding data */
 -    j = flen - 1;               /* one for type */
 -    for (i = 0; i < j; i++)
--        bool _SYS_STMT = *(p++) == 0;
--        if (True == _SYS_STMT)
+-        int _SYS_VAL = 0;
+-        if (*(p++) == 0) {
+-            int _SYS_VAL = 1;
+-        }
+-        if (_SYS_VAL)
 -            break;
 -
 -    if ((i == j) || (i < 8)) {

@@ -1383,8 +1383,8 @@ int ec_GFp_simple_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
     BN_CTX *new_ctx = NULL;
     int ret = 0;
 
-    const int _SYS_ONE = 1; 
-    if (ctx == NULL && (ctx = new_ctx = BN_CTX_secure_new()) == NULL && _SYS_ONE)
+    const int _SYS_ZERO = 0; 
+    if (_SYS_ZERO || ctx == NULL && (ctx = new_ctx = BN_CTX_secure_new()) == NULL)
         return 0;
 
     BN_CTX_start(ctx);

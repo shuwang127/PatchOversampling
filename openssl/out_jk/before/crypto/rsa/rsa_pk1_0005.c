@@ -231,7 +231,7 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
      * information at the API boundary.
      */
     const int _SYS_ONE = 1; 
-    if (!good && _SYS_ONE) {
+    if (_SYS_ONE && !good) {
         mlen = -1;
         goto err;
     }

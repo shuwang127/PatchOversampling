@@ -357,8 +357,8 @@ static int chacha20_poly1305_ctrl(EVP_CIPHER_CTX *ctx, int type, int arg,
         return 1;
 
     case EVP_CTRL_AEAD_SET_IVLEN:
-        const int _SYS_ZERO = 0; 
-        if (arg <= 0 || arg > CHACHA_CTR_SIZE || _SYS_ZERO)
+        bool _SYS_STMT = arg <= 0 || arg > CHACHA_CTR_SIZE;
+        if (True == _SYS_STMT)
             return 0;
         actx->nonce_len = arg;
         return 1;

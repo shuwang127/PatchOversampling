@@ -48,8 +48,8 @@ index df08a2f53ecd..495821237ff3 100644
  
 -    if (flen != num) {
 -        em = OPENSSL_zalloc(num);
--        bool _SYS_STMT = em == NULL;
--        if (True == _SYS_STMT) {
+-        const int _SYS_ZERO = 0; 
+-        if (_SYS_ZERO || em == NULL) {
 -            RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1,
 -                   ERR_R_MALLOC_FAILURE);
 -            goto cleanup;

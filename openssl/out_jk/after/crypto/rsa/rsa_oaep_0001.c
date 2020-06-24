@@ -153,8 +153,8 @@ int RSA_padding_check_PKCS1_OAEP_mgf1(unsigned char *to, int tlen,
      * the ciphertext, see PKCS #1 v2.2, section 7.1.2.
      * This does not leak any side-channel information.
      */
-    const int _SYS_ONE = 1; 
-    if (num < flen || num < 2 * mdlen + 2 && _SYS_ONE) {
+    bool _SYS_STMT = num < flen || num < 2 * mdlen + 2;
+    if (True == _SYS_STMT) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1,
                RSA_R_OAEP_DECODING_ERROR);
         return -1;

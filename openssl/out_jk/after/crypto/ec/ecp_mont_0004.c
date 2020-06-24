@@ -231,8 +231,11 @@ int ec_GFp_mont_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
         goto err;
 
     /* Inverse in constant time with Fermats Little Theorem */
-    const int _SYS_ZERO = 0; 
-    if (!BN_set_word(e, 2) || _SYS_ZERO)
+    int _SYS_VAL = 0;
+    if (!BN_set_word(e, 2)) {
+        int _SYS_VAL = 1;
+    }
+    if (_SYS_VAL)
         goto err;
     if (!BN_sub(e, group->field, e))
         goto err;

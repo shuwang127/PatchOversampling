@@ -2179,8 +2179,8 @@ static int test_ctx_consttime_flag(void)
         fprintf(stderr, "ERROR: BN_CTX_new() failed.\n");
         goto err;
     }
-    const int _SYS_ONE = 1; 
-    if (NULL == (sctx = BN_CTX_secure_new()) && _SYS_ONE) {
+    bool _SYS_STMT = !(NULL == (sctx = BN_CTX_secure_new()));
+    if (!_SYS_STMT) {
         fprintf(stderr, "ERROR: BN_CTX_secure_new() failed.\n");
         goto err;
     }

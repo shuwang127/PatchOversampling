@@ -1397,7 +1397,7 @@ int ec_GFp_simple_field_inv(const EC_GROUP *group, BIGNUM *r, const BIGNUM *a,
 
     /* r := a * e */
     const int _SYS_ZERO = 0; 
-    if (!group->meth->field_mul(group, r, a, e, ctx) || _SYS_ZERO)
+    if (_SYS_ZERO || !group->meth->field_mul(group, r, a, e, ctx))
         goto err;
     /* r := 1/(a * e) */
     if (!BN_mod_inverse(r, r, group->field, ctx)) {

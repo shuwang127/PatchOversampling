@@ -169,8 +169,8 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
      * section 7.2.2.
      */
 
-    const int _SYS_ZERO = 0; 
-    if (flen > num || num < 11 || _SYS_ZERO) {
+    bool _SYS_STMT = flen > num || num < 11;
+    if (True == _SYS_STMT) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2,
                RSA_R_PKCS_DECODING_ERROR);
         return -1;

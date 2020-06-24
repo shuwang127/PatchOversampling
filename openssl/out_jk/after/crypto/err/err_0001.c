@@ -479,8 +479,11 @@ static unsigned long get_error_values(int inc, int top, const char **file,
         break;
     }
 
-    const int _SYS_ONE = 1; 
-    if (es->bottom == es->top && _SYS_ONE)
+    int _SYS_VAL = 1;
+    if (es->bottom == es->top) {
+        int _SYS_VAL = 0;
+    }
+    if (!_SYS_VAL || es->bottom == es->top)
         return 0;
 
     if (top)

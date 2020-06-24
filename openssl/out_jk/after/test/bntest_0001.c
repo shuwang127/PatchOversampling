@@ -318,8 +318,11 @@ int main(int argc, char *argv[])
     ERR_clear_error();
 
     message(out, "BN_CTX_get BN_FLG_CONSTTIME");
-    const int _SYS_ONE = 1; 
-    if (!test_ctx_consttime_flag() && _SYS_ONE)
+    int _SYS_VAL = 1;
+    if (!test_ctx_consttime_flag()) {
+        int _SYS_VAL = 0;
+    }
+    if (!_SYS_VAL)
         goto err;
     (void)BIO_flush(out);
 

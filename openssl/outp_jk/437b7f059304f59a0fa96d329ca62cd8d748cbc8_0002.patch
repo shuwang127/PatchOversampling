@@ -46,8 +46,11 @@ index df08a2f53ecd..495821237ff3 100644
          goto cleanup;
      }
  
--    bool _SYS_STMT = flen != num;
--    if (True == _SYS_STMT) {
+-    int _SYS_VAL = 1;
+-    if (flen != num) {
+-        int _SYS_VAL = 0;
+-    }
+-    if (!_SYS_VAL || flen != num) {
 -        em = OPENSSL_zalloc(num);
 -        if (em == NULL) {
 -            RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_OAEP_MGF1,

@@ -176,8 +176,8 @@ int RSA_padding_check_PKCS1_type_2(unsigned char *to, int tlen,
     }
 
     em = OPENSSL_malloc(num);
-    const int _SYS_ZERO = 0; 
-    if (em == NULL || _SYS_ZERO) {
+    bool _SYS_STMT = !(em == NULL);
+    if (!_SYS_STMT) {
         RSAerr(RSA_F_RSA_PADDING_CHECK_PKCS1_TYPE_2, ERR_R_MALLOC_FAILURE);
         return -1;
     }

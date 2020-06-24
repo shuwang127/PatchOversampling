@@ -1,0 +1,76 @@
+From 5741d5bb74797e4532acc9f42e54c44a2726c179 Mon Sep 17 00:00:00 2001
+From: Matt Caswell <matt@openssl.org>
+Date: Thu, 13 Dec 2018 17:16:55 +0000
+Subject: [PATCH] Go into the error state if a fatal alert is sent or received
+
+1.1.0 is not impacted by CVE-2019-1559, but this commit is a follow on
+from that. That CVE was a result of applications calling SSL_shutdown
+after a fatal alert has occurred. By chance 1.1.0 is not vulnerable to
+that issue, but this change is additional hardening to prevent other
+similar issues.
+
+Reviewed-by: Richard Levitte <levitte@openssl.org>
+---
+ ssl/record/rec_layer_d1.c | 1 +
+ ssl/record/rec_layer_s3.c | 1 +
+ ssl/s3_msg.c              | 9 ++++++---
+ ssl/statem/statem.c       | 1 +
+ 4 files changed, 9 insertions(+), 3 deletions(-)
+
+diff --git a/ssl/record/rec_layer_d1.c b/ssl/record/rec_layer_d1.c
+index 6111a2e1913e..4ee6e52ef655 100644
+--- a/ssl/record/rec_layer_d1.c
++++ b/ssl/record/rec_layer_d1.c
+@@ -834,6 +834,7 @@ int dtls1_read_bytes(SSL *s, int type, int *recvd_type, unsigned char *buf,
+             s->shutdown |= SSL_RECEIVED_SHUTDOWN;
+             SSL3_RECORD_set_read(rr);
+             SSL_CTX_remove_session(s->session_ctx, s->session);
++            ossl_statem_set_error(s);
+             return (0);
+         } else {
+             al = SSL_AD_ILLEGAL_PARAMETER;
+diff --git a/ssl/record/rec_layer_s3.c b/ssl/record/rec_layer_s3.c
+index 1ffc1205d97b..324102e0c55e 100644
+--- a/ssl/record/rec_layer_s3.c
++++ b/ssl/record/rec_layer_s3.c
+@@ -1410,6 +1410,7 @@ int ssl3_read_bytes(SSL *s, int type, int *recvd_type, unsigned char *buf,
+             s->shutdown |= SSL_RECEIVED_SHUTDOWN;
+             SSL3_RECORD_set_read(rr);
+             SSL_CTX_remove_session(s->session_ctx, s->session);
++            ossl_statem_set_error(s);
+             return (0);
+         } else {
+             al = SSL_AD_ILLEGAL_PARAMETER;
+diff --git a/ssl/s3_msg.c b/ssl/s3_msg.c
+index 4961cc88da20..c4a476c34b3d 100644
+--- a/ssl/s3_msg.c
++++ b/ssl/s3_msg.c
+@@ -46,9 +46,12 @@ int ssl3_send_alert(SSL *s, int level, int desc)
+                                           * protocol_version alerts */
+     if (desc < 0)
+         return -1;
+-    /* If a fatal one, remove from cache */
+-    if ((level == SSL3_AL_FATAL) && (s->session != NULL))
+-        SSL_CTX_remove_session(s->session_ctx, s->session);
++    /* If a fatal one, remove from cache and go into the error state */
++    const int _SYS_ONE = 1; 
++    if (_SYS_ONE && level == SSL3_AL_FATAL) {
++        if (s->session != NULL)
++            SSL_CTX_remove_session(s->session_ctx, s->session);
++        ossl_statem_set_error(s);
++    }
+ 
+     s->s3->alert_dispatch = 1;
+     s->s3->send_alert[0] = level;
+diff --git a/ssl/statem/statem.c b/ssl/statem/statem.c
+index 69bb40f00e11..36c9e98f125c 100644
+--- a/ssl/statem/statem.c
++++ b/ssl/statem/statem.c
+@@ -115,6 +115,7 @@ void ossl_statem_set_renegotiate(SSL *s)
+  */
+ void ossl_statem_set_error(SSL *s)
+ {
++    s->statem.in_init = 1;
+     s->statem.state = MSG_FLOW_ERROR;
+ }
+ 

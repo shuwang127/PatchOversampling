@@ -29,6 +29,7 @@ Usage:
 import os
 import re
 import random
+import numpy as np
 
 rootPath = './'
 appPath = rootPath + '/openssl/'
@@ -73,11 +74,11 @@ def main():
                             if _DEBUG_: print('[DEBUG] ', filename, ifstmt, patchname, linenums)
                             # ===========================================================
                             # get variants of the source code.
-                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, -1)
+                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, 2)
                             #SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
                             # get variants of the patch.
                             patchChanged, _, ok = PatchOversampling(patchname, version, filename, linenums, ifstmt, nChoice)
-                            #if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))
+                            if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))
 
     return
 
@@ -535,7 +536,7 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
     if (nChoice not in range(_CHOICE_)):  # if nChoice is not in our settings.
         nChoice = random.randint(0, _CHOICE_ - 1)  # randomly choose.
 
-    nChoice = 7
+    nChoice = 2
     newBlock = ''
     if (0 == nChoice):
         newBlock += verstr + ' ' * (indexIfStart-1) + 'const int _SYS_ZERO = 0; \n'
@@ -562,9 +563,56 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
             newBlock += '+' + ifBlock.split('\n')[0][1:] + '\n'
             newBlock += ifBlock[indexEnter + 1:]
     elif (2 == nChoice):
-        print(ifBlock)
-        newBlock += verstr + ' ' * (indexIfStart-1) + 'bool _SYS_STMT = ' + ifBlock[indexIfLeft + 1:indexIfRight] + ';\n'
-        newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_STMT' + ifBlock[indexIfRight:]
+        print(ifBlock, end='')
+        print('------------------------------')
+        ifBlockSeg = ifBlock.split('\n')
+        del ifBlockSeg[-1]
+        print(ifBlockSeg)
+        print('------------------------------')
+        indexIfJudgeEnd = ifBlock[indexIfRight + 1:].find('\n', 1)
+        ifPatchDel = '-' + ifBlock[1:indexIfRight+1+indexIfJudgeEnd+1]
+        ifPatchDel = ifPatchDel.replace('\n ', '\n-')
+        ifPatchDel = ifPatchDel.replace('\n+', '\n-')
+        ifPatchAdd = '+' + ' ' * (indexIfStart-1) + 'bool _SYS_STMT = ' + ifBlock[indexIfLeft + 1:indexIfRight] + ';\n'
+        ifPatchAdd = ifPatchAdd.replace('\n ', '\n+')
+        ifPatchAdd = ifPatchAdd.replace('\n-', '\n+')
+        ifPatchAdd += '+' + ifBlock[1:indexIfLeft+1] + 'True == _SYS_STMT' + ifBlock[indexIfRight:indexIfRight+1+indexIfJudgeEnd+1]
+        ifPatch = ifPatchDel + ifPatchAdd
+        ifPatchSeg = ifPatch.split('\n')
+        del ifPatchSeg[-1]
+        print(ifPatchSeg)
+        print('------------------------------')
+        marks = -1 * np.ones(len(ifBlockSeg)+1, dtype=int)
+        for i in range(len(ifBlockSeg)):
+            for j in range(1+np.max(marks), len(ifPatchSeg)):
+                if ifBlockSeg[i][1:] == ifPatchSeg[j][1:]:
+                    marks[i] = j
+                    break
+        print(marks)
+
+        for i in reversed(range(len(marks)-1)):
+            if (marks[i] >= 0):
+                print(i, marks[i])
+                if (-1 == np.max(marks[i+1:])):
+                    ifBlockSeg = ifBlockSeg[:i+1] + ifPatchSeg[marks[i]+1:] + ifBlockSeg[i+1:]
+                    print(ifBlockSeg)
+                else:
+                    indexNext = [item for item in marks[i+1:] if (item >= 0)][0]
+                    ifBlockSeg = ifBlockSeg[:i+1] + ifPatchSeg[marks[i]+1:indexNext] + ifBlockSeg[i+1:]
+
+                if (ifPatchSeg[marks])
+
+
+
+
+
+
+        print('------------------------------')
+
+
+
+
+
     elif (3 == nChoice):
         newBlock += verstr + ' ' * (indexIfStart-1) + 'bool _SYS_STMT = !(' + ifBlock[indexIfLeft + 1:indexIfRight] + ');\n'
         newBlock += ifBlock[:indexIfLeft + 1] + '!_SYS_STMT' + ifBlock[indexIfRight:]

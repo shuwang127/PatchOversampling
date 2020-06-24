@@ -49,15 +49,18 @@ index 9b0a2ccb20b7..736565ca8a28 100644
 +     *
 +     * Anything else is an error and may lead to a corrupt ASN1 method table
 +     */
--     if (!((ameth->pem_str == abc
++     int _SYS_VAL = 1;
 +     if (!((ameth->pem_str == NULL
-            && (ameth->pkey_flags & ASN1_PKEY_ALIAS) != 0)
-            || (ameth->pem_str != NULL
-               && (ameth->pkey_flags & ASN1_PKEY_ALIAS) == 0))) {
-         EVPerr(EVP_F_EVP_PKEY_ASN1_ADD0, ERR_R_PASSED_INVALID_ARGUMENT);
-         return 0;
-     }
-
++           && (ameth->pkey_flags & ASN1_PKEY_ALIAS) != 0)
++           || (ameth->pem_str != NULL
++              && (ameth->pkey_flags & ASN1_PKEY_ALIAS) == 0))) {
++         int _SYS_VAL = 0;
++     }
++     if (!_SYS_VAL) {
++        EVPerr(EVP_F_EVP_PKEY_ASN1_ADD0, ERR_R_PASSED_INVALID_ARGUMENT);
++        return 0;
++    }
++
      if (app_methods == NULL) {
          app_methods = sk_EVP_PKEY_ASN1_METHOD_new(ameth_cmp);
          if (app_methods == NULL)

@@ -41,7 +41,8 @@ optPath = appPath + '/outp_jk/'
 
 _CHOICE_  = 8       # The choice number.
 _DEBUG_   = 0       # 1: only use one sample, 0: use all samples.
-_VERSION_ = 0       # 1: 'after', 0: 'before'.
+
+_VERSION_ = 1       # 1: 'after', 0: 'before'.
 version = 'after' if (_VERSION_) else 'before'
 
 def main():
@@ -75,8 +76,8 @@ def main():
                             if _DEBUG_: print('[DEBUG] ', filename, ifstmt, patchname, linenums)
                             # ===========================================================
                             # get variants of the source code.
-                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, 6)
-                            #SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
+                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, -1)
+                            SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
                             # get variants of the patch.
                             patchChanged, _, ok = PatchOversampling(patchname, version, filename, linenums, ifstmt, nChoice)
                             if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))

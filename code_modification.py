@@ -41,13 +41,13 @@ optPath = appPath + '/outp_jk/'
 
 _CHOICE_  = 8       # The choice number.
 _DEBUG_   = 0       # 1: only use one sample, 0: use all samples.
-_VERSION_ = 1       # 1: 'after', 0: 'before'.
+_VERSION_ = 0       # 1: 'after', 0: 'before'.
 version = 'after' if (_VERSION_) else 'before'
 
 def main():
     global _DEBUG_
     # Generate AST files from program files.
-    GenerateASTs(datPath, astPath)
+    #GenerateASTs(datPath, astPath)
     # get patch lists from patch path.
     patchList = ScanPatches(patPath, datPath)
     # scan all the files.
@@ -75,8 +75,8 @@ def main():
                             if _DEBUG_: print('[DEBUG] ', filename, ifstmt, patchname, linenums)
                             # ===========================================================
                             # get variants of the source code.
-                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, -1)
-                            SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
+                            codeChanged, nChoice = CodeOversampling(filename, ifstmt, 6)
+                            #SaveToFile(codeChanged, root.replace(datPath, outPath, 1), file)
                             # get variants of the patch.
                             patchChanged, _, ok = PatchOversampling(patchname, version, filename, linenums, ifstmt, nChoice)
                             if (ok): SaveToFile(patchChanged, optPath, patchname.replace(patPath, ''))
@@ -770,9 +770,9 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
         ifPatchDel = ifPatchDel.replace('\n+', '\n-')
         # get the added patch.
         ifPatchAdd = verstr + ' ' * (indexIfStart - 1) + 'int _SYS_VAL = 0;\n'
-        ifPatchAdd += ifBlock[:indexIfRight + 1] + ' {\n'
+        ifPatchAdd += ifBlock[:indexIfRight + 1] + ' { \n'
         ifPatchAdd += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 1;\n'
-        ifPatchAdd += verstr + ' ' * (indexIfStart - 1) + '}\n'
+        ifPatchAdd += verstr + ' ' * (indexIfStart - 1) + '} \n'
         ifPatchAdd = ifPatchAdd.replace('\n ', '\n+')
         ifPatchAdd = ifPatchAdd.replace('\n-', '\n+')
         ifPatchAdd += '+' + ifBlock[1:indexIfLeft + 1] + '_SYS_VAL' + ifBlock[indexIfRight:indexIfRight + 1 + indexIfJudgeEnd + 1]
@@ -806,9 +806,9 @@ def PatchOversampling(pname, version, fname, lnums, ifstmt, nChoice=-1):
         ifPatchDel = ifPatchDel.replace('\n+', '\n-')
         # get the added patch.
         ifPatchAdd = verstr + ' ' * (indexIfStart - 1) + 'int _SYS_VAL = 1;\n'
-        ifPatchAdd += ifBlock[:indexIfRight + 1] + ' {\n'
+        ifPatchAdd += ifBlock[:indexIfRight + 1] + ' { \n'
         ifPatchAdd += verstr + ' ' * (indexIfStart + 3) + 'int _SYS_VAL = 0;\n'
-        ifPatchAdd += verstr + ' ' * (indexIfStart - 1) + '}\n'
+        ifPatchAdd += verstr + ' ' * (indexIfStart - 1) + '} \n'
         ifPatchAdd = ifPatchAdd.replace('\n ', '\n+')
         ifPatchAdd = ifPatchAdd.replace('\n-', '\n+')
         ifPatchAdd += '+' + ifBlock[1:indexIfLeft + 1] + '!_SYS_VAL' + ifBlock[indexIfRight:indexIfRight + 1 + indexIfJudgeEnd + 1]
